@@ -1,4 +1,4 @@
-import {clamp,smooth,santaPose,projectilePose} from './scene.js';
+import {clamp,smooth,santaPose,projectilePose} from './scene.js?v=71058633a819';
 export class Renderer{
   constructor(canvas,assets,{batched=false}={}){this.canvas=canvas;this.ctx=canvas.getContext('2d',{alpha:true});this.assets=assets;this.batched=batched;this.dpr=1;this.groundPath=null;}
   resize(w,h,dpr){this.dpr=Math.min(dpr||1,2);this.canvas.width=Math.round(w*this.dpr);this.canvas.height=Math.round(h*this.dpr);this.groundPath=null;}

@@ -1,6 +1,6 @@
-import {World,DEFAULTS,settings,clamp} from './scene.js';
-import {Renderer} from './renderer.js';
-import {loadAssets} from './assets.js';
+import {World,DEFAULTS,settings,clamp} from './scene.js?v=71058633a819';
+import {Renderer} from './renderer.js?v=71058633a819';
+import {loadAssets} from './assets.js?v=71058633a819';
 const $=id=>document.getElementById(id),storeKey='snowplay.web.settings.v1';
 const world=new World();let renderer,paused=false,last=0,lastHUD=0,benchmark=null,lastResult=null,countdownUntil=0,baseline=false;
 const metrics={intervals:[],costs:[],last:0,frames:0};let saved='';
