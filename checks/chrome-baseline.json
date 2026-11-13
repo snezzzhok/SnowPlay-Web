@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-13T22:26:43.107Z",
+  "deviceLabel": "Mac Apple M1 / Chrome Guest / baseline / Low Power Mode",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 810,
+    "height": 661,
+    "dpr": 2
+  },
+  "renderer": "per-particle",
+  "scenario": "100% snow + Santa + plow; 24 seconds; 2 second warmup; seed 2027",
+  "physicalDeviceVerified": false,
+  "invalidated": false,
+  "hiddenDuringRun": false,
+  "concurrencySamples": 1414,
+  "metrics": {
+    "frames": 1441,
+    "fps": 60,
+    "frameMeanMS": 16.667,
+    "frameP95MS": 17.6,
+    "frameP99MS": 17.7,
+    "frameMaxMS": 17.8,
+    "renderMeanMS": 1.624,
+    "renderP95MS": 1.9,
+    "over25ms": 0
+  },
+  "combined": {
+    "frames": 1414,
+    "fps": 60,
+    "frameMeanMS": 16.667,
+    "frameP95MS": 17.6,
+    "frameP99MS": 17.7,
+    "frameMaxMS": 17.8,
+    "renderMeanMS": 1.622,
+    "renderP95MS": 1.9,
+    "over25ms": 0
+  },
+  "maxParticles": 1460
+}
