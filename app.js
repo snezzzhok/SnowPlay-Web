@@ -41,7 +41,7 @@ function startBenchmark(){if(benchmark||!renderer)return;lastResult=null;last=0;
 $('benchmark').addEventListener('click',startBenchmark);
 $('export').addEventListener('click',()=>{if(!lastResult)return;lastResult.deviceLabel=$('device-label').value.slice(0,80);const url=URL.createObjectURL(new Blob([JSON.stringify(lastResult,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='snowplay-performance.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 function frame(now){if(document.hidden){last=0;requestAnimationFrame(frame);return;}const dt=last?Math.min(.05,(now-last)/1000):0,interval=last?now-last:0;last=now;
-  const start=performance.now();if(!paused)world.step(dt);renderer.draw(world);const cost=performance.now()-start;
+  const start=performance.now(),wasTree=world.config.tree;if(!paused)world.step(dt);if(wasTree!==world.config.tree)save();renderer.draw(world);const cost=performance.now()-start;
   if(interval>0&&!paused){metrics.intervals.push(interval);metrics.costs.push(cost);if(metrics.intervals.length>120){metrics.intervals.shift();metrics.costs.shift();}}
   if(benchmark){const b=benchmark,age=(now-b.start)/1000,cycle=Math.floor(age/8.15);if(cycle!==b.cycle){b.cycle=cycle;world.action('santa');world.action('plow');}if(age>=2&&interval>0){b.intervals.push(interval);b.costs.push(cost);b.maxParticles=Math.max(b.maxParticles,world.snow.length);if(world.santa&&world.plow){b.concurrent++;b.combined.push(interval);b.combinedCosts.push(cost);}}if(age>=26)endBenchmark();}
   giftTarget();if(now-lastHUD>500){lastHUD=now;const r=report(metrics.intervals,metrics.costs);$('live-fps').textContent=paused?'Пауза':Math.round(r.fps||0)+' FPS';countdown();busy();save();}requestAnimationFrame(frame);
