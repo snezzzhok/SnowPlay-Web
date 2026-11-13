@@ -1,0 +1,121 @@
+{
+  "project": "SnowPlay Web",
+  "source": "Original SnowPlay vector library; World derivatives from this project",
+  "assets": [
+    {
+      "id": "snowball_small",
+      "svg": "Snowman/snowball_small.svg",
+      "sha256": "3e1e638e182a8643c162bbbc7952addb8bdca1bc1dead04e30f37f09e1937dde"
+    },
+    {
+      "id": "snowball_medium",
+      "svg": "Snowman/snowball_medium.svg",
+      "sha256": "20139cb7312c35a9de5ba65d88f39774caf7944a5059c0245c892f09fd250c70"
+    },
+    {
+      "id": "snowball_large",
+      "svg": "Snowman/snowball_large.svg",
+      "sha256": "df11abcb51baedd3abe9687cba6acc187f0aca4bcb79b661f1b532063367a218"
+    },
+    {
+      "id": "snowman_complete",
+      "svg": "Snowman/snowman_complete.svg",
+      "sha256": "6b8501862093fc5e9605328ff046fc466f449e1afe0e530dc72a71cccdc3dace"
+    },
+    {
+      "id": "snowplow_body",
+      "svg": "Snowplow/snowplow_body.svg",
+      "sha256": "44e86802ce9ace25063ab6061f36a442845befb78655cd6708ba35f251fc21e9"
+    },
+    {
+      "id": "snowplow_wheels",
+      "svg": "Snowplow/snowplow_wheels.svg",
+      "sha256": "8723205e05807e800e76bf143325fa6676ce627c5e8b9bf5061b3db1117abe02"
+    },
+    {
+      "id": "snowplow_blade",
+      "svg": "Snowplow/snowplow_blade.svg",
+      "sha256": "946772fee27d251a557b1ef105ebbaeb1c367298b6dfdb3f6543d22f776c05e1"
+    },
+    {
+      "id": "snowplow_beacon",
+      "svg": "Snowplow/snowplow_beacon.svg",
+      "sha256": "f5d3c46990fe51635fb52bade4c6fd04e3f9610c807b5de2be5f1759e721111e"
+    },
+    {
+      "id": "snowplow_complete",
+      "svg": "Snowplow/snowplow_complete.svg",
+      "sha256": "354583da72136d126b445af9571892d6d9f1754faab6461c4834654bdcfd4719"
+    },
+    {
+      "id": "tree_trunk",
+      "svg": "Christmas/tree_trunk.svg",
+      "sha256": "35eb461a7507125a238e0932aab9e69e6387b714eb2d27316ea3bf603bbf3c30"
+    },
+    {
+      "id": "sleigh",
+      "svg": "Santa/sleigh.svg",
+      "sha256": "be1443ed7c08d3c9c3c7cd02a7ea1d97058323033cc42215e4464286359ff0de"
+    },
+    {
+      "id": "santa_character",
+      "svg": "Santa/santa_character.svg",
+      "sha256": "31cd2b935d232c6f68f366dcfa5e2a7fbf254cffd6ba67d6fff75b5acb99f63a"
+    },
+    {
+      "id": "gift_sack",
+      "svg": "Santa/gift_sack.svg",
+      "sha256": "98ce7387f955bbe5e45d3a295f23d6f6b70c6e6389a5e672ea29ae8c3db48be9"
+    },
+    {
+      "id": "santa_sleigh",
+      "svg": "Santa/santa_sleigh.svg",
+      "sha256": "6061ac7f4f96b68313ef95fda7196e9fcc02254e94113e92dfb53e096063a345"
+    },
+    {
+      "id": "magic_trail",
+      "svg": "Santa/magic_trail.svg",
+      "sha256": "0e67a4eef121bd81f49dcddca61e64dc60881b368e534889baeb7c6d4dc0a95e"
+    },
+    {
+      "id": "gift_closed",
+      "svg": "Gifts/gift_closed.svg",
+      "sha256": "7e29e4954db06b080ea496b75dc464b998fcf7960ef24bcad4fa50766d3f2cde"
+    },
+    {
+      "id": "gift_open",
+      "svg": "Gifts/gift_open.svg",
+      "sha256": "80435b7f1bd385fb6e14fded5c1aaba196f1fc9fc9d221301f9436f3d2fc01f5"
+    },
+    {
+      "id": "gift_parachute",
+      "svg": "Gifts/gift_parachute.svg",
+      "sha256": "4848ae6e30e01b3eb1c0d5c29687995b54475fce557e9b147594f027a2922e57"
+    },
+    {
+      "id": "snowflake_icon",
+      "svg": "UI/snowflake_icon.svg",
+      "sha256": "1e7193d4a1c555783643fe10a2ee19ce07f5a11f9109a0eabbde3e1765ddb666"
+    },
+    {
+      "id": "tree_bare",
+      "svg": "World/tree_bare.svg",
+      "sha256": "3110b2553965557df0074fff072c7be8ff71451f46b9937cf2e14a4d55eadead"
+    },
+    {
+      "id": "tree_topper_gold",
+      "svg": "World/tree_topper_gold.svg",
+      "sha256": "f1dc81be516f136e748b5064d991d634f0d5171b34d2ca9a7a42a00222712ae1"
+    },
+    {
+      "id": "tree_balls_gold",
+      "svg": "World/tree_balls_gold.svg",
+      "sha256": "9743b7befbaa37d934f6567097ec17f191d63e083a6fe3110a3a8a67e8b7c6bb"
+    },
+    {
+      "id": "tree_string_multi",
+      "svg": "World/tree_string_multi.svg",
+      "sha256": "d0fcdff2f9868894dc2e04f644af88fd4e33198b232cccf2b85fd8d187511623"
+    }
+  ]
+}

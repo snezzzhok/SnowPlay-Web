@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10282e">
+  <meta name="description" content="SnowPlay — маленькая зима в твоём браузере. Снег, Санта и новогодние истории без установки.">
+  <title>SnowPlay — маленькая зима</title>
+  <link rel="icon" href="./assets/UI/snowflake_icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><img src="./assets/UI/snowflake_icon.svg" width="30" height="30" alt="">SnowPlay<span>маленькая зима</span></a><button id="pause" aria-pressed="false">Пауза</button></header>
+  <main class="layout">
+    <section class="scene" id="scene" aria-label="Интерактивная зимняя сцена">
+      <div class="sky-caption"><span class="eyebrow">ТВОЙ МАЛЕНЬКИЙ ЗИМНИЙ МИР</span><h1>Пусть немного<br>идёт снег.</h1><p>Никуда не спешить. Просто посмотреть.</p></div>
+      <div class="moon" aria-hidden="true"></div><div class="ridge ridge-back" aria-hidden="true"></div><div class="ridge ridge-front" aria-hidden="true"></div>
+      <canvas id="world" aria-label="Снег, ёлка, снеговик и анимированные персонажи"></canvas>
+      <div class="sample-window" id="sample-window"><div class="window-bar"><button id="close-window" aria-label="Убрать демонстрационное окно"></button><i></i><i></i><span>Тихая минута</span></div><div class="window-body"><img src="./assets/UI/snowflake_icon.svg" width="32" height="32" alt=""><p>За окном — зима.<br>Здесь — немного спокойствия.</p><small>Это окошко можно перетаскивать</small></div></div>
+      <div class="scene-note" id="scene-note" hidden>Подарок открывается одним нажатием</div>
+      <div class="countdown" id="countdown" hidden></div>
+      <button class="gift-hit" id="gift-hit" hidden aria-label="Открыть подарок"></button>
+      <div class="loading" id="loading" role="status">Зажигаем зимний свет…</div>
+      <div class="scene-bottom"><span><b class="live-dot"></b> Живёт в твоём браузере</span><button id="show-window" hidden>Вернуть окошко</button><span id="live-fps" aria-live="off">— FPS</span></div>
+    </section>
+    <aside class="panel" aria-label="Пульт управления">
+      <div class="panel-intro"><span class="eyebrow">ПУЛЬТ УПРАВЛЕНИЯ</span><h2>Настрой свою зиму</h2><p>Немного снега. Пара маленьких историй.</p></div>
+      <section class="control-section"><h3>01 <span>Снег</span></h3>
+        <label class="range-label" for="amount">Количество <output id="amount-value">35%</output></label><input id="amount" type="range" min="0" max="100" step="1" value="35">
+        <label class="range-label" for="speed">Скорость <output id="speed-value">1×</output></label><input id="speed" type="range" min="25" max="250" step="5" value="100">
+        <div class="wind-row"><div><label for="wind">Направление</label><output id="wind-value">Прямо</output></div><div class="wind-compass" id="wind-compass"><div class="glass-plane"></div><div class="wind-needle" id="wind-needle"></div></div></div>
+        <input id="wind" type="range" min="-90" max="90" step="1" value="0" aria-label="Направление снега от минус 90 до 90 градусов">
+        <label class="toggle"><span>Снег на окошке</span><input id="window-snow" type="checkbox"></label>
+      </section>
+      <section class="control-section"><h3>02 <span>Маленькие истории</span></h3><div class="story-buttons">
+        <button class="story" data-action="santa"><img src="./assets/Santa/santa_sleigh.svg" width="68" height="48" alt=""><span>Вызвать Санту<small>С подарком, конечно</small></span><b>↗</b></button>
+        <button class="story" data-action="plow"><img src="./assets/Snowplow/snowplow_complete.svg" width="68" height="48" alt=""><span>Снегоуборщик<small>Наведёт порядок в сугробах</small></span><b>→</b></button>
+      </div></section>
+      <section class="control-section"><h3>03 <span>Ёлка и снеговик</span></h3><div class="button-grid"><button data-action="tree">Поставить ёлку</button><button data-action="decorate">Украсить</button><button data-action="gifts">Подарки под ёлку</button><button data-action="cut">Срубить ёлку</button><button data-action="snowman">Слепить снеговика</button><button data-action="throw">Бросить снежок в снеговика</button></div></section>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <div class="panel-footer"><button id="reset" class="text-button">Сбросить настройки</button><details id="performance"><summary>Проверка плавности</summary><p>24 секунды: максимум снега, Санта и снегоуборщик одновременно. Оставь вкладку открытой. Настройки восстановятся после замера.</p><button id="benchmark">Начать замер</button><button id="export" hidden>Скачать результат</button><output id="benchmark-result"></output><label class="device-label" for="device-label">Устройство (для отчёта)</label><input id="device-label" type="text" maxlength="80" placeholder="Например: iPhone 15, Safari"></details><p class="local-note">Настройки сохраняются только в этом браузере.<br>Телефон управляет своей сценой. Синхронизации экранов нет.</p></div>
+    </aside>
+  </main>
+  <noscript><p class="noscript">Включи JavaScript, чтобы запустить зимнюю сцену.</p></noscript>
+</body>
+</html>
