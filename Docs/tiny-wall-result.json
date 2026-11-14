@@ -1,0 +1,10 @@
+{
+  "largeCastleRendered" : false,
+  "opaqueClumpDiameterPt" : 11,
+  "opaqueWallWidthPt" : 20,
+  "passed" : true,
+  "scope" : "actual controllers and native Core Graphics render in an isolated scene",
+  "sequentialPlacement" : true,
+  "snowMass" : 190.06635554218246,
+  "twoClumps" : true
+}

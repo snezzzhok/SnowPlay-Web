@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "packagedAppOutsideCheckout": true,
+  "resourceEnvironmentOverride": false,
+  "registeredPNGPreviews": 126,
+  "snowplowAlias": true,
+  "newModelsPresent": true,
+  "liveGPUFramesTested": false
+}

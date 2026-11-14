@@ -1,0 +1,20 @@
+name: macOS build and tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  native:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift unit tests
+        run: swift test
+      - name: Native Xcode project
+        run: xcodebuild -project SnowPlay.xcodeproj -scheme SnowPlay -configuration Debug -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO build test
+      - name: Package ad-hoc application
+        run: Scripts/package.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SnowPlay-macOS
+          path: dist/SnowPlay-macOS.zip

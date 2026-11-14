@@ -1,0 +1,268 @@
+{
+  "accessibility": true,
+  "brushedSnowVolume": 6718.540803650865,
+  "characters": [],
+  "config": {
+    "accumulationHeight": 8,
+    "automaticCleaning": 0,
+    "bulbBrightness": 0.95,
+    "bulbColor": "pastel",
+    "bulbSize": 10,
+    "bulbSpacing": 20,
+    "dockHats": {
+      "file:///Applications/ChatGPT.app/": "blue",
+      "file:///Applications/Google%20Chrome.app/": "green",
+      "file:///Applications/Telegram.app/": "red",
+      "file:///Applications/Visual%20Studio%20Code.app/": "blue",
+      "file:///System/Library/CoreServices/Finder.app/": "red"
+    },
+    "dockSnow": false,
+    "floorWorldVersion": 1,
+    "fps": 60,
+    "frost": true,
+    "garland": true,
+    "garlandLights": true,
+    "garlandSag": 12,
+    "garlandTwinkle": true,
+    "groundHeight": 18,
+    "groundSnow": true,
+    "intensity": 1,
+    "interaction": false,
+    "lastDelivery": 816296936.481294,
+    "mascot": "none",
+    "maxParticles": 3600,
+    "mode": "play",
+    "placements": {
+      "1": {
+        "garland": [
+          {
+            "x": 0.4801486545138889,
+            "y": 0.06538194444444445
+          },
+          {
+            "x": 0.5473275078667534,
+            "y": 0.06098958333333333
+          }
+        ],
+        "garlandTarget": "desktop",
+        "ornaments": [
+          {
+            "anchor": {
+              "x": 0.41,
+              "y": 0.43
+            },
+            "hidden": false,
+            "id": "tree_slot_0"
+          },
+          {
+            "anchor": {
+              "x": 0.61,
+              "y": 0.59
+            },
+            "hidden": false,
+            "id": "tree_slot_1"
+          },
+          {
+            "anchor": {
+              "x": 0.38,
+              "y": 0.73
+            },
+            "hidden": false,
+            "id": "tree_slot_2"
+          }
+        ],
+        "snowman": {
+          "x": 0.48074273003472223,
+          "y": 0.9523292286418011
+        },
+        "snowmanRadii": [
+          10.5,
+          8,
+          6
+        ],
+        "tree": {
+          "x": 0.4118022918701172,
+          "y": 0.7015526496039497
+        }
+      }
+    },
+    "preserveSnowman": true,
+    "reducedMotion": false,
+    "snow": true,
+    "snowSpeed": 0.8,
+    "tree": true,
+    "treeBalls": "none",
+    "treeGarland": "none",
+    "treeSize": "medium",
+    "treeStar": "none",
+    "treeToy1": "none",
+    "treeToy2": "none",
+    "treeToy3": "none",
+    "windAngle": -21,
+    "windowEffectDuration": 4,
+    "windowSnow": true,
+    "windStrength": 0.6,
+    "yetiEnabled": true
+  },
+  "deliveryState": {
+    "flying": false,
+    "giftWaiting": true,
+    "pending": false
+  },
+  "diagnostic": "\u0419\u0435\u0442\u0438 \u0441\u0442\u0440\u043e\u0438\u0442 \u0441\u043d\u0435\u0436\u043d\u044b\u0439 \u0437\u0430\u043c\u043e\u043a.",
+  "displays": 1,
+  "dockDetected": true,
+  "dockIcons": 0,
+  "dockSnowVolume": 0,
+  "dockVisible": false,
+  "editor": "none",
+  "fullscreenSuppressed": false,
+  "paused": false,
+  "performance": {
+    "battery": false,
+    "cpuAverageSinceLaunch": 66.89937648364045,
+    "cpuPercentOneCore": 92.29588473977196,
+    "gpuMeasured": false,
+    "p95FrameMS": 35.84350005257875,
+    "particles": 2448,
+    "physicalFootprintMB": 179.17437744140625,
+    "residentMB": 43.125,
+    "simulating": true,
+    "simulationHz": 30.476832260979975,
+    "targetFPS": 30,
+    "uptimeSeconds": 163.16867620835546
+  },
+  "reducedMotionActive": false,
+  "sculpting": {
+    "active": false,
+    "ready": false,
+    "seeded": false
+  },
+  "snowWorld": {
+    "carriedMass": 0,
+    "exportedMass": 0,
+    "groundMass": 29722.35980025582,
+    "meltedMass": 0,
+    "pendingMass": 0
+  },
+  "surfaceIDs": [
+    "ground-1",
+    "window-458-14935",
+    "window-483-43773",
+    "window-483-43860",
+    "window-96160-14889",
+    "window-97377-41294"
+  ],
+  "systemPaused": false,
+  "windowEffects": [],
+  "windowEvents": {
+    "axAttached": 5,
+    "axListUnavailable": 4,
+    "axNotification": 63,
+    "created": 5,
+    "minimized": 1,
+    "moved": 6,
+    "resized": 6,
+    "visibilityLost": 2
+  },
+  "windows": 5,
+  "windowSnowStates": [
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 774,
+        "width": 1206,
+        "x": 78,
+        "y": 56
+      },
+      "id": "window-96160-14889",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowOrigin": [
+        80,
+        56.5
+      ],
+      "snowVolume": 6150.523434991447,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 175,
+        "width": 240,
+        "x": 992,
+        "y": 256
+      },
+      "id": "window-483-43860",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowOrigin": [
+        994,
+        256.5
+      ],
+      "snowVolume": 0,
+      "visible": false
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 410,
+        "width": 373,
+        "x": 788,
+        "y": 556
+      },
+      "id": "window-97377-41294",
+      "phase": "minimized",
+      "restoreProgress": 1,
+      "snowOrigin": [
+        790,
+        556.5
+      ],
+      "snowVolume": 0,
+      "visible": false
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 575,
+        "width": 1137,
+        "x": 106,
+        "y": 96
+      },
+      "id": "window-458-14935",
+      "phase": "inactive",
+      "restoreProgress": 1,
+      "snowOrigin": [
+        108,
+        96.5
+      ],
+      "snowVolume": 5838.2853113061165,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 761,
+        "width": 920,
+        "x": 320,
+        "y": 212
+      },
+      "id": "window-483-43773",
+      "phase": "inactive",
+      "restoreProgress": 1,
+      "snowOrigin": [
+        322,
+        212.5
+      ],
+      "snowVolume": 609.6439030221525,
+      "visible": true
+    }
+  ],
+  "yetiGames": {
+    "1": {
+      "castleMass": 1800,
+      "castleProgress": 1,
+      "lastGame": "castle"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "presentedGPUFramesMeasured" : false,
+  "scope" : "Visible own 900x540pt test window on real macOS, same native SpriteKit\/controllers\/physics; window tracking and desktop free-area policy are not measured here. FPS values are native update callbacks, not GPU presentation timestamps.",
+  "stages" : {
+    "duel" : {
+      "acceptedFires" : 2,
+      "brushedSnowMass" : 0,
+      "duel" : {
+
+      },
+      "mainTickP95WorkMS" : 5.9023333378718235,
+      "performance" : {
+        "battery" : false,
+        "cpuAverageSinceLaunch" : 33.978876890175783,
+        "cpuPercentOneCore" : 40.474102397490512,
+        "gpuMeasured" : false,
+        "p95FrameMS" : 38.223166666284669,
+        "particles" : 1440,
+        "physicalFootprintMB" : 127.940185546875,
+        "residentMB" : 64.921875,
+        "simulating" : true,
+        "simulationHz" : 41.702326888839558,
+        "targetFPS" : 60,
+        "uptimeSeconds" : 87.301069708330033
+      },
+      "pointerFires" : 7,
+      "santaAndPlowOverlap" : false,
+      "scene" : {
+        "callbackFPS" : 41.542984875138551,
+        "frames" : 1068,
+        "gpuMeasured" : false,
+        "measurement" : "native draw\/update callbacks; not presented GPU frames",
+        "p95IntervalMS" : 45.15841666579945,
+        "p95WorkMS" : 0
+      },
+      "seconds" : 25.773007666663034
+    },
+    "peak" : {
+      "acceptedFires" : 2,
+      "brushedSnowMass" : 151.45736927990572,
+      "duel" : {
+
+      },
+      "mainTickP95WorkMS" : 7.4610416631912813,
+      "performance" : {
+        "battery" : false,
+        "cpuAverageSinceLaunch" : 35.152638917138923,
+        "cpuPercentOneCore" : 24.648415648967259,
+        "gpuMeasured" : false,
+        "p95FrameMS" : 38.291500000923406,
+        "particles" : 1440,
+        "physicalFootprintMB" : 97.862060546875,
+        "residentMB" : 56.34375,
+        "simulating" : true,
+        "simulationHz" : 41.139509944864194,
+        "targetFPS" : 60,
+        "uptimeSeconds" : 106.53354670832778
+      },
+      "pointerFires" : 7,
+      "santaAndPlowOverlap" : true,
+      "scene" : {
+        "callbackFPS" : 43.197171368243403,
+        "frames" : 801,
+        "gpuMeasured" : false,
+        "measurement" : "native draw\/update callbacks; not presented GPU frames",
+        "p95IntervalMS" : 41.103499999735504,
+        "p95WorkMS" : 0
+      },
+      "seconds" : 19.491052458331978
+    }
+  }
+}

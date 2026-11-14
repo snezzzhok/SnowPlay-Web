@@ -1,0 +1,949 @@
+{
+  "assets": [
+    {
+      "id": "yeti_body",
+      "category": "Characters",
+      "svg": "World/yeti_body.svg",
+      "preview": "Prepared/yeti_body@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_head",
+      "category": "Characters",
+      "svg": "World/yeti_head.svg",
+      "preview": "Prepared/yeti_head@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_arm_left",
+      "category": "Characters",
+      "svg": "World/yeti_arm_left.svg",
+      "preview": "Prepared/yeti_arm_left@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_arm_right",
+      "category": "Characters",
+      "svg": "World/yeti_arm_right.svg",
+      "preview": "Prepared/yeti_arm_right@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_foot_left",
+      "category": "Characters",
+      "svg": "World/yeti_foot_left.svg",
+      "preview": "Prepared/yeti_foot_left@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_foot_right",
+      "category": "Characters",
+      "svg": "World/yeti_foot_right.svg",
+      "preview": "Prepared/yeti_foot_right@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "yeti_axe",
+      "category": "Characters",
+      "svg": "World/yeti_axe.svg",
+      "preview": "Prepared/yeti_axe@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "authorship": "Original SnowPlay vector art for the Interactive Winter World brief"
+    },
+    {
+      "id": "tree_toy_0",
+      "category": "Christmas",
+      "svg": "World/tree_toy_0.svg",
+      "preview": "Prepared/tree_toy_0@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 0/1"
+    },
+    {
+      "id": "tree_toy_1",
+      "category": "Christmas",
+      "svg": "World/tree_toy_1.svg",
+      "preview": "Prepared/tree_toy_1@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 2/3"
+    },
+    {
+      "id": "tree_toy_2",
+      "category": "Christmas",
+      "svg": "World/tree_toy_2.svg",
+      "preview": "Prepared/tree_toy_2@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 4/5"
+    },
+    {
+      "id": "tree_toy_3",
+      "category": "Christmas",
+      "svg": "World/tree_toy_3.svg",
+      "preview": "Prepared/tree_toy_3@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 6/7"
+    },
+    {
+      "id": "tree_toy_4",
+      "category": "Christmas",
+      "svg": "World/tree_toy_4.svg",
+      "preview": "Prepared/tree_toy_4@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 8/9"
+    },
+    {
+      "id": "tree_toy_5",
+      "category": "Christmas",
+      "svg": "World/tree_toy_5.svg",
+      "preview": "Prepared/tree_toy_5@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 10/11"
+    },
+    {
+      "id": "tree_toy_6",
+      "category": "Christmas",
+      "svg": "World/tree_toy_6.svg",
+      "preview": "Prepared/tree_toy_6@2x.png",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "size": {
+        "width": 22,
+        "height": 24
+      },
+      "authorship": "Derived losslessly from Christmas/tree_ornaments.svg, circles 12/13"
+    },
+    {
+      "id": "fairy_bulb_red",
+      "category": "Decorations",
+      "svg": "World/fairy_bulb_red.svg",
+      "preview": "Prepared/fairy_bulb_red@2x.png",
+      "size": {
+        "width": 48,
+        "height": 52
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "fairy_bulb_green",
+      "category": "Decorations",
+      "svg": "World/fairy_bulb_green.svg",
+      "preview": "Prepared/fairy_bulb_green@2x.png",
+      "size": {
+        "width": 48,
+        "height": 52
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "fairy_bulb_gold",
+      "category": "Decorations",
+      "svg": "World/fairy_bulb_gold.svg",
+      "preview": "Prepared/fairy_bulb_gold@2x.png",
+      "size": {
+        "width": 48,
+        "height": 52
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "fairy_bulb_blue",
+      "category": "Decorations",
+      "svg": "World/fairy_bulb_blue.svg",
+      "preview": "Prepared/fairy_bulb_blue@2x.png",
+      "size": {
+        "width": 48,
+        "height": 52
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "fairy_bulb_purple",
+      "category": "Decorations",
+      "svg": "World/fairy_bulb_purple.svg",
+      "preview": "Prepared/fairy_bulb_purple@2x.png",
+      "size": {
+        "width": 48,
+        "height": 52
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "hat_knit_red",
+      "category": "Decorations",
+      "svg": "World/hat_knit_red.svg",
+      "preview": "Prepared/hat_knit_red@2x.png",
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "authorship": "Patterned derivative of supplied hat_red.svg; original preserved"
+    },
+    {
+      "id": "hat_knit_green",
+      "category": "Decorations",
+      "svg": "World/hat_knit_green.svg",
+      "preview": "Prepared/hat_knit_green@2x.png",
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "authorship": "Patterned derivative of supplied hat_green.svg; original preserved"
+    },
+    {
+      "id": "hat_knit_blue",
+      "category": "Decorations",
+      "svg": "World/hat_knit_blue.svg",
+      "preview": "Prepared/hat_knit_blue@2x.png",
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "authorship": "Patterned derivative of supplied hat_blue.svg; original preserved"
+    },
+    {
+      "id": "glove_cursor",
+      "category": "UI",
+      "svg": "World/glove_cursor.svg",
+      "preview": "Prepared/glove_cursor@2x.png",
+      "size": {
+        "width": 60,
+        "height": 60
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_bare",
+      "category": "Christmas",
+      "svg": "World/tree_bare.svg",
+      "preview": "Prepared/tree_bare@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Bare evergreen derivative of supplied tree_foliage.svg"
+    },
+    {
+      "id": "tree_topper_gold",
+      "category": "Christmas",
+      "svg": "World/tree_topper_gold.svg",
+      "preview": "Prepared/tree_topper_gold@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_topper_ice",
+      "category": "Christmas",
+      "svg": "World/tree_topper_ice.svg",
+      "preview": "Prepared/tree_topper_ice@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_topper_ruby",
+      "category": "Christmas",
+      "svg": "World/tree_topper_ruby.svg",
+      "preview": "Prepared/tree_topper_ruby@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_balls_red",
+      "category": "Christmas",
+      "svg": "World/tree_balls_red.svg",
+      "preview": "Prepared/tree_balls_red@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_balls_gold",
+      "category": "Christmas",
+      "svg": "World/tree_balls_gold.svg",
+      "preview": "Prepared/tree_balls_gold@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_balls_ice",
+      "category": "Christmas",
+      "svg": "World/tree_balls_ice.svg",
+      "preview": "Prepared/tree_balls_ice@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_string_multi",
+      "category": "Christmas",
+      "svg": "World/tree_string_multi.svg",
+      "preview": "Prepared/tree_string_multi@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_string_warm",
+      "category": "Christmas",
+      "svg": "World/tree_string_warm.svg",
+      "preview": "Prepared/tree_string_warm@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_string_ice",
+      "category": "Christmas",
+      "svg": "World/tree_string_ice.svg",
+      "preview": "Prepared/tree_string_ice@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_charm_bauble",
+      "category": "Christmas",
+      "svg": "World/tree_charm_bauble.svg",
+      "preview": "Prepared/tree_charm_bauble@2x.png",
+      "size": {
+        "width": 40,
+        "height": 42
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_charm_candy",
+      "category": "Christmas",
+      "svg": "World/tree_charm_candy.svg",
+      "preview": "Prepared/tree_charm_candy@2x.png",
+      "size": {
+        "width": 40,
+        "height": 42
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "tree_charm_flake",
+      "category": "Christmas",
+      "svg": "World/tree_charm_flake.svg",
+      "preview": "Prepared/tree_charm_flake@2x.png",
+      "size": {
+        "width": 40,
+        "height": 42
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "authorship": "Original SnowPlay floor-world vector art"
+    },
+    {
+      "id": "snow_castle",
+      "category": "Characters",
+      "svg": "World/snow_castle.png",
+      "preview": "Prepared/snow_castle@2x.png",
+      "size": {
+        "width": 1536,
+        "height": 1024
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9169921875
+      },
+      "authorship": "Original imagegen transparent raster; prompt/provenance in Docs/Floor-World-Revision.md"
+    },
+    {
+      "id": "gnome_body_red",
+      "category": "Characters",
+      "svg": "World/gnome_body_red.svg",
+      "preview": "Prepared/gnome_body_red@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_body_green",
+      "category": "Characters",
+      "svg": "World/gnome_body_green.svg",
+      "preview": "Prepared/gnome_body_green@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_body_blue",
+      "category": "Characters",
+      "svg": "World/gnome_body_blue.svg",
+      "preview": "Prepared/gnome_body_blue@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_head",
+      "category": "Characters",
+      "svg": "World/gnome_head.svg",
+      "preview": "Prepared/gnome_head@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_hat",
+      "category": "Characters",
+      "svg": "World/gnome_hat.svg",
+      "preview": "Prepared/gnome_hat@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_foot_left",
+      "category": "Characters",
+      "svg": "World/gnome_foot_left.svg",
+      "preview": "Prepared/gnome_foot_left@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_arm_left",
+      "category": "Characters",
+      "svg": "World/gnome_arm_left.svg",
+      "preview": "Prepared/gnome_arm_left@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_foot_right",
+      "category": "Characters",
+      "svg": "World/gnome_foot_right.svg",
+      "preview": "Prepared/gnome_foot_right@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_arm_right",
+      "category": "Characters",
+      "svg": "World/gnome_arm_right.svg",
+      "preview": "Prepared/gnome_arm_right@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "gnome_palm",
+      "category": "Characters",
+      "svg": "World/gnome_palm.svg",
+      "preview": "Prepared/gnome_palm@2x.png",
+      "size": {
+        "width": 18,
+        "height": 18
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "yeti_palm",
+      "category": "Characters",
+      "svg": "World/yeti_palm.svg",
+      "preview": "Prepared/yeti_palm@2x.png",
+      "size": {
+        "width": 20,
+        "height": 20
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "yeti_emotion_happy",
+      "category": "Characters",
+      "svg": "World/yeti_emotion_happy.svg",
+      "preview": "Prepared/yeti_emotion_happy@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "yeti_emotion_surprised",
+      "category": "Characters",
+      "svg": "World/yeti_emotion_surprised.svg",
+      "preview": "Prepared/yeti_emotion_surprised@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "yeti_emotion_tired",
+      "category": "Characters",
+      "svg": "World/yeti_emotion_tired.svg",
+      "preview": "Prepared/yeti_emotion_tired@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "yeti_emotion_angry",
+      "category": "Characters",
+      "svg": "World/yeti_emotion_angry.svg",
+      "preview": "Prepared/yeti_emotion_angry@2x.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_body",
+      "category": "Characters",
+      "svg": "World/truck_body.svg",
+      "preview": "Prepared/truck_body@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_platform",
+      "category": "Characters",
+      "svg": "World/truck_platform.svg",
+      "preview": "Prepared/truck_platform@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_wheel_front",
+      "category": "Characters",
+      "svg": "World/truck_wheel_front.svg",
+      "preview": "Prepared/truck_wheel_front@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_wheel_rear",
+      "category": "Characters",
+      "svg": "World/truck_wheel_rear.svg",
+      "preview": "Prepared/truck_wheel_rear@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_lights",
+      "category": "Characters",
+      "svg": "World/truck_lights.svg",
+      "preview": "Prepared/truck_lights@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "truck_ribbon",
+      "category": "Characters",
+      "svg": "World/truck_ribbon.svg",
+      "preview": "Prepared/truck_ribbon@2x.png",
+      "size": {
+        "width": 320,
+        "height": 180
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "snow_clump_0",
+      "category": "Characters",
+      "svg": "World/snow_clump_0.svg",
+      "preview": "Prepared/snow_clump_0@2x.png",
+      "size": {
+        "width": 48,
+        "height": 36
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "snow_clump_1",
+      "category": "Characters",
+      "svg": "World/snow_clump_1.svg",
+      "preview": "Prepared/snow_clump_1@2x.png",
+      "size": {
+        "width": 48,
+        "height": 36
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Original SnowPlay Living Winter vector components"
+    },
+    {
+      "id": "snowman_face_closed",
+      "category": "Snowman",
+      "svg": "World/snowman_face_closed.svg",
+      "preview": "Prepared/snowman_face_closed@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Blink variant derived from supplied standalone snowman_face vector"
+    },
+    {
+      "id": "tree_stem",
+      "category": "Christmas",
+      "svg": "World/tree_stem.svg",
+      "preview": "Prepared/tree_stem@2x.png",
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "authorship": "Standalone trunk extracted from supplied vector; original source retained"
+    },
+    {
+      "id": "shovel_cursor",
+      "category": "UI",
+      "svg": "World/shovel_cursor.svg",
+      "preview": "Prepared/shovel_cursor@2x.png",
+      "size": {
+        "width": 60,
+        "height": 60
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "authorship": "Original SnowPlay cursor, explicitly requested for manual snowman sculpting"
+    }
+  ]
+}

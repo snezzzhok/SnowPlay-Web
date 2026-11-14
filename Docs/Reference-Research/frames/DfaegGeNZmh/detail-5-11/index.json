@@ -1,0 +1,145 @@
+[
+  {
+    "frame": 150,
+    "pts": 5.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-001.png"
+  },
+  {
+    "frame": 165,
+    "pts": 5.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-002.png"
+  },
+  {
+    "frame": 180,
+    "pts": 6.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-003.png"
+  },
+  {
+    "frame": 195,
+    "pts": 6.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-004.png"
+  },
+  {
+    "frame": 210,
+    "pts": 7.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-005.png"
+  },
+  {
+    "frame": 225,
+    "pts": 7.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-006.png"
+  },
+  {
+    "frame": 240,
+    "pts": 8.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-007.png"
+  },
+  {
+    "frame": 255,
+    "pts": 8.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-008.png"
+  },
+  {
+    "frame": 270,
+    "pts": 9.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-009.png"
+  },
+  {
+    "frame": 285,
+    "pts": 9.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-010.png"
+  },
+  {
+    "frame": 300,
+    "pts": 10.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-011.png"
+  },
+  {
+    "frame": 315,
+    "pts": 10.5,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-012.png"
+  },
+  {
+    "frame": 330,
+    "pts": 11.0,
+    "crop": [
+      0,
+      700,
+      1080,
+      1220
+    ],
+    "file": "Docs/Reference-Research/frames/DfaegGeNZmh/detail-5-11/frame-013.png"
+  }
+]

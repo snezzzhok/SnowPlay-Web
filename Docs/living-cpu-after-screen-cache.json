@@ -1,0 +1,32 @@
+{
+  "build" : "Release",
+  "gpuMeasured" : false,
+  "modes" : {
+    "balanced" : {
+      "maxCPUWorkMS" : 21.370250000472879,
+      "meanCPUWorkMS" : 17.06243501983495,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 18.9153333340073,
+      "particles" : 646,
+      "SantaAndPlowOverlapped" : false
+    },
+    "focus" : {
+      "maxCPUWorkMS" : 33.953250000195112,
+      "meanCPUWorkMS" : 3.4840054563314231,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 4.03816666585044,
+      "particles" : 45,
+      "SantaAndPlowOverlapped" : false
+    },
+    "play" : {
+      "maxCPUWorkMS" : 56.239916666527279,
+      "meanCPUWorkMS" : 38.054946428552022,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 46.558666666896897,
+      "particles" : 2400,
+      "SantaAndPlowOverlapped" : true
+    }
+  },
+  "presentedFPSMeasured" : false,
+  "scope" : "Isolated own native scene, 1440x900 pt \/ 2880x1800 Retina bitmap. Simulation + Core Graphics draw work only. No display wait, GPU presentation, native live FPS, window tracker or WebKit CPU included."
+}

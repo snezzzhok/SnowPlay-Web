@@ -1,0 +1,179 @@
+{
+  "accessibility": true,
+  "brushedSnowVolume": 0,
+  "characters": [],
+  "config": {
+    "accumulationHeight": 5,
+    "automaticCleaning": 0,
+    "automaticSnowman": true,
+    "bulbBrightness": 0.95,
+    "bulbColor": "pastel",
+    "bulbSize": 10,
+    "bulbSpacing": 20,
+    "dockHats": {},
+    "dockSnow": false,
+    "floorWorldVersion": 1,
+    "fps": 60,
+    "frost": false,
+    "garland": false,
+    "garlandLights": true,
+    "garlandSag": 12,
+    "garlandTwinkle": true,
+    "groundHeight": 42,
+    "groundSnow": true,
+    "intensity": 0.35,
+    "interaction": false,
+    "livingWorldVersion": 1,
+    "mascot": "none",
+    "maxParticles": 3600,
+    "mode": "balanced",
+    "placements": {},
+    "preserveSnowman": true,
+    "reducedMotion": false,
+    "snow": true,
+    "snowSize": 2.5,
+    "snowSpeed": 1,
+    "tree": false,
+    "treeBalls": "none",
+    "treeGarland": "none",
+    "treeSize": "medium",
+    "treeStar": "none",
+    "treeToy1": "none",
+    "treeToy2": "none",
+    "treeToy3": "none",
+    "windAngle": 0,
+    "windowEffectDuration": 4,
+    "windowSnow": false,
+    "windStrength": 0.12,
+    "yetiEnabled": false
+  },
+  "deliveryState": {
+    "flying": false,
+    "giftWaiting": false,
+    "pending": false
+  },
+  "diagnostic": "",
+  "displays": 1,
+  "dockDetected": false,
+  "dockIcons": 0,
+  "dockSnowVolume": 0,
+  "dockVisible": false,
+  "editor": "none",
+  "fullscreenSuppressed": false,
+  "living": {
+    "activity": {},
+    "automaticSanta": false,
+    "automaticSnowman": false,
+    "busy": false,
+    "characterSnowExported": 0,
+    "duel": {},
+    "treeDelivery": []
+  },
+  "looseSnowballs": 0,
+  "paused": false,
+  "performance": {
+    "battery": true,
+    "cpuAverageSinceLaunch": 40.688474892842905,
+    "cpuPercentOneCore": 15.497374599430353,
+    "gpuMeasured": false,
+    "p95FrameMS": 35.097416664939374,
+    "particles": 646,
+    "physicalFootprintMB": 232.40936279296875,
+    "residentMB": 159.28125,
+    "simulating": true,
+    "simulationHz": 29.53971129553725,
+    "targetFPS": 30,
+    "uptimeSeconds": 3.2957072083227104
+  },
+  "reducedMotionActive": false,
+  "rendering": [
+    {
+      "desktop": {
+        "callbackFPS": 19.02181000794898,
+        "frames": 78,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 101.59708333958406,
+        "p95WorkMS": 0.15833333600312471
+      },
+      "display": "1",
+      "interactive": {
+        "callbackFPS": 0,
+        "frames": 4,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 11.731208331184462,
+        "p95WorkMS": 0.05058333044871688
+      },
+      "spriteKit": {
+        "callbackFPS": 27.0741357522542,
+        "frames": 109,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 51.07541667530313,
+        "p95WorkMS": 0
+      },
+      "windowCaps": {
+        "callbackFPS": 0,
+        "frames": 1,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 0,
+        "p95WorkMS": 0.020083331037312746
+      }
+    }
+  ],
+  "sculpting": {
+    "active": false,
+    "balls": 0,
+    "limit": 5,
+    "ready": false,
+    "seeded": false,
+    "snowmen": 0
+  },
+  "snowmen": [],
+  "snowWorld": {
+    "carriedMass": 0,
+    "exportedMass": 0,
+    "groundMass": 3557.8033408830884,
+    "meltedMass": 0,
+    "pendingMass": 0
+  },
+  "surfaceIDs": [
+    "ground-1"
+  ],
+  "systemPaused": false,
+  "tracking": {
+    "dockFrameQueries": 0,
+    "dockInventoryScans": 0
+  },
+  "windowEffects": [],
+  "windowEvents": {
+    "created": 1
+  },
+  "windows": 1,
+  "windowSnowStates": [
+    {
+      "accessibilityLinked": false,
+      "frame": {
+        "height": 651,
+        "width": 1199,
+        "x": 104,
+        "y": 106
+      },
+      "id": "window-747-232",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowOrigin": [],
+      "snowVolume": 0,
+      "visible": true
+    }
+  ],
+  "yetiGames": {
+    "1": {
+      "castleMass": 0,
+      "castleProgress": 0,
+      "lastGame": ""
+    }
+  }
+}

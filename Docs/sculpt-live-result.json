@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "unseededSnowStock": true,
+  "secondsUntilSeeded": 0.44,
+  "hiddenDockObserved": false,
+  "cancelClearsSurface": true,
+  "samples": [
+    {
+      "sculpting": {
+        "active": true,
+        "ready": false,
+        "seeded": false
+      },
+      "dockVisible": true,
+      "surfaceIDs": [
+        "dock",
+        "sculpt-1",
+        "window-458-14935"
+      ]
+    },
+    {
+      "sculpting": {
+        "active": true,
+        "ready": false,
+        "seeded": false
+      },
+      "dockVisible": true,
+      "surfaceIDs": [
+        "dock",
+        "sculpt-1",
+        "window-458-14935"
+      ]
+    },
+    {
+      "sculpting": {
+        "active": true,
+        "ready": false,
+        "seeded": true
+      },
+      "dockVisible": true,
+      "surfaceIDs": [
+        "dock",
+        "sculpt-1",
+        "window-458-14935"
+      ]
+    }
+  ]
+}

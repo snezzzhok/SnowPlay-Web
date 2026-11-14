@@ -1,0 +1,1773 @@
+{
+  "project": "SnowPlay",
+  "version": "1.0.0",
+  "style": "Soft 2D Cartoon / Cute Winter Illustration",
+  "source": "Two user-provided concept images (style references, not embedded)",
+  "format": "standalone SVG + 2x PNG preview",
+  "coordinate_system": "SVG top-left; normalized anchors",
+  "excluded": [
+    "Mochi",
+    "Puffy",
+    "Bubi",
+    "snow on top edges of windows"
+  ],
+  "palette": {
+    "ink": "#35456D",
+    "white": "#FFFFFF",
+    "snow": "#F0F7FF",
+    "shadow": "#B6CDF7",
+    "red": "#F3484A",
+    "red_dark": "#CD334F",
+    "gold": "#FFCC4B",
+    "green": "#45C889",
+    "blue": "#5399FF",
+    "pink": "#FFA9B6",
+    "purple": "#A384F4",
+    "orange": "#FF983A"
+  },
+  "asset_count": 63,
+  "assets": [
+    {
+      "id": "snow_particle_1",
+      "category": "Snow",
+      "svg": "Snow/snow_particle_1.svg",
+      "preview": "Snow/snow_particle_1.png",
+      "viewBox": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "falling snowfall particle; opacity/size vary",
+      "animated_layers": [],
+      "notes": "Use mostly 1–3 pt onscreen"
+    },
+    {
+      "id": "snow_particle_2",
+      "category": "Snow",
+      "svg": "Snow/snow_particle_2.svg",
+      "preview": "Snow/snow_particle_2.png",
+      "viewBox": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "falling snowfall particle; opacity/size vary",
+      "animated_layers": [],
+      "notes": "Use mostly 1–3 pt onscreen"
+    },
+    {
+      "id": "snow_particle_3",
+      "category": "Snow",
+      "svg": "Snow/snow_particle_3.svg",
+      "preview": "Snow/snow_particle_3.png",
+      "viewBox": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "falling snowfall particle; opacity/size vary",
+      "animated_layers": [],
+      "notes": "Use mostly 1–3 pt onscreen"
+    },
+    {
+      "id": "snow_pile",
+      "category": "Snow",
+      "svg": "Snow/snow_pile.svg",
+      "preview": "Snow/snow_pile.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        110
+      ],
+      "size": {
+        "width": 256,
+        "height": 110
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.89
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snow accumulated on Dock; use clipped horizontal repeats",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snow_pile_small",
+      "category": "Snow",
+      "svg": "Snow/snow_pile_small.svg",
+      "preview": "Snow/snow_pile_small.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        110
+      ],
+      "size": {
+        "width": 256,
+        "height": 110
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.89
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "small remnant snow pile",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowball_small",
+      "category": "Snowman",
+      "svg": "Snowman/snowball_small.svg",
+      "preview": "Snowman/snowball_small.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snowman assembly and cursor rolling",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowball_medium",
+      "category": "Snowman",
+      "svg": "Snowman/snowball_medium.svg",
+      "preview": "Snowman/snowball_medium.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snowman assembly and cursor rolling",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowball_large",
+      "category": "Snowman",
+      "svg": "Snowman/snowball_large.svg",
+      "preview": "Snowman/snowball_large.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snowman assembly and cursor rolling",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_body",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_body.svg",
+      "preview": "Snowman/snowman_body.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "base snowman body",
+      "animated_layers": [
+        "bottom_sphere",
+        "middle_sphere",
+        "head_sphere"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "snowman_face",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_face.svg",
+      "preview": "Snowman/snowman_face.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "face to apply after three-sphere assembly",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_buttons",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_buttons.svg",
+      "preview": "Snowman/snowman_buttons.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "button details on snowman",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_scarf",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_scarf.svg",
+      "preview": "Snowman/snowman_scarf.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "scarf that appears after assembly",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_arms",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_arms.svg",
+      "preview": "Snowman/snowman_arms.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "two twig arms after assembly",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_hat",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_hat.svg",
+      "preview": "Snowman/snowman_hat.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "festive hat for snowman",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_complete",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_complete.svg",
+      "preview": "Snowman/snowman_complete.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "complete assembled snowman",
+      "animated_layers": [
+        "body",
+        "arms",
+        "scarf",
+        "buttons",
+        "face",
+        "hat"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "snowman_stage_1",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_stage_1.svg",
+      "preview": "Snowman/snowman_stage_1.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "assembly stage",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_stage_2",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_stage_2.svg",
+      "preview": "Snowman/snowman_stage_2.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "assembly stage",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowman_stage_3",
+      "category": "Snowman",
+      "svg": "Snowman/snowman_stage_3.svg",
+      "preview": "Snowman/snowman_stage_3.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "assembly stage",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowplow_body",
+      "category": "Snowplow",
+      "svg": "Snowplow/snowplow_body.svg",
+      "preview": "Snowplow/snowplow_body.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        230
+      ],
+      "size": {
+        "width": 320,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.79
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "plow chassis on animation track",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowplow_wheels",
+      "category": "Snowplow",
+      "svg": "Snowplow/snowplow_wheels.svg",
+      "preview": "Snowplow/snowplow_wheels.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        230
+      ],
+      "size": {
+        "width": 320,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "rotating wheels layer",
+      "animated_layers": [
+        "wheel_left",
+        "wheel_right"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "snowplow_blade",
+      "category": "Snowplow",
+      "svg": "Snowplow/snowplow_blade.svg",
+      "preview": "Snowplow/snowplow_blade.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        230
+      ],
+      "size": {
+        "width": 320,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.76,
+        "y": 0.78
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snow clearing blade; animate minor tilt",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowplow_beacon",
+      "category": "Snowplow",
+      "svg": "Snowplow/snowplow_beacon.svg",
+      "preview": "Snowplow/snowplow_beacon.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        230
+      ],
+      "size": {
+        "width": 320,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "blinking amber beacon",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "snowplow_complete",
+      "category": "Snowplow",
+      "svg": "Snowplow/snowplow_complete.svg",
+      "preview": "Snowplow/snowplow_complete.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        230
+      ],
+      "size": {
+        "width": 320,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snowplow with all parts",
+      "animated_layers": [
+        "wheels",
+        "chassis",
+        "blade",
+        "beacon"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tree_foliage",
+      "category": "Christmas",
+      "svg": "Christmas/tree_foliage.svg",
+      "preview": "Christmas/tree_foliage.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "tree crown",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "tree_trunk",
+      "category": "Christmas",
+      "svg": "Christmas/tree_trunk.svg",
+      "preview": "Christmas/tree_trunk.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.94
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "tree base",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "tree_snow_caps",
+      "category": "Christmas",
+      "svg": "Christmas/tree_snow_caps.svg",
+      "preview": "Christmas/tree_snow_caps.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "snow on branches",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "tree_ornaments",
+      "category": "Christmas",
+      "svg": "Christmas/tree_ornaments.svg",
+      "preview": "Christmas/tree_ornaments.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "ornaments; pulse brightness occasionally",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "tree_star",
+      "category": "Christmas",
+      "svg": "Christmas/tree_star.svg",
+      "preview": "Christmas/tree_star.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "glowing tree star",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "christmas_tree",
+      "category": "Christmas",
+      "svg": "Christmas/christmas_tree.svg",
+      "preview": "Christmas/christmas_tree.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.94
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "complete festive tree",
+      "animated_layers": [
+        "trunk",
+        "foliage",
+        "snow_caps",
+        "ornaments",
+        "star"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sleigh",
+      "category": "Santa",
+      "svg": "Santa/sleigh.svg",
+      "preview": "Santa/sleigh.png",
+      "viewBox": [
+        0,
+        0,
+        330,
+        230
+      ],
+      "size": {
+        "width": 330,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.48,
+        "y": 0.9
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "sleigh moves horizontally; Santa child sprite",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "santa_character",
+      "category": "Santa",
+      "svg": "Santa/santa_character.svg",
+      "preview": "Santa/santa_character.png",
+      "viewBox": [
+        0,
+        0,
+        330,
+        230
+      ],
+      "size": {
+        "width": 330,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.56
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "Santa sitting in sleigh, slight wave",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_sack",
+      "category": "Santa",
+      "svg": "Santa/gift_sack.svg",
+      "preview": "Santa/gift_sack.png",
+      "viewBox": [
+        0,
+        0,
+        330,
+        230
+      ],
+      "size": {
+        "width": 330,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "gift bag on sleigh",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "santa_sleigh",
+      "category": "Santa",
+      "svg": "Santa/santa_sleigh.svg",
+      "preview": "Santa/santa_sleigh.png",
+      "viewBox": [
+        0,
+        0,
+        330,
+        230
+      ],
+      "size": {
+        "width": 330,
+        "height": 230
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "complete Santa and sleigh",
+      "animated_layers": [
+        "sleigh",
+        "gift_sack",
+        "santa",
+        "hand"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "magic_trail",
+      "category": "Santa",
+      "svg": "Santa/magic_trail.svg",
+      "preview": "Santa/magic_trail.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        110
+      ],
+      "size": {
+        "width": 256,
+        "height": 110
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "subtle sparkle trail behind sleigh",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_box",
+      "category": "Gifts",
+      "svg": "Gifts/gift_box.svg",
+      "preview": "Gifts/gift_box.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "gift base for lid opening",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_lid",
+      "category": "Gifts",
+      "svg": "Gifts/gift_lid.svg",
+      "preview": "Gifts/gift_lid.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "lid moves and rotates during opening",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_bow",
+      "category": "Gifts",
+      "svg": "Gifts/gift_bow.svg",
+      "preview": "Gifts/gift_bow.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "bow on closed gift",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_closed",
+      "category": "Gifts",
+      "svg": "Gifts/gift_closed.svg",
+      "preview": "Gifts/gift_closed.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "closed wrapped gift",
+      "animated_layers": [
+        "box",
+        "lid",
+        "bow"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gift_open",
+      "category": "Gifts",
+      "svg": "Gifts/gift_open.svg",
+      "preview": "Gifts/gift_open.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "open present, emit glow and fireworks",
+      "animated_layers": [
+        "box",
+        "lid"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "parachute_canopy",
+      "category": "Gifts",
+      "svg": "Gifts/parachute_canopy.svg",
+      "preview": "Gifts/parachute_canopy.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.28
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "canopy for falling gift; sway and scale",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "parachute_strings",
+      "category": "Gifts",
+      "svg": "Gifts/parachute_strings.svg",
+      "preview": "Gifts/parachute_strings.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "parachute suspension cords",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "gift_parachute",
+      "category": "Gifts",
+      "svg": "Gifts/gift_parachute.svg",
+      "preview": "Gifts/gift_parachute.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "gift descending on a parachute",
+      "animated_layers": [
+        "canopy",
+        "strings",
+        "gift"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hat_red",
+      "category": "Decorations",
+      "svg": "Decorations/hat_red.svg",
+      "preview": "Decorations/hat_red.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        220
+      ],
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "temporary Dock icon holiday hat; opt-in only",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "hat_green",
+      "category": "Decorations",
+      "svg": "Decorations/hat_green.svg",
+      "preview": "Decorations/hat_green.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        220
+      ],
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "temporary Dock icon holiday hat; opt-in only",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "hat_blue",
+      "category": "Decorations",
+      "svg": "Decorations/hat_blue.svg",
+      "preview": "Decorations/hat_blue.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        220
+      ],
+      "size": {
+        "width": 256,
+        "height": 220
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "temporary Dock icon holiday hat; opt-in only",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "garland_multicolor",
+      "category": "Decorations",
+      "svg": "Decorations/garland_multicolor.svg",
+      "preview": "Decorations/garland_multicolor.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        130
+      ],
+      "size": {
+        "width": 256,
+        "height": 130
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "multicolor string lights, adjustable sag by programmatic cable",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "garland_warm",
+      "category": "Decorations",
+      "svg": "Decorations/garland_warm.svg",
+      "preview": "Decorations/garland_warm.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        130
+      ],
+      "size": {
+        "width": 256,
+        "height": 130
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "warm white garland variation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "garland_cool",
+      "category": "Decorations",
+      "svg": "Decorations/garland_cool.svg",
+      "preview": "Decorations/garland_cool.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        130
+      ],
+      "size": {
+        "width": 256,
+        "height": 130
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "cool white garland variation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "garland_wire",
+      "category": "Decorations",
+      "svg": "Decorations/garland_wire.svg",
+      "preview": "Decorations/garland_wire.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        130
+      ],
+      "size": {
+        "width": 256,
+        "height": 130
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "garland cable; actual cable geometry should be drawn dynamically",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "bulb_red",
+      "category": "Decorations",
+      "svg": "Decorations/bulb_red.svg",
+      "preview": "Decorations/bulb_red.png",
+      "viewBox": [
+        0,
+        0,
+        64,
+        72
+      ],
+      "size": {
+        "width": 64,
+        "height": 72
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "individual lamp for position/brightness animation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "bulb_gold",
+      "category": "Decorations",
+      "svg": "Decorations/bulb_gold.svg",
+      "preview": "Decorations/bulb_gold.png",
+      "viewBox": [
+        0,
+        0,
+        64,
+        72
+      ],
+      "size": {
+        "width": 64,
+        "height": 72
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "individual lamp for position/brightness animation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "bulb_green",
+      "category": "Decorations",
+      "svg": "Decorations/bulb_green.svg",
+      "preview": "Decorations/bulb_green.png",
+      "viewBox": [
+        0,
+        0,
+        64,
+        72
+      ],
+      "size": {
+        "width": 64,
+        "height": 72
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "individual lamp for position/brightness animation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "bulb_blue",
+      "category": "Decorations",
+      "svg": "Decorations/bulb_blue.svg",
+      "preview": "Decorations/bulb_blue.png",
+      "viewBox": [
+        0,
+        0,
+        64,
+        72
+      ],
+      "size": {
+        "width": 64,
+        "height": 72
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "individual lamp for position/brightness animation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "bulb_purple",
+      "category": "Decorations",
+      "svg": "Decorations/bulb_purple.svg",
+      "preview": "Decorations/bulb_purple.png",
+      "viewBox": [
+        0,
+        0,
+        64,
+        72
+      ],
+      "size": {
+        "width": 64,
+        "height": 72
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "individual lamp for position/brightness animation",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "frost_corner",
+      "category": "Effects",
+      "svg": "Effects/frost_corner.svg",
+      "preview": "Effects/frost_corner.png",
+      "viewBox": [
+        0,
+        0,
+        160,
+        160
+      ],
+      "size": {
+        "width": 160,
+        "height": 160
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "inactive window corner ice overlay; fade on activation",
+      "animated_layers": [],
+      "notes": "Applied at window corners only, not upper edges; mirror for other corners"
+    },
+    {
+      "id": "frost_crystal",
+      "category": "Effects",
+      "svg": "Effects/frost_crystal.svg",
+      "preview": "Effects/frost_crystal.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "optional tiny icy crystal effect",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "firework_gold",
+      "category": "Effects",
+      "svg": "Effects/firework_gold.svg",
+      "preview": "Effects/firework_gold.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "brief subtle celebration after gift open; opt-in",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "firework_pink",
+      "category": "Effects",
+      "svg": "Effects/firework_pink.svg",
+      "preview": "Effects/firework_pink.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "brief subtle celebration after gift open; opt-in",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "firework_blue",
+      "category": "Effects",
+      "svg": "Effects/firework_blue.svg",
+      "preview": "Effects/firework_blue.png",
+      "viewBox": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "size": {
+        "width": 256,
+        "height": 256
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "brief subtle celebration after gift open; opt-in",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "sparkles",
+      "category": "Effects",
+      "svg": "Effects/sparkles.svg",
+      "preview": "Effects/sparkles.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "glow punctuation, low frequency",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "wind_swirl",
+      "category": "Effects",
+      "svg": "Effects/wind_swirl.svg",
+      "preview": "Effects/wind_swirl.png",
+      "viewBox": [
+        0,
+        0,
+        150,
+        150
+      ],
+      "size": {
+        "width": 150,
+        "height": 150
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "optional visual hint for wind changing direction",
+      "animated_layers": [],
+      "notes": ""
+    },
+    {
+      "id": "countdown_panel",
+      "category": "UI",
+      "svg": "UI/countdown_panel.svg",
+      "preview": "UI/countdown_panel.png",
+      "viewBox": [
+        0,
+        0,
+        320,
+        190
+      ],
+      "size": {
+        "width": 320,
+        "height": 190
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        28,
+        64
+      ],
+      "usage": "compact New Year timer widget background; overlay live text in AppKit",
+      "animated_layers": [],
+      "notes": "No baked-in dates or numbers"
+    },
+    {
+      "id": "snowflake_icon",
+      "category": "UI",
+      "svg": "UI/snowflake_icon.svg",
+      "preview": "UI/snowflake_icon.png",
+      "viewBox": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "suggested_display_pt": [
+        14,
+        28
+      ],
+      "usage": "menu bar/application icon glyph",
+      "animated_layers": [],
+      "notes": ""
+    }
+  ]
+}

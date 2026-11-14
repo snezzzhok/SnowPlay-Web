@@ -1,0 +1,22 @@
+{
+  "url": "http://127.0.0.1:49754",
+  "pid": 9235,
+  "paused": false,
+  "mode": "play",
+  "density": 1,
+  "particles": 1000,
+  "dockDetected": true,
+  "dockVisible": false,
+  "dockSnowVolume": 0,
+  "accessibility": true,
+  "manualMarksPreserved": {
+    "results": {
+      "1": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    "current": 1
+  },
+  "automaticCleaning": 0
+}

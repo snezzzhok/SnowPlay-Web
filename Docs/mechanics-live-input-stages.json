@@ -1,0 +1,287 @@
+{
+  "scope": "Visible owned native window; physical CUA input against the product input classes. See separate physical-input result for assertions and scope.",
+  "stages": {
+    "duel": {
+      "accepted": 2,
+      "attempts": 3,
+      "editor": "none",
+      "game": {},
+      "looseBalls": [],
+      "models": [
+        {
+          "id": "CA782FDA-12C4-4E12-A10B-9665BC53B9EF",
+          "x": 390,
+          "y": 635.4339160508544
+        },
+        {
+          "id": "B82476E5-156A-45C5-AB86-AAB7BFF04395",
+          "x": 530,
+          "y": 634.0962591985057
+        },
+        {
+          "id": "80D5D8D3-3D7B-49AA-8FAA-98041F7F743C",
+          "x": 670,
+          "y": 635.769220890226
+        },
+        {
+          "id": "62792DAF-2E4A-40A8-9302-3F84CF77D608",
+          "x": 810,
+          "y": 639.9266331608384
+        },
+        {
+          "id": "284938CD-4E3E-4977-A373-119C624F764F",
+          "x": 950,
+          "y": 645.9983635559731
+        }
+      ],
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 46.86746086748303,
+        "cpuPercentOneCore": 29.12900031186704,
+        "gpuMeasured": false,
+        "p95FrameMS": 19.253166668931954,
+        "particles": 168,
+        "physicalFootprintMB": 128.674560546875,
+        "residentMB": 105.578125,
+        "simulating": true,
+        "simulationHz": 58.56550081235213,
+        "targetFPS": 60,
+        "uptimeSeconds": 93.5066444583208
+      },
+      "santaPlowYetiOverlap": false,
+      "scene": {
+        "callbackFPS": 60.00085044311112,
+        "frames": 3529,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 17.662875005044043,
+        "p95WorkMS": 0
+      },
+      "sculptBalls": [],
+      "seconds": 60.32793116665562,
+      "snowmen": 5,
+      "tickWorkP95MS": 2.588958333944902
+    },
+    "move": {
+      "accepted": 2,
+      "attempts": 3,
+      "editor": "none",
+      "game": {},
+      "looseBalls": [],
+      "models": [
+        {
+          "id": "E45BF82E-E09B-470A-A095-BC053319E7EE",
+          "x": 390,
+          "y": 640.9611046625317
+        },
+        {
+          "id": "C87AD0F7-D904-4424-9432-916C0DC354F1",
+          "x": 530,
+          "y": 643.5427474971999
+        },
+        {
+          "id": "337B54D8-E19A-4449-8829-5299D8C3941C",
+          "x": 670,
+          "y": 637.3468939818821
+        },
+        {
+          "id": "725913C6-58DB-4479-A87F-D9015809005A",
+          "x": 810,
+          "y": 647.385095849332
+        },
+        {
+          "id": "FE9CC990-D005-473F-9EBC-ECB9129E042C",
+          "x": 970,
+          "y": 637.5654504771913
+        }
+      ],
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 56.8743723043712,
+        "cpuPercentOneCore": 27.07549770735735,
+        "gpuMeasured": false,
+        "p95FrameMS": 30.728874990018085,
+        "particles": 168,
+        "physicalFootprintMB": 168.62774658203125,
+        "residentMB": 134.0625,
+        "simulating": true,
+        "simulationHz": 57.626632361075586,
+        "targetFPS": 60,
+        "uptimeSeconds": 216.75616979165352
+      },
+      "santaPlowYetiOverlap": false,
+      "scene": {
+        "callbackFPS": 59.99857880715691,
+        "frames": 1279,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 17.490250000264496,
+        "p95WorkMS": 0
+      },
+      "sculptBalls": [],
+      "seconds": 21.967740583320847,
+      "snowmen": 5,
+      "tickWorkP95MS": 1.189000002341345
+    },
+    "sculpt": {
+      "accepted": 2,
+      "attempts": 3,
+      "editor": "none",
+      "game": {},
+      "looseBalls": [],
+      "models": [
+        {
+          "id": "45FC56F4-7A2F-4B9A-98A7-9038E09C5498",
+          "x": 905,
+          "y": 664.6150606881903
+        }
+      ],
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 50.039516241717095,
+        "cpuPercentOneCore": 34.1522588920775,
+        "gpuMeasured": false,
+        "p95FrameMS": 17.025499997544102,
+        "particles": 168,
+        "physicalFootprintMB": 130.87762451171875,
+        "residentMB": 92.453125,
+        "simulating": true,
+        "simulationHz": 59.652451789633716,
+        "targetFPS": 60,
+        "uptimeSeconds": 294.8056797499885
+      },
+      "santaPlowYetiOverlap": false,
+      "scene": {
+        "callbackFPS": 59.998953901691536,
+        "frames": 4570,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 17.67720832140185,
+        "p95WorkMS": 0
+      },
+      "sculptBalls": [],
+      "seconds": 77.63069916666427,
+      "snowmen": 1,
+      "tickWorkP95MS": 1.3091250002617016
+    },
+    "snowballs": {
+      "accepted": 2,
+      "attempts": 3,
+      "editor": "none",
+      "game": {},
+      "looseBalls": [],
+      "models": [
+        {
+          "id": "35F28F6C-326F-49B9-9025-B177E83E8C97",
+          "x": 530,
+          "y": 634.095534464858
+        },
+        {
+          "id": "72E97A68-FF04-4B50-900B-7DCCE1E7DF1D",
+          "x": 670,
+          "y": 635.7692208902411
+        },
+        {
+          "id": "9A6384B9-433B-48ED-9F5F-2E93AE0F5F5A",
+          "x": 810,
+          "y": 639.9266331608384
+        },
+        {
+          "id": "8E9351FA-D001-4342-A6D8-7AF5041510DE",
+          "x": 950,
+          "y": 645.9983635559731
+        }
+      ],
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 57.62095422318443,
+        "cpuPercentOneCore": 28.56352742875934,
+        "gpuMeasured": false,
+        "p95FrameMS": 27.872416671016254,
+        "particles": 168,
+        "physicalFootprintMB": 126.9403076171875,
+        "residentMB": 129.28125,
+        "simulating": true,
+        "simulationHz": 58.577684596009604,
+        "targetFPS": 60,
+        "uptimeSeconds": 194.52292574998864
+      },
+      "santaPlowYetiOverlap": false,
+      "scene": {
+        "callbackFPS": 59.44710704365762,
+        "frames": 5905,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 23.31137500004843,
+        "p95WorkMS": 0
+      },
+      "sculptBalls": [],
+      "seconds": 101.6674965833372,
+      "snowmen": 4,
+      "tickWorkP95MS": 2.705375009099953
+    },
+    "stress": {
+      "accepted": 2,
+      "attempts": 3,
+      "editor": "none",
+      "game": {},
+      "looseBalls": [],
+      "models": [
+        {
+          "id": "D03546C7-3730-4D25-A5CE-FBD355E6EC6C",
+          "x": 390,
+          "y": 635.4339160508544
+        },
+        {
+          "id": "EB20817E-461A-42B8-B620-4BDA60991844",
+          "x": 530,
+          "y": 634.0962591985057
+        },
+        {
+          "id": "D9E5625B-5B55-49AC-B235-920B177228F1",
+          "x": 670,
+          "y": 635.769220890226
+        },
+        {
+          "id": "093E6A66-1295-4293-9E2B-4435C665710B",
+          "x": 810,
+          "y": 639.9266331608384
+        },
+        {
+          "id": "D085C356-6CFB-4CF6-B999-E47D160902EC",
+          "x": 950,
+          "y": 645.9983635559731
+        }
+      ],
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 47.723104288150644,
+        "cpuPercentOneCore": 34.577848256822,
+        "gpuMeasured": false,
+        "p95FrameMS": 17.15658334433101,
+        "particles": 2400,
+        "physicalFootprintMB": 132.40899658203125,
+        "residentMB": 98.71875,
+        "simulating": true,
+        "simulationHz": 60.00000417181566,
+        "targetFPS": 60,
+        "uptimeSeconds": 359.3898920833308
+      },
+      "santaPlowYetiOverlap": true,
+      "scene": {
+        "callbackFPS": 60.01178676874792,
+        "frames": 3898,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 17.6647916669026,
+        "p95WorkMS": 0
+      },
+      "sculptBalls": [],
+      "seconds": 65.22091662499588,
+      "snowmen": 5,
+      "tickWorkP95MS": 3.6831250035902485
+    }
+  },
+  "graphicalSessionConfirmed": true,
+  "physicalInputEvidence": "mechanics-physical-input-result.json"
+}

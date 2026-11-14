@@ -1,0 +1,130 @@
+{
+  "url": "https://snezzzhok.github.io/SnowPlay-Web/",
+  "anonymousHTTP": true,
+  "htmlStatus": 200,
+  "assetCount": 23,
+  "allHashesMatch": true,
+  "scriptsMatchCurrentSource": true,
+  "assets": [
+    {
+      "id": "snowball_small",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowball_medium",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowball_large",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowman_complete",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowplow_body",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowplow_wheels",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowplow_blade",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowplow_beacon",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowplow_complete",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "tree_trunk",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "sleigh",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "santa_character",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "gift_sack",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "santa_sleigh",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "magic_trail",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "gift_closed",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "gift_open",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "gift_parachute",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "snowflake_icon",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "tree_bare",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "tree_topper_gold",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "tree_balls_gold",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "id": "tree_string_multi",
+      "status": 200,
+      "sha256Matches": true
+    }
+  ],
+  "sourceRepository": "https://github.com/snezzzhok/SnowPlay-Web",
+  "deployment": "https://github.com/snezzzhok/SnowPlay-Web/actions/runs/43522309137",
+  "publicCommit": "01304ef",
+  "releaseFPS": 60,
+  "phoneMeasured": false
+}

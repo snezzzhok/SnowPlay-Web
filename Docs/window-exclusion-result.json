@@ -1,0 +1,713 @@
+{
+  "passed": true,
+  "legacyWindowSnowIgnored": true,
+  "observedFixture": true,
+  "samples": [
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "resizing",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "resizing",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": false
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "restoring",
+          "restoreProgress": 0.37505375006003305,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "restoring",
+          "restoreProgress": 0.6256733332993463,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "restoring",
+          "restoreProgress": 0.8751032290747389,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [
+        {
+          "id": "window-8577-16716",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    },
+    {
+      "windows": [],
+      "effects": [],
+      "accessibility": true
+    }
+  ]
+}

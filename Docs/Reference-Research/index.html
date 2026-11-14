@@ -1,0 +1,99 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SnowPlay — разбор 6 референсов</title><style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#101820;color:#e9f0f5}body{max-width:1180px;margin:0 auto;padding:30px 24px;line-height:1.55}h1{font-size:34px;margin:0}h2{font-size:24px;margin:0 0 10px}p{max-width:850px}a{color:#b8dcf0}header{margin-bottom:26px}.sub{color:#b1c2cc}nav{display:flex;gap:15px;flex-wrap:wrap}article{border-top:1px solid #34434e;padding:25px 0;scroll-margin-top:15px}.row{display:grid;grid-template-columns:300px 1fr;gap:26px}video{width:100%;max-height:580px;border-radius:10px;background:black}.meta{font-size:13px;color:#aabdc9}button{border:1px solid #556b78;color:#e9f0f5;background:#223642;border-radius:7px;padding:8px 10px;cursor:pointer;font:inherit;font-size:13px;margin:4px 3px 4px 0}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #a9e7ff;outline-offset:3px}button:hover{background:#36505f}.moments{max-width:700px}.readout{display:block;font-variant-numeric:tabular-nums;margin:12px 0}details{margin-top:18px}summary{cursor:pointer;font-weight:600}img{display:block;width:100%;height:auto;margin:15px 0;border-radius:7px}footer{border-top:1px solid #34434e;margin-top:25px;padding-top:20px;color:#b1c2cc}@media(max-width:700px){.row{grid-template-columns:1fr}video{max-height:500px}body{padding:20px 15px}h1{font-size:27px}}
+</style><header><div class="sub">SnowPlay · исследование 13 ноября 2026</div><h1>6 роликов. 3 приложения.</h1><p>127,9 секунды исходного видео. Здесь можно проверить наблюдения и ключевые кадры. Внутренний движок по одному ролику не устанавливается; запущенные сторонние приложения в этом исследовании не тестировались.</p><nav><a href="Analysis.md">Полный разбор</a><a href="SnowPlay-Mechanics-Spec.md">Спецификация реализации</a></nav></header>
+<article id="Dfoml0yis3P"><h2>1. Snowhush · материал и окна</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/Dfoml0yis3P/overview/frame-001.png" src="media/Dfoml0yis3P.mp4"></video><div class="meta">44.372 с · 1080×1920 · 60/1 FPS файла</div></div><div><p>Оформленная демонстрация: снег на опорах, движение, курсор, таяние. Не сырая запись физического эксперимента.</p><a href="https://www.instagram.com/reel/Dfoml0yis3P/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="4">4.000 с · Курсор</button>
+<button data-time="12">12.000 с · Движение окна</button>
+<button data-time="14">14.000 с · Закрытие</button>
+<button data-time="20">20.000 с · Настройки</button>
+<button data-time="32">32.000 с · Демонстрация экрана</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 2 листов</summary>
+<a href="frames/Dfoml0yis3P-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfoml0yis3P-overview-1.jpg" alt="Snowhush · материал и окна: Dfoml0yis3P-overview-1"></a>
+<a href="frames/Dfoml0yis3P-overview-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfoml0yis3P-overview-2.jpg" alt="Snowhush · материал и окна: Dfoml0yis3P-overview-2"></a>
+</details>
+</article>
+<article id="DfSv9v1NwMb"><h2>2. Koi · окна и курсор</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/DfSv9v1NwMb/overview/frame-001.png" src="media/DfSv9v1NwMb.mp4"></video><div class="meta">14.372 с · 1080×1920 · 30/1 FPS файла</div></div><div><p>Resize и движение окна имеют разный результат. Между сценами есть монтажные переходы.</p><a href="https://www.instagram.com/reel/DfSv9v1NwMb/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="1">1.000 с · Resize</button>
+<button data-time="3.233">3.233 с · Перед отрывом</button>
+<button data-time="3.5">3.500 с · Отрыв слоя</button>
+<button data-time="6">6.000 с · Курсор</button>
+<button data-time="8">8.000 с · Dock</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 1 листов</summary>
+<a href="frames/DfSv9v1NwMb-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/DfSv9v1NwMb-overview-1.jpg" alt="Koi · окна и курсор: DfSv9v1NwMb-overview-1"></a>
+</details>
+<details><summary>Покадровые детали · 1 листов</summary>
+<a href="frames/DfSv9v1NwMb-detail-1-4-1.jpg" target="_blank"><img loading="lazy" src="frames/DfSv9v1NwMb-detail-1-4-1.jpg" alt="Koi · окна и курсор: DfSv9v1NwMb-detail-1-4-1"></a>
+</details>
+</article>
+<article id="Dfms7IoNkOP"><h2>3. Koi · ёлка, снеговик и Йети</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/Dfms7IoNkOP/overview/frame-001.png" src="media/Dfms7IoNkOP.mp4"></video><div class="meta">16.276 с · 720×1280 · 30/1 FPS файла</div></div><div><p>Украшения выбираются наборами. Йети рубит ёлку; летящий снежок при разрушении снеговика не подтверждён.</p><a href="https://www.instagram.com/reel/Dfms7IoNkOP/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="2">2.000 с · Меню ёлки</button>
+<button data-time="5.233">5.233 с · Первый шар</button>
+<button data-time="7.733">7.733 с · Снеговик собран</button>
+<button data-time="9.2">9.200 с · Команда удаления</button>
+<button data-time="10.5">10.500 с · Замахи</button>
+<button data-time="12">12.000 с · Ёлка стоит</button>
+<button data-time="12.1">12.100 с · Наклон</button>
+<button data-time="12.4">12.400 с · Ёлки нет</button>
+<button data-time="14.4">14.400 с · До разрушения</button>
+<button data-time="14.433333">14.433 с · Первый кадр распада</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 1 листов</summary>
+<a href="frames/Dfms7IoNkOP-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-overview-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-overview-1"></a>
+</details>
+<details><summary>Покадровые детали · 9 листов</summary>
+<a href="frames/Dfms7IoNkOP-detail-10.5-12.4-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-10.5-12.4-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-10.5-12.4-1"></a>
+<a href="frames/Dfms7IoNkOP-detail-10.5-12.4-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-10.5-12.4-2.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-10.5-12.4-2"></a>
+<a href="frames/Dfms7IoNkOP-detail-12.6-16.2-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-12.6-16.2-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-12.6-16.2-1"></a>
+<a href="frames/Dfms7IoNkOP-detail-12.6-16.2-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-12.6-16.2-2.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-12.6-16.2-2"></a>
+<a href="frames/Dfms7IoNkOP-detail-14.2-14.7-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-14.2-14.7-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-14.2-14.7-1"></a>
+<a href="frames/Dfms7IoNkOP-detail-14.2-14.7-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-14.2-14.7-2.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-14.2-14.7-2"></a>
+<a href="frames/Dfms7IoNkOP-detail-5-8.5-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-5-8.5-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-5-8.5-1"></a>
+<a href="frames/Dfms7IoNkOP-detail-8.8-12.4-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-8.8-12.4-1.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-8.8-12.4-1"></a>
+<a href="frames/Dfms7IoNkOP-detail-8.8-12.4-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfms7IoNkOP-detail-8.8-12.4-2.jpg" alt="Koi · ёлка, снеговик и Йети: Dfms7IoNkOP-detail-8.8-12.4-2"></a>
+</details>
+</article>
+<article id="Dfe_bS1tAnH"><h2>4. Koi · дуэль и снегоуборщик</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/Dfe_bS1tAnH/overview/frame-001.png" src="media/Dfe_bS1tAnH.mp4"></video><div class="meta">22.685 с · 1080×1920 · 60/1 FPS файла</div></div><div><p>Съёмка монитора: мелкие позы видны хуже. Перед ковшом движется вал; конец вывоза не показан.</p><a href="https://www.instagram.com/reel/Dfe_bS1tAnH/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="12">12.000 с · Дуэль</button>
+<button data-time="20.5">20.500 с · Реакция персонажей</button>
+<button data-time="21">21.000 с · Машина</button>
+<button data-time="22.5">22.500 с · Вал перед ковшом</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 1 листов</summary>
+<a href="frames/Dfe_bS1tAnH-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfe_bS1tAnH-overview-1.jpg" alt="Koi · дуэль и снегоуборщик: Dfe_bS1tAnH-overview-1"></a>
+</details>
+<details><summary>Покадровые детали · 3 листов</summary>
+<a href="frames/Dfe_bS1tAnH-detail-11-19-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfe_bS1tAnH-detail-11-19-1.jpg" alt="Koi · дуэль и снегоуборщик: Dfe_bS1tAnH-detail-11-19-1"></a>
+<a href="frames/Dfe_bS1tAnH-detail-11-19-2.jpg" target="_blank"><img loading="lazy" src="frames/Dfe_bS1tAnH-detail-11-19-2.jpg" alt="Koi · дуэль и снегоуборщик: Dfe_bS1tAnH-detail-11-19-2"></a>
+<a href="frames/Dfe_bS1tAnH-detail-19.5-22.6-1.jpg" target="_blank"><img loading="lazy" src="frames/Dfe_bS1tAnH-detail-19.5-22.6-1.jpg" alt="Koi · дуэль и снегоуборщик: Dfe_bS1tAnH-detail-19.5-22.6-1"></a>
+</details>
+</article>
+<article id="DfaegGeNZmh"><h2>5. KoiArt · снежок и Санта</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/DfaegGeNZmh/overview/frame-001.png" src="media/DfaegGeNZmh.mp4"></video><div class="meta">14.372 с · 1080×1920 · 30/1 FPS файла</div></div><div><p>Катание над Dock, затем другой эпизод с доставкой. Открытие подарка и парашют не показаны.</p><a href="https://www.instagram.com/reel/DfaegGeNZmh/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="5">5.000 с · Снежок на окне</button>
+<button data-time="7">7.000 с · Снежок на Dock</button>
+<button data-time="9.5">9.500 с · Санта</button>
+<button data-time="11">11.000 с · Подарок</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 1 листов</summary>
+<a href="frames/DfaegGeNZmh-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/DfaegGeNZmh-overview-1.jpg" alt="KoiArt · снежок и Санта: DfaegGeNZmh-overview-1"></a>
+</details>
+<details><summary>Покадровые детали · 1 листов</summary>
+<a href="frames/DfaegGeNZmh-detail-5-11-1.jpg" target="_blank"><img loading="lazy" src="frames/DfaegGeNZmh-detail-5-11-1.jpg" alt="KoiArt · снежок и Санта: DfaegGeNZmh-detail-5-11-1"></a>
+</details>
+</article>
+<article id="DfnvIglK-Qp"><h2>6. Snow by Archie · редактор сцены</h2><div class="row"><div><video controls muted playsinline preload="metadata" poster="frames/DfnvIglK-Qp/overview/frame-001.png" src="media/DfnvIglK-Qp.mp4"></video><div class="meta">15.835 с · 1080×1920 · 30/1 FPS файла</div></div><div><p>Редактор креплений и провисания. 65 MB в титре — заявление автора, не наш замер.</p><a href="https://www.instagram.com/reel/DfnvIglK-Qp/" target="_blank" rel="noreferrer">Оригинальная публикация ↗</a><span class="readout">0.000 с</span><div class="moments">
+<button data-time="2">2.000 с · Рабочий стол</button>
+<button data-time="6">6.000 с · Редактор</button>
+<button data-time="8">8.000 с · Провод и узлы</button>
+<button data-time="10">10.000 с · Панель ветра</button>
+<button data-time="12">12.000 с · Другая сцена</button>
+</div><div><button data-delta="-0.25">−0,25 с</button><button data-delta="0.25">+0,25 с</button></div><p class="meta">Перемотка видео — для просмотра. Точные PTS и номера исходных кадров подписаны на листах ниже. Частота записи не равна измеренному FPS приложения.</p></div></div>
+<details><summary>Обзорная последовательность · 1 листов</summary>
+<a href="frames/DfnvIglK-Qp-overview-1.jpg" target="_blank"><img loading="lazy" src="frames/DfnvIglK-Qp-overview-1.jpg" alt="Snow by Archie · редактор сцены: DfnvIglK-Qp-overview-1"></a>
+</details>
+</article>
+<footer>Наблюдения и ограничения отделены от предложенных механик SnowPlay. Исходные видео используются для локального исследования и не являются ресурсами приложения. Новые сценарии Йети и физического переноса снега в этом проходе не внедрялись.</footer><script>
+const clips=[...document.querySelectorAll('video')];for(const v of clips){v.addEventListener('play',()=>clips.forEach(other=>{if(other!==v)other.pause()}));v.addEventListener('timeupdate',()=>v.closest('article').querySelector('.readout').textContent=v.currentTime.toFixed(3)+' с');}
+for(const b of document.querySelectorAll('button'))b.addEventListener('click',()=>{const v=b.closest('article').querySelector('video');v.pause();const time=b.hasAttribute('data-time')?Number(b.dataset.time):v.currentTime+Number(b.dataset.delta);v.currentTime=Math.max(0,Math.min(Number.isFinite(v.duration)?v.duration:999,time));});
+</script></html>

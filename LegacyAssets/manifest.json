@@ -1,0 +1,767 @@
+{
+  "tree_body": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_body.svg",
+    "png": "PNG/tree_body.png",
+    "retina": "PNG/tree_body@2x.png"
+  },
+  "tree_trunk": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_trunk.svg",
+    "png": "PNG/tree_trunk.png",
+    "retina": "PNG/tree_trunk@2x.png"
+  },
+  "tree_star": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_star.svg",
+    "png": "PNG/tree_star.png",
+    "retina": "PNG/tree_star@2x.png"
+  },
+  "ornaments": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/ornaments.svg",
+    "png": "PNG/ornaments.png",
+    "retina": "PNG/ornaments@2x.png"
+  },
+  "tree_lights": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_lights.svg",
+    "png": "PNG/tree_lights.png",
+    "retina": "PNG/tree_lights@2x.png"
+  },
+  "tree_snow": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_snow.svg",
+    "png": "PNG/tree_snow.png",
+    "retina": "PNG/tree_snow@2x.png"
+  },
+  "tree_shadow": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/tree_shadow.svg",
+    "png": "PNG/tree_shadow.png",
+    "retina": "PNG/tree_shadow@2x.png"
+  },
+  "snowball_small": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowball_small.svg",
+    "png": "PNG/snowball_small.png",
+    "retina": "PNG/snowball_small@2x.png"
+  },
+  "snowball_medium": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowball_medium.svg",
+    "png": "PNG/snowball_medium.png",
+    "retina": "PNG/snowball_medium@2x.png"
+  },
+  "snowball_large": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowball_large.svg",
+    "png": "PNG/snowball_large.png",
+    "retina": "PNG/snowball_large@2x.png"
+  },
+  "snowman_base": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowman_base.svg",
+    "png": "PNG/snowman_base.png",
+    "retina": "PNG/snowman_base@2x.png"
+  },
+  "snowman_middle": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowman_middle.svg",
+    "png": "PNG/snowman_middle.png",
+    "retina": "PNG/snowman_middle@2x.png"
+  },
+  "snowman_head": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowman_head.svg",
+    "png": "PNG/snowman_head.png",
+    "retina": "PNG/snowman_head@2x.png"
+  },
+  "snowman_details": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snowman_details.svg",
+    "png": "PNG/snowman_details.png",
+    "retina": "PNG/snowman_details@2x.png"
+  },
+  "plow_body": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/plow_body.svg",
+    "png": "PNG/plow_body.png",
+    "retina": "PNG/plow_body@2x.png"
+  },
+  "plow_wheels": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/plow_wheels.svg",
+    "png": "PNG/plow_wheels.png",
+    "retina": "PNG/plow_wheels@2x.png"
+  },
+  "sleigh_body": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/sleigh_body.svg",
+    "png": "PNG/sleigh_body.png",
+    "retina": "PNG/sleigh_body@2x.png"
+  },
+  "santa_body": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/santa_body.svg",
+    "png": "PNG/santa_body.png",
+    "retina": "PNG/santa_body@2x.png"
+  },
+  "santa_bag": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/santa_bag.svg",
+    "png": "PNG/santa_bag.png",
+    "retina": "PNG/santa_bag@2x.png"
+  },
+  "gift_box": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/gift_box.svg",
+    "png": "PNG/gift_box.png",
+    "retina": "PNG/gift_box@2x.png"
+  },
+  "gift_lid": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/gift_lid.svg",
+    "png": "PNG/gift_lid.png",
+    "retina": "PNG/gift_lid@2x.png"
+  },
+  "parachute": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/parachute.svg",
+    "png": "PNG/parachute.png",
+    "retina": "PNG/parachute@2x.png"
+  },
+  "mochi_idle_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_idle_0.svg",
+    "png": "PNG/mochi_idle_0.png",
+    "retina": "PNG/mochi_idle_0@2x.png"
+  },
+  "mochi_idle_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_idle_1.svg",
+    "png": "PNG/mochi_idle_1.png",
+    "retina": "PNG/mochi_idle_1@2x.png"
+  },
+  "mochi_idle_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_idle_2.svg",
+    "png": "PNG/mochi_idle_2.png",
+    "retina": "PNG/mochi_idle_2@2x.png"
+  },
+  "mochi_idle_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_idle_3.svg",
+    "png": "PNG/mochi_idle_3.png",
+    "retina": "PNG/mochi_idle_3@2x.png"
+  },
+  "mochi_walk_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_walk_0.svg",
+    "png": "PNG/mochi_walk_0.png",
+    "retina": "PNG/mochi_walk_0@2x.png"
+  },
+  "mochi_walk_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_walk_1.svg",
+    "png": "PNG/mochi_walk_1.png",
+    "retina": "PNG/mochi_walk_1@2x.png"
+  },
+  "mochi_walk_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_walk_2.svg",
+    "png": "PNG/mochi_walk_2.png",
+    "retina": "PNG/mochi_walk_2@2x.png"
+  },
+  "mochi_walk_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_walk_3.svg",
+    "png": "PNG/mochi_walk_3.png",
+    "retina": "PNG/mochi_walk_3@2x.png"
+  },
+  "mochi_sleep_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_sleep_0.svg",
+    "png": "PNG/mochi_sleep_0.png",
+    "retina": "PNG/mochi_sleep_0@2x.png"
+  },
+  "mochi_sleep_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_sleep_1.svg",
+    "png": "PNG/mochi_sleep_1.png",
+    "retina": "PNG/mochi_sleep_1@2x.png"
+  },
+  "mochi_sleep_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_sleep_2.svg",
+    "png": "PNG/mochi_sleep_2.png",
+    "retina": "PNG/mochi_sleep_2@2x.png"
+  },
+  "mochi_sleep_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_sleep_3.svg",
+    "png": "PNG/mochi_sleep_3.png",
+    "retina": "PNG/mochi_sleep_3@2x.png"
+  },
+  "mochi_reaction_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_reaction_0.svg",
+    "png": "PNG/mochi_reaction_0.png",
+    "retina": "PNG/mochi_reaction_0@2x.png"
+  },
+  "mochi_reaction_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_reaction_1.svg",
+    "png": "PNG/mochi_reaction_1.png",
+    "retina": "PNG/mochi_reaction_1@2x.png"
+  },
+  "mochi_reaction_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_reaction_2.svg",
+    "png": "PNG/mochi_reaction_2.png",
+    "retina": "PNG/mochi_reaction_2@2x.png"
+  },
+  "mochi_reaction_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/mochi_reaction_3.svg",
+    "png": "PNG/mochi_reaction_3.png",
+    "retina": "PNG/mochi_reaction_3@2x.png"
+  },
+  "puffy_idle_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_idle_0.svg",
+    "png": "PNG/puffy_idle_0.png",
+    "retina": "PNG/puffy_idle_0@2x.png"
+  },
+  "puffy_idle_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_idle_1.svg",
+    "png": "PNG/puffy_idle_1.png",
+    "retina": "PNG/puffy_idle_1@2x.png"
+  },
+  "puffy_idle_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_idle_2.svg",
+    "png": "PNG/puffy_idle_2.png",
+    "retina": "PNG/puffy_idle_2@2x.png"
+  },
+  "puffy_idle_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_idle_3.svg",
+    "png": "PNG/puffy_idle_3.png",
+    "retina": "PNG/puffy_idle_3@2x.png"
+  },
+  "puffy_walk_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_walk_0.svg",
+    "png": "PNG/puffy_walk_0.png",
+    "retina": "PNG/puffy_walk_0@2x.png"
+  },
+  "puffy_walk_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_walk_1.svg",
+    "png": "PNG/puffy_walk_1.png",
+    "retina": "PNG/puffy_walk_1@2x.png"
+  },
+  "puffy_walk_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_walk_2.svg",
+    "png": "PNG/puffy_walk_2.png",
+    "retina": "PNG/puffy_walk_2@2x.png"
+  },
+  "puffy_walk_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_walk_3.svg",
+    "png": "PNG/puffy_walk_3.png",
+    "retina": "PNG/puffy_walk_3@2x.png"
+  },
+  "puffy_sleep_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_sleep_0.svg",
+    "png": "PNG/puffy_sleep_0.png",
+    "retina": "PNG/puffy_sleep_0@2x.png"
+  },
+  "puffy_sleep_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_sleep_1.svg",
+    "png": "PNG/puffy_sleep_1.png",
+    "retina": "PNG/puffy_sleep_1@2x.png"
+  },
+  "puffy_sleep_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_sleep_2.svg",
+    "png": "PNG/puffy_sleep_2.png",
+    "retina": "PNG/puffy_sleep_2@2x.png"
+  },
+  "puffy_sleep_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_sleep_3.svg",
+    "png": "PNG/puffy_sleep_3.png",
+    "retina": "PNG/puffy_sleep_3@2x.png"
+  },
+  "puffy_reaction_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_reaction_0.svg",
+    "png": "PNG/puffy_reaction_0.png",
+    "retina": "PNG/puffy_reaction_0@2x.png"
+  },
+  "puffy_reaction_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_reaction_1.svg",
+    "png": "PNG/puffy_reaction_1.png",
+    "retina": "PNG/puffy_reaction_1@2x.png"
+  },
+  "puffy_reaction_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_reaction_2.svg",
+    "png": "PNG/puffy_reaction_2.png",
+    "retina": "PNG/puffy_reaction_2@2x.png"
+  },
+  "puffy_reaction_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/puffy_reaction_3.svg",
+    "png": "PNG/puffy_reaction_3.png",
+    "retina": "PNG/puffy_reaction_3@2x.png"
+  },
+  "bubi_idle_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_idle_0.svg",
+    "png": "PNG/bubi_idle_0.png",
+    "retina": "PNG/bubi_idle_0@2x.png"
+  },
+  "bubi_idle_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_idle_1.svg",
+    "png": "PNG/bubi_idle_1.png",
+    "retina": "PNG/bubi_idle_1@2x.png"
+  },
+  "bubi_idle_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_idle_2.svg",
+    "png": "PNG/bubi_idle_2.png",
+    "retina": "PNG/bubi_idle_2@2x.png"
+  },
+  "bubi_idle_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_idle_3.svg",
+    "png": "PNG/bubi_idle_3.png",
+    "retina": "PNG/bubi_idle_3@2x.png"
+  },
+  "bubi_walk_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_walk_0.svg",
+    "png": "PNG/bubi_walk_0.png",
+    "retina": "PNG/bubi_walk_0@2x.png"
+  },
+  "bubi_walk_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_walk_1.svg",
+    "png": "PNG/bubi_walk_1.png",
+    "retina": "PNG/bubi_walk_1@2x.png"
+  },
+  "bubi_walk_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_walk_2.svg",
+    "png": "PNG/bubi_walk_2.png",
+    "retina": "PNG/bubi_walk_2@2x.png"
+  },
+  "bubi_walk_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_walk_3.svg",
+    "png": "PNG/bubi_walk_3.png",
+    "retina": "PNG/bubi_walk_3@2x.png"
+  },
+  "bubi_sleep_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_sleep_0.svg",
+    "png": "PNG/bubi_sleep_0.png",
+    "retina": "PNG/bubi_sleep_0@2x.png"
+  },
+  "bubi_sleep_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_sleep_1.svg",
+    "png": "PNG/bubi_sleep_1.png",
+    "retina": "PNG/bubi_sleep_1@2x.png"
+  },
+  "bubi_sleep_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_sleep_2.svg",
+    "png": "PNG/bubi_sleep_2.png",
+    "retina": "PNG/bubi_sleep_2@2x.png"
+  },
+  "bubi_sleep_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_sleep_3.svg",
+    "png": "PNG/bubi_sleep_3.png",
+    "retina": "PNG/bubi_sleep_3@2x.png"
+  },
+  "bubi_reaction_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_reaction_0.svg",
+    "png": "PNG/bubi_reaction_0.png",
+    "retina": "PNG/bubi_reaction_0@2x.png"
+  },
+  "bubi_reaction_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_reaction_1.svg",
+    "png": "PNG/bubi_reaction_1.png",
+    "retina": "PNG/bubi_reaction_1@2x.png"
+  },
+  "bubi_reaction_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_reaction_2.svg",
+    "png": "PNG/bubi_reaction_2.png",
+    "retina": "PNG/bubi_reaction_2@2x.png"
+  },
+  "bubi_reaction_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/bubi_reaction_3.svg",
+    "png": "PNG/bubi_reaction_3.png",
+    "retina": "PNG/bubi_reaction_3@2x.png"
+  },
+  "frost_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/frost_0.svg",
+    "png": "PNG/frost_0.png",
+    "retina": "PNG/frost_0@2x.png"
+  },
+  "frost_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/frost_1.svg",
+    "png": "PNG/frost_1.png",
+    "retina": "PNG/frost_1@2x.png"
+  },
+  "frost_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/frost_2.svg",
+    "png": "PNG/frost_2.png",
+    "retina": "PNG/frost_2@2x.png"
+  },
+  "frost_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/frost_3.svg",
+    "png": "PNG/frost_3.png",
+    "retina": "PNG/frost_3@2x.png"
+  },
+  "snow_dot_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_0.svg",
+    "png": "PNG/snow_dot_0.png",
+    "retina": "PNG/snow_dot_0@2x.png"
+  },
+  "snow_dot_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_1.svg",
+    "png": "PNG/snow_dot_1.png",
+    "retina": "PNG/snow_dot_1@2x.png"
+  },
+  "snow_dot_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_2.svg",
+    "png": "PNG/snow_dot_2.png",
+    "retina": "PNG/snow_dot_2@2x.png"
+  },
+  "snow_dot_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_3.svg",
+    "png": "PNG/snow_dot_3.png",
+    "retina": "PNG/snow_dot_3@2x.png"
+  },
+  "snow_dot_4": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_4.svg",
+    "png": "PNG/snow_dot_4.png",
+    "retina": "PNG/snow_dot_4@2x.png"
+  },
+  "snow_dot_5": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_dot_5.svg",
+    "png": "PNG/snow_dot_5.png",
+    "retina": "PNG/snow_dot_5@2x.png"
+  },
+  "snow_cap_0": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_cap_0.svg",
+    "png": "PNG/snow_cap_0.png",
+    "retina": "PNG/snow_cap_0@2x.png"
+  },
+  "snow_cap_1": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_cap_1.svg",
+    "png": "PNG/snow_cap_1.png",
+    "retina": "PNG/snow_cap_1@2x.png"
+  },
+  "snow_cap_2": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_cap_2.svg",
+    "png": "PNG/snow_cap_2.png",
+    "retina": "PNG/snow_cap_2@2x.png"
+  },
+  "snow_cap_3": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/snow_cap_3.svg",
+    "png": "PNG/snow_cap_3.png",
+    "retina": "PNG/snow_cap_3@2x.png"
+  },
+  "garland_bulb": {
+    "canvas": [
+      96,
+      96
+    ],
+    "svg": "SVG/garland_bulb.svg",
+    "png": "PNG/garland_bulb.png",
+    "retina": "PNG/garland_bulb@2x.png"
+  }
+}

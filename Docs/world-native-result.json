@@ -1,0 +1,25 @@
+{
+  "chapterStartFrames" : {
+    "Snowplow · collected material moves with blade" : 249,
+    "Tree toys + pinned Verlet garland" : 0,
+    "Yeti · approach, strikes, tree fall, exit" : 23,
+    "Yeti · help build from actual snow stock" : 149,
+    "Yeti · pick up, carry and put down a gift" : 178,
+    "Yeti · play with snow, then leave" : 215,
+    "Yeti · prepare, release, physical arc, breakup" : 106
+  },
+  "chopContactsAndFall" : true,
+  "emptyDockGroundFallbackAndWorkbenchReturn" : true,
+  "fiveCharacterActions" : true,
+  "focusProgressiveMelt" : true,
+  "foregroundProjectileAndMovedTargetMiss" : true,
+  "framesRendered" : 324,
+  "garlandAttachmentsAndPersistence" : true,
+  "passed" : true,
+  "plowMassAndCancellation" : true,
+  "savedSnowmanRestoration" : true,
+  "scope" : "owned native scene; exact runtime controllers and supplied\/project vector textures; no user screen capture",
+  "screensOrSpacesTested" : false,
+  "throwArcAndBreakup" : true,
+  "treeToysAndPersistence" : true
+}

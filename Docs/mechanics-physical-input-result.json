@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "Physical CUA input in visible owned window using real product InputView, DuelInputPanel and native controllers; excludes production desktop free-area policy.",
+  "duel": {
+    "physicalClicks": 3,
+    "acceptedShots": 2,
+    "clickOutsidePlayerTurnIgnored": true,
+    "observedYetiHPAfterAimedHit": 4,
+    "escClosedInputPanel": true
+  },
+  "snowballPlay": {
+    "hoverCollectedRealMass": true,
+    "hoverToolNote": "CUA has no hover-only primitive; pointer movement accompanying three right clicks (no game right-click handler) produced the ball. Left drag grabbed and released it.",
+    "beforeSnowmen": 5,
+    "afterSnowmen": 4,
+    "ballsAfterThrow": 0,
+    "escRestoredInput": true
+  },
+  "move": {
+    "beforeX": [
+      390,
+      530,
+      670,
+      810,
+      950
+    ],
+    "afterX": [
+      390,
+      530,
+      670,
+      810,
+      970
+    ],
+    "escRestoredInput": true
+  },
+  "sculpt": {
+    "physicalDragGestures": 3,
+    "completedSnowmen": 1,
+    "editorAfterCompletion": "none",
+    "onSnowTextOverlay": false
+  },
+  "snowmanCursorBitmapCaptured": false
+}

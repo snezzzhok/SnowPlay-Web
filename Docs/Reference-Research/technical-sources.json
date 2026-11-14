@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-11-13",
+  "snowhushCommit": "1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a",
+  "reviewedFiles": [
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/Renderer.swift",
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/WindowTracker.swift",
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/SnowLayer.swift",
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/SnowSimulation.swift",
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/OverlayWindow.swift",
+    "https://github.com/mbezruchko/Snowhush/blob/1a21f11236a5cc67efc5ca0f1e3b6934cca3cc9a/Sources/Snowhush/DockOverlay.swift"
+  ],
+  "codeCopiedIntoSnowPlay": false,
+  "thirdPartyAppsInstalled": false,
+  "scope": "six supplied reels; public source review of Snowhush only; current repository version is not established as the version filmed"
+}

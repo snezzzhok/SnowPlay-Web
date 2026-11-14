@@ -1,0 +1,43 @@
+{
+  "scope": "CUA click on real release placement InputView plus real Escape cancellation, isolated user settings",
+  "escapeCancelled": true,
+  "editorAfterClick": "none",
+  "treeEnabled": true,
+  "diagnostic": "Место выбрано — гном везёт ёлку. Она появится за рабочими окнами.",
+  "placements": {
+    "1": {
+      "extraGarlands": [],
+      "garland": [],
+      "ornaments": [
+        {
+          "anchor": {
+            "x": 0.41,
+            "y": 0.43
+          },
+          "hidden": false,
+          "id": "tree_slot_0"
+        },
+        {
+          "anchor": {
+            "x": 0.61,
+            "y": 0.59
+          },
+          "hidden": false,
+          "id": "tree_slot_1"
+        },
+        {
+          "anchor": {
+            "x": 0.38,
+            "y": 0.73
+          },
+          "hidden": false,
+          "id": "tree_slot_2"
+        }
+      ],
+      "tree": {
+        "x": 0.5,
+        "y": 0.9185354501462287
+      }
+    }
+  }
+}

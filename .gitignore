@@ -1,0 +1,10 @@
+.build/
+.DS_Store
+DerivedData/
+*.xcuserstate
+xcuserdata/
+dist/*
+!dist/SnowPlay-macOS.zip
+!dist/SHA256SUMS.txt
+__pycache__/
+*.pyc

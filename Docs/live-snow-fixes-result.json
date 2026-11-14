@@ -1,0 +1,224 @@
+{
+  "build": "release",
+  "passed": true,
+  "unseededActualSnow": true,
+  "sampleSeconds": 10,
+  "maxParticles": 1000,
+  "finalDockVolume": 2480.6308967338996,
+  "autoHiddenObserved": true,
+  "cpuMedianOneCore": 31.936702724003936,
+  "rssMaxMB": 59.734375,
+  "gpuMeasured": false,
+  "samples": [
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 24.527340241809974,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 12.3472,
+        "cpuPercentOneCore": 12.3472,
+        "gpuMeasured": false,
+        "p95FrameMS": 19.17950005736202,
+        "particles": 1000,
+        "physicalFootprintMB": 16.017578125,
+        "residentMB": 51.953125,
+        "simulating": true,
+        "simulationHz": 52.13900242494338,
+        "targetFPS": 30,
+        "uptimeSeconds": 0.1647790833376348
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 649.9676846900478,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 35.39191842412019,
+        "cpuPercentOneCore": 28.898040201901367,
+        "gpuMeasured": false,
+        "p95FrameMS": 35.029333317652345,
+        "particles": 1000,
+        "physicalFootprintMB": 94.830322265625,
+        "residentMB": 59.65625,
+        "simulating": true,
+        "simulationHz": 25.42821376757446,
+        "targetFPS": 30,
+        "uptimeSeconds": 1.1680858749896288
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 1012.5867128321011,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 33.68034686150596,
+        "cpuPercentOneCore": 31.74254420931044,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.726291662082076,
+        "particles": 1000,
+        "physicalFootprintMB": 67.736572265625,
+        "residentMB": 59.734375,
+        "simulating": true,
+        "simulationHz": 27.747993533361992,
+        "targetFPS": 30,
+        "uptimeSeconds": 2.1998021666659042
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 1369.0968763204799,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 33.17571716254793,
+        "cpuPercentOneCore": 32.06737784601581,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.726291662082076,
+        "particles": 1000,
+        "physicalFootprintMB": 67.752197265625,
+        "residentMB": 59.453125,
+        "simulating": true,
+        "simulationHz": 28.470653832114056,
+        "targetFPS": 30,
+        "uptimeSeconds": 3.2013776666717604
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 1718.8645915746781,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 33.00767589642333,
+        "cpuPercentOneCore": 32.469723547315205,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.826208371669054,
+        "particles": 1000,
+        "physicalFootprintMB": 67.799072265625,
+        "residentMB": 59.5,
+        "simulating": true,
+        "simulationHz": 28.847584015428087,
+        "targetFPS": 30,
+        "uptimeSeconds": 4.201398500008509
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 2007.4076751598536,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 31.889988110025286,
+        "cpuPercentOneCore": 27.345665617935396,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.726291662082076,
+        "particles": 1000,
+        "physicalFootprintMB": 67.814697265625,
+        "residentMB": 59.515625,
+        "simulating": true,
+        "simulationHz": 29.081513451711064,
+        "targetFPS": 30,
+        "uptimeSeconds": 5.234743249951862
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 2155.2514361937383,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 31.845972949698613,
+        "cpuPercentOneCore": 31.61557020476455,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.726291662082076,
+        "particles": 1000,
+        "physicalFootprintMB": 67.767822265625,
+        "residentMB": 59.484375,
+        "simulating": true,
+        "simulationHz": 29.232242654145402,
+        "targetFPS": 30,
+        "uptimeSeconds": 6.23476633336395
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 2347.483542210265,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 31.926343644526234,
+        "cpuPercentOneCore": 32.427435144635886,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.519833396188915,
+        "particles": 1000,
+        "physicalFootprintMB": 67.767822265625,
+        "residentMB": 59.484375,
+        "simulating": true,
+        "simulationHz": 29.340534459290172,
+        "targetFPS": 30,
+        "uptimeSeconds": 7.234768333379179
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 2398.306658442923,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 31.921397480422627,
+        "cpuPercentOneCore": 31.886766770294066,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.671791712753475,
+        "particles": 1000,
+        "physicalFootprintMB": 67.767822265625,
+        "residentMB": 59.484375,
+        "simulating": true,
+        "simulationHz": 29.4245056085024,
+        "targetFPS": 30,
+        "uptimeSeconds": 8.268080999958329
+      }
+    },
+    {
+      "dockDetected": true,
+      "dockVisible": false,
+      "dockSnowVolume": 2480.6308967338996,
+      "fullscreenSuppressed": false,
+      "systemPaused": false,
+      "performance": {
+        "battery": false,
+        "cpuAverageSinceLaunch": 31.9286366740896,
+        "cpuPercentOneCore": 31.986638677713806,
+        "gpuMeasured": false,
+        "p95FrameMS": 34.519833396188915,
+        "particles": 1000,
+        "physicalFootprintMB": 67.783447265625,
+        "residentMB": 59.5,
+        "simulating": true,
+        "simulationHz": 29.49396413730148,
+        "targetFPS": 30,
+        "uptimeSeconds": 9.300015000044368
+      }
+    }
+  ]
+}

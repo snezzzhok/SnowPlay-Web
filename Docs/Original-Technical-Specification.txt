@@ -1,0 +1,945 @@
+# ❄️ SnowPlay 2.0 — проектирование всей зимней системы macOS
+
+Техническое задание для Codex • Физика снега • Анимации окон • Ассеты • Оптимизация
+
+Главная идея: весь снег должен вести себя как одна связанная система, а не как набор независимых красивых анимаций.
+
+Например, ты работаешь в Safari. На верхней части окна лежит снег, по экрану медленно падают снежинки. Ты закрываешь Safari — время визуально замедляется, снег взлетает и разлетается в стороны. Через секунду всё возвращается к обычной скорости, а снег продолжает накапливаться на оставшихся окнах и Dock.
+
+Если снова открываешь Safari, новое окно появляется чистым, и на нём постепенно начинает скапливаться снег. Если окно было не закрыто, а свёрнуто, SnowPlay помнит, сколько снега было до сворачивания.
+
+## 1. Как должен выглядеть снег
+
+[A wintery scene with falling snowflakes over a snowy ground on a light blue gradient.](https://images.openai.com/static-rsc-4/TFeqBRSi-oEQOaK2mileZfr4FTnCUefmUVAGzenVmBnEjsibYyBBxKEH5TzdHxaO9yc30F4jDIwyp5Hc080-CrS_7GotJzm3Y3wqnkYdQS5lttAjyT27DKlfA6Oo1VSOoh7WDAyPSqTq5wfoefF1B_LMYliJdUrk7-rXisg-pVZjShf8xAkQBFFwEQ7ThGcS?purpose=inline)
+
+[Ice button, frozen frame with snow, level menu in cartoon style isolated on white background. Glass shiny panel, game ui element. . Vector illustration](https://images.openai.com/static-rsc-4/EH5oyabOws4LYlFmuJ3lcIlu3tjsbyYlYX9g7Ef6JsXZGtTrYhWg5xbYKWoPIlxfTxquxch-zD8EElzEnU4dmBoVROhQ3AnwAf-xsggxMZclmVHK5egRq5ixe9T7SoQWPPgm2eVsTIX_Ou2OdM0gusFuHCczUeQ_b7gx9zw54wM-BIAYODDvSfeS9D3hkOEX?purpose=inline)
+
+[Beautiful falling snow Christmas background. Subtl](https://images.openai.com/static-rsc-4/cn9L95i35p6rdBjlQeXx-VHzVz1OwP1Wr3ldjucZEm3K95SBilpCKmKqi2UGUVkT1NTQHqNc6ofMz26NGMw63FYZT_RyxD3XELO9csF0lz8dso-jtbVuxa6hcdyGNKBOW48ncAEnSfFStz2SS2H9CHEaSk2CNxLzzwT-I7VnFo6MKYqfaQkB5EBVFKLfQUWy?purpose=inline)
+
+7
+
+Снег должен выглядеть естественно, но немного мультяшно.
+
+Вместо одинаковых белых точек предлагаю сделать три разновидности частиц.
+
+| Тип       | Размер | Доля | Поведение                                 |
+| --------- | ------ | ---- | ----------------------------------------- |
+| Маленькие | 1–2 pt | 65%  | Медленно падают, почти незаметны          |
+| Средние   | 2–4 pt | 28%  | Покачиваются и вращаются                  |
+| Крупные   | 4–6 pt | 7%   | Красивые снежинки, падают ближе к зрителю |
+
+Это стартовые значения для тестов, не физические размеры настоящих снежинок.
+
+Важное правило: нельзя, чтобы над текстом одновременно находилось слишком много крупных белых частиц. Поэтому снег над активным окном будет примерно на 70% менее интенсивным, чем на свободном рабочем столе.
+
+У каждой снежинки будут свои параметры: положение, размер, скорость, угол, вращение, прозрачность и реакция на ветер.
+
+### Пример базового поведения
+
+Интенсивность
+
+35%
+
+Направление ветра
+
+0°
+
+Статический предпросмотр плотности частиц. В настоящем приложении они будут двигаться независимо и плавно.
+
+Для эффекта натуральности добавим три уровня движения:
+
+- Постоянное движение вниз: основная скорость падения.
+- Медленное боковое покачивание: снежинки слегка меняют траекторию.
+- Ветер: изменяет направление и горизонтальную скорость всех свободных частиц.
+
+При сильном ветре уже накопленный снег может немного сдуваться с краёв, но не должен постоянно исчезать.
+
+## 2. Что происходит с окнами Mac
+
+Это самая важная часть всей программы.
+
+### Сценарий A — открываешь новое окно
+
+1. macOS создаёт окно. SnowPlay определяет его положение и размеры.
+2. Пока идёт системная анимация открытия, SnowPlay не запускает собственный взрыв снега.
+3. Через 0,2 секунды после стабилизации окна снежинки могут оседать на его верхнем крае.
+4. За следующие 15–40 секунд постепенно образуется маленькая снежная шапочка. Скорость зависит от интенсивности снегопада.
+
+Если окно появляется поверх другого заснеженного окна, снег с перекрытого участка не должен просвечивать через новое окно.
+
+### Сценарий B — сворачиваешь окно в Dock
+
+Это будет отдельный эффект Snow Collapse.
+
+0.0 s — окно со снегом
+
+0.2 s — снег взлетает
+
+0.6 s — снег осыпается
+
+Механика:
+
+1. Система обнаруживает сворачивание.
+2. Слой снега отделяется от верхнего края окна.
+3. Примерно 25% видимого снега превращается в частицы, остальные 75% сохраняются в состоянии окна, чтобы не перегружать экран.
+4. Частицы слегка поднимаются, затем падают вниз.
+5. Некоторые оседают на Dock; остальные плавно исчезают.
+6. Окно переходит в состояние `minimized`.
+
+При повторном открытии: окно восстанавливается, а сохранённый слой снега возвращается небольшим мягким оседанием за 0,3–0,5 секунды. Так оно не выглядит внезапно полностью заснеженным.
+
+### Сценарий C — полностью закрываешь окно
+
+Здесь используется твоя идея: Snow Burst + Slow Motion.
+
+### Временная шкала анимации
+
+0.00 s0.15 s0.40 s0.75 s1.10 s
+
+Взрыв
+
+Замедление
+
+Возврат скорости
+
+Как это ощущается:
+
+- 0–0,15 с: снег на закрываемом окне рассыпается, 20–35 маленьких частиц летят наружу.
+- 0,15–0,40 с: падающие снежинки визуально замедляются до 35% обычной скорости.
+- 0,40–0,75 с: скорость плавно возвращается к 100%, а разлетевшиеся частицы начинают падать.
+- 0,75–1,10 с: остатки снежного облака исчезают или оседают. Снегопад продолжается без перезапуска.
+
+Важное улучшение: мы замедляем только визуальную снежную систему, а не macOS или другие приложения. На рабочем столе эффект будет заметен, но активные рабочие окна не станут затемняться или вспыхивать.
+
+Также добавим защиту от спама: если пользователь быстро закрывает десять окон подряд, эффект объединяется в один небольшой снежный вихрь. Без десяти одновременных взрывов.
+
+### Сценарий D — перемещаешь окно
+
+Если окно движется медленно, снег следует за ним, немного колышется и держится на верхней границе.
+
+Если перемещаешь резко, снег наклоняется в противоположную сторону, часть соскальзывает с края, превращается в частицы и падает вниз.
+
+Если окно останавливается, остаток снега плавно выравнивается.
+
+### Сценарий E — меняешь размер окна
+
+Снежная шапка растягивается или сокращается вместе с шириной окна. При сильном уменьшении ширины избыток снега осыпается с боков.
+
+Никаких внезапных скачков или появления снега внутри окна.
+
+## 3. Лёд и морозные узоры на окнах
+
+[Frosty patterns](https://images.openai.com/static-rsc-4/6e_jdnydrjy75K16vCzcSdXhPatq_y1VoNkyCb-dxgMNOdDNFI3AkLAiJZ7kr6FPkEfKkUlQyedDIQ73OGafW3QvTQ2ZshtuZsI22GCaQ1liwKV9b9_Csgb4wD1CbQVRTTjuEPzhvJ0s3fdJ8NHFAEAlezdZvmp3BvWatsh2Qa2eKsx3NXnnBoZ93Glulskn?purpose=inline)
+
+[Ice background, frost on window](https://images.openai.com/static-rsc-4/IC8ldyXkKWUOoAF54Gz2l53a9iZUddkG2CEhbnMDl-3RyUy-RStbkiZ3olLh2W9f1vrSROYMo2fUm5UvXxUgTfno25bXbJH4wFJuk3ITxSdUWvnjX9-OVePuUUHURtQOrIr2MTZdv9hcympCXTHrwOn_y-3vr_Og7o-GOnTQSs66ZejDlww-e2LOBQbtU3cU?purpose=inline)
+
+[frosty old windowpane](https://images.openai.com/static-rsc-4/AmV7F8KVpyDiBDUR6jTjeluPevzOut5weZoI9vY8n0xKscycPPzpn5C38qlriGu343VxzVJwxZh31ZtCx30m5N05ik_MB1LE8rWcL5i8TL4Gn-7H1nvRHmzZRxDAgsvXlYiPpfsfRRvp-mvxC9rpHglprFRdIaNO_jBvnWivZ4kyF1Z5xH_SkKAJrxw07fyv?purpose=inline)
+
+7
+
+Мне нравится идея, что окна постепенно замерзают, когда ими долго не пользуешься.
+
+Но замораживать текст или всю поверхность окна не стоит. Это будет мешать чтению.
+
+Поэтому предлагаю систему Frosted Corners — иней только в верхних углах и по узкой внешней границе окна.
+
+| Состояние           | Действие                                      |
+| ------------------- | --------------------------------------------- |
+| Окно активно        | Инея нет                                      |
+| Неактивно 20 секунд | Начинают появляться тонкие ледяные веточки    |
+| Неактивно 60 секунд | Иней достигает максимума                      |
+| Снова активируешь   | Иней тает за 0,5 секунды                      |
+| Сворачиваешь        | Иней исчезает вместе с окном                  |
+| Закрываешь          | Иней превращается в несколько ледяных блёсток |
+
+При размораживании за 0,5 секунды узор плавно теряет непрозрачность и сокращается к краям. Можно добавить 3–5 микрокапель, но без потёков по содержимому окна.
+
+Ограничение: даже на неактивном окне не должно замерзать больше 2–3% его видимой площади. В Focus Mode иней отключается.
+
+## 4. Как будет работать Dock
+
+Dock — основное место, где снег живёт постоянно.
+
+[搜狗输入法Mac版带来皮肤商城功能 支持多种时间/日期/按键动态皮肤 - 蓝点网](https://images.openai.com/static-rsc-4/pjga1utLpAkHCh3KiN1ZTZLcdq80q5jEOdmiv-TBpwRVbx5iIZ5YBem0pO56ml_KyaVU2B0D3-zxzTxXJOOD47kNHoGJK9QB3ZeCmQE6jSyrPSZxlNp-52ScubkGUX05S9IbC9I-upBIn2KfEbDm-JgYfql7sEToJPwTOJ2AcM4?purpose=inline)
+
+[landiannews.com](https://www.landiannews.com/archives/107227.html?utm_source=chatgpt.com)
+
+Предлагаю три уровня:
+
+Первый — снежный слой. На верхней части Dock постепенно образуется мягкая волнистая полоска снега. Высоту можно настроить от 0 до 10 экранных точек (это не настоящий физический сантиметр). При изменении размеров Dock слой перестраивается.
+
+Второй — взаимодействие с курсором. Если пользователь включил режим лепки, горизонтальное движение курсора сгребает снег и создаёт шарик. Пока режим выключен, Dock ведёт себя совершенно обычно.
+
+Третий — снеговик и снегоуборщик. Готового снеговика можно перенести на свободную область рабочего стола. Снегоуборщик проходит по нижней зоне и убирает накопленный снег.
+
+Если Dock расположен слева или справа, SnowPlay должен менять направление накопления и не пытаться рисовать сугроб как горизонтальную полосу.
+
+Важное ограничение: в первой версии снег прикрепляется к общей области Dock. Точное накопление на каждой иконке отдельно — дополнительная функция после проверки системного доступа.
+
+## 5. Как будут работать гирлянды
+
+Гирлянда не должна хаотично висеть перед окнами. Поэтому создадим для неё отдельный Decoration Editor.
+
+[App de Noël Festivitas Illumine Mac Avec Guirlandes Scintillantes](https://images.openai.com/static-rsc-4/9Mxz9_PFT_0MT_83MGEppLPZb6uKIS3Y64DtE-mN4aJOTFH13cegpBRHmZV0tp6wMT7u2OtcttSyCs5B6AYCqLX2W7GzH9Wjro6-RqqoILZiZ7v3vYDpNbmfu_izy1fpCLdHGeE-jwJPf_Ka_3nSOqq9m_78pabiMwsHqX1bQA0?purpose=inline)
+
+[Glowing Christmas string lights garland isolated on transparent background](https://images.openai.com/static-rsc-4/825aXvmg7ZqKhN-2t2HtKQ09SLCxOKuA4oWD6DphRyNLfWVjcfBNQezu29Oz47YUfbCAN0YpLT8PeZkeGiN0jpdvnOrNxiCxaHkmYGvbRWPC21VI1TlxbUIwOSmy2Y_9umsjGPhialfyX0UAhomYncz0ztcAfqDN8w_8_8jNP35q34b3Db321k4uZDiY9WQv?purpose=inline)
+
+[🎄 Festivitas](https://images.openai.com/static-rsc-4/0AMyUueOFLHDCPiCrBiuyiv0ZBUWp_zDkeIbDy1xbmaXLFU2Wdd0bdUCdFMLvBhLOtl32SKdnpPnguWPhmbIEi1u8848l9YUVn1gw8rGVV2nheEGLX51eP1mGBo9fIBXpjE7VVXp1QFgPbf9aaSD90zsPgs_1l0OIqvVRotUv-8?purpose=inline)
+
+7
+
+### Режим установки гирлянды
+
+1. Открываешь локальный пульт и нажимаешь `Place Garland`.
+2. На рабочем столе появляется режим редактирования с маленькими круглыми точками крепления.
+3. Нажимаешь на первую точку, затем на вторую — между ними появляется провод с красивым провисанием.
+4. Можешь добавить третью, четвёртую и следующие точки с выбранным шагом.
+5. Настраиваешь расстояние между лампочками, их размер, цвет и степень провисания.
+6. Нажимаешь `Done`, после чего гирлянда больше не перехватывает клики.
+
+Точки разрешено размещать только в безопасных зонах: возле верхнего края рабочего стола, по бокам и вокруг Dock. Вешать гирлянду поперёк открытого документа по умолчанию нельзя.
+
+### Физика гирлянды
+
+Провод строится как плавная кривая между креплениями. Лампочки располагаются через одинаковые расстояния вдоль этой кривой.
+
+Если курсор быстро проходит рядом, провод слегка колеблется в течение 0,5–1,0 секунды. При обычном движении курсора ничего не происходит.
+
+По умолчанию лампочки светятся мягко, без резких миганий.
+
+## 6. Санта, сани и подарок на парашюте
+
+[Browse thousands of Cute Santa images for design inspiration | Dribbble](https://images.openai.com/static-rsc-4/GL72j5tDS1vUXM83Mkb3AWQt0da3nmKMxAU5kDtGBQ-_hUK5azuGiEb8V4OlRgE-64alAMskflgSce2C_v8HL2rayru8t_XCUiPqILKK1pFR-uJntwwJv7F9mNwb9WnrLNRSvu91DG4h5GlfJEk33Eg7sojY8X5gVhZ-noXZclk?purpose=inline)
+
+[Delivery concept with parachute flat design](https://images.openai.com/static-rsc-4/OS4ZOpENgQWvCEhNTCxU6ueEVKMq_t8BUPQp3rKFvT0XE9WO1hvHs8mdcyAXAQstZWtdJ9iJD7zQKjKyuVvTHHYKSwW6Icyf7gGKL4--1SOEv0dGNj5lfxMSUKq0MbCjevtpiCY_0ULSoa52TRT6pGJUO-oTs6R0Y8wxfhcT8R4erWd_bMDx2XYR20-wk-OH?purpose=inline)
+
+[Santa and reindeer flying in sleigh over town night sky](https://images.openai.com/static-rsc-4/jbI4fplA-7ZxsODYFzMIqzPaERTMYFYZ6zvURYjLGT10VV2YKj2rCjAU_z5qjsB0AojIMp7hYJg-BaQbkKvADjdAA-K1Ef6Vt6RpNP338i8YnqE9VO4KOru8p6Mo9MVOOY9GsqL2LqSTfgpmCh0j970J-T1PlmlFHU4O-zuJlPjteq4E3kdXQ-34C19DfuzG?purpose=inline)
+
+8
+
+Эта анимация должна происходить только на свободном фоне рабочего стола, а не перед открытыми приложениями.
+
+### Сценарий Santa Delivery
+
+| Время | Событие                                                  |
+| ----- | -------------------------------------------------------- |
+| 0–1 с | Из-за левого края заднего фона появляются маленькие сани |
+| 1–3 с | Санта плавно пролетает над рабочим столом                |
+| 3 с   | Из саней выпадает один подарок                           |
+| 3–5 с | Раскрывается парашют, подарок покачивается               |
+| 5–7 с | Подарок мягко приземляется                               |
+| После | Сани улетают, подарок остаётся на рабочем столе          |
+
+Здесь не будет оленей. Санта летит на маленьких волшебных санях с едва заметным следом снежных блёсток.
+
+Если весь рабочий стол закрыт окнами, событие переносится до появления свободного пространства. Если пользователь работает в полноэкранном приложении, доставка не запускается.
+
+### Открытие подарка
+
+При двойном клике коробочка слегка подпрыгивает, крышка приподнимается, появляется мягкое золотое свечение.
+
+Затем пользователь видит один из двух вариантов:
+
+- New Year Countdown — маленький счётчик дней, часов, минут и секунд до Нового года.
+- Fireworks Countdown — обратный отсчёт и короткий мультяшный салют на фоне рабочего стола.
+
+Анимация не должна сама переключать пользователя на рабочий стол. Если открыты Safari или VS Code, эффект остаётся за ними. Пользователь увидит его только там, где свободен фон.
+
+Доставка — не чаще одного раза в день по умолчанию, без звуков и уведомлений. Повторный подарок можно вызвать вручную из пульта.
+
+## 7. Ассеты — как всё нарисовать и анимировать
+
+Нам понадобится своя небольшая библиотека графики.
+
+Все ассеты выполняются в едином стиле: мягкий 2D Cartoon, округлые формы, минимум деталей, одинаковое освещение, прозрачный фон.
+
+| Ассет                     | Формат              | Анимация                   |
+| ------------------------- | ------------------- | -------------------------- |
+| Снежинки (6 видов)        | SVG/PNG             | Падение, вращение          |
+| Снежная шапка (4 формы)   | SVG/PNG             | Рост, деформация           |
+| Снежные комки (3 размера) | SVG/PNG             | Катание, рост              |
+| Снеговик                  | Отдельные части PNG | Сборка, покачивание        |
+| Снегоуборщик              | Слои PNG или вектор | Колёса, ковш, снег         |
+| Гирлянда                  | Вектор + лампочки   | Провисание, колебание      |
+| Ёлка                      | Слоёный PNG/SVG     | Украшение, мягкое свечение |
+| Санта и сани              | Отдельные части     | Полёт                      |
+| Подарок и парашют         | Отдельные части     | Падение, открытие          |
+| Моти, Пуффи, Буби         | Sprite sheets       | Ходьба, сон, прыжок        |
+| Иней (4 узора)            | SVG/PNG             | Рост, таяние               |
+| Салют                     | Частицы             | Вспышки, затухание         |
+
+Важно: анимируемые части нельзя просто склеить в одну картинку. Например, у саней должны быть отдельно корпус, Санта и мешок. У подарка — коробка, крышка, лента и парашют.
+
+### Ёлка — отдельное техническое задание на ассет
+
+[Big Christmas set of watercolor elements. Christmas tree and toys, garlands, socks, gifts, stars, branches. Winter holiday decor](https://images.openai.com/static-rsc-4/Eb3krP20eMnzU65UwvOd4R4w4Ff8XuTr0EhFC4_sAvVyL7Ki0nHeFuXXc8kQWXbvWmqrhCqwUilAxr5tPKkWuaFEF6wOHvAGWdkPsOsbjDLQCOxlOZOQCPApC46jp9jQf8JqcyXUHfz8LXkcWxZ67x66AxwwSZIKrQw57RsP2kCpANbbSqffetQBTv9Shg8b?purpose=inline)
+
+Ёлка должна быть небольшой, около 80–140 экранных точек высотой. Её можно поставить только на свободное место рабочего стола.
+
+Нужны следующие слои:
+
+- `tree_body.svg` — зелёная крона.
+- `tree_trunk.svg` — короткий ствол.
+- `tree_star.svg` — золотая звезда.
+- `ornaments.svg` — красные, золотые и голубые шары.
+- `tree_lights.svg` — маленькие лампочки.
+- `tree_snow.svg` — снежные шапочки на ветвях.
+- `tree_shadow.svg` — мягкая тень.
+
+Ёлка может слегка покачиваться при сильном ветре. В остальное время она стоит неподвижно.
+
+На ёлку тоже должен падать снег: небольшое количество снега скапливается на верхних ветках, но не закрывает звезду или украшения.
+
+Для Codex нужен генератор исходных векторных ассетов: сначала программно рисуем согласованные формы в SVG, затем экспортируем их в PNG с прозрачностью. Сложных персонажей можно отдельно генерировать графическим инструментом и вручную согласовывать по стилю.
+
+### Универсальные правила для всех ассетов
+
+- Никаких реалистичных фотографий и текстур.
+- Никаких чёрных толстых контуров.
+- Мягкие тени и спокойная палитра.
+- Один основной источник освещения, условно сверху слева.
+- Никаких резких прыжков масштаба.
+- Каждый ассет должен хорошо выглядеть в размере 24–128 точек.
+- SVG сохраняется как исходник, PNG экспортируется в 1× и 2× для Retina.
+- Ассеты не должны содержать белую прямоугольную подложку.
+
+## 8. Архитектура приложения — как всё соединить
+
+После изучения документации Apple я бы выбрал Swift + AppKit + SpriteKit, а веб-панель сделал бы отдельно.
+
+Apple предоставляет информацию о расположении окон через Core Graphics, а Accessibility API позволяет получать некоторые события их изменения. SpriteKit предназначен для отрисовки частиц и анимаций. Однако стандартные `SKEmitterNode` не предоставляют физические объекты для каждой снежинки, поэтому накопление снега лучше рассчитывать собственным движком, а эмиттеры использовать для второстепенных эффектов.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://developer.apple.com\&sz=32)
+
+Apple Developer Documentation+3
+
+
+
+macOS Window Observer
+
+Положение, размеры, события окон, Dock
+
+Winter Engine
+
+Snow Physics
+
+Surface System
+
+Animation Director
+
+Decoration Manager
+
+Renderer
+
+Прозрачные слои, частицы, ассеты
+
+Local API
+
+Пульт управления и настройки
+
+В системе должны быть шесть независимых модулей.
+
+Snow Physics Engine рассчитывает падение снега, ветер, сдувание, снежные облака, столкновения и плавное замедление.
+
+Surface Manager знает, где находятся допустимые поверхности накопления. Каждая поверхность имеет свой идентификатор, координаты, высоту снега и максимальную ёмкость.
+
+Window Observer следит за открытием, закрытием, сворачиванием, перемещением и активацией окон. Необходимо отдельно обрабатывать ситуации, когда приложение не выдаёт точное событие.
+
+Animation Director запускает все специальные анимации: Snow Burst, Frost Melt, Santa Delivery, Snowplow и Fireworks. Он следит, чтобы одновременно не запускалось слишком много эффектов.
+
+Decoration Manager отвечает за ёлку, гирлянды, подарки и плюшевых существ. Он хранит их позиции и проверяет, чтобы они не перекрывали важные области интерфейса.
+
+Local Control Server принимает команды от браузера, изменяет настройки и возвращает текущее состояние. Сам сервер не должен рисовать снег — только управлять нативным приложением.
+
+### Самое сложное техническое ограничение
+
+Есть разница между тем, что macOS позволяет узнать после события, и тем, что можно узнать во время системной анимации.
+
+Например, Apple указывает, что `kAXWindowMovedNotification` отправляется в конце перемещения окна. Поэтому для плавного движения снега за перетаскиваемым окном потребуется дополнительное отслеживание координат, а не только ожидание уведомлений.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://developer.apple.com\&sz=32)
+
+Apple Developer Documentation+1
+
+
+
+Также нельзя считать, что программный слой всегда будет строго позади одного окна и перед другим. Это нужно отдельно протестировать на настоящем Mac, особенно с Mission Control, Spaces, Stage Manager и полноэкранным режимом. Apple предоставляет настройки участия окон в этих режимах, но они не гарантируют произвольное размещение эффекта между чужими окнами.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://developer.apple.com\&sz=32)
+
+Apple Developer Documentation+1
+
+
+
+Решение: сделать два визуальных уровня — отдельный фоновый слой для Санты и подарков и прозрачный слой для снега на границах окон. При невозможности правильно определить перекрытия эффект лучше скрыть, чем рисовать поверх текста или кнопок.
+
+## 9. Как управлять скоростью и реалистичностью снега
+
+Чтобы анимации выглядели плавно, нам не нужен сложный физический симулятор для каждой снежинки. Достаточно нескольких простых правил.
+
+### Физика снежинок
+
+Для каждой частицы:
+
+\\[ x\_{next}=x+v_x\Delta t,\qquad y\_{next}=y+v_y\Delta t \\]
+
+Горизонтальная скорость зависит от ветра и лёгкого покачивания, вертикальная — от размера снежинки.
+
+Затем проверяем, встретилась ли частица с поверхностью. Если да, она исчезает из свободного снегопада и добавляет небольшое количество снега на соответствующий участок поверхности.
+
+Однако не нужно физически считать каждую микроскопическую снежинку после приземления. Гораздо эффективнее хранить профиль снежного слоя: например, высоту снега в точках вдоль верхнего края окна.
+
+Упрощённая схема хранения снежной шапки. В реальном приложении участков будет больше, в зависимости от ширины окна.
+
+Так мы сможем делать естественные неровные сугробы, при этом почти не нагружая процессор.
+
+### Система замедления времени
+
+Каждая анимация получает собственный множитель времени:
+
+- `1.0` — обычная скорость.
+- `0.35` — замедленный снег.
+- `0.0` — полная остановка выбранного эффекта.
+
+При закрытии окна множитель плавно уменьшается, затем возвращается к единице.
+
+Ключевой момент: во время Snow Burst продолжается внутреннее моделирование накопления снега. После возврата скорости ничего не должно прыгать или начинаться заново.
+
+## 10. Правила производительности и удобства
+
+Предлагаю такие первоначальные технические цели:
+
+| Показатель                           | Цель                                 |
+| ------------------------------------ | ------------------------------------ |
+| Частота отрисовки                    | 60 FPS при обычной работе            |
+| Максимум активных свободных снежинок | 400 на экран                         |
+| Время размораживания                 | 0,5 секунды                          |
+| Задержка реакции на событие окна     | Желательно до 100 мс                 |
+| Средняя загрузка CPU в Balanced Mode | Целевой ориентир до 3% одного ядра   |
+| Потребление памяти                   | Цель до 150 МБ                       |
+| Фоновые звуки                        | Отключены                            |
+| Отключение эффектов                  | Одной кнопкой                        |
+| Работа в полноэкранных приложениях   | По умолчанию скрывать лишние эффекты |
+
+Это целевые значения для тестирования, а не обещание производительности. Проверять их нужно на настоящем Mac и с разными разрешениями экранов.
+
+Если компьютер работает от аккумулятора, частота отрисовки может автоматически снижаться. При закрытой крышке ноутбука, блокировке или переходе в сон все анимации должны приостанавливаться.
+
+## 11. Готовое ТЗ для Codex
+
+Ниже подготовлен единый документ, который можно использовать как основную инструкцию для разработки. Он специально требует сначала построить работающий снежный движок, а не сразу создавать десятки украшений.
+
+# SnowPlay 2.0 — Technical Specification for Codex
+
+## 1. Goal
+
+Build SnowPlay, a native macOS desktop application that adds a minimal, interactive, cartoon-style winter world to the user's desktop.
+
+The application must remain lightweight, unobtrusive, visually consistent, and safe to use during normal work.
+
+Core principle: **90% normal Mac, 10% Christmas magic.**
+
+Do not build a browser-only simulation as the final product. The real snow and window effects must be implemented in the native macOS application.
+
+## 2. Research and setup
+
+Before implementation:
+
+1. Inspect the available macOS version, Xcode, Swift compiler and project structure.
+2. Verify the current Apple APIs required for window tracking, rendering, and input handling.
+3. Identify permission requirements.
+4. Test the feasibility of transparent overlay windows that allow mouse events to pass through.
+5. Test live tracking of external window geometry.
+6. Investigate the Dock position, auto-hide and scaling behaviour.
+7. Write a feasibility report separating confirmed behaviours, experimental behaviours and unsupported behaviours.
+8. Do not invent private macOS APIs or claim undocumented capabilities are supported.
+
+Prefer public, documented Apple APIs.
+
+## 3. Technology
+
+- Native application: Swift and AppKit.
+- Rendering: SpriteKit initially; evaluate Metal only if required.
+- UI: SwiftUI/AppKit menu bar interface.
+- Snow simulation: custom lightweight particle and accumulation engine.
+- Window observation: Accessibility API and Core Graphics window information.
+- Local web control: HTTP server bound only to 127.0.0.1.
+- Settings: Codable configuration stored locally.
+- Assets: SVG source files and transparent PNG exports.
+
+Keep the system modular.
+
+## 4. Snow Engine
+
+Implement three visual categories of falling snow:
+
+- Small particles: 65%.
+- Medium particles: 28%.
+- Large particles: 7%.
+
+Each particle stores position, velocity, size, alpha, rotation and particle state.
+
+Implement:
+
+- Gravity-based downward movement.
+- Wind from -90 to +90 degrees.
+- Gentle horizontal drift.
+- Soft randomized movement.
+- Smooth changes in wind direction.
+- Screen-edge particle recycling.
+- Configurable density and opacity.
+- Particle visibility reduction over active windows.
+- Configurable particle count limits.
+
+Never render snow with distracting flashes or high-contrast effects.
+
+## 5. Snow Accumulation System
+
+Create a SurfaceManager.
+
+Supported initial surfaces:
+
+- Top edges of ordinary application windows.
+- The Dock as a single simplified surface.
+- Optional desktop decorative objects.
+
+Each surface must have:
+
+- Unique identifier.
+- Screen ID.
+- Current geometry.
+- Visibility state.
+- Snow accumulation profile.
+- Maximum snow height.
+- Surface motion velocity.
+- Last update timestamp.
+
+Use a sampled height field instead of one physical object per accumulated snowflake.
+
+The accumulated snow must appear soft and irregular.
+
+Maximum height must be configurable, with a default of 10 logical display points.
+
+Do not place snow on interactive buttons or text regions when avoiding those areas is possible.
+
+## 6. Window Lifecycle
+
+Implement an explicit state machine:
+
+- CREATED
+- VISIBLE
+- ACTIVE
+- INACTIVE
+- MOVING
+- RESIZING
+- MINIMIZING
+- MINIMIZED
+- RESTORING
+- CLOSING
+- CLOSED
+
+### Opening
+
+Detect a new eligible window.
+
+Allow the window to stabilize, then initialize an empty accumulation surface.
+
+Start accumulating snow gradually.
+
+### Minimizing
+
+When a window minimizes:
+
+1. Detach the visible snow accumulation.
+2. Convert a bounded portion of the visible snow into animated particles.
+3. Animate a small rising and falling burst.
+4. Save the remaining snow profile.
+5. Hide the window-attached effects.
+6. Preserve the minimized window state.
+
+On restoration, smoothly return the saved snow layer over approximately 0.3–0.5 seconds.
+
+Do not interpret application hiding or Space changes as window closure.
+
+### Closing
+
+When closure is detected:
+
+1. Capture the last valid known window geometry and snow profile.
+2. Detach the accumulated snow.
+3. Generate a snow burst of approximately 20–35 visible particles.
+4. Reduce the visual snow time multiplier toward 0.35.
+5. Return gradually to the normal multiplier of 1.0.
+6. Continue normal snowfall and accumulation.
+7. Dispose of the closed window's data safely.
+
+Total visual sequence: approximately 1.1 seconds.
+
+Do not alter actual macOS time or application execution.
+
+If a closing event cannot be distinguished reliably from minimizing or hiding, use the safest reduced effect and record diagnostic information.
+
+Coalesce multiple rapid close events rather than triggering repeated full-screen effects.
+
+### Moving
+
+Track window position while moving whenever permitted.
+
+Make snow follow the moving window.
+
+When window speed exceeds a configurable threshold, shed a small fraction of the snow from the appropriate side.
+
+### Resizing
+
+Adjust the snow profile according to the new window width.
+
+Excess snow may fall from the sides.
+
+Avoid sudden jumps in geometry.
+
+## 7. Frost System
+
+Frost must be restricted to window corners and thin outer edges.
+
+- Begin growth after 20 seconds of inactivity.
+- Reach maximum after approximately 60 seconds.
+- Cover no more than 2–3% of the eligible window area.
+- On activation, melt smoothly in 0.5 seconds.
+- On minimization, hide the frost.
+- On closure, allow a subtle frost-fragment effect.
+
+Do not frost editable document content.
+
+Disable frost in Focus Mode.
+
+## 8. Dock System
+
+Support bottom, left and right Dock positions.
+
+Implement:
+
+- A soft accumulation strip.
+- Geometry updates when Dock changes size or location.
+- Snowball creation in explicit interaction mode.
+- Snow removal and refilling.
+- Snowplow animation along the relevant Dock orientation.
+
+Do not intercept normal Dock clicks.
+
+Individual Dock icon accumulation is optional and must be enabled only after successful macOS compatibility testing.
+
+## 9. Snowballs and Snowman
+
+Create an optional Snow Interaction Mode.
+
+- Use an explicit modifier or toggle to activate it.
+- Allow the cursor to gather snow.
+- Increase snowball radius according to collected snow.
+- Limit growth to a configurable maximum.
+- Support dragging three snowballs to an appropriate desktop location.
+- Join compatible snowballs into a snowman.
+- Add simple eyes, carrot nose, buttons and scarf.
+- Allow interaction without activating underlying applications accidentally.
+
+Disable the interaction when Focus Mode is active.
+
+## 10. Snowplow
+
+Implement an original small red cartoon snowplow.
+
+It must:
+
+- Enter from the screen edge.
+- Move along the Dock surface.
+- Push a bounded pile of snow.
+- Remove all accumulated snow during a full cleanup.
+- Trigger complementary clearing effects for window snow.
+- Leave the screen after finishing.
+- Permit snow accumulation to restart.
+
+Modes:
+
+- Automatic cleanup, default every 60 seconds.
+- Manual cleanup.
+- Preserve Snowman option.
+- Complete Winter Reset.
+
+The snowplow must not interfere with clicks or window management.
+
+## 11. Garland Editor
+
+Create a placement mode for Christmas lights.
+
+- Allow the user to place anchor points.
+- Draw a gently sagging cable between points.
+- Position bulbs at configurable distances.
+- Support bulb colour, brightness, spacing and sag.
+- Constrain default placement to desktop edges and safe regions.
+- Save positions for each display configuration.
+- Support limited decorative cursor interaction.
+- Return to mouse-transparent mode after editing.
+
+Avoid covering menu bar controls or other important system UI.
+
+## 12. Christmas Tree
+
+Generate a consistent cartoon-style layered vector asset.
+
+Layers:
+
+- Tree body.
+- Trunk.
+- Star.
+- Ornaments.
+- Lights.
+- Snow overlay.
+- Ground shadow.
+
+Provide SVG sources and transparent PNG exports at 1x and 2x.
+
+The user must be able to place the tree on the desktop in Decoration Mode.
+
+The tree must stay behind ordinary application windows.
+
+Snow may accumulate on its branches.
+
+## 13. Santa Delivery
+
+Create a Santa sleigh animation without reindeer.
+
+Sequence:
+
+1. Santa enters from the desktop background edge.
+2. Sleigh moves along a smooth curve.
+3. A single present is dropped.
+4. A small parachute opens.
+5. The present descends with gentle side-to-side motion.
+6. The present lands on the desktop.
+7. Santa exits.
+
+The event must occur behind active application windows.
+
+Defer the event when no safe desktop area is available.
+
+Limit the default delivery frequency to once per day.
+
+Only one unopened present may exist at any time.
+
+## 14. Gift Opening
+
+The present opens only after an intentional double-click in the interactive desktop region.
+
+Provide:
+
+- Present lid animation.
+- Gentle glow.
+- New Year countdown widget.
+- Optional short fireworks animation.
+
+Animations must remain in the desktop/background layer.
+
+Do not steal application focus or interrupt work.
+
+## 15. Mascots
+
+Implement three original small, round, fluffy fantasy creatures:
+
+- Mochi: white yeti-like character.
+- Puffy: lavender creature.
+- Bubi: mint-green creature.
+
+Use a unified art style.
+
+Each mascot should have:
+
+- Idle.
+- Walk.
+- Sleep.
+- Small reaction.
+
+Show at most one mascot at a time.
+
+Keep appearance infrequent.
+
+Disable in Focus Mode.
+
+## 16. Animation Director
+
+Create a centralized animation scheduler.
+
+All effects must support:
+
+- Start.
+- Stop.
+- Cancel.
+- Completion callbacks.
+- Maximum active particles.
+- Priority.
+- Reduced Motion mode.
+- Focus Mode suppression.
+- Per-effect time multiplier.
+
+Animations must not block one another or pause the operating system.
+
+Limit simultaneous expensive effects.
+
+## 17. Local Control Panel
+
+Implement a local web interface.
+
+Features:
+
+- Snow toggle.
+- Snow intensity.
+- Wind angle.
+- Wind strength.
+- Accumulation height.
+- Snow on windows.
+- Frost.
+- Dock snow.
+- Snowball interaction.
+- Garland editor.
+- Tree placement.
+- Santa delivery.
+- Mascot selection.
+- Snowplow activation.
+- Automatic cleaning interval.
+- Focus, Balanced and Play modes.
+- Full effect reset.
+- Performance settings.
+
+Provide a live preview of the selected settings.
+
+The local HTTP server must bind to 127.0.0.1 only.
+
+Protect commands against unauthorized cross-origin requests and require a local session token for state-changing actions.
+
+## 18. Performance
+
+Target:
+
+- Smooth 60 FPS when appropriate.
+- Adaptive particle limits.
+- Maximum default of 400 free particles per display.
+- Low CPU use during ordinary work.
+- Low memory use.
+- Reduced rendering when running on battery.
+- Animation pause during system sleep and locked sessions.
+- Proper clean-up after displays are disconnected.
+
+Measure actual performance; do not assume targets are achieved.
+
+## 19. Compatibility and Privacy
+
+Test:
+
+- Multiple displays.
+- Different Retina scaling factors.
+- Dock auto-hide.
+- Dock on different screen edges.
+- Mission Control.
+- Spaces.
+- Stage Manager.
+- Fullscreen applications.
+- Minimized windows.
+- Hidden applications.
+- Different macOS appearance modes.
+- Accessibility permission denied or revoked.
+
+Use the minimum permissions required.
+
+Do not capture document content unnecessarily.
+
+Do not collect browsing history, screenshots, keystrokes or personal files.
+
+Provide an immediate Pause All Effects action.
+
+## 20. Development Order
+
+Phase 1: Create a native transparent overlay and verify click-through rendering.
+
+Phase 2: Implement a free-particle snowfall engine.
+
+Phase 3: Detect window geometry and render a stable snow cap.
+
+Phase 4: Add real accumulation and window lifecycle effects.
+
+Phase 5: Implement snow burst, slow motion and frost.
+
+Phase 6: Implement Dock interactions, snowballs and snowplow.
+
+Phase 7: Create or import layered graphical assets.
+
+Phase 8: Add garlands, tree, Santa, gift and mascots.
+
+Phase 9: Build the local web control panel.
+
+Phase 10: Optimize, test, package, document and prepare GitHub release.
+
+## 21. Required Tests
+
+Create automated unit tests for:
+
+- Particle motion.
+- Wind interpolation.
+- Snow accumulation.
+- Surface resizing.
+- Snow conservation or bounded loss during animations.
+- Window state transitions.
+- Effect cancellation.
+- Animation scheduling.
+- Configuration loading.
+- Local API security.
+
+Add manual integration test scripts for actual macOS window interactions.
+
+## 22. Deliverables
+
+- Complete Swift source code.
+- Xcode project.
+- Modular Snow Engine.
+- All layered source assets.
+- Transparent PNG exports.
+- Working local control panel.
+- Default presets.
+- Automated tests.
+- Manual test checklist.
+- Performance report.
+- README with installation instructions.
+- GitHub Actions build configuration where appropriate.
+- Distributable macOS application build when the environment supports signing and packaging.
+
+## 23. Mandatory Engineering Rules
+
+Do not implement everything as one large Swift file.
+
+Do not substitute fake screenshots for native macOS behaviour.
+
+Do not fabricate successful integration tests.
+
+Do not use private or undocumented APIs without explicitly flagging the limitation.
+
+Before implementing each subsystem, identify its inputs, outputs, events, errors and dependencies.
+
+After each phase, compile the project and run applicable tests.
+
+Report incomplete or unsupported features accurately.
+
+Prioritize working snowfall, window interactions and performance over decorations.
+
+The final application must remain usable without the web control panel being open.
+
+## 12. Что Codex должен проверить первым
+
+Я бы особенно внимательно проверил четыре вещи, прежде чем тратить время на красивые ассеты:
+
+1. Отслеживание окон: умеем ли мы определять момент закрытия, сворачивания, восстановления и перемещения окна без заметных задержек?
+2. Правильные слои: не перекрывают ли снег, иней и декоративные элементы кнопки, текст и окна, расположенные выше?
+3. Настоящий Dock: можем ли мы стабильно отслеживать его позицию, масштаб и автоматическое скрытие?
+4. Производительность: остаётся ли система плавной после нескольких часов непрерывного снегопада?
+
+Эти проверки важнее создания ёлки или Санты. Если какой-то системный эффект окажется ненадёжным, мы должны заменить его более простым, но стабильным поведением.
+
+Для реализации рекомендую использовать документацию [AppKit NSWindow](https://developer.apple.com/documentation/appkit/nswindow?utm_source=chatgpt.com), [Quartz Window Services](https://developer.apple.com/documentation/coregraphics/quartz-window-services?utm_source=chatgpt.com) и [SpriteKit Particle Emitters](https://developer.apple.com/documentation/spritekit/skemitternode?utm_source=chatgpt.com).
+
+Итог: SnowPlay 2.0 будет ощущаться как настоящий маленький зимний мир, который реагирует на действия пользователя. Самыми выразительными эффектами станут замедление снега при закрытии окна, плавное размораживание при возвращении к работе, нарастающие сугробы и физическое взаимодействие со снежками. При этом обычная работа на Mac всегда важнее любой анимации.

@@ -1,0 +1,15 @@
+{
+  "cachedColorVector" : {
+    "medianMS" : 30.765041667109472,
+    "p95MS" : 31.877000001259148
+  },
+  "cachedGlyph" : {
+    "medianMS" : 42.445666666026227,
+    "p95MS" : 45.600708333950024
+  },
+  "scope" : "2400 white snow dots at 2.5x-like sizes in 2880x1800 Retina bitmap; raster-work microbenchmark, not presented GPU FPS",
+  "vector" : {
+    "medianMS" : 28.163749999293941,
+    "p95MS" : 34.179083331764559
+  }
+}

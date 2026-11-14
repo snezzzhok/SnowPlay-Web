@@ -1,0 +1,10 @@
+{
+  "passed" : true,
+  "repeatedThrowCommands" : 20,
+  "repeatedTreeCommands" : 20,
+  "resetCancelsActions" : true,
+  "scope" : "Actual native controllers and sprites in an isolated scene; no foreign mouse events",
+  "snowballArcHeightPt" : 34.299999999999997,
+  "snowmanFragmentsReturnToSnow" : true,
+  "treeFallsWithoutYeti" : true
+}

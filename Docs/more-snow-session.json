@@ -1,0 +1,141 @@
+{
+  "accessibility": true,
+  "brushedSnowVolume": 0,
+  "config": {
+    "accumulationHeight": 8,
+    "automaticCleaning": 0,
+    "bulbBrightness": 0.5,
+    "bulbColor": "pastel",
+    "bulbSize": 4,
+    "bulbSpacing": 20,
+    "dockHats": {
+      "file:///Applications/ChatGPT.app/": "blue",
+      "file:///Applications/Google%20Chrome.app/": "green",
+      "file:///System/Library/CoreServices/Finder.app/": "red"
+    },
+    "dockSnow": true,
+    "fps": 60,
+    "frost": true,
+    "garland": false,
+    "garlandSag": 12,
+    "garlandTwinkle": true,
+    "intensity": 1,
+    "interaction": false,
+    "lastDelivery": 816246656.973849,
+    "mascot": "none",
+    "maxParticles": 3600,
+    "mode": "play",
+    "placements": {
+      "1": {
+        "garland": [
+          {
+            "x": 0.15,
+            "y": 0
+          },
+          {
+            "x": 0.55,
+            "y": 0
+          },
+          {
+            "x": 0.95,
+            "y": 0
+          }
+        ],
+        "garlandWindow": "window-458-14935",
+        "tree": {
+          "x": 0.567536883884006,
+          "y": 0.858675045437283
+        }
+      }
+    },
+    "preserveSnowman": true,
+    "reducedMotion": false,
+    "snow": true,
+    "snowSpeed": 1,
+    "tree": true,
+    "windAngle": -18,
+    "windowEffectDuration": 4,
+    "windowSnow": true,
+    "windStrength": 0.6
+  },
+  "deliveryState": {
+    "flying": false,
+    "giftWaiting": true,
+    "pending": false
+  },
+  "diagnostic": "",
+  "displays": 1,
+  "dockDetected": true,
+  "dockIcons": 8,
+  "dockSnowVolume": 4809.802555026275,
+  "dockVisible": true,
+  "editor": "none",
+  "fullscreenSuppressed": false,
+  "paused": false,
+  "performance": {
+    "battery": true,
+    "cpuAverageSinceLaunch": 45.37082988008559,
+    "cpuPercentOneCore": 45.225776412167946,
+    "gpuMeasured": false,
+    "p95FrameMS": 35.02941667102277,
+    "particles": 2400,
+    "physicalFootprintMB": 191.58050537109375,
+    "residentMB": 49.4375,
+    "simulating": true,
+    "simulationHz": 29.546289428992203,
+    "targetFPS": 30,
+    "uptimeSeconds": 38.86103041667957
+  },
+  "reducedMotionActive": false,
+  "sculpting": {
+    "active": false,
+    "ready": false,
+    "seeded": false
+  },
+  "surfaceIDs": [
+    "dock",
+    "tree-1",
+    "window-458-14935",
+    "window-96233-27601",
+    "window-97377-25133",
+    "window-97377-25139"
+  ],
+  "systemPaused": false,
+  "windowEffects": [],
+  "windowEvents": {
+    "created": 4,
+    "resized": 4,
+    "visibilityLost": 2
+  },
+  "windows": 4,
+  "windowSnowStates": [
+    {
+      "id": "window-458-14935",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowVolume": 6236.718983625745,
+      "visible": true
+    },
+    {
+      "id": "window-97377-25139",
+      "phase": "inactive",
+      "restoreProgress": 1,
+      "snowVolume": 0,
+      "visible": false
+    },
+    {
+      "id": "window-96233-27601",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 389.425076227974,
+      "visible": true
+    },
+    {
+      "id": "window-97377-25133",
+      "phase": "inactive",
+      "restoreProgress": 1,
+      "snowVolume": 3982.7916855204057,
+      "visible": true
+    }
+  ]
+}

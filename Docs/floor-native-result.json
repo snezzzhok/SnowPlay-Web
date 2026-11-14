@@ -1,0 +1,27 @@
+{
+  "axeContactAndFallingTree" : true,
+  "chapterStartFrames" : {
+    "Bare evergreen · three sizes, no built-in ornaments" : 82,
+    "Decorated tree · three hooks, stars, baubles, lights" : 94,
+    "Ground sculpting · glove gesture, real snow, automatic stack" : 34,
+    "Remove tree · approach, blade contact, falling tree, exit" : 326,
+    "Snowplow · eased travel, wheel distance, moving loaded blade" : 383,
+    "Tree presents · first click releases three colored bursts" : 110,
+    "Window drag · tight support, vertical shedding, local mound" : 0,
+    "Yeti game A · ground run, random-direction snowball" : 142,
+    "Yeti game B · assemble the snow castle from ground stock" : 226
+  },
+  "decoratedTreeAndThreeHooks" : true,
+  "framesRendered" : 536,
+  "glowingModelBulbs" : true,
+  "groundSculptAndMass" : true,
+  "localizedImpactMound" : true,
+  "multiplePhysicalScreensTested" : false,
+  "passed" : true,
+  "plowMassAndCancellation" : true,
+  "scope" : "exact app controllers\/resources in an owned native scene; no user desktop capture",
+  "threeBareTreeSizes" : true,
+  "threeGiftFireworksFirstClick" : true,
+  "windowAnchorAndVerticalFall" : true,
+  "yetiGroundFeetAndBothGames" : true
+}

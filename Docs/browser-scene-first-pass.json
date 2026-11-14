@@ -1,0 +1,124 @@
+{
+  "checks" : {
+    "firstOpen" : {
+      "amount" : 35,
+      "assets" : 23,
+      "clean" : true,
+      "errors" : [
+
+      ],
+      "fits" : true,
+      "images" : true,
+      "noYeti" : true
+    },
+    "mobileViewportOnly" : {
+      "fits" : true,
+      "images" : true,
+      "panelWidth" : 373,
+      "sceneWidth" : 373,
+      "width" : 390
+    },
+    "reload" : {
+      "amount" : 62,
+      "images" : true,
+      "tree" : false
+    },
+    "repeatActions" : {
+      "fx" : 28,
+      "projectile" : false,
+      "snowman" : false,
+      "tree" : false
+    },
+    "reset" : {
+      "amount" : 35,
+      "clean" : true,
+      "tree" : true
+    }
+  },
+  "measurementHost" : "Actual Mac Apple M1, visible WKWebView, 1200x900 CSS pixels; Low Power Mode enabled",
+  "mobileViewportIsNotPhoneBenchmark" : true,
+  "passed" : true,
+  "performance" : [
+    {
+      "combined" : {
+        "fps" : 30,
+        "frameMaxMS" : 41,
+        "frameMeanMS" : 33.331000000000003,
+        "frameP95MS" : 35,
+        "frameP99MS" : 35,
+        "frames" : 709,
+        "over25ms" : 709,
+        "renderMeanMS" : 1.4430000000000001,
+        "renderP95MS" : 2
+      },
+      "concurrencySamples" : 709,
+      "createdAt" : "2026-11-13T22:17:41.398Z",
+      "deviceLabel" : "",
+      "hiddenDuringRun" : false,
+      "invalidated" : false,
+      "maxParticles" : 1688,
+      "metrics" : {
+        "fps" : 30,
+        "frameMaxMS" : 41,
+        "frameMeanMS" : 33.332999999999998,
+        "frameP95MS" : 35,
+        "frameP99MS" : 35,
+        "frames" : 721,
+        "over25ms" : 721,
+        "renderMeanMS" : 1.4399999999999999,
+        "renderP95MS" : 2
+      },
+      "physicalDeviceVerified" : false,
+      "renderer" : "per-particle",
+      "scenario" : "100% snow + Santa + plow; 24 seconds; 2 second warmup",
+      "schema" : 1,
+      "userAgent" : "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko)",
+      "viewport" : {
+        "dpr" : 2,
+        "height" : 764,
+        "width" : 810
+      }
+    },
+    {
+      "combined" : {
+        "fps" : 30,
+        "frameMaxMS" : 35,
+        "frameMeanMS" : 33.334000000000003,
+        "frameP95MS" : 34,
+        "frameP99MS" : 34,
+        "frames" : 710,
+        "over25ms" : 710,
+        "renderMeanMS" : 4.8520000000000003,
+        "renderP95MS" : 6
+      },
+      "concurrencySamples" : 710,
+      "createdAt" : "2026-11-13T22:18:07.835Z",
+      "deviceLabel" : "",
+      "hiddenDuringRun" : false,
+      "invalidated" : false,
+      "maxParticles" : 1688,
+      "metrics" : {
+        "fps" : 30,
+        "frameMaxMS" : 35,
+        "frameMeanMS" : 33.334000000000003,
+        "frameP95MS" : 34,
+        "frameP99MS" : 34,
+        "frames" : 721,
+        "over25ms" : 721,
+        "renderMeanMS" : 4.8239999999999998,
+        "renderP95MS" : 6
+      },
+      "physicalDeviceVerified" : false,
+      "renderer" : "batched",
+      "scenario" : "100% snow + Santa + plow; 24 seconds; 2 second warmup",
+      "schema" : 1,
+      "userAgent" : "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko)",
+      "viewport" : {
+        "dpr" : 2,
+        "height" : 764,
+        "width" : 810
+      }
+    }
+  ],
+  "physicalPhoneTested" : false
+}

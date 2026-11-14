@@ -1,0 +1,450 @@
+[
+  {
+    "id": "Dfoml0yis3P",
+    "url": "https://www.instagram.com/reel/Dfoml0yis3P/",
+    "uploader": "Maksim Zaytsev",
+    "username": "41466268742",
+    "date": "20261112",
+    "duration": 44.371995,
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "avg_frame_rate": "60/1"
+    },
+    "sourceFrames": 2662,
+    "sha256": "0b02bfe00b5b8b675f3e97cb7bd1e78d33bfee1c10c68b4587c44f290399fae5",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-001.png"
+      },
+      {
+        "frame": 120,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-002.png"
+      },
+      {
+        "frame": 240,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-003.png"
+      },
+      {
+        "frame": 360,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-004.png"
+      },
+      {
+        "frame": 480,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-005.png"
+      },
+      {
+        "frame": 600,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-006.png"
+      },
+      {
+        "frame": 720,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-007.png"
+      },
+      {
+        "frame": 840,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-008.png"
+      },
+      {
+        "frame": 960,
+        "pts": 16.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-009.png"
+      },
+      {
+        "frame": 1080,
+        "pts": 18.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-010.png"
+      },
+      {
+        "frame": 1200,
+        "pts": 20.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-011.png"
+      },
+      {
+        "frame": 1320,
+        "pts": 22.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-012.png"
+      },
+      {
+        "frame": 1440,
+        "pts": 24.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-013.png"
+      },
+      {
+        "frame": 1560,
+        "pts": 26.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-014.png"
+      },
+      {
+        "frame": 1680,
+        "pts": 28.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-015.png"
+      },
+      {
+        "frame": 1800,
+        "pts": 30.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-016.png"
+      },
+      {
+        "frame": 1920,
+        "pts": 32.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-017.png"
+      },
+      {
+        "frame": 2040,
+        "pts": 34.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-018.png"
+      },
+      {
+        "frame": 2160,
+        "pts": 36.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-019.png"
+      },
+      {
+        "frame": 2280,
+        "pts": 38.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-020.png"
+      },
+      {
+        "frame": 2400,
+        "pts": 40.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-021.png"
+      },
+      {
+        "frame": 2520,
+        "pts": 42.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-022.png"
+      },
+      {
+        "frame": 2640,
+        "pts": 44.0,
+        "file": "Docs/Reference-Research/frames/Dfoml0yis3P/overview/frame-023.png"
+      }
+    ]
+  },
+  {
+    "id": "DfSv9v1NwMb",
+    "url": "https://www.instagram.com/reel/DfSv9v1NwMb/",
+    "uploader": "Koi",
+    "username": "16967099358",
+    "date": "20261103",
+    "duration": 14.371995,
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "avg_frame_rate": "30/1"
+    },
+    "sourceFrames": 431,
+    "sha256": "583ccbe2c4704016cde94c6f7c81434ddaed199c6cae57d3e98dd527d1be1195",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-001.png"
+      },
+      {
+        "frame": 60,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-002.png"
+      },
+      {
+        "frame": 120,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-003.png"
+      },
+      {
+        "frame": 180,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-004.png"
+      },
+      {
+        "frame": 240,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-005.png"
+      },
+      {
+        "frame": 300,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-006.png"
+      },
+      {
+        "frame": 360,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-007.png"
+      },
+      {
+        "frame": 420,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/overview/frame-008.png"
+      }
+    ]
+  },
+  {
+    "id": "Dfms7IoNkOP",
+    "url": "https://www.instagram.com/reel/Dfms7IoNkOP/",
+    "uploader": "Koi",
+    "username": "16967099358",
+    "date": "20261111",
+    "duration": 16.276009,
+    "video": {
+      "width": 720,
+      "height": 1280,
+      "avg_frame_rate": "30/1"
+    },
+    "sourceFrames": 488,
+    "sha256": "f174eda9a79e62810eadacf3ff8143c8d2a7dfd310e1d214687349e8c201f8f5",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-001.png"
+      },
+      {
+        "frame": 60,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-002.png"
+      },
+      {
+        "frame": 120,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-003.png"
+      },
+      {
+        "frame": 180,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-004.png"
+      },
+      {
+        "frame": 240,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-005.png"
+      },
+      {
+        "frame": 300,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-006.png"
+      },
+      {
+        "frame": 360,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-007.png"
+      },
+      {
+        "frame": 420,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-008.png"
+      },
+      {
+        "frame": 480,
+        "pts": 16.0,
+        "file": "Docs/Reference-Research/frames/Dfms7IoNkOP/overview/frame-009.png"
+      }
+    ]
+  },
+  {
+    "id": "Dfe_bS1tAnH",
+    "url": "https://www.instagram.com/reel/Dfe_bS1tAnH/",
+    "uploader": "Koi",
+    "username": "16967099358",
+    "date": "20261108",
+    "duration": 22.685011,
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "avg_frame_rate": "60/1"
+    },
+    "sourceFrames": 1360,
+    "sha256": "0200bd6026e960329f8614104875395516c1b93d85276e9ef202c7af97321b25",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-001.png"
+      },
+      {
+        "frame": 120,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-002.png"
+      },
+      {
+        "frame": 240,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-003.png"
+      },
+      {
+        "frame": 360,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-004.png"
+      },
+      {
+        "frame": 480,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-005.png"
+      },
+      {
+        "frame": 600,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-006.png"
+      },
+      {
+        "frame": 720,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-007.png"
+      },
+      {
+        "frame": 840,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-008.png"
+      },
+      {
+        "frame": 960,
+        "pts": 16.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-009.png"
+      },
+      {
+        "frame": 1080,
+        "pts": 18.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-010.png"
+      },
+      {
+        "frame": 1200,
+        "pts": 20.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-011.png"
+      },
+      {
+        "frame": 1320,
+        "pts": 22.0,
+        "file": "Docs/Reference-Research/frames/Dfe_bS1tAnH/overview/frame-012.png"
+      }
+    ]
+  },
+  {
+    "id": "DfaegGeNZmh",
+    "url": "https://www.instagram.com/reel/DfaegGeNZmh/",
+    "uploader": "Koi",
+    "username": "16967099358",
+    "date": "20261106",
+    "duration": 14.371995,
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "avg_frame_rate": "30/1"
+    },
+    "sourceFrames": 431,
+    "sha256": "927432636a10a0927a1566f0d0dce4b68a4e5ed87d2fd377d1a6917fc2ee9507",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-001.png"
+      },
+      {
+        "frame": 60,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-002.png"
+      },
+      {
+        "frame": 120,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-003.png"
+      },
+      {
+        "frame": 180,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-004.png"
+      },
+      {
+        "frame": 240,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-005.png"
+      },
+      {
+        "frame": 300,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-006.png"
+      },
+      {
+        "frame": 360,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-007.png"
+      },
+      {
+        "frame": 420,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/DfaegGeNZmh/overview/frame-008.png"
+      }
+    ]
+  },
+  {
+    "id": "DfnvIglK-Qp",
+    "url": "https://www.instagram.com/reel/DfnvIglK-Qp/",
+    "uploader": "Archie Auburn",
+    "username": "21945673102",
+    "date": "20261112",
+    "duration": 15.835011,
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "avg_frame_rate": "30/1"
+    },
+    "sourceFrames": 475,
+    "sha256": "ddb691213a54160da5a7f12f51cba2182e7a3ee054bd1f67bc3fa32b11b7052f",
+    "status": "downloaded",
+    "samples": [
+      {
+        "frame": 0,
+        "pts": 0.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-001.png"
+      },
+      {
+        "frame": 60,
+        "pts": 2.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-002.png"
+      },
+      {
+        "frame": 120,
+        "pts": 4.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-003.png"
+      },
+      {
+        "frame": 180,
+        "pts": 6.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-004.png"
+      },
+      {
+        "frame": 240,
+        "pts": 8.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-005.png"
+      },
+      {
+        "frame": 300,
+        "pts": 10.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-006.png"
+      },
+      {
+        "frame": 360,
+        "pts": 12.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-007.png"
+      },
+      {
+        "frame": 420,
+        "pts": 14.0,
+        "file": "Docs/Reference-Research/frames/DfnvIglK-Qp/overview/frame-008.png"
+      }
+    ]
+  }
+]

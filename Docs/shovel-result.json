@@ -1,0 +1,11 @@
+{
+  "aboveDockInput" : true,
+  "automaticCursorAndPanelExit" : true,
+  "escapeReturnsMass" : true,
+  "manualFromLegacyAutomaticPreference" : true,
+  "massConserved" : true,
+  "passed" : true,
+  "scope" : "Own Cocoa mouse\/key events through actual InputView and coordinator; seeded real snow physics, controlled session independent of desktop lock; no physical desktop gesture claim",
+  "shovelAssetLoaded" : true,
+  "threeDraggedBallsAssemble" : true
+}

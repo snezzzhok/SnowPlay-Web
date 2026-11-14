@@ -1,0 +1,35 @@
+{
+  "build" : "Release",
+  "gpuMeasured" : false,
+  "modes" : {
+    "balanced" : {
+      "maxCPUWorkMS" : 38.437333334513824,
+      "meanCPUWorkMS" : 11.614893353180378,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 16.802166666820995,
+      "particles" : 646,
+      "SantaAndPlowOverlapped" : false,
+      "weatherSprites" : 616
+    },
+    "focus" : {
+      "maxCPUWorkMS" : 3.8909999984753085,
+      "meanCPUWorkMS" : 2.6297108135059672,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 3.4547916657174937,
+      "particles" : 45,
+      "SantaAndPlowOverlapped" : false,
+      "weatherSprites" : 45
+    },
+    "play" : {
+      "maxCPUWorkMS" : 30.515708333041403,
+      "meanCPUWorkMS" : 16.344333333308029,
+      "measuredFrames" : 420,
+      "p95CPUWorkMS" : 19.265375000031781,
+      "particles" : 2400,
+      "SantaAndPlowOverlapped" : true,
+      "weatherSprites" : 2233
+    }
+  },
+  "presentedFPSMeasured" : false,
+  "scope" : "Isolated own native scene, 1440x900 pt \/ 2880x1800 Retina bitmap. Simulation + weather SpriteKit node updates + remaining Core Graphics draws. Weather GPU drawing\/presentation and other SpriteKit GPU drawing are excluded. No display wait, native live FPS, window tracker or WebKit CPU included."
+}

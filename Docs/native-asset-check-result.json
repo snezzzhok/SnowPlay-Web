@@ -1,0 +1,10 @@
+{
+  "actualHatMouseInteractionTested" : false,
+  "dockDetected" : true,
+  "dockIconFramesObserved" : 0,
+  "nativeNodeChecks" : true,
+  "nativeSceneRendered" : true,
+  "originalAssets" : 63,
+  "passed" : true,
+  "retinaTextures" : true
+}

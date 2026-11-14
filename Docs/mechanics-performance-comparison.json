@@ -1,0 +1,160 @@
+{
+  "scope": "Visible owned native 1000x550pt fixture with five snowmen and 2400 snow sprites; real Santa/plow/Yeti overlap. Callbacks and CPU, not presented GPU frames. CUA screenshots/profile sampling can perturb timings; this is not a statistically controlled benchmark.",
+  "before": {
+    "accepted": 2,
+    "attempts": 3,
+    "editor": "none",
+    "game": {},
+    "looseBalls": [],
+    "models": [
+      {
+        "id": "D03546C7-3730-4D25-A5CE-FBD355E6EC6C",
+        "x": 390,
+        "y": 635.4339160508544
+      },
+      {
+        "id": "EB20817E-461A-42B8-B620-4BDA60991844",
+        "x": 530,
+        "y": 634.0962591985057
+      },
+      {
+        "id": "D9E5625B-5B55-49AC-B235-920B177228F1",
+        "x": 670,
+        "y": 635.769220890226
+      },
+      {
+        "id": "093E6A66-1295-4293-9E2B-4435C665710B",
+        "x": 810,
+        "y": 639.9266331608384
+      },
+      {
+        "id": "D085C356-6CFB-4CF6-B999-E47D160902EC",
+        "x": 950,
+        "y": 645.9983635559731
+      }
+    ],
+    "performance": {
+      "battery": false,
+      "cpuAverageSinceLaunch": 47.723104288150644,
+      "cpuPercentOneCore": 34.577848256822,
+      "gpuMeasured": false,
+      "p95FrameMS": 17.15658334433101,
+      "particles": 2400,
+      "physicalFootprintMB": 132.40899658203125,
+      "residentMB": 98.71875,
+      "simulating": true,
+      "simulationHz": 60.00000417181566,
+      "targetFPS": 60,
+      "uptimeSeconds": 359.3898920833308
+    },
+    "santaPlowYetiOverlap": true,
+    "scene": {
+      "callbackFPS": 60.01178676874792,
+      "frames": 3898,
+      "gpuMeasured": false,
+      "measurement": "native draw/update callbacks; not presented GPU frames",
+      "p95IntervalMS": 17.6647916669026,
+      "p95WorkMS": 0
+    },
+    "sculptBalls": [],
+    "seconds": 65.22091662499588,
+    "snowmen": 5,
+    "tickWorkP95MS": 3.6831250035902485
+  },
+  "optimization": "Do not invalidate empty decorative canvases on every tick; clear the final populated frame once. No simulation density/rate reduction.",
+  "after": {
+    "accepted": 0,
+    "attempts": 0,
+    "drawCallbacks": {
+      "action": {
+        "callbackFPS": 0,
+        "frames": 412,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 17.450958330300637,
+        "p95WorkMS": 0.03445833863224834
+      },
+      "bank": {
+        "callbackFPS": 59.99814922657709,
+        "frames": 2282,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 16.99320833722595,
+        "p95WorkMS": 0.02166666672565043
+      },
+      "front": {
+        "callbackFPS": 0,
+        "frames": 1,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 0,
+        "p95WorkMS": 0.0040833401726558805
+      }
+    },
+    "editor": "none",
+    "game": {},
+    "looseBalls": [],
+    "models": [
+      {
+        "id": "2C3E2296-01E8-4A40-912B-C5290CA0434C",
+        "x": 390,
+        "y": 635.4339160508544
+      },
+      {
+        "id": "2EF0552B-CF69-4FAC-B5FA-B38469CAB278",
+        "x": 530,
+        "y": 634.0962591985057
+      },
+      {
+        "id": "92CB0A5C-AC27-4D98-8870-B91877284A99",
+        "x": 670,
+        "y": 635.769220890226
+      },
+      {
+        "id": "4E7D26CC-6562-436B-929B-F0F0A4964267",
+        "x": 810,
+        "y": 639.9266331608384
+      },
+      {
+        "id": "AAC9E8E4-6158-4E9E-9555-F424342FAD2A",
+        "x": 950,
+        "y": 645.9983635559731
+      }
+    ],
+    "overlapSamples": 347,
+    "overlapTickIntervalP95MS": 17.50012500269804,
+    "overlapTickWorkP95MS": 4.14624999393709,
+    "performance": {
+      "battery": false,
+      "cpuAverageSinceLaunch": 42.27284309866009,
+      "cpuPercentOneCore": 35.070848855684936,
+      "gpuMeasured": false,
+      "p95FrameMS": 17.3404999950435,
+      "particles": 2400,
+      "physicalFootprintMB": 120.58062744140625,
+      "residentMB": 115,
+      "simulating": true,
+      "simulationHz": 59.657610914904744,
+      "targetFPS": 60,
+      "uptimeSeconds": 37.69125479167269
+    },
+    "santaPlowYetiOverlap": true,
+    "scene": {
+      "callbackFPS": 60.0029901210665,
+      "frames": 2280,
+      "gpuMeasured": false,
+      "measurement": "native draw/update callbacks; not presented GPU frames",
+      "p95IntervalMS": 17.655833333265036,
+      "p95WorkMS": 0
+    },
+    "sculptBalls": [],
+    "seconds": 38.551317624995136,
+    "snowmen": 5,
+    "tickWorkP95MS": 3.528749992256053
+  },
+  "hardware": {
+    "model": "MacBookAir10,1",
+    "chip": "Apple M1"
+  },
+  "conclusion": "About 60 callbacks/s in both warmed runs. Empty foreground layer drew once; action layer stopped drawing after its final frame cleared. Timing samples do not establish a statistically significant CPU speedup or universal 60 presented FPS."
+}

@@ -1,0 +1,20 @@
+{
+  "automaticSnowmanMass" : 660.51985541725401,
+  "desktopInputsBelowAppWindows" : true,
+  "desktopLayersBelowApps" : true,
+  "duelExclusiveInput" : true,
+  "duelExitCycles" : 20,
+  "duelWinAndLose" : true,
+  "feedAndSurprise" : true,
+  "maximumRootChildren" : 6,
+  "maxTreeGripErrorPt" : 3.0755072587198445e-05,
+  "originalSnowplowAliasWorks" : true,
+  "passed" : true,
+  "passiveGiftWithoutSanta" : true,
+  "pooledSpriteKitWeather" : true,
+  "rescueUsesCarrierParent" : true,
+  "scope" : "Actual AppKit\/SpriteKit\/controllers in isolated own scene; these are controlled scene renders, not screenshots of user windows",
+  "snowmanFlightAndFragments" : true,
+  "storyCancellationMass" : true,
+  "treeCycles" : 20
+}

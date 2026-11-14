@@ -1,0 +1,246 @@
+{
+  "size": 1024,
+  "pages": 2,
+  "assets": [
+    {
+      "id": "yeti_body",
+      "page": 0,
+      "x": 1,
+      "y": 1,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_head",
+      "page": 0,
+      "x": 195,
+      "y": 1,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_arm_left",
+      "page": 0,
+      "x": 389,
+      "y": 1,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_arm_right",
+      "page": 0,
+      "x": 583,
+      "y": 1,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_foot_left",
+      "page": 0,
+      "x": 777,
+      "y": 1,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_foot_right",
+      "page": 0,
+      "x": 1,
+      "y": 195,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_axe",
+      "page": 0,
+      "x": 195,
+      "y": 195,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_body_red",
+      "page": 0,
+      "x": 389,
+      "y": 195,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_body_green",
+      "page": 0,
+      "x": 583,
+      "y": 195,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_body_blue",
+      "page": 0,
+      "x": 777,
+      "y": 195,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_head",
+      "page": 0,
+      "x": 1,
+      "y": 389,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_hat",
+      "page": 0,
+      "x": 195,
+      "y": 389,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_foot_left",
+      "page": 0,
+      "x": 389,
+      "y": 389,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_arm_left",
+      "page": 0,
+      "x": 583,
+      "y": 389,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_foot_right",
+      "page": 0,
+      "x": 777,
+      "y": 389,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_arm_right",
+      "page": 0,
+      "x": 1,
+      "y": 583,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "gnome_palm",
+      "page": 0,
+      "x": 195,
+      "y": 583,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_palm",
+      "page": 0,
+      "x": 389,
+      "y": 583,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_emotion_happy",
+      "page": 0,
+      "x": 583,
+      "y": 583,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_emotion_surprised",
+      "page": 0,
+      "x": 777,
+      "y": 583,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_emotion_tired",
+      "page": 0,
+      "x": 1,
+      "y": 777,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "yeti_emotion_angry",
+      "page": 0,
+      "x": 195,
+      "y": 777,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "id": "truck_body",
+      "page": 0,
+      "x": 389,
+      "y": 777,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "truck_platform",
+      "page": 1,
+      "x": 1,
+      "y": 1,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "truck_wheel_front",
+      "page": 1,
+      "x": 345,
+      "y": 1,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "truck_wheel_rear",
+      "page": 1,
+      "x": 1,
+      "y": 195,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "truck_lights",
+      "page": 1,
+      "x": 345,
+      "y": 195,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "truck_ribbon",
+      "page": 1,
+      "x": 1,
+      "y": 389,
+      "width": 342,
+      "height": 192
+    },
+    {
+      "id": "snow_clump_0",
+      "page": 1,
+      "x": 345,
+      "y": 389,
+      "width": 256,
+      "height": 192
+    },
+    {
+      "id": "snow_clump_1",
+      "page": 1,
+      "x": 603,
+      "y": 389,
+      "width": 256,
+      "height": 192
+    }
+  ]
+}

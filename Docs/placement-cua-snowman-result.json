@@ -1,0 +1,6 @@
+{
+  "scope": "CUA click on real isolated release selection panel",
+  "editorAfterClick": "none",
+  "automaticSnowmanActive": false,
+  "diagnostic": "Место выбрано — собираем три шара. Если снега мало, сборка начнётся после накопления сугроба."
+}

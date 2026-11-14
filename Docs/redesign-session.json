@@ -1,0 +1,130 @@
+{
+  "accessibility": true,
+  "brushedSnowVolume": 0,
+  "config": {
+    "accumulationHeight": 8,
+    "automaticCleaning": 0,
+    "bulbBrightness": 0.5,
+    "bulbColor": "pastel",
+    "bulbSize": 4,
+    "bulbSpacing": 20,
+    "dockHats": {
+      "file:///System/Library/CoreServices/Finder.app/": "red"
+    },
+    "dockSnow": true,
+    "fps": 60,
+    "frost": true,
+    "garland": false,
+    "garlandSag": 12,
+    "garlandTwinkle": true,
+    "intensity": 0.65,
+    "interaction": false,
+    "lastDelivery": 816214142.784683,
+    "mascot": "none",
+    "maxParticles": 1200,
+    "mode": "play",
+    "placements": {
+      "1": {
+        "garland": [
+          {
+            "x": 0.15,
+            "y": 0
+          },
+          {
+            "x": 0.55,
+            "y": 0
+          },
+          {
+            "x": 0.95,
+            "y": 0
+          }
+        ],
+        "garlandWindow": "window-458-14935",
+        "tree": {
+          "x": 0.485302734375,
+          "y": 0.8480613199869792
+        }
+      }
+    },
+    "preserveSnowman": true,
+    "reducedMotion": false,
+    "snow": true,
+    "snowSpeed": 1,
+    "tree": false,
+    "windAngle": -23,
+    "windowEffectDuration": 4,
+    "windowSnow": true,
+    "windStrength": 0.6
+  },
+  "deliveryState": {
+    "flying": false,
+    "giftWaiting": false,
+    "pending": true
+  },
+  "diagnostic": "",
+  "displays": 1,
+  "dockDetected": true,
+  "dockIcons": 8,
+  "dockSnowVolume": 4203.8152429928305,
+  "dockVisible": true,
+  "editor": "none",
+  "fullscreenSuppressed": false,
+  "paused": false,
+  "performance": {
+    "battery": false,
+    "cpuAverageSinceLaunch": 19.528847502836335,
+    "cpuPercentOneCore": 19.62373208720358,
+    "gpuMeasured": false,
+    "p95FrameMS": 34.38379161525518,
+    "particles": 512,
+    "physicalFootprintMB": 66.76776123046875,
+    "residentMB": 37.4375,
+    "simulating": true,
+    "simulationHz": 29.76053608585799,
+    "targetFPS": 30,
+    "uptimeSeconds": 44.86362545832526
+  },
+  "reducedMotionActive": false,
+  "sculpting": {
+    "active": false,
+    "ready": false,
+    "seeded": false
+  },
+  "surfaceIDs": [
+    "dock",
+    "window-458-14935",
+    "window-96233-25137",
+    "window-97377-25133"
+  ],
+  "systemPaused": false,
+  "windowEffects": [],
+  "windowEvents": {
+    "created": 3,
+    "moved": 1,
+    "resized": 1
+  },
+  "windows": 3,
+  "windowSnowStates": [
+    {
+      "id": "window-458-14935",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowVolume": 6236.390911962072,
+      "visible": true
+    },
+    {
+      "id": "window-96233-25137",
+      "phase": "inactive",
+      "restoreProgress": 1,
+      "snowVolume": 495.2468899678844,
+      "visible": true
+    },
+    {
+      "id": "window-97377-25133",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 6512.393571607859,
+      "visible": true
+    }
+  ]
+}

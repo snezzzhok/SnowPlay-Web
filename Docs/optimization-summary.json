@@ -1,0 +1,65 @@
+{
+  "scope": "Actual packaged native app, isolated preferences, same existing window layout and hats. Sequential runs, 5s warmup + 15 samples at 1s. CPU is percent of one core; GPU presentation not measured.",
+  "hardware": "MacBookAir10,1 / Apple M1",
+  "cases": {
+    "idle-current": {
+      "before": {
+        "cpuMedianOneCore": 22.985632366863236,
+        "cpuMeanOneCore": 23.016432208607167,
+        "rssMedianMB": 89.640625,
+        "footprintMedianMB": 85.1746826171875,
+        "targetFPS": 30,
+        "simulationHzMedian": 28.961939649277102,
+        "p95TickMSMedian": 33.45912499935366,
+        "particles": 0
+      },
+      "after": {
+        "cpuMedianOneCore": 5.046796466553179,
+        "cpuMeanOneCore": 5.0167103959667365,
+        "rssMedianMB": 92.09375,
+        "footprintMedianMB": 84.81524658203125,
+        "targetFPS": 15,
+        "simulationHzMedian": 14.882042562067763,
+        "p95TickMSMedian": 67.98529166553635,
+        "particles": 0
+      },
+      "cpuReductionPercent": 78.04369100660989
+    },
+    "snow-55": {
+      "before": {
+        "cpuMedianOneCore": 32.731893892481146,
+        "cpuMeanOneCore": 31.926091793813836,
+        "rssMedianMB": 93.203125,
+        "footprintMedianMB": 227.0809326171875,
+        "targetFPS": 30,
+        "simulationHzMedian": 29.286629078188096,
+        "p95TickMSMedian": 34.45533334161155,
+        "particles": 1136
+      },
+      "after": {
+        "cpuMedianOneCore": 19.92874331116974,
+        "cpuMeanOneCore": 19.619369165165615,
+        "rssMedianMB": 91.375,
+        "footprintMedianMB": 244.9090576171875,
+        "targetFPS": 30,
+        "simulationHzMedian": 29.445373727077797,
+        "p95TickMSMedian": 35.01262499776203,
+        "particles": 1136
+      },
+      "cpuReductionPercent": 39.11521473021891
+    }
+  },
+  "glowPixelCheck": {
+    "meanChannelErrorOf255": 0.04422760009765625,
+    "retina1xAnd2x": true,
+    "passed": true,
+    "maximumChannelErrorOf255": 2,
+    "colors": 5
+  },
+  "coreTests": {
+    "methods": 81,
+    "assertionFailures": 0
+  },
+  "realWindowLifecycleTested": true,
+  "presentedGPUFramesMeasured": false
+}

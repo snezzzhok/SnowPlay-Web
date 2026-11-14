@@ -1,0 +1,757 @@
+{
+  "passed": true,
+  "unseededWindowAccumulation": true,
+  "moveMaximizeMinimizeRestoreClose": true,
+  "samples": [
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [],
+      "profiles": [],
+      "accessibility": true,
+      "events": {
+        "axAttached": 3,
+        "created": 3
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [],
+      "profiles": [],
+      "accessibility": true,
+      "events": {
+        "axAttached": 3,
+        "created": 3
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 160,
+            "y": 322
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 0,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "created": 4
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 160,
+            "y": 322
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 116.14496831849719,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "created": 4
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 160,
+            "y": 322
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 116.14496831849719,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "created": 4
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 160,
+            "y": 322
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 116.14496831849719,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "created": 4
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 300,
+            "y": 262
+          },
+          "id": "window-31026-35533",
+          "phase": "moving",
+          "restoreProgress": 1,
+          "snowVolume": 172.38769872882813,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 1,
+        "created": 4,
+        "moved": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 408,
+            "width": 620,
+            "x": 300,
+            "y": 262
+          },
+          "id": "window-31026-35533",
+          "phase": "moving",
+          "restoreProgress": 1,
+          "snowVolume": 172.38769872882813,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 1,
+        "created": 4,
+        "moved": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "resizing",
+          "restoreProgress": 1,
+          "snowVolume": 327.8367313051929,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "moved": 1,
+        "resized": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "resizing",
+          "restoreProgress": 1,
+          "snowVolume": 327.8367313051929,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "moved": 1,
+        "resized": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "resizing",
+          "restoreProgress": 1,
+          "snowVolume": 500.26906367426295,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "moved": 1,
+        "resized": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 763.9068043854819,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "moved": 1,
+        "resized": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "active",
+          "restoreProgress": 1,
+          "snowVolume": 1059.4895713842366,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "moved": 1,
+        "resized": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 908.4209606379883,
+          "visible": false
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 2,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1000,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 908.4209606379883,
+          "visible": false
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 3,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 908.4209606379883,
+          "visible": false
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 3,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 908.4209606379883,
+          "visible": false
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 3,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "minimized",
+          "restoreProgress": 1,
+          "snowVolume": 908.4209606379883,
+          "visible": false
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 3,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "restoring",
+          "restoreProgress": 0.2916418751119636,
+          "snowVolume": 981.3280045657407,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 4,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "restoring",
+          "restoreProgress": 0.5416463541332632,
+          "snowVolume": 1297.2557949743305,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 4,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "restoring",
+          "restoreProgress": 0.7890890624839813,
+          "snowVolume": 1424.788463461528,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 4,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 1700.9865360524832,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 4,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1021,
+      "windows": [
+        {
+          "accessibilityLinked": true,
+          "frame": {
+            "height": 774,
+            "width": 1440,
+            "x": 0,
+            "y": 30
+          },
+          "id": "window-31026-35533",
+          "phase": "visible",
+          "restoreProgress": 1,
+          "snowVolume": 1700.9865360524832,
+          "visible": true
+        }
+      ],
+      "profiles": [
+        "window-31026-35533"
+      ],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 4,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    },
+    {
+      "windowSnow": true,
+      "fullscreen": false,
+      "systemPaused": false,
+      "particles": 1026,
+      "windows": [],
+      "profiles": [],
+      "accessibility": true,
+      "events": {
+        "axAttached": 4,
+        "axNotification": 5,
+        "confirmedClosed": 1,
+        "created": 4,
+        "minimized": 1,
+        "moved": 1,
+        "resized": 1,
+        "restored": 1,
+        "visibilityLost": 1
+      }
+    }
+  ]
+}

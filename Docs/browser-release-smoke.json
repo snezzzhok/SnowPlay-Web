@@ -1,0 +1,46 @@
+{
+  "checks" : {
+    "firstOpen" : {
+      "amount" : 35,
+      "assets" : 23,
+      "clean" : true,
+      "errors" : [
+
+      ],
+      "fits" : true,
+      "images" : true,
+      "noYeti" : true
+    },
+    "mobileViewportOnly" : {
+      "fits" : true,
+      "images" : true,
+      "panelWidth" : 373,
+      "sceneWidth" : 373,
+      "width" : 390
+    },
+    "reload" : {
+      "amount" : 62,
+      "images" : true,
+      "tree" : false
+    },
+    "repeatActions" : {
+      "fx" : 37,
+      "projectile" : false,
+      "snowman" : false,
+      "storedTree" : false,
+      "tree" : false
+    },
+    "reset" : {
+      "amount" : 35,
+      "clean" : true,
+      "tree" : true
+    }
+  },
+  "measurementHost" : "Actual Mac Apple M1, visible WKWebView, 1200x900 CSS pixels; Low Power Mode enabled",
+  "mobileViewportIsNotPhoneBenchmark" : true,
+  "passed" : true,
+  "performance" : [
+
+  ],
+  "physicalPhoneTested" : false
+}

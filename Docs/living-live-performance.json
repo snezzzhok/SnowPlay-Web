@@ -1,0 +1,940 @@
+{
+  "scope": "Real macOS release app; native draw/update callbacks, CPU and resident memory. Not GPU presentation.",
+  "gpuMeasured": false,
+  "presentedFramesMeasured": false,
+  "scenarios": {
+    "focus": {
+      "samples": 8,
+      "cpuOneCoreMedian": 7.055039030431075,
+      "residentMBMedian": 78.734375,
+      "particles": 45,
+      "targetFPS": 20,
+      "nativeProbes": [
+        {
+          "desktop": {
+            "callbackFPS": 20.16933002757105,
+            "frames": 258,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 64.78287500067381,
+            "p95WorkMS": 0.10779166768770665
+          },
+          "display": "1",
+          "spriteKit": {
+            "callbackFPS": 20.406403314981123,
+            "frames": 258,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 57.04462499852525,
+            "p95WorkMS": 0
+          },
+          "windowCaps": {
+            "callbackFPS": 12.003595115962439,
+            "frames": 154,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 116.33629167045001,
+            "p95WorkMS": 0.04350000381236896
+          }
+        }
+      ]
+    },
+    "balanced": {
+      "samples": 8,
+      "cpuOneCoreMedian": 14.355280137864641,
+      "residentMBMedian": 75.5625,
+      "particles": 646,
+      "targetFPS": 30,
+      "nativeProbes": [
+        {
+          "desktop": {
+            "callbackFPS": 30.034824116038283,
+            "frames": 640,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 43.999791669193655,
+            "p95WorkMS": 0.0711250031599775
+          },
+          "display": "1",
+          "spriteKit": {
+            "callbackFPS": 30.01701561902136,
+            "frames": 640,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 37.94320833549136,
+            "p95WorkMS": 0
+          },
+          "windowCaps": {
+            "callbackFPS": 13.36742195985648,
+            "frames": 346,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 106.34958333685063,
+            "p95WorkMS": 0.04145833372604102
+          }
+        }
+      ]
+    },
+    "play": {
+      "samples": 8,
+      "cpuOneCoreMedian": 23.03787345706089,
+      "residentMBMedian": 73.015625,
+      "particles": 2400,
+      "targetFPS": 30,
+      "nativeProbes": [
+        {
+          "desktop": {
+            "callbackFPS": 29.97734842635269,
+            "frames": 1032,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 44.18033333058702,
+            "p95WorkMS": 0.04604167042998597
+          },
+          "display": "1",
+          "spriteKit": {
+            "callbackFPS": 29.993045181809343,
+            "frames": 1032,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 39.20758332969854,
+            "p95WorkMS": 0
+          },
+          "windowCaps": {
+            "callbackFPS": 14.874249741830276,
+            "frames": 540,
+            "gpuMeasured": false,
+            "measurement": "native draw/update callbacks; not presented GPU frames",
+            "p95IntervalMS": 79.4451250039856,
+            "p95WorkMS": 0.03479166480246931
+          }
+        }
+      ]
+    },
+    "snowSantaPlow": {
+      "samples": 28,
+      "rawNativeProbes": [
+        [
+          {
+            "desktop": {
+              "callbackFPS": 30.000689751926547,
+              "frames": 1062,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 44.18033333058702,
+              "p95WorkMS": 0.04612500197254121
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 29.999191407427134,
+              "frames": 1062,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 39.228458335855976,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.90528704471139,
+              "frames": 556,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.030333329050336033
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 30.565104129697627,
+              "frames": 1077,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 44.18033333058702,
+              "p95WorkMS": 0.0479166628792882
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 30.514948567737274,
+              "frames": 1076,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 39.228458335855976,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.919818544917813,
+              "frames": 560,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.030333329050336033
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 31.387374430317003,
+              "frames": 1092,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 44.13025000394555,
+              "p95WorkMS": 0.04824999632546678
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 31.365137906387666,
+              "frames": 1091,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 39.20758332969854,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.964519856637757,
+              "frames": 565,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 77.99904166313354,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 32.016660090749674,
+              "frames": 1106,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.9582083345158,
+              "p95WorkMS": 0.05162500019650906
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 32.117440541142244,
+              "frames": 1107,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.97195833269507,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.975344157361315,
+              "frames": 569,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 32.64808340426812,
+              "frames": 1121,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.9582083345158,
+              "p95WorkMS": 0.055833334045019
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 32.787665491787976,
+              "frames": 1122,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.97195833269507,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.987115792108979,
+              "frames": 573,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 33.27352248437105,
+              "frames": 1136,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.839999998454005,
+              "p95WorkMS": 0.05645833152811974
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 33.46785172809782,
+              "frames": 1138,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.67745833849767,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 14.98706713121402,
+              "frames": 577,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 34.79307980234088,
+              "frames": 1151,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.668916667229496,
+              "p95WorkMS": 0.058791672927327454
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 35.00390007395761,
+              "frames": 1153,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.616333331447095,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.00937023395762,
+              "frames": 581,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 35.529468158602185,
+              "frames": 1167,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.54087499814341,
+              "p95WorkMS": 0.058791672927327454
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 35.685872325998254,
+              "frames": 1168,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.09283333248459,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.04905594200773,
+              "frames": 586,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 36.085333854574195,
+              "frames": 1181,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 43.54087499814341,
+              "p95WorkMS": 0.05933333159191534
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 36.37723950363539,
+              "frames": 1184,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.002250003046356,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.055344865907083,
+              "frames": 590,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 36.7034745077223,
+              "frames": 1196,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 42.68812500231434,
+              "p95WorkMS": 0.06112499977461994
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 36.98712648255461,
+              "frames": 1199,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 38.002250003046356,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.086896785817633,
+              "frames": 594,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 39.135199956900195,
+              "frames": 1212,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 41.80275000544498,
+              "p95WorkMS": 0.06233333260752261
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 39.452706509247676,
+              "frames": 1214,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 36.91824999987148,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.1068698159936,
+              "frames": 599,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02916666562668979
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 39.77150679687956,
+              "frames": 1227,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 41.74679166317219,
+              "p95WorkMS": 0.0646666667307727
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 40.114039092189834,
+              "frames": 1230,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 36.886333327856846,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.163775840019852,
+              "frames": 603,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 40.370154857524945,
+              "frames": 1242,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 41.74679166317219,
+              "p95WorkMS": 0.0646666667307727
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 40.70898765002991,
+              "frames": 1245,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 36.82587499497458,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.174160058380984,
+              "frames": 607,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 40.97130042175183,
+              "frames": 1258,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 41.28595833753934,
+              "p95WorkMS": 0.0646666667307727
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 41.264993708028065,
+              "frames": 1260,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 36.82587499497458,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.196101351432986,
+              "frames": 612,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 44.85911192530383,
+              "frames": 1273,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 40.356125005928334,
+              "p95WorkMS": 0.06470832886407152
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 45.19930715200727,
+              "frames": 1276,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 35.720333333301824,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.217946906444892,
+              "frames": 616,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 45.417439754528935,
+              "frames": 1289,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 40.106833330355585,
+              "p95WorkMS": 0.06545832729898393
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 45.75012687859019,
+              "frames": 1291,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 35.71941666450584,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.250739099371266,
+              "frames": 621,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.73370833112858,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 45.90591329896552,
+              "frames": 1304,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 39.15016666724114,
+              "p95WorkMS": 0.06550000398419797
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 46.26426840960146,
+              "frames": 1307,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 35.65787500701845,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.271561594946874,
+              "frames": 625,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02716666494961828
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 46.39013640599578,
+              "frames": 1320,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 39.15016666724114,
+              "p95WorkMS": 0.0655833282507956
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 52.50157733661515,
+              "frames": 1322,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.35562499705702,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.29098906139579,
+              "frames": 630,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02716666494961828
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 52.36118148227122,
+              "frames": 1335,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.67791666096309,
+              "p95WorkMS": 0.06708333239657804
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 52.80709025427322,
+              "frames": 1337,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.34454166906653,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.310868300894954,
+              "frames": 634,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 52.70613632653873,
+              "frames": 1352,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.66587500204332,
+              "p95WorkMS": 0.06708333239657804
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 53.13174472166484,
+              "frames": 1354,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.34395833371673,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.340981046887839,
+              "frames": 639,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.51458333607297,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 53.00257081566363,
+              "frames": 1368,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.581958334252704,
+              "p95WorkMS": 0.06691666931146756
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 53.41213434160939,
+              "frames": 1370,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.34316666587256,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.359834235951315,
+              "frames": 643,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02716666494961828
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 59.41286709575437,
+              "frames": 1383,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 18.352999999478925,
+              "p95WorkMS": 0.0679166623740457
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 60.001984491831,
+              "frames": 1386,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 19.93475000199396,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.385109719229831,
+              "frames": 648,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 59.296763373250194,
+              "frames": 1397,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 18.503499995858874,
+              "p95WorkMS": 0.0679166623740457
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 59.990481666419946,
+              "frames": 1401,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 20.18008333106991,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.384046953691396,
+              "frames": 652,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 59.329782541097984,
+              "frames": 1413,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 18.49950000178069,
+              "p95WorkMS": 0.06779166869819164
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 59.99091316742417,
+              "frames": 1416,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 19.93475000199396,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.401771172231353,
+              "frames": 656,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 58.61434070396124,
+              "frames": 1423,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 20.1150416614837,
+              "p95WorkMS": 0.06729166489094496
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 58.96539027127783,
+              "frames": 1426,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 21.498166664969176,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.412563494247703,
+              "frames": 660,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.02745833626249805
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 57.250730761224254,
+              "frames": 1431,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 23.293958329304587,
+              "p95WorkMS": 0.06729166489094496
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 57.85949457316881,
+              "frames": 1433,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 24.148249998688698,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.5220915360934,
+              "frames": 664,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.027000001864507794
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 56.21511188870583,
+              "frames": 1439,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 28.763208334567025,
+              "p95WorkMS": 0.06729166489094496
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 55.91155442222977,
+              "frames": 1442,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.29045833379496,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.513541622674747,
+              "frames": 668,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.027000001864507794
+            }
+          }
+        ],
+        [
+          {
+            "desktop": {
+              "callbackFPS": 54.599774102319145,
+              "frames": 1447,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 32.68595833651489,
+              "p95WorkMS": 0.06729166489094496
+            },
+            "display": "1",
+            "spriteKit": {
+              "callbackFPS": 54.84516442904874,
+              "frames": 1449,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 33.320624999760184,
+              "p95WorkMS": 0
+            },
+            "windowCaps": {
+              "callbackFPS": 15.507195520509995,
+              "frames": 672,
+              "gpuMeasured": false,
+              "measurement": "native draw/update callbacks; not presented GPU frames",
+              "p95IntervalMS": 78.40958332963055,
+              "p95WorkMS": 0.027000001864507794
+            }
+          }
+        ]
+      ],
+      "cpuOneCoreMax": 39.636149733776826,
+      "santaObserved": false
+    },
+    "duel": {
+      "status": "unavailable_no_free_desktop_area",
+      "diagnostic": "Нужен свободный участок рабочего стола размером примерно 660×210. Подвинь или сверни окно."
+    }
+  },
+  "pausedCPUOneCore": 0.3313859529490065,
+  "status": "measured_callbacks_not_gpu"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-13",
+  "downloadedClips": 6,
+  "products": 3,
+  "sourceSeconds": 127.912016,
+  "sourceFrames": 5847,
+  "overviewFrames": 68,
+  "contactSheets": 21,
+  "allOverviewImagesValid": true,
+  "localReportLinksValid": true,
+  "viewerHTTP200": true,
+  "liveThirdPartyAppsTested": false,
+  "newMechanicsImplemented": false,
+  "browserViewerVerified": true,
+  "browserSeekVerifiedSeconds": 12,
+  "extractedFramesIncludingOverlappingSequences": 211,
+  "sourceFrameIndicesAndPTSIncreasing": true,
+  "allExtractedImagesValid": true
+}

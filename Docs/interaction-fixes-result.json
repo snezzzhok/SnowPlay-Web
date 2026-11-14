@@ -1,0 +1,14 @@
+{
+  "aboveDockLevels" : true,
+  "cursorBrushConservesRemovedMass" : true,
+  "fullscreenCancellationPolicy" : true,
+  "garlandsRestored" : true,
+  "giftAndSnowmanDrag" : true,
+  "groundGloveWithoutWorkbench" : true,
+  "manualUserRetestRequired" : true,
+  "passed" : true,
+  "placementCursorPreviewAndCancellation" : true,
+  "scope" : "native Cocoa events\/controller with owned foreign fixture and seeded physics unit fixture; no global input injection",
+  "singleClickGift" : true,
+  "treePlacementAndDrag" : true
+}

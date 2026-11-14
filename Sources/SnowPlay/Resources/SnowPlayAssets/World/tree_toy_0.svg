@@ -1,0 +1,10 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="22" height="24" viewBox="107.0 89.0 22 24" fill="none"><ns0:defs>
+<ns0:linearGradient id="snow" x1="0" y1="0" x2="0.9" y2="1"><ns0:stop stop-color="#FFFFFF" /><ns0:stop offset=".57" stop-color="#F4F8FF" /><ns0:stop offset="1" stop-color="#BCD0F5" /></ns0:linearGradient>
+<ns0:linearGradient id="red" x1="0" y1="0" x2=".75" y2="1"><ns0:stop stop-color="#FF7770" /><ns0:stop offset=".48" stop-color="#F3484A" /><ns0:stop offset="1" stop-color="#C93455" /></ns0:linearGradient>
+<ns0:linearGradient id="green" x1="0" y1="0" x2=".8" y2="1"><ns0:stop stop-color="#8BE9AD" /><ns0:stop offset=".6" stop-color="#45C889" /><ns0:stop offset="1" stop-color="#259874" /></ns0:linearGradient>
+<ns0:linearGradient id="blue" x1="0" y1="0" x2=".8" y2="1"><ns0:stop stop-color="#A7D5FF" /><ns0:stop offset=".55" stop-color="#5399FF" /><ns0:stop offset="1" stop-color="#4276DA" /></ns0:linearGradient>
+<ns0:linearGradient id="gold" x1="0" y1="0" x2=".8" y2="1"><ns0:stop stop-color="#FFF2A3" /><ns0:stop offset=".52" stop-color="#FFCD4D" /><ns0:stop offset="1" stop-color="#F69A2A" /></ns0:linearGradient>
+<ns0:linearGradient id="purple" x1="0" y1="0" x2=".8" y2="1"><ns0:stop stop-color="#DBC7FF" /><ns0:stop offset=".58" stop-color="#A384F4" /><ns0:stop offset="1" stop-color="#8467C4" /></ns0:linearGradient>
+<ns0:radialGradient id="glow"><ns0:stop stop-color="#FFF7C2" stop-opacity=".85" /><ns0:stop offset="1" stop-color="#FFF7C2" stop-opacity="0" /></ns0:radialGradient>
+<ns0:filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><ns0:feGaussianBlur stdDeviation="3" /></ns0:filter>
+</ns0:defs><ns0:circle cx="118" cy="101" r="7" fill="url(#red)" stroke="#F5D6A1" stroke-width="1" /><ns0:circle cx="116" cy="98" r="2" fill="#FFFFFF" stroke="none" stroke-width="0" /></ns0:svg>

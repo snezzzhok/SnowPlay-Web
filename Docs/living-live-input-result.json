@@ -1,0 +1,11 @@
+{
+  "scope": "Physical CUA input in own isolated visible native window; not transparent desktop input or presented GPU measurement",
+  "duelAcceptedFiresObserved": 2,
+  "yetiHPObservedBefore": 5,
+  "yetiHPObservedAfter": 4,
+  "escapeRemovedGameNodes": true,
+  "brushedSnowMass": 151.45736927990572,
+  "santaAndPlowOverlap": true,
+  "performanceAcceptancePassed": false,
+  "notes": "Repeated live callback pacing varied and missed stable 60; see living-visible-preview.json. No claim of full desktop or GPU acceptance."
+}

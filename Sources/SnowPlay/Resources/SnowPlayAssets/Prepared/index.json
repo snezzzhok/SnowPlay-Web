@@ -1,0 +1,1577 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "snow_particle_1",
+      "source": "Snow/snow_particle_1.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d6ae25c4d17be5cb325b2d32fdab8c085f3d6670aa1d00924b842381ca31c0b4",
+      "derived_from": null
+    },
+    {
+      "id": "snow_particle_2",
+      "source": "Snow/snow_particle_2.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "08074ef4ea7ecef877d0f1f37a7b9796b5a5178d9366086cac649b5dc7aa035f",
+      "derived_from": null
+    },
+    {
+      "id": "snow_particle_3",
+      "source": "Snow/snow_particle_3.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d692136bf98d8eb7fce0ab3a7c2f3836c127c53da732d241db5ff286e0c52e6d",
+      "derived_from": null
+    },
+    {
+      "id": "snow_pile",
+      "source": "Snow/snow_pile.svg",
+      "width": 223.4181818181818,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.89
+      },
+      "sha256": "80540b716f2c0816f4cb4d831e7e2e8ceee02a7a91833a36d534cdc41d7d17da",
+      "derived_from": null
+    },
+    {
+      "id": "snow_pile_small",
+      "source": "Snow/snow_pile_small.svg",
+      "width": 223.4181818181818,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.89
+      },
+      "sha256": "80540b716f2c0816f4cb4d831e7e2e8ceee02a7a91833a36d534cdc41d7d17da",
+      "derived_from": null
+    },
+    {
+      "id": "snowball_small",
+      "source": "Snowman/snowball_small.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "3e1e638e182a8643c162bbbc7952addb8bdca1bc1dead04e30f37f09e1937dde",
+      "derived_from": null
+    },
+    {
+      "id": "snowball_medium",
+      "source": "Snowman/snowball_medium.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "20139cb7312c35a9de5ba65d88f39774caf7944a5059c0245c892f09fd250c70",
+      "derived_from": null
+    },
+    {
+      "id": "snowball_large",
+      "source": "Snowman/snowball_large.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "df11abcb51baedd3abe9687cba6acc187f0aca4bcb79b661f1b532063367a218",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_body",
+      "source": "Snowman/snowman_body.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "sha256": "5cc1ba0301d66cd71251ad1a40332eadbf45b31cedca397645f04b9089452c83",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_face",
+      "source": "Snowman/snowman_face.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "de4d252b8d557c6cab212e8cdf69f8445465ff10e5251643f3fe34fe0870dd91",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_buttons",
+      "source": "Snowman/snowman_buttons.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "7836d844900ac15184d965c931b72909ae1f9ae437baae643964c347648affb8",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_scarf",
+      "source": "Snowman/snowman_scarf.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f65e3ddcca83fff7e8ae8ea2a037424ab88ab8dfbe4315ba18ae8af8eaa7d533",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_arms",
+      "source": "Snowman/snowman_arms.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "6b14b0b6a32bd343850a98bb9160b4ff49d8a3ba7a4cbb0c2c6de2a4f704f512",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_hat",
+      "source": "Snowman/snowman_hat.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "af3cad3424891dcb4b343460b39746395c74ed7b1ffbec5ee97c7140ef7d6ba5",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_complete",
+      "source": "Snowman/snowman_complete.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "sha256": "6b8501862093fc5e9605328ff046fc466f449e1afe0e530dc72a71cccdc3dace",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_stage_1",
+      "source": "Snowman/snowman_stage_1.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "sha256": "7634091c0ee1c320165f746671ba68521bc1a7626e4f1013918b73ba3e645278",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_stage_2",
+      "source": "Snowman/snowman_stage_2.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "sha256": "56c5d8462e5eef8353535cea50f103b1323196a9b501144636ea3b5b54b04989",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_stage_3",
+      "source": "Snowman/snowman_stage_3.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.96
+      },
+      "sha256": "5cc1ba0301d66cd71251ad1a40332eadbf45b31cedca397645f04b9089452c83",
+      "derived_from": null
+    },
+    {
+      "id": "snowplow_body",
+      "source": "Snowplow/snowplow_body.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.79
+      },
+      "sha256": "44e86802ce9ace25063ab6061f36a442845befb78655cd6708ba35f251fc21e9",
+      "derived_from": null
+    },
+    {
+      "id": "snowplow_wheels",
+      "source": "Snowplow/snowplow_wheels.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "8723205e05807e800e76bf143325fa6676ce627c5e8b9bf5061b3db1117abe02",
+      "derived_from": null
+    },
+    {
+      "id": "snowplow_blade",
+      "source": "Snowplow/snowplow_blade.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.76,
+        "y": 0.78
+      },
+      "sha256": "946772fee27d251a557b1ef105ebbaeb1c367298b6dfdb3f6543d22f776c05e1",
+      "derived_from": null
+    },
+    {
+      "id": "snowplow_beacon",
+      "source": "Snowplow/snowplow_beacon.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f5d3c46990fe51635fb52bade4c6fd04e3f9610c807b5de2be5f1759e721111e",
+      "derived_from": null
+    },
+    {
+      "id": "snowplow_complete",
+      "source": "Snowplow/snowplow_complete.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "sha256": "354583da72136d126b445af9571892d6d9f1754faab6461c4834654bdcfd4719",
+      "derived_from": null
+    },
+    {
+      "id": "tree_foliage",
+      "source": "Christmas/tree_foliage.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "3018632f0879a0cfa08834b9772c0861a5b91a2d09c48560ae898e45877caa83",
+      "derived_from": null
+    },
+    {
+      "id": "tree_trunk",
+      "source": "Christmas/tree_trunk.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.94
+      },
+      "sha256": "35eb461a7507125a238e0932aab9e69e6387b714eb2d27316ea3bf603bbf3c30",
+      "derived_from": null
+    },
+    {
+      "id": "tree_snow_caps",
+      "source": "Christmas/tree_snow_caps.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "6985cd728e73b5d5e506f111b2baf4b01c53caaa599e5e0bdb804f566b5c4570",
+      "derived_from": null
+    },
+    {
+      "id": "tree_ornaments",
+      "source": "Christmas/tree_ornaments.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "25a87a124774b66059c4f8b75c20e5419d384bc55477bf31861b313ba39443c2",
+      "derived_from": null
+    },
+    {
+      "id": "tree_star",
+      "source": "Christmas/tree_star.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "c938d6b8249a900d30d128c30107546480c609a3190783e6be00530eeb071030",
+      "derived_from": null
+    },
+    {
+      "id": "christmas_tree",
+      "source": "Christmas/christmas_tree.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.94
+      },
+      "sha256": "d8eed0632d542495a2c70ec37b63ba76b47b30093f71016ce3727a416990b2d9",
+      "derived_from": null
+    },
+    {
+      "id": "sleigh",
+      "source": "Santa/sleigh.svg",
+      "width": 114.78260869565217,
+      "height": 80,
+      "anchor": {
+        "x": 0.48,
+        "y": 0.9
+      },
+      "sha256": "be1443ed7c08d3c9c3c7cd02a7ea1d97058323033cc42215e4464286359ff0de",
+      "derived_from": null
+    },
+    {
+      "id": "santa_character",
+      "source": "Santa/santa_character.svg",
+      "width": 114.78260869565217,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.56
+      },
+      "sha256": "31cd2b935d232c6f68f366dcfa5e2a7fbf254cffd6ba67d6fff75b5acb99f63a",
+      "derived_from": null
+    },
+    {
+      "id": "gift_sack",
+      "source": "Santa/gift_sack.svg",
+      "width": 114.78260869565217,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "98ce7387f955bbe5e45d3a295f23d6f6b70c6e6389a5e672ea29ae8c3db48be9",
+      "derived_from": null
+    },
+    {
+      "id": "santa_sleigh",
+      "source": "Santa/santa_sleigh.svg",
+      "width": 114.78260869565217,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sha256": "6061ac7f4f96b68313ef95fda7196e9fcc02254e94113e92dfb53e096063a345",
+      "derived_from": null
+    },
+    {
+      "id": "magic_trail",
+      "source": "Santa/magic_trail.svg",
+      "width": 186.1818181818182,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0e67a4eef121bd81f49dcddca61e64dc60881b368e534889baeb7c6d4dc0a95e",
+      "derived_from": null
+    },
+    {
+      "id": "gift_box",
+      "source": "Gifts/gift_box.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "sha256": "9fb861b715896d5028c31c39eba718f6718773cc3ecea63f985bc565282215b8",
+      "derived_from": null
+    },
+    {
+      "id": "gift_lid",
+      "source": "Gifts/gift_lid.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "2db6c4beeccb45b998b0fe2054e662272f2a61a487b65f4fa0d0d2945a1afaa0",
+      "derived_from": null
+    },
+    {
+      "id": "gift_bow",
+      "source": "Gifts/gift_bow.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f01987bfde0a4a66efc3b7f8301a1e2541dc574652cbd1b6a39341055da8d797",
+      "derived_from": null
+    },
+    {
+      "id": "gift_closed",
+      "source": "Gifts/gift_closed.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "sha256": "7e29e4954db06b080ea496b75dc464b998fcf7960ef24bcad4fa50766d3f2cde",
+      "derived_from": null
+    },
+    {
+      "id": "gift_open",
+      "source": "Gifts/gift_open.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.84
+      },
+      "sha256": "80435b7f1bd385fb6e14fded5c1aaba196f1fc9fc9d221301f9436f3d2fc01f5",
+      "derived_from": null
+    },
+    {
+      "id": "parachute_canopy",
+      "source": "Gifts/parachute_canopy.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.28
+      },
+      "sha256": "55817b2c77a25836ccbb7b79c671c3a56a3203249344da37dd150edf33055508",
+      "derived_from": null
+    },
+    {
+      "id": "parachute_strings",
+      "source": "Gifts/parachute_strings.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d5a5186b6708220ecd4d366291cf19d894ae255dc9c8b87c582f839d55d8e8e2",
+      "derived_from": null
+    },
+    {
+      "id": "gift_parachute",
+      "source": "Gifts/gift_parachute.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "4848ae6e30e01b3eb1c0d5c29687995b54475fce557e9b147594f027a2922e57",
+      "derived_from": null
+    },
+    {
+      "id": "hat_red",
+      "source": "Decorations/hat_red.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "5119a8938d1012e568af5e21f249a80590e3faf77686d95141553a5b1a53bfb0",
+      "derived_from": null
+    },
+    {
+      "id": "hat_green",
+      "source": "Decorations/hat_green.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "e2c958c1317f845964a3de44af4e605c50534d4b70421c315265ca89cb71d106",
+      "derived_from": null
+    },
+    {
+      "id": "hat_blue",
+      "source": "Decorations/hat_blue.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "7396d53c602e0686873581fc3f4e3f95e3e3c007e629bd45689a39ed33ee299c",
+      "derived_from": null
+    },
+    {
+      "id": "garland_multicolor",
+      "source": "Decorations/garland_multicolor.svg",
+      "width": 189.04615384615386,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "eff057edfd306701a901346f897125f513ddfe620a30a4fe4dded5c556366153",
+      "derived_from": null
+    },
+    {
+      "id": "garland_warm",
+      "source": "Decorations/garland_warm.svg",
+      "width": 189.04615384615386,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "dbc62d33326c804918d1784f12374b4b3f9de63f7b988553bf2d282403d95065",
+      "derived_from": null
+    },
+    {
+      "id": "garland_cool",
+      "source": "Decorations/garland_cool.svg",
+      "width": 189.04615384615386,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "987bf583946ca811af5dcf569a6daa50e1075c3812f23cb6088beec28b6fe43e",
+      "derived_from": null
+    },
+    {
+      "id": "garland_wire",
+      "source": "Decorations/garland_wire.svg",
+      "width": 189.04615384615386,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0197dde9390c180c9303f1b36e3ec11de531e35bcaa1e20bd930b1e1ab637c88",
+      "derived_from": null
+    },
+    {
+      "id": "bulb_red",
+      "source": "Decorations/bulb_red.svg",
+      "width": 8.88888888888889,
+      "height": 10,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "sha256": "b105b0c32af36c484811e20ea9c67c8fbed1efe3070ddddf8fd4f09cc7a16366",
+      "derived_from": null
+    },
+    {
+      "id": "bulb_gold",
+      "source": "Decorations/bulb_gold.svg",
+      "width": 8.88888888888889,
+      "height": 10,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "sha256": "20f73724c99090fdd18578a7b2417bd96be6e939bec722ceacea844740e2428b",
+      "derived_from": null
+    },
+    {
+      "id": "bulb_green",
+      "source": "Decorations/bulb_green.svg",
+      "width": 8.88888888888889,
+      "height": 10,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "sha256": "5908805ae9f86da363265d409cdc6df90c1a124fe9c4e8690a278a5215404088",
+      "derived_from": null
+    },
+    {
+      "id": "bulb_blue",
+      "source": "Decorations/bulb_blue.svg",
+      "width": 8.88888888888889,
+      "height": 10,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "sha256": "eb548dcf37137ec4687bfb47037fe37b3f07169703da14515b3d3e4682069276",
+      "derived_from": null
+    },
+    {
+      "id": "bulb_purple",
+      "source": "Decorations/bulb_purple.svg",
+      "width": 8.88888888888889,
+      "height": 10,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.25
+      },
+      "sha256": "afbfc5eb035b0e64884193a3d90f82811b2c9bd04acfd3cffd3a521eac891638",
+      "derived_from": null
+    },
+    {
+      "id": "frost_corner",
+      "source": "Effects/frost_corner.svg",
+      "width": 40.0,
+      "height": 40,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "7239972a9d8e73fe6648065db245a25b4ae881dad004eea24ce706c050685785",
+      "derived_from": null
+    },
+    {
+      "id": "frost_crystal",
+      "source": "Effects/frost_crystal.svg",
+      "width": 40.0,
+      "height": 40,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f4d9cd36b9f20761304516f7652c19560c99711d293b56a2d762fb4dde9f87df",
+      "derived_from": null
+    },
+    {
+      "id": "firework_gold",
+      "source": "Effects/firework_gold.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "ddfed1abbde3f4482db3735bc391072ea67ee3e04ce8a019d60d6392795bdbc2",
+      "derived_from": null
+    },
+    {
+      "id": "firework_pink",
+      "source": "Effects/firework_pink.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "21c6b7913b287b7f72133fb87b33e1ed8ea722fbc9714b0c43af62650d1e97aa",
+      "derived_from": null
+    },
+    {
+      "id": "firework_blue",
+      "source": "Effects/firework_blue.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "ec8ae2488e37cf6732512aee43ceefd76f2bbf3044b4457ebbae9c102aca9862",
+      "derived_from": null
+    },
+    {
+      "id": "sparkles",
+      "source": "Effects/sparkles.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "c32cd070d4e87be94b36698e27b3ba7a94c56f52e62cc4e6438f568c64c97c0f",
+      "derived_from": null
+    },
+    {
+      "id": "wind_swirl",
+      "source": "Effects/wind_swirl.svg",
+      "width": 80.0,
+      "height": 80,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d000c81282672df6fa34f1513c96bf4e729888afc961cebf93c53d65497dd27d",
+      "derived_from": null
+    },
+    {
+      "id": "countdown_panel",
+      "source": "UI/countdown_panel.svg",
+      "width": 161.68421052631578,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "bc9225e05920de80ae1f03d6cccda6f9f6924e7fef112eb045b682bffd81f1f8",
+      "derived_from": null
+    },
+    {
+      "id": "snowflake_icon",
+      "source": "UI/snowflake_icon.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "1e7193d4a1c555783643fe10a2ee19ce07f5a11f9109a0eabbde3e1765ddb666",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_body",
+      "source": "World/yeti_body.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "67f8237445b63ae0c6da8e56458f1876627d7cb047b6e251f29a4326b5cb1558",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_head",
+      "source": "World/yeti_head.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "faa2cffcf988e164307cd493348e93aaefa2dd974d9e602a27b6bdc5046aed60",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_arm_left",
+      "source": "World/yeti_arm_left.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "163e80dc8b1d8aff5453885352ad7e950b87331b5722282bccac1b36881f362f",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_arm_right",
+      "source": "World/yeti_arm_right.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "a86decb25e9d2c56f95ac90bc3451f879ef975d000b9d09fe75d9a71534d30dc",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_foot_left",
+      "source": "World/yeti_foot_left.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "af469032d00dbe3d995427e3df6c1c9ab993fd1a2e8e5d294b35b8e0d6e8aeae",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_foot_right",
+      "source": "World/yeti_foot_right.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "54c12351b9283d62f84eba869cbcae33ae07da857af5b238185013e577e99ec5",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_axe",
+      "source": "World/yeti_axe.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "036dee57bfcc4f27033ddecceca7d990caa53b2c495e9bf2b7b7084c139b820c",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_0",
+      "source": "World/tree_toy_0.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "58f52bbfb7eff0897e6cbde4dec6b68c4e9aaabfbf7b9859c8d1856857fa52ac",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_1",
+      "source": "World/tree_toy_1.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "19f363d425e1905b9f7295c00fa07cf86f7a9a7087cd9d8576a9829a1370c07a",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_2",
+      "source": "World/tree_toy_2.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "e5f9f52a14b3d5ee3dd85953b0b5c129b0c1e49ed6cddb89778a6ee632bfff5b",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_3",
+      "source": "World/tree_toy_3.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "6d2bdb7adaecbe5ba01fc9587d310b2836cfbdfac6c473aa7c3da55203080ae8",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_4",
+      "source": "World/tree_toy_4.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "58272bcc931abf7117e756bef514faca8026ac6a2409e4b20c22502995f5480a",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_5",
+      "source": "World/tree_toy_5.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "aa15a0f3cf5b10a8a7a2ce7df87f18dd3a273ac13e2bf3a4559fd2b6aa93f5e0",
+      "derived_from": null
+    },
+    {
+      "id": "tree_toy_6",
+      "source": "World/tree_toy_6.svg",
+      "width": 88.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "sha256": "0106c318138cc71a6d42a43aaed910567db04e6d083fa3eaf496f3687f886708",
+      "derived_from": null
+    },
+    {
+      "id": "fairy_bulb_red",
+      "source": "World/fairy_bulb_red.svg",
+      "width": 88.61538461538461,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "sha256": "20846160b7c7842ec1c54525a9e063c0cd18e3aa7e40f79ae7fe7a0a09cd91c1",
+      "derived_from": null
+    },
+    {
+      "id": "fairy_bulb_green",
+      "source": "World/fairy_bulb_green.svg",
+      "width": 88.61538461538461,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "sha256": "d1a750e99bf1c9a4896725c20f3020b58232de761be8b10f329b05a07139393c",
+      "derived_from": null
+    },
+    {
+      "id": "fairy_bulb_gold",
+      "source": "World/fairy_bulb_gold.svg",
+      "width": 88.61538461538461,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "sha256": "5a08732b7a2786c3aaffa2c47e3f6f6eb83ea32ebd4adfade2ab5dcf2b62d8e7",
+      "derived_from": null
+    },
+    {
+      "id": "fairy_bulb_blue",
+      "source": "World/fairy_bulb_blue.svg",
+      "width": 88.61538461538461,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "sha256": "6850290197694562e690d4b9b6d4f61fae764b6b31d8bdd85e821762c40dc1d0",
+      "derived_from": null
+    },
+    {
+      "id": "fairy_bulb_purple",
+      "source": "World/fairy_bulb_purple.svg",
+      "width": 88.61538461538461,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.18
+      },
+      "sha256": "221793e23cbbe5cbbedf695e95f03eed192aecf9eda31c1227d36a6987c6c4de",
+      "derived_from": null
+    },
+    {
+      "id": "hat_knit_red",
+      "source": "World/hat_knit_red.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "ab2f1aef6a9113e2d064f6452f7908dc1e5609de31e7a29554103fe77ce9f1ad",
+      "derived_from": null
+    },
+    {
+      "id": "hat_knit_green",
+      "source": "World/hat_knit_green.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "96a0a89193533b0dc5cb0adc4feb5f10232c3ada826155583c8440a2bb35ef43",
+      "derived_from": null
+    },
+    {
+      "id": "hat_knit_blue",
+      "source": "World/hat_knit_blue.svg",
+      "width": 111.7090909090909,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.78
+      },
+      "sha256": "5375141b9f234346bc3d6a3d142fe6323e5b2cc65930ca24ea109dc8fc34f8cf",
+      "derived_from": null
+    },
+    {
+      "id": "glove_cursor",
+      "source": "World/glove_cursor.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "77bb5966b0213c642089d5af410dec601db34388096a893d72efe108db338599",
+      "derived_from": null
+    },
+    {
+      "id": "tree_bare",
+      "source": "World/tree_bare.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "3110b2553965557df0074fff072c7be8ff71451f46b9937cf2e14a4d55eadead",
+      "derived_from": null
+    },
+    {
+      "id": "tree_topper_gold",
+      "source": "World/tree_topper_gold.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f1dc81be516f136e748b5064d991d634f0d5171b34d2ca9a7a42a00222712ae1",
+      "derived_from": null
+    },
+    {
+      "id": "tree_topper_ice",
+      "source": "World/tree_topper_ice.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "012a9b882273daf58e1f7aaa154980e4e3c99f36910ae0570e23ba3bd989cbbb",
+      "derived_from": null
+    },
+    {
+      "id": "tree_topper_ruby",
+      "source": "World/tree_topper_ruby.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "e1551626f6a6f9b26f07f72f6fd791dc1d2b1f232aa9558da7cfe8e4299b6b81",
+      "derived_from": null
+    },
+    {
+      "id": "tree_balls_red",
+      "source": "World/tree_balls_red.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "2c46673a04db70f4649fdde3851d35a9dbede05200d4bfb934d38b89d804db6a",
+      "derived_from": null
+    },
+    {
+      "id": "tree_balls_gold",
+      "source": "World/tree_balls_gold.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "9743b7befbaa37d934f6567097ec17f191d63e083a6fe3110a3a8a67e8b7c6bb",
+      "derived_from": null
+    },
+    {
+      "id": "tree_balls_ice",
+      "source": "World/tree_balls_ice.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "44a96e89e0465178f28f4eeed5d486a51088baa0ebaf7346f99300b5291f2985",
+      "derived_from": null
+    },
+    {
+      "id": "tree_string_multi",
+      "source": "World/tree_string_multi.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d0fcdff2f9868894dc2e04f644af88fd4e33198b232cccf2b85fd8d187511623",
+      "derived_from": null
+    },
+    {
+      "id": "tree_string_warm",
+      "source": "World/tree_string_warm.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "4402cc788b96e6be95f02f2e01cd349f44a755ed737889415f0839513952648d",
+      "derived_from": null
+    },
+    {
+      "id": "tree_string_ice",
+      "source": "World/tree_string_ice.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "c77eefe7d0080b0f6f8d370b9c80d011bed5d36b16d7c1c31f2123224cd16da1",
+      "derived_from": null
+    },
+    {
+      "id": "tree_charm_bauble",
+      "source": "World/tree_charm_bauble.svg",
+      "width": 91.42857142857143,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "sha256": "673daa2c82887890f124143c657ca7df4839618a76cae7a24a30e1e51ff3283b",
+      "derived_from": null
+    },
+    {
+      "id": "tree_charm_candy",
+      "source": "World/tree_charm_candy.svg",
+      "width": 91.42857142857143,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "sha256": "f432f11bb7e202980fd80b541bd99f94cf6a032cb5fde4d4d8c03b372b23a5ef",
+      "derived_from": null
+    },
+    {
+      "id": "tree_charm_flake",
+      "source": "World/tree_charm_flake.svg",
+      "width": 91.42857142857143,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.12
+      },
+      "sha256": "91f7c448fa9077254325ea77a4f58340e75f1ef299ece2dbaab59b0bb7d4246c",
+      "derived_from": null
+    },
+    {
+      "id": "snow_castle",
+      "source": "World/snow_castle.png",
+      "width": 330.0,
+      "height": 220,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9169921875
+      },
+      "sha256": "b95a85aa8149f82d2c814dfa9b179cbeb079f497c418ef37d29a6fa4de08900f",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_body_red",
+      "source": "World/gnome_body_red.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "01401591e153897e4f5b3160756ca8ac77f8084012fc3845f3a43d260e2c92ca",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_body_green",
+      "source": "World/gnome_body_green.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "4d2196e536758e14fd5384e08d29d1afe40a436e82ce97495aa207f96597a916",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_body_blue",
+      "source": "World/gnome_body_blue.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "27cc005bb7f2062721fd0baf3cb8c1dc81b7e1b6b71d79d8b30b193a463c62d3",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_head",
+      "source": "World/gnome_head.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0e25579003546af1e1a819d1c22c8c7af805117106b8f4543536db8d266a4943",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_hat",
+      "source": "World/gnome_hat.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "d917e9b69d45e89cb573d9d238137b4c8ea17b17fe73517e1f7f876455070096",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_foot_left",
+      "source": "World/gnome_foot_left.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "fb2ac0edf826271efc37b9b8402ff56f2672154dd24013c905c47231ec1b6b1c",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_arm_left",
+      "source": "World/gnome_arm_left.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "2890e6d9f45ebd3f6ce5652c7adcb9a8122774fc6f1a54920c36544814668ecc",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_foot_right",
+      "source": "World/gnome_foot_right.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "44a1bc3fa964afce891b7abe0b054ccfe38a61b6f540c2656d0caa6e5fcfab8f",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_arm_right",
+      "source": "World/gnome_arm_right.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "676931440dcf432851550a22739d615e3fb8094490d31853b1e557999d926049",
+      "derived_from": null
+    },
+    {
+      "id": "gnome_palm",
+      "source": "World/gnome_palm.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "2d19433b2b32793b4d2cca6cd5004ee1d506a1ea88801ebf9fee1299b650e078",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_palm",
+      "source": "World/yeti_palm.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "b0a2d6e1d3866ef8c8da270fed0e9e2f00a3be92b460bbe9254987629b952d45",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_emotion_happy",
+      "source": "World/yeti_emotion_happy.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "1360684f292b01ebad70c6e42d586f0290a4b6c3c3e6994040a81d567b3aee6f",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_emotion_surprised",
+      "source": "World/yeti_emotion_surprised.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "16f6527e064ffb759a02a251ea5dc7b69c18f80c5254e4eec404ea79f0ec4883",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_emotion_tired",
+      "source": "World/yeti_emotion_tired.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0d68e721bab3c1f778d2f2e7900857a48d2b2cb3951f4ae7d5c2a20eb5dd668b",
+      "derived_from": null
+    },
+    {
+      "id": "yeti_emotion_angry",
+      "source": "World/yeti_emotion_angry.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "842ca08c4f4404b19d32e49346658eaae8e9220faa01c41115a63812c1fe542c",
+      "derived_from": null
+    },
+    {
+      "id": "truck_body",
+      "source": "World/truck_body.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "eb850fc219ea60118e2d1275ad047ed9e0f728c2e2bd625105a775034f5bdcde",
+      "derived_from": null
+    },
+    {
+      "id": "truck_platform",
+      "source": "World/truck_platform.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "47a21ca28e6570aff8cd1c7c81553ad8845902733ffdedf2f039afa4bd732cd9",
+      "derived_from": null
+    },
+    {
+      "id": "truck_wheel_front",
+      "source": "World/truck_wheel_front.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "f9de42f75f7efafb40e6f12d2c1bf1e776fd26a9f65c9764a21edde81e68d33e",
+      "derived_from": null
+    },
+    {
+      "id": "truck_wheel_rear",
+      "source": "World/truck_wheel_rear.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "4ceb58b975bacf014a71ddc5b10ec5d9a7a73cc243c7743845924e316ca5bc22",
+      "derived_from": null
+    },
+    {
+      "id": "truck_lights",
+      "source": "World/truck_lights.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "8264764904ffc68c1d62db4f3e095241a4411dc0fa1b6ce78c1990ebb54c7ee4",
+      "derived_from": null
+    },
+    {
+      "id": "truck_ribbon",
+      "source": "World/truck_ribbon.svg",
+      "width": 170.66666666666666,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "eb594ab699124eea2dd65fa3f8233bfd8780f4908d49fd24bd032f07477d3f0b",
+      "derived_from": null
+    },
+    {
+      "id": "snow_clump_0",
+      "source": "World/snow_clump_0.svg",
+      "width": 128.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "e0de6d75e3e277eb69e4963b3f0d60e2d65ba83973a3df86c6531eb1ae290206",
+      "derived_from": null
+    },
+    {
+      "id": "snow_clump_1",
+      "source": "World/snow_clump_1.svg",
+      "width": 128.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "544fff3ae99c036e74c0e3bd71ebef31a53c579441f720afbcd24871dd1a0b42",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_face_closed",
+      "source": "World/snowman_face_closed.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "49c833b028f1c6cd2b1104b19ecb4b0c2ce7ad2cd2265d93874f53d56e5d7a1a",
+      "derived_from": null
+    },
+    {
+      "id": "tree_stem",
+      "source": "World/tree_stem.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "97414cd27bc2e9cc724e52aa79be516e2c16217354d97983b83be1213fbdcb3f",
+      "derived_from": null
+    },
+    {
+      "id": "shovel_cursor",
+      "source": "World/shovel_cursor.svg",
+      "width": 96.0,
+      "height": 96,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.88
+      },
+      "sha256": "75eb1eaf351dd203381c017b2756352bfac7049f94a2d0e9b393d2e1c4bd2472",
+      "derived_from": null
+    },
+    {
+      "id": "snowman_ball_base",
+      "source": "Prepared/snowman_ball_base.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0fc38dbd38533a89b0bb3b75edd19ebbfd2e749cf2cb459f06214843cf2387f2",
+      "derived_from": "snowman_body"
+    },
+    {
+      "id": "snowman_ball_middle",
+      "source": "Prepared/snowman_ball_middle.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "264af04e37d65d8278f9f3e8ba129d2d7270761e98baefc9c948e4fa8ff41f10",
+      "derived_from": "snowman_body"
+    },
+    {
+      "id": "snowman_ball_head",
+      "source": "Prepared/snowman_ball_head.svg",
+      "width": 56.0,
+      "height": 56,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "337b65de31c047fcb0108e99999c835132fdbdc162f1ac051403a3cd99cc341c",
+      "derived_from": "snowman_body"
+    },
+    {
+      "id": "snowplow_wheel_left",
+      "source": "Prepared/snowplow_wheel_left.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "6397c9d7376db31421cda09069596c481f901a80c4c99f88708c0f649a7d4000",
+      "derived_from": "snowplow_wheels"
+    },
+    {
+      "id": "snowplow_wheel_right",
+      "source": "Prepared/snowplow_wheel_right.svg",
+      "width": 89.04347826086956,
+      "height": 64,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "sha256": "0dc0ec8dd406568e175e95954aa659fb16312fe8f61d8fe3108bdc45a24c7767",
+      "derived_from": "snowplow_wheels"
+    }
+  ]
+}

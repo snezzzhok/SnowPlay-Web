@@ -1,0 +1,15 @@
+{
+  "cachedHalo" : {
+    "medianMS" : 8.2921666671609273,
+    "p95MS" : 8.5638333348470042
+  },
+  "clippedGradient" : {
+    "medianMS" : 7.9404999996768311,
+    "p95MS" : 8.372333333682036
+  },
+  "radialGradient" : {
+    "medianMS" : 7.8566249994764803,
+    "p95MS" : 8.3463333339750534
+  },
+  "scope" : "50 radial lights at 2880x1800 Retina; controlled CPU draw comparison, not GPU presentation"
+}

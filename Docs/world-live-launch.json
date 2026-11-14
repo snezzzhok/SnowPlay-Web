@@ -1,0 +1,197 @@
+{
+  "accessibility": true,
+  "brushedSnowVolume": 0,
+  "characters": [],
+  "config": {
+    "accumulationHeight": 8,
+    "automaticCleaning": 0,
+    "bulbBrightness": 0.5,
+    "bulbColor": "pastel",
+    "bulbSize": 4,
+    "bulbSpacing": 20,
+    "dockHats": {
+      "file:///Applications/ChatGPT.app/": "blue",
+      "file:///Applications/Google%20Chrome.app/": "green",
+      "file:///Applications/Telegram.app/": "red",
+      "file:///Applications/Visual%20Studio%20Code.app/": "blue",
+      "file:///System/Library/CoreServices/Finder.app/": "red"
+    },
+    "dockSnow": true,
+    "fps": 60,
+    "frost": true,
+    "garland": false,
+    "garlandLights": true,
+    "garlandSag": 12,
+    "garlandTwinkle": true,
+    "groundHeight": 18,
+    "groundSnow": true,
+    "intensity": 1,
+    "interaction": false,
+    "lastDelivery": 816275093.005157,
+    "mascot": "none",
+    "maxParticles": 3600,
+    "mode": "play",
+    "placements": {
+      "1": {
+        "garland": [
+          {
+            "x": 0.15,
+            "y": 0
+          },
+          {
+            "x": 0.55,
+            "y": 0
+          },
+          {
+            "x": 0.95,
+            "y": 0
+          }
+        ],
+        "garlandWindow": "window-458-14935",
+        "tree": {
+          "x": 0.4118022918701172,
+          "y": 0.7015526496039497
+        }
+      }
+    },
+    "preserveSnowman": true,
+    "reducedMotion": false,
+    "snow": true,
+    "snowSpeed": 0.8,
+    "tree": true,
+    "windAngle": -21,
+    "windowEffectDuration": 4,
+    "windowSnow": true,
+    "windStrength": 0.6
+  },
+  "deliveryState": {
+    "flying": false,
+    "giftWaiting": false,
+    "pending": true
+  },
+  "diagnostic": "",
+  "displays": 1,
+  "dockDetected": true,
+  "dockIcons": 10,
+  "dockSnowVolume": 5193.982692117937,
+  "dockVisible": true,
+  "editor": "none",
+  "fullscreenSuppressed": false,
+  "paused": false,
+  "performance": {
+    "battery": true,
+    "cpuAverageSinceLaunch": 30.112405305675498,
+    "cpuPercentOneCore": 25.48216795161768,
+    "gpuMeasured": false,
+    "p95FrameMS": 34.79499998502433,
+    "particles": 2400,
+    "physicalFootprintMB": 72.736572265625,
+    "residentMB": 27.4375,
+    "simulating": true,
+    "simulationHz": 29.807826414333967,
+    "targetFPS": 30,
+    "uptimeSeconds": 102.59185437497217
+  },
+  "reducedMotionActive": false,
+  "sculpting": {
+    "active": false,
+    "ready": false,
+    "seeded": false
+  },
+  "snowWorld": {
+    "carriedMass": 0,
+    "exportedMass": 0,
+    "groundMass": 16953.28596596028,
+    "meltedMass": 0,
+    "pendingMass": 0
+  },
+  "surfaceIDs": [
+    "dock",
+    "ground-1",
+    "tree-1",
+    "window-458-64",
+    "window-483-35657",
+    "window-96160-14889",
+    "window-96233-35678",
+    "window-97377-28207"
+  ],
+  "systemPaused": false,
+  "windowEffects": [],
+  "windowEvents": {
+    "axAttached": 5,
+    "created": 5
+  },
+  "windows": 5,
+  "windowSnowStates": [
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 774,
+        "width": 1440,
+        "x": 0,
+        "y": 30
+      },
+      "id": "window-458-64",
+      "phase": "active",
+      "restoreProgress": 1,
+      "snowVolume": 7330.4663321429625,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 126,
+        "width": 126,
+        "x": 498,
+        "y": 430
+      },
+      "id": "window-96233-35678",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 0,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 658,
+        "width": 797,
+        "x": 171,
+        "y": 30
+      },
+      "id": "window-97377-28207",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 0,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 436,
+        "width": 920,
+        "x": 260,
+        "y": 115
+      },
+      "id": "window-483-35657",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 0,
+      "visible": true
+    },
+    {
+      "accessibilityLinked": true,
+      "frame": {
+        "height": 774,
+        "width": 1281,
+        "x": 98,
+        "y": 30
+      },
+      "id": "window-96160-14889",
+      "phase": "visible",
+      "restoreProgress": 1,
+      "snowVolume": 0,
+      "visible": true
+    }
+  ]
+}

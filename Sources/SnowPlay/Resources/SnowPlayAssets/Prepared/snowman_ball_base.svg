@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none"><defs>
+<linearGradient id="snow" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#FFFFFF" /><stop offset=".57" stop-color="#F4F8FF" /><stop offset="1" stop-color="#BCD0F5" /></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#FF7770" /><stop offset=".48" stop-color="#F3484A" /><stop offset="1" stop-color="#C93455" /></linearGradient>
+<linearGradient id="green" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#8BE9AD" /><stop offset=".6" stop-color="#45C889" /><stop offset="1" stop-color="#259874" /></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#A7D5FF" /><stop offset=".55" stop-color="#5399FF" /><stop offset="1" stop-color="#4276DA" /></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFF2A3" /><stop offset=".52" stop-color="#FFCD4D" /><stop offset="1" stop-color="#F69A2A" /></linearGradient>
+<linearGradient id="purple" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#DBC7FF" /><stop offset=".58" stop-color="#A384F4" /><stop offset="1" stop-color="#8467C4" /></linearGradient>
+<radialGradient id="glow"><stop stop-color="#FFF7C2" stop-opacity=".85" /><stop offset="1" stop-color="#FFF7C2" stop-opacity="0" /></radialGradient>
+<filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" /></filter>
+</defs><circle cx="128" cy="175" r="66" fill="url(#snow)" stroke="#CADCF7" stroke-width="2" /></svg>

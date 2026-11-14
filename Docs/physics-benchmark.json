@@ -1,0 +1,9 @@
+{
+  "frames" : 3600,
+  "freeParticles" : 400,
+  "maxStepMS" : 0.39016699999999999,
+  "meanStepMS" : 0.085752595833333459,
+  "note" : "Release physics only. Not a renderer, GPU or app CPU measurement.",
+  "p95StepMS" : 0.098791000000000004,
+  "surfaces" : 40
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": {
+    "actualSnowAccumulated": true,
+    "minimizedProfilePreserved": true,
+    "restoredProfileSettles": true,
+    "effectsFinishAndClosedWindowDisposed": true,
+    "regionMatchesFormerWindow": true,
+    "minimizeAndCloseBothRegional": true,
+    "fourSecondDuration": true,
+    "localSpeedReaches35Percent": true,
+    "recoveryBeforeCompletion": true
+  },
+  "failure": null,
+  "effectKinds": [
+    "burst",
+    "collapse"
+  ],
+  "effectSampleCount": 89,
+  "accessibility": true,
+  "fullscreenSuppressed": false,
+  "fixtureEvents": [
+    {
+      "frame": {
+        "width": 620,
+        "x": 160,
+        "height": 408,
+        "y": 170
+      },
+      "number": 15926,
+      "event": "ready",
+      "visible": true,
+      "miniaturized": false
+    },
+    {
+      "visible": true,
+      "event": "status",
+      "miniaturized": false,
+      "cgFrame": {
+        "X": 160,
+        "Height": 408,
+        "Y": 322,
+        "Width": 620
+      },
+      "number": 15926,
+      "frame": {
+        "height": 408,
+        "x": 160,
+        "y": 170,
+        "width": 620
+      }
+    }
+  ],
+  "note": "Real NSWindow fixture, public miniaturize/deminiaturize/close after live snowfall, effect correlation by exact source ID. No screenshots or document content."
+}

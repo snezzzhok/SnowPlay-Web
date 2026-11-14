@@ -1,0 +1,14 @@
+{
+  "attempts" : 2,
+  "error" : "nil",
+  "observation" : {
+    "connected" : "Подключено",
+    "images" : true,
+    "loaded" : true,
+    "message" : "",
+    "tabs" : 5
+  },
+  "passed" : true,
+  "popoverShown" : true,
+  "scope" : "Actual product AppDelegate status-button action and NSPopover on unlocked macOS; own content snapshot only"
+}

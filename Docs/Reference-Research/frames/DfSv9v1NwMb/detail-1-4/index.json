@@ -1,0 +1,80 @@
+[
+  {
+    "frame": 30,
+    "pts": 1.0,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-001.png"
+  },
+  {
+    "frame": 37,
+    "pts": 1.233333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-002.png"
+  },
+  {
+    "frame": 45,
+    "pts": 1.5,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-003.png"
+  },
+  {
+    "frame": 52,
+    "pts": 1.733333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-004.png"
+  },
+  {
+    "frame": 60,
+    "pts": 2.0,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-005.png"
+  },
+  {
+    "frame": 67,
+    "pts": 2.233333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-006.png"
+  },
+  {
+    "frame": 75,
+    "pts": 2.5,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-007.png"
+  },
+  {
+    "frame": 82,
+    "pts": 2.733333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-008.png"
+  },
+  {
+    "frame": 90,
+    "pts": 3.0,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-009.png"
+  },
+  {
+    "frame": 97,
+    "pts": 3.233333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-010.png"
+  },
+  {
+    "frame": 105,
+    "pts": 3.5,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-011.png"
+  },
+  {
+    "frame": 112,
+    "pts": 3.733333,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-012.png"
+  },
+  {
+    "frame": 120,
+    "pts": 4.0,
+    "crop": null,
+    "file": "Docs/Reference-Research/frames/DfSv9v1NwMb/detail-1-4/frame-013.png"
+  }
+]

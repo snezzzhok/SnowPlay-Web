@@ -1,0 +1,1857 @@
+{
+  "scope": "Actual packaged native app, isolated preferences, same existing window layout and hats. Sequential runs, 5s warmup + 15 samples at 1s. CPU is percent of one core; GPU presentation not measured.",
+  "cases": {
+    "idle-current": {
+      "settings": {
+        "intensity": 0,
+        "snow": true,
+        "mode": "play",
+        "snowSpeed": 0.25,
+        "windowSnow": false,
+        "frost": false,
+        "dockHats": {
+          "file:///Applications/Google%20Chrome.app/": "blue",
+          "file:///Applications/Telegram.app/": "red"
+        }
+      },
+      "samples": [
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 9.99755959271957,
+            "cpuPercentOneCore": 5.25812122389438,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.13004167634062,
+            "particles": 0,
+            "physicalFootprintMB": 84.97149658203125,
+            "residentMB": 92.25,
+            "simulating": true,
+            "simulationHz": 14.678522732118209,
+            "targetFPS": 15,
+            "uptimeSeconds": 4.363854958341108
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.975324358682295,
+                "frames": 75,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.18749999790452,
+                "p95WorkMS": 0.28683332493528724
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 35,
+            "dockInventoryScans": 3
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 8.999441117297598,
+            "cpuPercentOneCore": 4.911570443216331,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.13004167634062,
+            "particles": 0,
+            "physicalFootprintMB": 84.76837158203125,
+            "residentMB": 92.046875,
+            "simulating": true,
+            "simulationHz": 14.745712635455405,
+            "targetFPS": 15,
+            "uptimeSeconds": 5.429359375004424
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.97692827337478,
+                "frames": 90,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44379166129511,
+                "p95WorkMS": 0.28591667069122195
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 51,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 8.306327666989901,
+            "cpuPercentOneCore": 4.544766202004276,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.06220833095722,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.784721188655517,
+            "targetFPS": 15,
+            "uptimeSeconds": 6.429784874999314
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.970576609195481,
+                "frames": 105,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44379166129511,
+                "p95WorkMS": 0.28683332493528724
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 53,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 7.91141687575556,
+            "cpuPercentOneCore": 5.374109499758618,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.06220833095722,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.81248447832981,
+            "targetFPS": 15,
+            "uptimeSeconds": 7.430527416669065
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.982799840204155,
+                "frames": 120,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44379166129511,
+                "p95WorkMS": 0.2911249903263524
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 54,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 7.588472472842294,
+            "cpuPercentOneCore": 5.338796682460133,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.01595834258478,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.836229831925195,
+            "targetFPS": 15,
+            "uptimeSeconds": 8.497191000002204
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.984032779838616,
+                "frames": 135,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44379166129511,
+                "p95WorkMS": 0.2912500058300793
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 70,
+            "dockInventoryScans": 5
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 7.300700058946509,
+            "cpuPercentOneCore": 5.008048828464477,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.01595834258478,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.854795689055301,
+            "targetFPS": 15,
+            "uptimeSeconds": 9.563754083341337
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.986008825794062,
+                "frames": 150,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.20037499407772,
+                "p95WorkMS": 0.2911249903263524
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 71,
+            "dockInventoryScans": 5
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 7.087322624022714,
+            "cpuPercentOneCore": 5.046796466553179,
+            "gpuMeasured": false,
+            "p95FrameMS": 68.01595834258478,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.868522055680867,
+            "targetFPS": 15,
+            "uptimeSeconds": 10.563834041677183
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.987890919583238,
+                "frames": 166,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44275000609923,
+                "p95WorkMS": 0.2905833243858069
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 87,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.935795400593644,
+            "cpuPercentOneCore": 5.433613798930445,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.98529166553635,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.882042562067763,
+            "targetFPS": 15,
+            "uptimeSeconds": 11.629423208345543
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.987481081949074,
+                "frames": 181,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44275000609923,
+                "p95WorkMS": 0.2912500058300793
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 88,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.778069243953312,
+            "cpuPercentOneCore": 5.058475952673688,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.98054167302325,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.891987690470053,
+            "targetFPS": 15,
+            "uptimeSeconds": 12.696108125004685
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.98991308568983,
+                "frames": 196,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.20037499407772,
+                "p95WorkMS": 0.2919999969890341
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 90,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.636323177949841,
+            "cpuPercentOneCore": 4.948956637640506,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.98054167302325,
+            "particles": 0,
+            "physicalFootprintMB": 84.81524658203125,
+            "residentMB": 92.09375,
+            "simulating": true,
+            "simulationHz": 14.90055409457845,
+            "targetFPS": 15,
+            "uptimeSeconds": 13.762635958337341
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.989731409400884,
+                "frames": 211,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44275000609923,
+                "p95WorkMS": 0.2919999969890341
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 106,
+            "dockInventoryScans": 7
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.475587905629657,
+            "cpuPercentOneCore": 4.264182159432905,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.98054167302325,
+            "particles": 0,
+            "physicalFootprintMB": 84.79962158203125,
+            "residentMB": 92.078125,
+            "simulating": true,
+            "simulationHz": 14.9069859805889,
+            "targetFPS": 15,
+            "uptimeSeconds": 14.762968458337127
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.989878334473165,
+                "frames": 226,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.20037499407772,
+                "p95WorkMS": 0.2919999969890341
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 107,
+            "dockInventoryScans": 7
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.397022623212672,
+            "cpuPercentOneCore": 5.3095239648835335,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.92750000022352,
+            "particles": 0,
+            "physicalFootprintMB": 84.79962158203125,
+            "residentMB": 92.078125,
+            "simulating": true,
+            "simulationHz": 14.91340562753897,
+            "targetFPS": 15,
+            "uptimeSeconds": 15.829504749999614
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.989633302322154,
+                "frames": 241,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44379166129511,
+                "p95WorkMS": 0.2932083298219368
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 123,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.324168861816322,
+            "cpuPercentOneCore": 5.171088544376606,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.91874999180436,
+            "particles": 0,
+            "physicalFootprintMB": 84.79962158203125,
+            "residentMB": 92.078125,
+            "simulating": true,
+            "simulationHz": 14.918450602147212,
+            "targetFPS": 15,
+            "uptimeSeconds": 16.829642333337688
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.991475802765963,
+                "frames": 256,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.44275000609923,
+                "p95WorkMS": 0.2932083298219368
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 124,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.220634328512515,
+            "cpuPercentOneCore": 4.58691733454224,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.88412500463892,
+            "particles": 0,
+            "physicalFootprintMB": 84.79962158203125,
+            "residentMB": 92.078125,
+            "simulating": true,
+            "simulationHz": 14.923424179679184,
+            "targetFPS": 15,
+            "uptimeSeconds": 17.896197416674113
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.992482450014048,
+                "frames": 271,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.32145833747927,
+                "p95WorkMS": 0.2932083298219368
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 126,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 6.151720182623728,
+            "cpuPercentOneCore": 4.995688200669726,
+            "gpuMeasured": false,
+            "p95FrameMS": 67.88412500463892,
+            "particles": 0,
+            "physicalFootprintMB": 84.79962158203125,
+            "residentMB": 92.078125,
+            "simulating": true,
+            "simulationHz": 14.927611011867217,
+            "targetFPS": 15,
+            "uptimeSeconds": 18.963037416673615
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.0051249953685328364
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004208326572552323
+              },
+              "spriteKit": {
+                "callbackFPS": 0,
+                "frames": 0,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 14.992406247593344,
+                "frames": 286,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 71.32145833747927,
+                "p95WorkMS": 0.2932083298219368
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 141,
+            "dockInventoryScans": 9
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        }
+      ],
+      "summary": {
+        "cpuMedianOneCore": 5.046796466553179,
+        "cpuMeanOneCore": 5.0167103959667365,
+        "rssMedianMB": 92.09375,
+        "footprintMedianMB": 84.81524658203125,
+        "targetFPS": 15,
+        "simulationHzMedian": 14.882042562067763,
+        "p95TickMSMedian": 67.98529166553635,
+        "particles": 0
+      }
+    },
+    "snow-55": {
+      "settings": {
+        "intensity": 0.55,
+        "snow": true,
+        "mode": "play",
+        "snowSpeed": 0.25,
+        "windowSnow": false,
+        "frost": false,
+        "dockHats": {
+          "file:///Applications/Google%20Chrome.app/": "blue",
+          "file:///Applications/Telegram.app/": "red"
+        }
+      },
+      "samples": [
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 22.746621388262223,
+            "cpuPercentOneCore": 19.432734470763073,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.139208324835636,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0340576171875,
+            "residentMB": 91.375,
+            "simulating": true,
+            "simulationHz": 28.49785103155566,
+            "targetFPS": 30,
+            "uptimeSeconds": 4.245311791659333
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 9.34400362022182,
+                "frames": 46,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 266.7885416740319,
+                "p95WorkMS": 0.0923750048968941
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.313268951961366,
+                "frames": 145,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.99879167450126,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.500002108364065,
+                "frames": 145,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.60416666732635,
+                "p95WorkMS": 0.19033333228435367
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 35,
+            "dockInventoryScans": 3
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 21.605075363296727,
+            "cpuPercentOneCore": 16.915327839462854,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.03612500207964,
+            "particles": 1136,
+            "physicalFootprintMB": 225.2059326171875,
+            "residentMB": 91.328125,
+            "simulating": true,
+            "simulationHz": 28.79566176078811,
+            "targetFPS": 30,
+            "uptimeSeconds": 5.278676333327894
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 9.046907366565517,
+                "frames": 53,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 268.1143333320506,
+                "p95WorkMS": 0.0923750048968941
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.248471199050552,
+                "frames": 175,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.99879167450126,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.57713430844618,
+                "frames": 175,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.827708343276754,
+                "p95WorkMS": 0.1981249952223152
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 51,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 21.10018086114791,
+            "cpuPercentOneCore": 18.520844058761245,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.03504165564664,
+            "particles": 1136,
+            "physicalFootprintMB": 244.9090576171875,
+            "residentMB": 91.234375,
+            "simulating": true,
+            "simulationHz": 28.995271975129413,
+            "targetFPS": 30,
+            "uptimeSeconds": 6.311955375000252
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 8.59608366381935,
+                "frames": 59,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 290.8619999943767,
+                "p95WorkMS": 0.0923750048968941
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.21920347299338,
+                "frames": 205,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.17883332481142,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.644723609153566,
+                "frames": 205,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.827708343276754,
+                "p95WorkMS": 0.2080833219224587
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 53,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.760453450158618,
+            "cpuPercentOneCore": 18.616170215032696,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.03504165564664,
+            "particles": 1136,
+            "physicalFootprintMB": 225.1278076171875,
+            "residentMB": 91.234375,
+            "simulating": true,
+            "simulationHz": 29.133886154603367,
+            "targetFPS": 30,
+            "uptimeSeconds": 7.3119838333223015
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 10.612681695591897,
+                "frames": 85,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 267.2887083317619,
+                "p95WorkMS": 0.0923750048968941
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.182388481036202,
+                "frames": 236,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.17883332481142,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.687864946216234,
+                "frames": 236,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.827708343276754,
+                "p95WorkMS": 0.21275000472087413
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 54,
+            "dockInventoryScans": 4
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.68973586186429,
+            "cpuPercentOneCore": 20.172651249152786,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.02933333220426,
+            "particles": 1136,
+            "physicalFootprintMB": 225.1278076171875,
+            "residentMB": 91.234375,
+            "simulating": true,
+            "simulationHz": 29.23895755430083,
+            "targetFPS": 30,
+            "uptimeSeconds": 8.31198625000252
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 10.995089131324738,
+                "frames": 99,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 267.2887083317619,
+                "p95WorkMS": 0.0923750048968941
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.16625305061388,
+                "frames": 266,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.99879167450126,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.729519290903998,
+                "frames": 266,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.827708343276754,
+                "p95WorkMS": 0.2127083280356601
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 70,
+            "dockInventoryScans": 5
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.52309205172951,
+            "cpuPercentOneCore": 19.180876392237753,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.02933333220426,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0028076171875,
+            "residentMB": 91.34375,
+            "simulating": true,
+            "simulationHz": 29.32801458766939,
+            "targetFPS": 30,
+            "uptimeSeconds": 9.34396724999533
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 12.91094097219846,
+                "frames": 129,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 266.7885416740319,
+                "p95WorkMS": 0.0907500070752576
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.148591805905383,
+                "frames": 296,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.99879167450126,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.75344730248158,
+                "frames": 296,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.02524999587331,
+                "p95WorkMS": 0.21275000472087413
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 71,
+            "dockInventoryScans": 5
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.466084960818083,
+            "cpuPercentOneCore": 19.934129623950952,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.01262499776203,
+            "particles": 1136,
+            "physicalFootprintMB": 225.2215576171875,
+            "residentMB": 91.359375,
+            "simulating": true,
+            "simulationHz": 29.38956260583497,
+            "targetFPS": 30,
+            "uptimeSeconds": 10.345315208323882
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 13.743625238950397,
+                "frames": 151,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 231.28162500506733,
+                "p95WorkMS": 0.0907500070752576
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.13518819279137,
+                "frames": 326,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.99879167450126,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.7760122383736,
+                "frames": 326,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.3833333394723,
+                "p95WorkMS": 0.2127083280356601
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 87,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.39015157388496,
+            "cpuPercentOneCore": 19.629927542649934,
+            "gpuMeasured": false,
+            "p95FrameMS": 35.01262499776203,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0184326171875,
+            "residentMB": 91.375,
+            "simulating": true,
+            "simulationHz": 29.445373727077797,
+            "targetFPS": 30,
+            "uptimeSeconds": 11.378635374989244
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 15.14979168199691,
+                "frames": 182,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 209.2008333420381,
+                "p95WorkMS": 0.09020832658279687
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.123344412575758,
+                "frames": 357,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.90187500230968,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.7954001760654,
+                "frames": 357,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.3833333394723,
+                "p95WorkMS": 0.21275000472087413
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 89,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.39722338244182,
+            "cpuPercentOneCore": 20.47517099384011,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.96975000598468,
+            "particles": 1136,
+            "physicalFootprintMB": 225.2371826171875,
+            "residentMB": 91.375,
+            "simulating": true,
+            "simulationHz": 29.494209752521584,
+            "targetFPS": 30,
+            "uptimeSeconds": 12.410963749993243
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 16.29863712142004,
+                "frames": 212,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 198.2281666714698,
+                "p95WorkMS": 0.08991667709778994
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.003128125219455,
+                "frames": 387,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.8950000081677,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 30.005135042928327,
+                "frames": 387,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.20295833388809,
+                "p95WorkMS": 0.21858332911506295
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 90,
+            "dockInventoryScans": 6
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.401275530348403,
+            "cpuPercentOneCore": 20.45151504120168,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.919791665743105,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0184326171875,
+            "residentMB": 91.375,
+            "simulating": true,
+            "simulationHz": 29.529849937769374,
+            "targetFPS": 30,
+            "uptimeSeconds": 13.411989833330153
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 17.279215451931506,
+                "frames": 242,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 192.8852499986533,
+                "p95WorkMS": 0.0873749959282577
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 29.999170914764534,
+                "frames": 417,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.90187500230968,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 30.000877167491442,
+                "frames": 417,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.27283332752995,
+                "p95WorkMS": 0.21858332911506295
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 106,
+            "dockInventoryScans": 7
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.365713964877084,
+            "cpuPercentOneCore": 19.903420585034254,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.96975000598468,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0496826171875,
+            "residentMB": 91.40625,
+            "simulating": true,
+            "simulationHz": 29.56698918243085,
+            "targetFPS": 30,
+            "uptimeSeconds": 14.443696916656336
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 18.127685210403808,
+                "frames": 272,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 167.0636666676728,
+                "p95WorkMS": 0.08679166785441339
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 29.99225893816475,
+                "frames": 447,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.77462500834372,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.993533564344173,
+                "frames": 447,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.27283332752995,
+                "p95WorkMS": 0.21462500444613397
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 108,
+            "dockInventoryScans": 7
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.36186864972963,
+            "cpuPercentOneCore": 20.306418146360596,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.99274999194313,
+            "particles": 1136,
+            "physicalFootprintMB": 225.2684326171875,
+            "residentMB": 91.40625,
+            "simulating": true,
+            "simulationHz": 29.59202780148786,
+            "targetFPS": 30,
+            "uptimeSeconds": 15.445321124992915
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 18.874218103377196,
+                "frames": 302,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 164.9007916712435,
+                "p95WorkMS": 0.08304166840389371
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 29.997373333925196,
+                "frames": 477,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.77462500834372,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 29.999856531554503,
+                "frames": 477,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.27283332752995,
+                "p95WorkMS": 0.21858332911506295
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 123,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.361348548622995,
+            "cpuPercentOneCore": 20.353574580152728,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.919791665743105,
+            "particles": 1136,
+            "physicalFootprintMB": 245.0809326171875,
+            "residentMB": 91.4375,
+            "simulating": true,
+            "simulationHz": 29.61771264958415,
+            "targetFPS": 30,
+            "uptimeSeconds": 16.478658041669405
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 19.55129368762345,
+                "frames": 333,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 135.16579166753218,
+                "p95WorkMS": 0.08304166840389371
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.005565756333375,
+                "frames": 507,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.77462500834372,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 30.00080174158877,
+                "frames": 508,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.20295833388809,
+                "p95WorkMS": 0.21462500444613397
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 125,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.33582235464713,
+            "cpuPercentOneCore": 19.92874331116974,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.919791665743105,
+            "particles": 1136,
+            "physicalFootprintMB": 225.3309326171875,
+            "residentMB": 91.46875,
+            "simulating": true,
+            "simulationHz": 29.640405906449978,
+            "targetFPS": 30,
+            "uptimeSeconds": 17.511964541656198
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 27.539168416265195,
+                "frames": 363,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 42.94225000194274,
+                "p95WorkMS": 0.07887498941272497
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.00143966992065,
+                "frames": 538,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.867041660822,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 30.00121664595012,
+                "frames": 538,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 36.19391666143201,
+                "p95WorkMS": 0.21979166194796562
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 126,
+            "dockInventoryScans": 8
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        },
+        {
+          "performance": {
+            "battery": true,
+            "cpuAverageSinceLaunch": 20.343244853864334,
+            "cpuPercentOneCore": 20.469033427713804,
+            "gpuMeasured": false,
+            "p95FrameMS": 34.957000010763295,
+            "particles": 1136,
+            "physicalFootprintMB": 245.1121826171875,
+            "residentMB": 91.46875,
+            "simulating": true,
+            "simulationHz": 29.660504739665193,
+            "targetFPS": 30,
+            "uptimeSeconds": 18.545305958323297
+          },
+          "rendering": [
+            {
+              "desktop": {
+                "callbackFPS": 27.744679213473045,
+                "frames": 393,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 42.297749998397194,
+                "p95WorkMS": 0.07887498941272497
+              },
+              "display": "1",
+              "interactive": {
+                "callbackFPS": 0,
+                "frames": 1,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 0,
+                "p95WorkMS": 0.004749992513097823
+              },
+              "spriteKit": {
+                "callbackFPS": 30.016836622643922,
+                "frames": 568,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.72566666116472,
+                "p95WorkMS": 0
+              },
+              "windowCaps": {
+                "callbackFPS": 30.02606758509894,
+                "frames": 568,
+                "gpuMeasured": false,
+                "measurement": "native draw/update callbacks; not presented GPU frames",
+                "p95IntervalMS": 35.940166664659046,
+                "p95WorkMS": 0.2094583323923871
+              }
+            }
+          ],
+          "tracking": {
+            "dockFrameQueries": 142,
+            "dockInventoryScans": 9
+          },
+          "windows": 1,
+          "dockVisible": false,
+          "editor": "none"
+        }
+      ],
+      "summary": {
+        "cpuMedianOneCore": 19.92874331116974,
+        "cpuMeanOneCore": 19.619369165165615,
+        "rssMedianMB": 91.375,
+        "footprintMedianMB": 244.9090576171875,
+        "targetFPS": 30,
+        "simulationHzMedian": 29.445373727077797,
+        "p95TickMSMedian": 35.01262499776203,
+        "particles": 1136
+      }
+    }
+  }
+}
