@@ -2,8 +2,8 @@ import AppKit
 import SpriteKit
 import SnowCore
 extension DecorationManager {
-    var livingBusy:Bool {states.values.contains{$0.living.busy || $0.character != nil || $0.directTreeElapsed != nil || $0.directShotElapsed != nil}}
-    var visibleStoryActive:Bool {states.values.contains{s in
+    var livingBusy:Bool {stories.active != nil || states.values.contains{$0.living.busy || $0.character != nil || $0.directTreeElapsed != nil || $0.directShotElapsed != nil}}
+    var visibleStoryActive:Bool {stories.active != nil || states.values.contains{s in
         s.character != nil || s.directTreeElapsed != nil || s.directShotElapsed != nil || s.living.delivery != nil || s.living.activity != nil || s.living.automaticTarget != nil || (s.living.duel != nil && !s.living.duelObscured)
     }}
     var duelActive:Bool {states.values.contains{$0.living.duel != nil}}
@@ -74,8 +74,22 @@ extension DecorationManager {
         }
     }
     func startParachuteGift(display d:DisplayOverlay,surfaces:SurfaceManager)->Bool {
-        guard let s=states[d.id],s.deliveryElapsed == nil,s.gift == nil else{return false}
-        let x=d.rect.x+d.rect.width*Double.random(in:0.2...0.8)
+        guard let s=states[d.id],s.deliveryElapsed == nil,s.gift == nil,s.giftOpenedAt == nil else{return false}
+        // Use the actual snow surface, leaving clearance around placed models.
+        let occupied=s.snowballs.snowmen.map{ $0.hitbox.expanded(24) }+s.treePresents.map{Rect($0.position.x-32,$0.position.y-35,64,70)}
+        let treeX=s.tree.map{d.rect.x+$0.position.x}
+        let margin=min(100,d.rect.width/4) // Room for all three bursts at either edge.
+        var candidates:[Double]=[]
+        for i in 0..<24 {
+            let x=d.rect.x+margin+(d.rect.width-2*margin)*Double(i)/23
+            let point=Vec(x,groundY(x,display:d,surfaces:surfaces)-15)
+            if occupied.contains(where:{$0.contains(point)}) {continue}
+            if let treeX,abs(x-treeX)<s.treeHeight*0.45+25 {continue}
+            candidates.append(x)
+        }
+        let separated=candidates.filter{x in !s.recentGiftPositions.suffix(2).contains{abs(x-$0.x)<80}}
+        guard let x=(separated.isEmpty ? candidates:separated).randomElement() else{return false}
+        s.recentGiftPositions.append(Vec(x,d.rect.maxY));s.recentGiftPositions=Array(s.recentGiftPositions.suffix(3))
         let anchor=AssetManager.shared.registry["gift_box"]?.anchor.y ?? 0.84
         let landing=Double(ArtScale.gift)*(0.17515625+0.53*(anchor-0.5))
         s.deliveryElapsed=0;s.dropTime=0;s.dropPoint=Vec(x,d.rect.y+60);s.target=Vec(x,groundY(x,display:d,surfaces:surfaces)-landing)

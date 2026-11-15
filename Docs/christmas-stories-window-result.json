@@ -1,0 +1,16 @@
+{
+  "clickThrough" : true,
+  "desktopLayerBelowApps" : true,
+  "passed" : true,
+  "privateAPI" : false,
+  "scope" : "Real CGWindowList geometry from a separate owned AppKit test window, production observer and all seven story controllers",
+  "stories" : [
+    "presentTheft",
+    "lightRepair",
+    "snowballExchange",
+    "snowmanBuild",
+    "treeShake",
+    "santaDrop",
+    "snowmanParty"
+  ]
+}

@@ -1,0 +1,1211 @@
+{
+  "cancellationRuns" : 21,
+  "displayResizeCleanup" : true,
+  "failures" : [
+
+  ],
+  "objectLossRuns" : 7,
+  "partyIsIdempotentAndRollsBack" : true,
+  "partyOutfitRestoresAfterRestart" : true,
+  "passed" : true,
+  "runs" : [
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "parcel0",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "parcel1",
+          "time" : 0
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "parcel0",
+          "time" : 4.4999999999999893
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "parcel1",
+          "time" : 4.4999999999999893
+        },
+        {
+          "actor" : "yeti",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "victim",
+          "time" : 11.200000000000136
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "victim",
+          "time" : 18.566666666666894
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "victim",
+          "time" : 21.916666666666703
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "victim",
+          "time" : 24.916666666666533
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 29.36666666666628,
+      "finalGifts" : 5,
+      "id" : "presentTheft",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999998863,
+      "outcome" : "Elves recover the present (70%)",
+      "peakRootNodes" : 6,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti Steals a Present",
+      "variant" : 0,
+      "visitedBeats" : [
+        "chase",
+        "deliver-presents",
+        "elves-notice",
+        "elves-step-aside",
+        "goodbye",
+        "hands-touch-the-box",
+        "inspect-the-delivery",
+        "pick-up-the-present",
+        "put-it-back",
+        "retrieve-the-box",
+        "return-the-present",
+        "set-presents-down",
+        "stumble-and-drop",
+        "tiptoe-to-the-present",
+        "walk-home",
+        "yeti-peeks",
+        "yeti-runs-with-the-box"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "parcel0",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "parcel1",
+          "time" : 0
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "parcel0",
+          "time" : 4.4999999999999893
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "parcel1",
+          "time" : 4.4999999999999893
+        },
+        {
+          "actor" : "yeti",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "victim",
+          "time" : 11.200000000000136
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 28.949999999999637,
+      "finalGifts" : 4,
+      "id" : "presentTheft",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999998863,
+      "outcome" : "Yeti escapes (30%)",
+      "peakRootNodes" : 5,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti Steals a Present",
+      "variant" : 1,
+      "visitedBeats" : [
+        "chase",
+        "count-the-missing-present",
+        "deliver-presents",
+        "elves-notice",
+        "elves-step-aside",
+        "goodbye",
+        "hands-touch-the-box",
+        "inspect-the-delivery",
+        "set-presents-down",
+        "the-great-escape",
+        "tiptoe-to-the-present",
+        "too-late",
+        "walk-home",
+        "yeti-peeks",
+        "yeti-runs-with-the-box"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 0
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 6.0999999999999837
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 6.0999999999999837
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "tool",
+          "time" : 8.9000000000000217
+        },
+        {
+          "actor" : "elf0",
+          "event" : "rung-contact",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 8.9000000000000217
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 18.200000000000248
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 18.200000000000248
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 23.499999999999947,
+      "finalGifts" : 0,
+      "id" : "lightRepair",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 10.012385543913553,
+      "outcome" : "",
+      "peakRootNodes" : 4,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Elves Fix the Lights",
+      "variant" : 0,
+      "visitedBeats" : [
+        "a-job-well-done",
+        "a-little-surprise",
+        "climb-down",
+        "climb-the-rungs",
+        "fold-and-pack",
+        "goodbye",
+        "lights-restored",
+        "repair-the-wire",
+        "the-lights-go-dim",
+        "the-repair-crew",
+        "unfold-and-steady",
+        "walk-home"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 0
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 6.0999999999999837
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 6.0999999999999837
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "tool",
+          "time" : 8.9000000000000217
+        },
+        {
+          "actor" : "elf0",
+          "event" : "rung-contact",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 8.9000000000000217
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "toolbox",
+          "time" : 19.700000000000163
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "ladder",
+          "time" : 19.700000000000163
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 24.999999999999861,
+      "finalGifts" : 0,
+      "id" : "lightRepair",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 10.012385543913553,
+      "outcome" : "",
+      "peakRootNodes" : 4,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Elves Fix the Lights",
+      "variant" : 1,
+      "visitedBeats" : [
+        "a-job-well-done",
+        "a-little-surprise",
+        "climb-down",
+        "climb-the-rungs",
+        "fold-and-pack",
+        "goodbye",
+        "lights-restored",
+        "one-more-adjustment",
+        "repair-the-wire",
+        "the-lights-go-dim",
+        "the-repair-crew",
+        "unfold-and-steady",
+        "walk-home"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 7.399999999999979
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 8.7500000000000142
+        },
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 12.100000000000181
+        },
+        {
+          "actor" : "snowman",
+          "event" : "snowman-release",
+          "gripErrorPt" : 0,
+          "prop" : "reply",
+          "time" : 12.100000000000181
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 13.616666666666923
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 21.600000000000055,
+      "finalGifts" : 0,
+      "id" : "snowballExchange",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 0,
+      "outcome" : "Snowman dodged and hit Yeti",
+      "peakRootNodes" : 28,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti vs Snowman",
+      "variant" : 0,
+      "visitedBeats" : [
+        "a-mischievous-idea",
+        "goodbye",
+        "not-amused",
+        "roll-a-big-snowball",
+        "snowman-ducks-or-gets-hit",
+        "snowman-makes-a-reply",
+        "spot-the-snowman",
+        "stand-and-brush-off",
+        "straighten-the-hat",
+        "take-aim",
+        "the-comeback",
+        "walk-home",
+        "yeti-in-the-snow"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 7.399999999999979
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 8.7500000000000142
+        },
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 12.100000000000181
+        },
+        {
+          "actor" : "snowman",
+          "event" : "snowman-release",
+          "gripErrorPt" : 0,
+          "prop" : "reply",
+          "time" : 12.100000000000181
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 13.616666666666923
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 21.600000000000055,
+      "finalGifts" : 0,
+      "id" : "snowballExchange",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 0,
+      "outcome" : "Snowman recovered and hit Yeti",
+      "peakRootNodes" : 28,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti vs Snowman",
+      "variant" : 1,
+      "visitedBeats" : [
+        "a-mischievous-idea",
+        "goodbye",
+        "not-amused",
+        "roll-a-big-snowball",
+        "snowman-ducks-or-gets-hit",
+        "snowman-makes-a-reply",
+        "spot-the-snowman",
+        "stand-and-brush-off",
+        "straighten-the-hat",
+        "take-aim",
+        "the-comeback",
+        "walk-home",
+        "yeti-in-the-snow"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0+elf1",
+          "event" : "three-ball-stack",
+          "gripErrorPt" : 0,
+          "prop" : "snowman",
+          "time" : 14.116666666666948
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "carrot",
+          "time" : 17.816666666666936
+        },
+        {
+          "actor" : "elf0",
+          "event" : "nose-contact",
+          "gripErrorPt" : 0,
+          "prop" : "carrot",
+          "time" : 19.300000000000185
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "newHat",
+          "time" : 19.316666666666851
+        },
+        {
+          "actor" : "elf1",
+          "event" : "hat-contact",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 20.900000000000095
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 27.799999999999702,
+      "finalGifts" : 0,
+      "id" : "snowmanBuild",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999999432,
+      "outcome" : "Built from three snowballs using 660 units of real snow",
+      "peakRootNodes" : 5,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 3.0264376948852337e-05,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Elves Build a Snowman",
+      "variant" : 0,
+      "visitedBeats" : [
+        "a-carrot-nose",
+        "a-hat-and-scarf",
+        "a-new-friend-waves",
+        "choose-the-building-spot",
+        "dress-the-snowman",
+        "goodbye",
+        "lift-and-stack-three-balls",
+        "ready-to-lift",
+        "roll-ball-1",
+        "roll-ball-2",
+        "roll-ball-3",
+        "walk-home"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0+elf1",
+          "event" : "three-ball-stack",
+          "gripErrorPt" : 0,
+          "prop" : "snowman",
+          "time" : 14.116666666666948
+        },
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "carrot",
+          "time" : 17.816666666666936
+        },
+        {
+          "actor" : "elf0",
+          "event" : "nose-contact",
+          "gripErrorPt" : 0,
+          "prop" : "carrot",
+          "time" : 19.300000000000185
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "newHat",
+          "time" : 19.316666666666851
+        },
+        {
+          "actor" : "elf1",
+          "event" : "hat-contact",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 20.900000000000095
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 29.099999999999628,
+      "finalGifts" : 0,
+      "id" : "snowmanBuild",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999999432,
+      "outcome" : "Built from three snowballs using 660 units of real snow",
+      "peakRootNodes" : 5,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 3.0264376948852337e-05,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Elves Build a Snowman",
+      "variant" : 1,
+      "visitedBeats" : [
+        "a-carrot-nose",
+        "a-hat-and-scarf",
+        "a-new-friend-waves",
+        "choose-the-building-spot",
+        "dress-the-snowman",
+        "goodbye",
+        "lift-and-stack-three-balls",
+        "ready-to-lift",
+        "roll-ball-1",
+        "roll-ball-2",
+        "roll-ball-3",
+        "straighten-a-crooked-hat",
+        "walk-home"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "yeti",
+          "event" : "trunk-grip",
+          "gripErrorPt" : 0,
+          "prop" : "tree",
+          "time" : 5.1999999999999869
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-0",
+          "time" : 6.0166666666666506
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-1",
+          "time" : 6.933333333333314
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-2",
+          "time" : 7.8333333333333108
+        },
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 11.400000000000146
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 12.400000000000196
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 19.6333333333335,
+      "finalGifts" : 0,
+      "id" : "treeShake",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 6.8511038862069924,
+      "outcome" : "Tree kept in place; branch snow returned to ground physics",
+      "peakRootNodes" : 48,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti Shakes the Tree",
+      "variant" : 0,
+      "visitedBeats" : [
+        "approach-the-snowy-tree",
+        "elves-emerge",
+        "fix-the-decorations",
+        "goodbye",
+        "grip-the-trunk",
+        "inspect-the-branches",
+        "not-so-funny-now",
+        "one-last-clump",
+        "shake-the-branches",
+        "walk-home",
+        "yeti-laughs"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "yeti",
+          "event" : "trunk-grip",
+          "gripErrorPt" : 0,
+          "prop" : "tree",
+          "time" : 5.1999999999999869
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-0",
+          "time" : 6.0166666666666506
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-1",
+          "time" : 6.933333333333314
+        },
+        {
+          "actor" : "yeti",
+          "event" : "branch-snow-release",
+          "gripErrorPt" : 0,
+          "prop" : "tree-1-branch-2",
+          "time" : 7.8333333333333108
+        },
+        {
+          "actor" : "",
+          "event" : "throw",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 11.400000000000146
+        },
+        {
+          "actor" : "",
+          "event" : "impact",
+          "gripErrorPt" : 0,
+          "prop" : "snowball",
+          "time" : 12.400000000000196
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 19.6333333333335,
+      "finalGifts" : 0,
+      "id" : "treeShake",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 6.8511038862069924,
+      "outcome" : "Tree kept in place; branch snow returned to ground physics",
+      "peakRootNodes" : 48,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Yeti Shakes the Tree",
+      "variant" : 1,
+      "visitedBeats" : [
+        "approach-the-snowy-tree",
+        "elves-emerge",
+        "fix-the-decorations",
+        "goodbye",
+        "grip-the-trunk",
+        "inspect-the-branches",
+        "not-so-funny-now",
+        "one-last-clump",
+        "shake-the-branches",
+        "walk-home",
+        "yeti-laughs"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "santa",
+          "event" : "sack-release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 3.2999999999999932
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 4.8999999999999879
+        },
+        {
+          "actor" : "elf1+elf0",
+          "event" : "pair-pickup",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 10.100000000000081
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 14.30000000000029
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 21.850000000000041,
+      "finalGifts" : 4,
+      "id" : "santaDrop",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999998863,
+      "outcome" : "Santa’s present recovered by two elves",
+      "peakRootNodes" : 13,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Santa Drops a Present",
+      "variant" : 0,
+      "visitedBeats" : [
+        "a-present-tumbles",
+        "a-proud-little-bow",
+        "a-safe-delivery",
+        "carry-it-home",
+        "goodbye",
+        "inspect-the-fallen-box",
+        "lift-together",
+        "santa-over-the-scene",
+        "walk-home",
+        "what-was-that"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "santa",
+          "event" : "sack-release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 3.2999999999999932
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 4.8999999999999879
+        },
+        {
+          "actor" : "elf1+elf0",
+          "event" : "pair-pickup",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 10.100000000000081
+        },
+        {
+          "actor" : "",
+          "event" : "release",
+          "gripErrorPt" : 0,
+          "prop" : "fallen-present",
+          "time" : 14.30000000000029
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 21.850000000000041,
+      "finalGifts" : 4,
+      "id" : "santaDrop",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 4.9999999999998863,
+      "outcome" : "Santa’s present recovered by two elves",
+      "peakRootNodes" : 13,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Santa Drops a Present",
+      "variant" : 1,
+      "visitedBeats" : [
+        "a-present-tumbles",
+        "a-proud-little-bow",
+        "a-safe-delivery",
+        "carry-it-home",
+        "goodbye",
+        "inspect-the-fallen-box",
+        "lift-together",
+        "santa-over-the-scene",
+        "walk-home",
+        "what-was-that"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "scarf",
+          "time" : 0
+        },
+        {
+          "actor" : "snowman",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 6.5999999999999819
+        },
+        {
+          "actor" : "snowman",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "scarf",
+          "time" : 9.8000000000000664
+        },
+        {
+          "actor" : "elf1",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "party-lights",
+          "time" : 9.8166666666667339
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 23.983333333333253,
+      "finalGifts" : 0,
+      "id" : "snowmanParty",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 10.012385543913553,
+      "outcome" : "Party decorations kept",
+      "peakRootNodes" : 3,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Snowman Party",
+      "variant" : 0,
+      "visitedBeats" : [
+        "a-festive-hat",
+        "a-little-step-up",
+        "a-warm-scarf",
+        "back-to-the-snow",
+        "goodbye",
+        "the-first-little-dance",
+        "the-grand-finale",
+        "the-party-arrives",
+        "tiny-party-lights",
+        "walk-home",
+        "wave-to-a-friend"
+      ]
+    },
+    {
+      "actorCount" : 0,
+      "contacts" : [
+        {
+          "actor" : "elf0",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "scarf",
+          "time" : 0
+        },
+        {
+          "actor" : "elf1",
+          "event" : "attach",
+          "gripErrorPt" : 0,
+          "prop" : "star",
+          "time" : 5.4999999999999858
+        },
+        {
+          "actor" : "snowman",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "hat",
+          "time" : 8.8000000000000167
+        },
+        {
+          "actor" : "snowman",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "scarf",
+          "time" : 12.000000000000176
+        },
+        {
+          "actor" : "elf1",
+          "event" : "decorate-contact",
+          "gripErrorPt" : 0,
+          "prop" : "party-lights",
+          "time" : 12.016666666666843
+        }
+      ],
+      "display" : "1",
+      "elapsed" : 26.183333333333128,
+      "finalGifts" : 0,
+      "id" : "snowmanParty",
+      "interruption" : "",
+      "lifecycle" : [
+        "waiting",
+        "validating",
+        "reserving",
+        "spawning",
+        "playing",
+        "finishing",
+        "cleanup",
+        "completed"
+      ],
+      "minimumActorGapPt" : 10.012385543913553,
+      "outcome" : "Party decorations kept",
+      "peakRootNodes" : 3,
+      "phase" : "completed",
+      "propCount" : 0,
+      "result" : "completed",
+      "rollingHandErrorPt" : 0,
+      "step" : "done",
+      "succeeded" : true,
+      "title" : "Snowman Party",
+      "variant" : 1,
+      "visitedBeats" : [
+        "a-dropped-star",
+        "a-festive-hat",
+        "a-little-step-up",
+        "a-warm-scarf",
+        "back-to-the-snow",
+        "goodbye",
+        "pick-it-up-again",
+        "the-first-little-dance",
+        "the-grand-finale",
+        "the-party-arrives",
+        "tiny-party-lights",
+        "walk-home",
+        "wave-to-a-friend"
+      ]
+    }
+  ],
+  "scope" : "Production native controllers in isolated own macOS scene, no synthetic browser animation",
+  "windowInterruptionRuns" : 7
+}

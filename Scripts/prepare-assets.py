@@ -54,6 +54,7 @@ for ident,a in entries.items():
 subprocess.run([(str(root/'.build/toolchain/swiftc') if (root/'.build/toolchain/swiftc').exists() else shutil.which('swiftc')),'-sdk',subprocess.check_output(['xcrun','--show-sdk-path'],text=True).strip(),'-target','arm64-apple-macosx13.0',str(root/'Scripts/PrepareTextures.swift'),'-o',str(root/'.build/prepare-textures')],check=True)
 subprocess.run([str(root/'.build/prepare-textures'),str(assets)],check=True)
 subprocess.run([sys.executable,str(root/'Scripts/pack-character-atlas.py')],check=True)
+subprocess.run([sys.executable,str(root/'Scripts/prepare-story-outlines.py')],check=True)
 print(f'Validated {len(m["assets"])} originals; prepared {len(rows)} lazy-loadable textures at 1x/2x.')
 
 subprocess.run([sys.executable,str(root/'Scripts/build-native-catalogue.py')],check=True)

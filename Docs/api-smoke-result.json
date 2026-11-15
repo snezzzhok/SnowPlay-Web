@@ -2,6 +2,73 @@
   "accessibility": true,
   "brushedSnowVolume": 0,
   "characters": [],
+  "christmasStories": {
+    "active": {},
+    "catalogue": [
+      {
+        "available": false,
+        "description": "A sneaky Yeti, two elves, and a very tempting present.",
+        "icon": "gift_closed",
+        "id": "presentTheft",
+        "reason": "Requires a tree with unopened gifts",
+        "title": "Yeti Steals a Present"
+      },
+      {
+        "available": false,
+        "description": "A wobbly ladder and a little Christmas repair.",
+        "icon": "story_toolbox",
+        "id": "lightRepair",
+        "reason": "Requires tree lights",
+        "title": "Elves Fix the Lights"
+      },
+      {
+        "available": false,
+        "description": "A friendly snowball fight with a surprise comeback.",
+        "icon": "snowball_large",
+        "id": "snowballExchange",
+        "reason": "Requires a snowman",
+        "title": "Yeti vs Snowman"
+      },
+      {
+        "available": false,
+        "description": "Three real snowballs become a new winter friend.",
+        "icon": "snowman_stage_2",
+        "id": "snowmanBuild",
+        "reason": "Allow snowman creation in Advanced",
+        "title": "Elves Build a Snowman"
+      },
+      {
+        "available": false,
+        "description": "Yeti shakes the branches \u2014 and gets a snowy surprise.",
+        "icon": "tree_bare",
+        "id": "treeShake",
+        "reason": "Requires snow on tree branches",
+        "title": "Yeti Shakes the Tree"
+      },
+      {
+        "available": false,
+        "description": "Two helpful elves rescue Santa\u2019s fallen present.",
+        "icon": "santa_sleigh",
+        "id": "santaDrop",
+        "reason": "Requires a Christmas tree",
+        "title": "Santa Drops a Present"
+      },
+      {
+        "available": false,
+        "description": "A new hat, warm lights, and a tiny dance.",
+        "icon": "snowman_complete",
+        "id": "snowmanParty",
+        "reason": "Requires a snowman",
+        "title": "Snowman Party"
+      }
+    ],
+    "developerMode": false,
+    "eligibleSeconds": 6.759632500004955,
+    "focusStatus": "notAuthorized",
+    "last": {},
+    "nextIn": 593.240367499995,
+    "reservedObjects": 0
+  },
   "config": {
     "accumulationHeight": 5,
     "automaticCleaning": 0,
@@ -33,6 +100,34 @@
     "snow": true,
     "snowSize": 2.5,
     "snowSpeed": 1,
+    "stickers": {
+      "animations": true,
+      "autoSnap": true,
+      "defaultSize": 64,
+      "hidden": false,
+      "items": [],
+      "quality": "balanced",
+      "reduceMotion": false
+    },
+    "stories": {
+      "allowSnowmanCreation": false,
+      "enabled": true,
+      "enabledStories": [
+        "lightRepair",
+        "presentTheft",
+        "santaDrop",
+        "snowballExchange",
+        "snowmanBuild",
+        "snowmanParty",
+        "treeShake"
+      ],
+      "frequency": "normal",
+      "keepDecorations": false,
+      "pauseInFullscreen": true,
+      "pauseOnBattery": true,
+      "reservedZones": [],
+      "sounds": false
+    },
     "tree": false,
     "treeBalls": "none",
     "treeGarland": "none",
@@ -49,6 +144,7 @@
   },
   "deliveryState": {
     "flying": false,
+    "giftActive": false,
     "giftWaiting": false,
     "pending": false
   },
@@ -72,54 +168,54 @@
   "looseSnowballs": 0,
   "paused": false,
   "performance": {
-    "battery": true,
-    "cpuAverageSinceLaunch": 40.688474892842905,
-    "cpuPercentOneCore": 15.497374599430353,
+    "battery": false,
+    "cpuAverageSinceLaunch": 28.923114930159443,
+    "cpuPercentOneCore": 18.396509136236755,
     "gpuMeasured": false,
-    "p95FrameMS": 35.097416664939374,
+    "p95FrameMS": 131.00754166589468,
     "particles": 646,
-    "physicalFootprintMB": 232.40936279296875,
-    "residentMB": 159.28125,
+    "physicalFootprintMB": 198.34649658203125,
+    "residentMB": 75.453125,
     "simulating": true,
-    "simulationHz": 29.53971129553725,
+    "simulationHz": 19.97261036805875,
     "targetFPS": 30,
-    "uptimeSeconds": 3.2957072083227104
+    "uptimeSeconds": 7.827151416666311
   },
   "reducedMotionActive": false,
   "rendering": [
     {
       "desktop": {
-        "callbackFPS": 19.02181000794898,
-        "frames": 78,
+        "callbackFPS": 11.282850298279934,
+        "frames": 89,
         "gpuMeasured": false,
         "measurement": "native draw/update callbacks; not presented GPU frames",
-        "p95IntervalMS": 101.59708333958406,
-        "p95WorkMS": 0.15833333600312471
+        "p95IntervalMS": 220.52574999906938,
+        "p95WorkMS": 0.1402916677761823
       },
       "display": "1",
       "interactive": {
-        "callbackFPS": 0,
-        "frames": 4,
-        "gpuMeasured": false,
-        "measurement": "native draw/update callbacks; not presented GPU frames",
-        "p95IntervalMS": 11.731208331184462,
-        "p95WorkMS": 0.05058333044871688
-      },
-      "spriteKit": {
-        "callbackFPS": 27.0741357522542,
-        "frames": 109,
-        "gpuMeasured": false,
-        "measurement": "native draw/update callbacks; not presented GPU frames",
-        "p95IntervalMS": 51.07541667530313,
-        "p95WorkMS": 0
-      },
-      "windowCaps": {
         "callbackFPS": 0,
         "frames": 1,
         "gpuMeasured": false,
         "measurement": "native draw/update callbacks; not presented GPU frames",
         "p95IntervalMS": 0,
-        "p95WorkMS": 0.020083331037312746
+        "p95WorkMS": 0.018208334950031713
+      },
+      "spriteKit": {
+        "callbackFPS": 17.296673993723974,
+        "frames": 131,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 168.9228750001348,
+        "p95WorkMS": 0
+      },
+      "windowCaps": {
+        "callbackFPS": 0,
+        "frames": 6,
+        "gpuMeasured": false,
+        "measurement": "native draw/update callbacks; not presented GPU frames",
+        "p95IntervalMS": 104.12695833292673,
+        "p95WorkMS": 0.06562500129803084
       }
     }
   ],
@@ -135,9 +231,340 @@
   "snowWorld": {
     "carriedMass": 0,
     "exportedMass": 0,
-    "groundMass": 3557.8033408830884,
+    "groundMass": 2813.6174570075063,
     "meltedMass": 0,
     "pendingMass": 0
+  },
+  "stickerStudio": {
+    "catalogue": [
+      {
+        "animation": "none",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 256,
+        "id": "sticker_wreath",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Christmas Wreath",
+        "width": 256
+      },
+      {
+        "animation": "shimmer",
+        "categories": [
+          "windows"
+        ],
+        "height": 100,
+        "id": "sticker_icicles",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.15
+        },
+        "repeatable": true,
+        "title": "Icicle Garland",
+        "width": 320
+      },
+      {
+        "animation": "shimmer",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 280,
+        "id": "sticker_ice_cluster",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.08
+        },
+        "repeatable": false,
+        "title": "Ice Cluster",
+        "width": 180
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "windows"
+        ],
+        "height": 256,
+        "id": "sticker_frost",
+        "pivot": {
+          "x": 0.1,
+          "y": 0.1
+        },
+        "repeatable": false,
+        "title": "Frost Corner",
+        "width": 256
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 160,
+        "id": "sticker_fir_branch",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Snowy Fir Branch",
+        "width": 320
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 280,
+        "id": "sticker_stocking",
+        "pivot": {
+          "x": 0.4,
+          "y": 0.08
+        },
+        "repeatable": false,
+        "title": "Christmas Stocking",
+        "width": 200
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "characters"
+        ],
+        "height": 220,
+        "id": "sticker_hat",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.84
+        },
+        "repeatable": false,
+        "title": "Santa Hat",
+        "width": 280
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "characters"
+        ],
+        "height": 150,
+        "id": "sticker_scarf",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.26
+        },
+        "repeatable": false,
+        "title": "Winter Scarf",
+        "width": 260
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "tree",
+          "windows"
+        ],
+        "height": 256,
+        "id": "sticker_bow",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Festive Bow",
+        "width": 256
+      },
+      {
+        "animation": "shimmer",
+        "categories": [
+          "tree",
+          "windows"
+        ],
+        "height": 256,
+        "id": "sticker_star",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.8
+        },
+        "repeatable": false,
+        "title": "Golden Star",
+        "width": 256
+      },
+      {
+        "animation": "sway",
+        "categories": [
+          "tree",
+          "windows"
+        ],
+        "height": 256,
+        "id": "sticker_bells",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.12
+        },
+        "repeatable": false,
+        "title": "Golden Bells",
+        "width": 256
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "tree",
+          "other"
+        ],
+        "height": 280,
+        "id": "sticker_candy",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.1
+        },
+        "repeatable": false,
+        "title": "Candy Cane",
+        "width": 180
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "tree",
+          "other"
+        ],
+        "height": 280,
+        "id": "sticker_gingerbread",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Gingerbread Man",
+        "width": 220
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 180,
+        "id": "sticker_holly",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Holly Berries",
+        "width": 280
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "windows",
+          "tree"
+        ],
+        "height": 280,
+        "id": "sticker_mistletoe",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.1
+        },
+        "repeatable": false,
+        "title": "Mistletoe",
+        "width": 220
+      },
+      {
+        "animation": "glow",
+        "categories": [
+          "lights",
+          "windows",
+          "tree"
+        ],
+        "height": 110,
+        "id": "sticker_lights",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.12
+        },
+        "repeatable": true,
+        "title": "Mini Fairy Lights",
+        "width": 320
+      },
+      {
+        "animation": "glow",
+        "categories": [
+          "lights",
+          "other"
+        ],
+        "height": 280,
+        "id": "sticker_lantern",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.88
+        },
+        "repeatable": false,
+        "title": "Christmas Lantern",
+        "width": 200
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "other",
+          "tree"
+        ],
+        "height": 256,
+        "id": "sticker_present",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.86
+        },
+        "repeatable": false,
+        "title": "Wrapped Present",
+        "width": 256
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "other"
+        ],
+        "height": 210,
+        "id": "sticker_sign",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.88
+        },
+        "repeatable": false,
+        "title": "Snowy Wooden Sign",
+        "width": 320
+      },
+      {
+        "animation": "none",
+        "categories": [
+          "tree",
+          "windows"
+        ],
+        "height": 256,
+        "id": "sticker_snowflake",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "repeatable": false,
+        "title": "Crystal Snowflake",
+        "width": 256
+      }
+    ],
+    "editing": false,
+    "inactive": 0,
+    "instances": [],
+    "limit": 100,
+    "placing": "",
+    "redo": false,
+    "renderPasses": 17,
+    "selected": {},
+    "status": "",
+    "undo": false,
+    "visible": 0
   },
   "surfaceIDs": [
     "ground-1"
@@ -149,6 +576,7 @@
   },
   "windowEffects": [],
   "windowEvents": {
+    "axListUnavailable": 1,
     "created": 1
   },
   "windows": 1,
@@ -156,12 +584,12 @@
     {
       "accessibilityLinked": false,
       "frame": {
-        "height": 651,
-        "width": 1199,
-        "x": 104,
-        "y": 106
+        "height": 774,
+        "width": 1281,
+        "x": 43,
+        "y": 57
       },
-      "id": "window-747-232",
+      "id": "window-556-88",
       "phase": "active",
       "restoreProgress": 1,
       "snowOrigin": [],

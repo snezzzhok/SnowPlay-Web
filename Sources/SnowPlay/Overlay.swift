@@ -45,6 +45,8 @@ final class SnowCanvas: NSView {
     var groundLayer=false
     var clearsBeforeDraw=true
     private static let snowGradient=CGGradient(colorsSpace:CGColorSpaceCreateDeviceRGB(),colors:[CGColor(red:0.72,green:0.83,blue:0.91,alpha:0.97),CGColor(red:0.99,green:1,blue:1,alpha:0.98)] as CFArray,locations:[0,1])
+    var storyEffects:[StickerDrawing]=[]
+    var stickers:[StickerDrawing]=[]
     var composites: [CanvasSprite]=[]
     var workbenchLabel="Roll three snowballs along the bottom"
     var workbench: Rect?
@@ -65,15 +67,16 @@ final class SnowCanvas: NSView {
     // newly allocated path/image could reuse the old address and hide a real change.
     private var staticPaths:[CGPath]=[],staticImages:[CGImage]=[]
     func invalidateFrame() {
-        let dynamic=workbench != nil || !composites.isEmpty || !dots.isEmpty || !reveals.isEmpty || !garlandGlows.isEmpty || !snowballArt.isEmpty
+        let dynamic = !storyEffects.isEmpty || workbench != nil || !composites.isEmpty || !dots.isEmpty || !reveals.isEmpty || !garlandGlows.isEmpty || !snowballArt.isEmpty
         if dynamic {staticSignature=nil;staticPaths=[];staticImages=[];hadContent=true;needsDisplay=true;return}
         var hash=Hasher();hash.combine(groundLayer);hash.combine(caps.count);hash.combine(dynamicCaps.count);hash.combine(garlandPaths.count)
+        for item in stickers {hash.combine(item.id);hash.combine(item.alpha);hash.combine(item.transform.a);hash.combine(item.transform.b);hash.combine(item.transform.c);hash.combine(item.transform.d);hash.combine(item.transform.tx);hash.combine(item.transform.ty);hash.combine(ObjectIdentifier(item.image));for r in item.clips {hash.combine(r.minX);hash.combine(r.minY);hash.combine(r.width);hash.combine(r.height)}}
         for path in caps+dynamicCaps+garlandPaths {hash.combine(ObjectIdentifier(path))}
         for (path,alpha) in frost {hash.combine(ObjectIdentifier(path));hash.combine(alpha)}
         for (image,rect,alpha,mirror) in artwork+hats+garlandArt {
             hash.combine(ObjectIdentifier(image));hash.combine(rect.origin.x);hash.combine(rect.origin.y);hash.combine(rect.width);hash.combine(rect.height);hash.combine(alpha);hash.combine(mirror)
         }
-        let key=hash.finalize(),content = !caps.isEmpty || !dynamicCaps.isEmpty || !frost.isEmpty || !artwork.isEmpty || !hats.isEmpty || !garlandPaths.isEmpty || !garlandArt.isEmpty
+        let key=hash.finalize(),content = !stickers.isEmpty || !caps.isEmpty || !dynamicCaps.isEmpty || !frost.isEmpty || !artwork.isEmpty || !hats.isEmpty || !garlandPaths.isEmpty || !garlandArt.isEmpty
         if staticSignature != key || content != hadContent {if content || hadContent {needsDisplay=true}}
         staticSignature=key;hadContent=content;staticPaths=caps+dynamicCaps+garlandPaths+frost.map{$0.0};staticImages=(artwork+hats+garlandArt).map{$0.0}
     }
@@ -117,6 +120,7 @@ final class SnowCanvas: NSView {
             if mirror { context.translateBy(x:rect.midX,y:0); context.scaleBy(x:-1,y:1); context.translateBy(x:-rect.midX,y:0) }
             context.draw(image,in:rect); context.restoreGState()
         }
+        for item in stickers+storyEffects {item.draw(context)}
         for sprite in composites {
             context.saveGState();context.concatenate(sprite.transform);context.setAlpha(sprite.alpha);context.draw(sprite.image,in:sprite.rect);context.restoreGState()
         }
@@ -186,7 +190,7 @@ final class DisplayOverlay {
         (background.contentView as? SKView)?.isPaused = !decoration || hidden
         if !hidden {
             if desktopOccluded {if desktopSnow.isVisible {desktopSnow.orderOut(nil)};if background.isVisible {background.orderOut(nil)};(background.contentView as? SKView)?.isPaused=true}
-            let front = !canvas.caps.isEmpty || !canvas.artwork.isEmpty || !canvas.hats.isEmpty || !canvas.garlandArt.isEmpty || !canvas.garlandPaths.isEmpty
+            let front = !canvas.storyEffects.isEmpty || !canvas.stickers.isEmpty || !canvas.caps.isEmpty || !canvas.artwork.isEmpty || !canvas.hats.isEmpty || !canvas.garlandArt.isEmpty || !canvas.garlandPaths.isEmpty
             if front && !foreground.isVisible {foreground.orderFrontRegardless()}
             else if !front && foreground.isVisible {foreground.orderOut(nil)}
         }

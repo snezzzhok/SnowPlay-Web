@@ -3,6 +3,7 @@ import ApplicationServices
 import SnowCore
 
 final class TrackedWindow {
+    let attachmentIdentity=UUID().uuidString
     let id: String; let number: CGWindowID; let pid: pid_t
     var frame: Rect; var z: Int; var isVisible=true; var state: WindowState
     var lastGeometryTime=0.0,nextFastAttempt=0.0

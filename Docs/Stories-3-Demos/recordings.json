@@ -1,0 +1,101 @@
+{
+  "items" : [
+    {
+      "file" : "presentTheft-0.mp4",
+      "id" : "presentTheft",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 36.666666666666664,
+      "title" : "Yeti Steals a Present",
+      "variant" : 0
+    },
+    {
+      "file" : "presentTheft-1.mp4",
+      "id" : "presentTheft",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 35.466666666666669,
+      "title" : "Yeti Steals a Present",
+      "variant" : 1
+    },
+    {
+      "file" : "lightRepair-0.mp4",
+      "id" : "lightRepair",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 27.233333333333334,
+      "title" : "Elves Fix the Lights",
+      "variant" : 0
+    },
+    {
+      "file" : "snowballExchange-0.mp4",
+      "id" : "snowballExchange",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 79.433333333333337,
+      "title" : "Friendly Snowball Fight",
+      "variant" : 0
+    },
+    {
+      "file" : "snowmanBuild-0.mp4",
+      "id" : "snowmanBuild",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 33.100000000000001,
+      "title" : "Elves Build a Snowman",
+      "variant" : 0
+    },
+    {
+      "file" : "treeShake-0.mp4",
+      "id" : "treeShake",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 21.733333333333334,
+      "title" : "Yeti Shakes the Tree",
+      "variant" : 0
+    },
+    {
+      "file" : "santaDrop-0.mp4",
+      "id" : "santaDrop",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 19.933333333333334,
+      "title" : "Santa Drops a Present",
+      "variant" : 0
+    },
+    {
+      "file" : "snowmanParty-0.mp4",
+      "id" : "snowmanParty",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 28.100000000000001,
+      "title" : "Snowman Party",
+      "variant" : 0
+    },
+    {
+      "file" : "starHat-0.mp4",
+      "id" : "starHat",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 25,
+      "title" : "The Star and the Missing Hat",
+      "variant" : 0
+    },
+    {
+      "file" : "giftConveyor-0.mp4",
+      "id" : "giftConveyor",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 40.200000000000003,
+      "title" : "Elves’ Gift Conveyor",
+      "variant" : 0
+    },
+    {
+      "file" : "tinyGift-0.mp4",
+      "id" : "tinyGift",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 20,
+      "title" : "Giant Yeti, Tiny Present",
+      "variant" : 0
+    },
+    {
+      "file" : "garlandRemoval-0.mp4",
+      "id" : "garlandRemoval",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 16.300000000000001,
+      "title" : "Garland Take-down",
+      "variant" : 0
+    }
+  ],
+  "passed" : true
+}

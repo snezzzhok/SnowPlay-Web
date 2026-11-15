@@ -1,0 +1,104 @@
+{
+  "cases" : [
+    {
+      "elapsed" : 33.049999999999407,
+      "id" : "snowmanBuild",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 33.133333333332736,
+      "id" : "snowmanBuild",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 41.09999999999895,
+      "id" : "giftConveyor",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 41.116666666665616,
+      "id" : "giftConveyor",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 27.333333333333062,
+      "id" : "lightRepair",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 28.099999999999685,
+      "id" : "lightRepair",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 36.066666666665903,
+      "id" : "presentTheft",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 36.333333333332554,
+      "id" : "presentTheft",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 21.066666666666752,
+      "id" : "treeShake",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 21.133333333333415,
+      "id" : "treeShake",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 28.733333333332983,
+      "id" : "snowmanParty",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 28.983333333332968,
+      "id" : "snowmanParty",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    },
+    {
+      "elapsed" : 25.616666666666493,
+      "id" : "starHat",
+      "objectNormalizedX" : 0.29999999999999999,
+      "passed" : true,
+      "snowHeightLimit" : 8
+    },
+    {
+      "elapsed" : 26.149999999999796,
+      "id" : "starHat",
+      "objectNormalizedX" : 0.69999999999999996,
+      "passed" : true,
+      "snowHeightLimit" : 65
+    }
+  ],
+  "passed" : true,
+  "scope" : "Production native scene controllers with low\/high ground snow and objects on both sides of the display; edge rejection tested separately"
+}

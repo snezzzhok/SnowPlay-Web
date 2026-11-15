@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "all20Assets": true,
+  "largePresetChunkImport180": true,
+  "importAtomicUndoRedo": true,
+  "badPresetRejected": true,
+  "diskPersistence": true,
+  "userPreferencesUntouched": true
+}

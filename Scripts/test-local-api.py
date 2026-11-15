@@ -65,7 +65,7 @@ with tempfile.TemporaryDirectory(prefix='snowplay-api-') as folder:
   charmConfig=desktopGarland['config'];charmConfig['placements']['fixture']['ornaments']=[{'id':'tree_slot_0','anchor':{'x':.4,'y':.4},'hidden':True}];charmConfig['treeToy1']='candy'
   changedCharm=json.loads(call('/api/config',charmConfig,valid))
   assert not changedCharm['config']['placements']['fixture']['ornaments'][0]['hidden']
-  ids=json.loads(call('/api/assets'))['ids'];assert len(ids)==126
+  ids=json.loads(call('/api/assets'))['ids'];assert len(ids)==178
   assert call('/assets/christmas_tree').startswith(b'\x89PNG')
   assert call('/assets/snowplow_complete').startswith(b'\x89PNG') and call('/assets/snowplow').startswith(b'\x89PNG')
   import re

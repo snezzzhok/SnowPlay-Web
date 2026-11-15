@@ -1,0 +1,8 @@
+{
+  "close" : true,
+  "minimizeRestore" : true,
+  "move" : true,
+  "passed" : true,
+  "resize" : true,
+  "scope" : "Actual WindowServer geometry from a separate disposable AppKit window through production WindowObserver; no private API"
+}

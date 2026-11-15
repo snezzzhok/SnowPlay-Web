@@ -1,0 +1,9 @@
+{
+  "categoryFilter" : true,
+  "fits390And530" : true,
+  "passed" : true,
+  "scope" : "Real WKWebView connected to a temporary native SnowPlay process",
+  "settingsPersistence" : true,
+  "sevenTabs" : true,
+  "twentyImages" : true
+}

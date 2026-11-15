@@ -1,0 +1,16 @@
+{
+  "clickThrough" : true,
+  "models" : 20,
+  "occlusion" : true,
+  "p95UpdateMS" : 0.76450000051409006,
+  "passed" : true,
+  "profileScope" : "100 stickers, 600 production update calls in an owned native fixture; simulation work, not GPU-presented FPS",
+  "qualityRetainsSavedItems" : true,
+  "restartWindowAnchorInactive" : true,
+  "snowmanAccessories" : true,
+  "staticTransformCache" : true,
+  "treeMovement" : true,
+  "undoRedo" : true,
+  "windowIDReuseRejected" : true,
+  "windowMoveResize" : true
+}

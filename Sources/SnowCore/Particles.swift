@@ -97,7 +97,7 @@ public final class ParticleEngine {
                 // Compensate visual slowdown: deposition stays continuous in real time.
                 let accepted:Double
                 if particles[i].fallsToGround {accepted=surfaces.surfaces[id]?.depositImpact(at:f,volume:particles[i].snowVolume) ?? 0}
-                else {accepted=surfaces.surfaces[id]?.deposit(at:f,volume:free ? particles[i].size*24/max(0.35,localScale) : particles[i].snowVolume) ?? 0}
+                else {accepted=surfaces.surfaces[id]?.deposit(at:f,volume:free ? particles[i].size*24*config.accumulationRate/max(0.35,localScale) : particles[i].snowVolume) ?? 0}
                 if free { if (accepted>0 || id.hasPrefix("window-")) && surfaces.surfaces[id]?.renderVisible != false {particles[i]=flake(randomY:false)} }
                 else {
                     if particles[i].clump,accepted>0 {dust(at:particles[i].position+contact,count:3)}

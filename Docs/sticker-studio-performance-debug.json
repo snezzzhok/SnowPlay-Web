@@ -1,0 +1,37 @@
+{
+  "animatedLimit" : 12,
+  "battery" : false,
+  "canvas" : {
+    "callbackFPS" : 59.082461386906346,
+    "frames" : 1173,
+    "gpuMeasured" : false,
+    "measurement" : "native draw\/update callbacks; not presented GPU frames",
+    "p95IntervalMS" : 19.69933333384688,
+    "p95WorkMS" : 0.60058333474444225
+  },
+  "cpuAverageSinceLaunch" : 49.803464840325873,
+  "cpuPercentOneCore" : 62.851381190726407,
+  "gpuMeasured" : false,
+  "gpuPresentationMeasured" : false,
+  "p95FrameMS" : 17.359583333018236,
+  "p95SimulationWorkMS" : 10.850791670236504,
+  "p95TimerIntervalMS" : 17.379416665789904,
+  "particles" : 1400,
+  "passed" : true,
+  "physicalFootprintMB" : 105.39300537109375,
+  "residentMB" : 53.015625,
+  "scope" : "Visible owned 1000x650 native window, 1400 falling particles and 100 stickers, 12 animated maximum; debug build; callback timing, GPU presentation not measured",
+  "simulating" : true,
+  "simulationHz" : 58.853739841166792,
+  "spriteKit" : {
+    "callbackFPS" : 59.8336283974064,
+    "frames" : 1183,
+    "gpuMeasured" : false,
+    "measurement" : "native draw\/update callbacks; not presented GPU frames",
+    "p95IntervalMS" : 19.128583335259464,
+    "p95WorkMS" : 0
+  },
+  "stickers" : 100,
+  "targetFPS" : 60,
+  "uptimeSeconds" : 19.465420791668294
+}

@@ -46,9 +46,14 @@ extension WinterCoordinator {
         if kind == "garland-place" {
             if event.hasSuffix(":down") {
                 var place=config.placements[d.id] ?? Placement()
-                place.garlandWindow=nil;place.garlandTarget="desktop"
-                if place.garland.count>=3 {place.garland=[]}
-                place.garland.append(Vec((p.x-d.rect.x)/d.rect.width,(p.y-d.rect.y)/d.rect.height));config.placements[d.id]=place
+                guard place.garland.count<12 else {diagnostic="Twelve anchors maximum.";return true}
+                let target=place.garlandTarget ?? "desktop"
+                var local=Vec((p.x-d.rect.x)/d.rect.width,(p.y-d.rect.y)/d.rect.height)
+                if target == "window",let w=interactionWindows.first(where:{$0.id==place.garlandWindow && $0.isVisible}) {local=Vec((p.x-w.frame.x)/w.frame.width,clamp((p.y-w.frame.y-5)/12,0,1))}
+                if target == "tree",let t=place.tree {let origin=Vec(d.rect.x+t.x*d.rect.width,d.rect.y+t.y*d.rect.height);local=Vec((p.x-origin.x)/s.treeHeight+0.5,(p.y-origin.y)/s.treeHeight+0.5)}
+                place.garland.append(Vec(clamp(local.x,0.02,0.98),clamp(local.y,0,0.95)));config.placements[d.id]=place
+                input.stop()
+                diagnostic="Anchor \(place.garland.count) placed."
                 persist();statusChanged?()
             };return true
         }

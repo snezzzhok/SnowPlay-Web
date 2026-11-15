@@ -22,3 +22,57 @@
 .activity-status{font-size:11px;color:#61778a;line-height:1.5}.activity-status:empty{display:none}
 
 .living-control #connection{font-size:10px;color:#6a8092;white-space:nowrap;margin-left:auto}.living-control #connection:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#aabac6;margin-right:5px}.living-control #connection.online:before{background:#6f9e9a}
+
+/* Visual choices share the native settings; no duplicate controls. */
+.living-control .tree-choices{grid-template-columns:1fr;gap:16px}
+.living-control .visual-choice{border:0;padding:0;margin:0 0 15px;min-width:0}
+.living-control .visual-choice legend{font-size:11px;color:#5b7588;font-weight:600;margin-bottom:8px;padding:0}
+.living-control .option-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.living-control .option-cards:has(> :last-child:nth-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.living-control .option-card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;padding:8px 3px;min-width:0;min-height:100px;border:1px solid #cbdbe7;background:#f7fafc;font-size:11px;color:#35546b;box-shadow:none}
+.living-control .option-card:hover{background:#eaf3f8;border-color:#729eb6}
+.living-control .option-card[aria-checked=true]{border:2px solid #477c94;background:#e4f0f6;padding:7px 2px;color:#234b63}
+.living-control .option-card[aria-checked=true]:after{content:'✓';position:absolute;right:5px;top:3px;font-size:10px;color:#315f79}
+.living-control .choice-preview{height:62px;width:100%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.living-control .choice-preview img{width:42px;height:52px;object-fit:contain}
+.living-control .tree-preview img{position:absolute;width:72px;height:72px;bottom:-3px}
+.living-control .tree-preview.size-small img{height:43px;width:43px}
+.living-control .tree-preview.size-medium img{height:58px;width:58px}
+.living-control .tree-preview.size-large img{height:74px;width:74px}
+.living-control .empty-preview{font-size:25px;color:#9baeba}
+.living-control .strand-preview{border-radius:8px;background:#183344;gap:0;padding:3px}
+.living-control .strand-preview:before{content:'';position:absolute;left:-8px;right:-8px;top:9px;height:15px;border-bottom:2px solid #91ad9b;border-radius:50%}
+.living-control .strand-preview img{position:relative;width:25%;height:38px;object-fit:contain;margin-top:4px}
+.living-control .strand-preview img:nth-child(2),.living-control .strand-preview img:nth-child(3){margin-top:13px}
+@media(prefers-reduced-motion:no-preference){.living-control .option-card{transition:background .15s,border-color .15s}}
+
+.living-tabs{grid-template-columns:repeat(6,minmax(0,1fr))}
+.living-control .story-frequency{display:flex;gap:5px;padding:4px;border-radius:10px;background:#e8eff5;margin:12px 0}
+.living-control .story-frequency button{flex:1;padding:7px;font-size:12px;background:transparent;border:0;box-shadow:none}
+.living-control .story-frequency .active{background:white;color:#294f69;box-shadow:0 1px 4px #213d501c}
+.living-control #story-random{width:100%;margin-bottom:10px}
+.living-control #stories h3{margin-top:18px}
+.living-control .story-cards{display:grid;gap:9px}
+.living-control .story-card{display:grid;grid-template-columns:38px minmax(0,1fr) 57px;gap:10px;align-items:center;border:1px solid #d7e3ec;border-radius:12px;padding:12px;background:#f9fbfd}
+.living-control .story-card>img{width:38px;height:44px;object-fit:contain}
+.living-control .story-card h4{font-size:12px;line-height:1.35;margin:0 0 4px;font-weight:650;color:#31576e}
+.living-control .story-card p{font-size:10px;color:#6b8192;line-height:1.45;margin:0}
+.living-control .story-reason{display:block;font-size:10px;color:#907143;line-height:1.4;margin-top:4px}
+.living-control .story-reason:empty{display:none}
+.living-control .story-card-actions{display:flex;flex-direction:column;align-items:center;gap:8px}
+.living-control .story-play{padding:7px 11px;font-size:11px;min-height:30px}
+.living-control .story-auto{display:flex;align-items:center;gap:3px;font-size:10px;color:#698092}
+.living-control .story-auto input{accent-color:#477c94;width:13px;height:13px}
+.living-control .story-playing{display:flex;align-items:center;gap:10px;background:#e4f0f6;padding:10px;border-radius:10px;margin-top:10px;font-size:12px;color:#31576e}
+.living-control .story-playing button{margin-left:auto;font-size:11px;padding:6px 10px}
+.living-control .story-advanced{border-top:1px solid #dbe6ee;margin-top:18px;padding-top:14px}
+.living-control .story-advanced summary{font-size:12px;color:#526f84;cursor:pointer;margin-bottom:14px}
+@media(max-width:440px){.living-control .story-card{gap:7px;padding:10px;grid-template-columns:30px minmax(0,1fr) 50px}.living-control .story-card>img{width:30px;height:37px}.living-control .living-tabs button{font-size:9px}}
+.living-control button{appearance:none;-webkit-appearance:none}
+.living-control .story-frequency button[aria-pressed=true]{background:#fff;border:1px solid #b7d0e0;box-shadow:0 1px 4px #213d501c;color:#294f69}
+/* Sticker Studio shares the native control panel. */
+.living-tabs{overflow-x:auto;justify-content:flex-start;scrollbar-width:thin}.living-tabs [role=tab]{flex-shrink:0}
+.studio-actions,.sticker-categories{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.sticker-categories button{font-size:12px;padding:7px 10px}.sticker-categories [aria-pressed=true]{background:#315f58;color:#fff;border-color:#315f58}
+.sticker-library{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}.sticker-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 5px;background:linear-gradient(145deg,#f6faf8,#e8f0ee);min-width:0;font-size:11px;line-height:1.3}.sticker-card img{width:76px;height:76px;object-fit:contain;filter:drop-shadow(0 3px 3px #244b401c)}.sticker-card:hover{background:#dbeee6;border-color:#659684}.sticker-card[hidden]{display:none}
+.sticker-properties{display:grid;grid-template-columns:1fr 1fr;gap:14px}.sticker-properties label{display:flex;flex-direction:column;gap:6px;font-size:12px}.sticker-properties input,.sticker-properties select{max-width:100%;width:100%;box-sizing:border-box}.sticker-properties input[type=text]{padding:8px;border:1px solid #b6cec6;border-radius:8px}#decorations details{margin-top:18px}#decorations summary{cursor:pointer;font-weight:600}#decorations select{border:1px solid #bbcec5;border-radius:8px;padding:7px;background:#fff;color:#284542}@media(max-width:420px){.sticker-library{gap:7px}.sticker-card img{width:65px;height:65px}.studio-actions button{padding:8px 10px}}
+.living-control .living-tabs{display:flex;flex-wrap:wrap;gap:5px}.living-control .living-tabs button{flex:0 0 auto;min-width:max-content;font-size:11px;padding:9px 10px;white-space:nowrap}

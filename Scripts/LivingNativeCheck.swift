@@ -78,7 +78,14 @@ import SnowCore
   for _ in 0..<450 {step();if s.projectile != nil && !sawFlight {try picture("snowman-throw");sawFlight=true};sawFragments = sawFragments || !s.fragments.isEmpty}
   precondition(sawFlight && sawFragments && s.snowballs.snowman==nil && s.character==nil)
   precondition(w.decorations.startParachuteGift(display:d,surfaces:w.surfaces))
-  for i in 0..<600 {step();if i==110{try picture("gift-descent")};if i==260 {try picture("gift-countdown")}}
+  for i in 0..<420 {step();if i==110{try picture("gift-descent")}}
+  precondition(s.gift != nil && s.giftLanded && s.giftOpenedAt == nil && !s.countdown,"Gift must wait for the user")
+  w.input.mode = .none;w.input.rebuild(displays:[d],windows:[],dock:nil,decorations:w.decorations,focus:false,icons:[])
+  precondition(w.input.panels.contains{($0.contentView as? InputView)?.identifier?.rawValue == "gift"},"Landed gift cannot be clicked")
+  w.decorations.openGift(displayID:d.id,now:now,fireworks:true,director:w.director)
+  precondition(s.giftOpenedAt != nil && s.countdown)
+  let opened=s.giftOpenedAt;w.decorations.openGift(displayID:d.id,now:now+0.1,fireworks:true,director:w.director);precondition(s.giftOpenedAt==opened,"Repeat clicks restarted celebration")
+  for i in 0..<800 {step();if i==30 {try picture("gift-countdown")}}
   precondition(s.gift==nil && s.santa==nil && s.deliveryElapsed==nil)
   for win in [true,false] {
    precondition(w.decorations.startDuel(display:d,area:Rect(100,280,660,210)))
@@ -112,7 +119,7 @@ import SnowCore
   try picture("snow-gpu")
   d.engine.setCount(20);step();precondition(d.snowCloud.pooledCount<=84)
   d.engine.setCount(0);step();precondition(d.snowCloud.activeCount==0 && d.snowCloud.pooledCount<=64)
-  let result:[String:Any]=["passed":true,"scope":"Actual AppKit/SpriteKit/controllers in isolated own scene; these are controlled scene renders, not screenshots of user windows","treeCycles":20,"maxTreeGripErrorPt":gripError,"maximumRootChildren":maxNodes,"automaticSnowmanMass":mass,"snowmanFlightAndFragments":true,"passiveGiftWithoutSanta":true,"duelWinAndLose":true,"rescueUsesCarrierParent":true,"duelExitCycles":20,"feedAndSurprise":true,"desktopLayersBelowApps":true,"originalSnowplowAliasWorks":true,"pooledSpriteKitWeather":true,"storyCancellationMass":true,"desktopInputsBelowAppWindows":true,"duelExclusiveInput":true]
+  let result:[String:Any]=["passed":true,"scope":"Actual AppKit/SpriteKit/controllers in isolated own scene; these are controlled scene renders, not screenshots of user windows","treeCycles":20,"maxTreeGripErrorPt":gripError,"maximumRootChildren":maxNodes,"automaticSnowmanMass":mass,"snowmanFlightAndFragments":true,"manualGiftWithoutSanta":true,"duelWinAndLose":true,"rescueUsesCarrierParent":true,"duelExitCycles":20,"feedAndSurprise":true,"desktopLayersBelowApps":true,"originalSnowplowAliasWorks":true,"pooledSpriteKitWeather":true,"storyCancellationMass":true,"desktopInputsBelowAppWindows":true,"duelExclusiveInput":true]
   try JSONSerialization.data(withJSONObject:result,options:[.prettyPrinted,.sortedKeys]).write(to:URL(fileURLWithPath:"Docs/living-native-result.json"))
   print("PASS: Living Winter native scene, 20 deliveries/chops, grip contact, automatic snowman/throw, gift, both duel endings, 20 exits, feeding and desktop layers")
  }

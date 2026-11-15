@@ -56,6 +56,7 @@ final class Fixture: NSObject, NSApplicationDelegate {
         case "maximize": if let screen=NSScreen.main {window.setFrame(screen.visibleFrame,display:true)};emit("maximized")
         case "drag":
             for i in 1...40 {later(Double(i)*0.025) {self.window.setFrameOrigin(NSPoint(x:300+i*5,y:230));self.emit("drag-step")}}
+        case "resize": window.setContentSize(NSSize(width:480,height:290));emit("resized")
         case "move": window.setFrameOrigin(NSPoint(x:300,y:230));emit("moved")
         case "minimize": window.miniaturize(nil); emit("minimizeRequested")
         case "restore": window.deminiaturize(nil); emit("restoreRequested")

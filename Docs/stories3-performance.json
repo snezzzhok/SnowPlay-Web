@@ -1,0 +1,29 @@
+{
+  "actors" : 17,
+  "battery" : false,
+  "cpuAverageSinceLaunch" : 33.803370592914298,
+  "cpuPercentOneCore" : 23.878694189703943,
+  "gpuMeasured" : false,
+  "gpuPresentationMeasured" : false,
+  "p95FrameMS" : 18.824083334038733,
+  "p95SimulationWorkMS" : 3.2497916654392611,
+  "p95TimerIntervalMS" : 18.85016666710726,
+  "particles" : 1400,
+  "passed" : true,
+  "peakShots" : 3,
+  "physicalFootprintMB" : 170.31500244140625,
+  "residentMB" : 73.671875,
+  "scope" : "Owned visible native 1000x650 scene; production rig\/controller held at peak battle load: 5 elves, 10 Yetis, 2 giants, 1400 snowflakes and at most 3 analytic snowballs; release (-O); callbacks, not GPU presentation",
+  "simulating" : true,
+  "simulationHz" : 59.785833857376716,
+  "spriteKit" : {
+    "callbackFPS" : 59.991859036767437,
+    "frames" : 1194,
+    "gpuMeasured" : false,
+    "measurement" : "native draw\/update callbacks; not presented GPU frames",
+    "p95IntervalMS" : 19.159125000442145,
+    "p95WorkMS" : 0
+  },
+  "targetFPS" : 60,
+  "uptimeSeconds" : 21.855867833335651
+}

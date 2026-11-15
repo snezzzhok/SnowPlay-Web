@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "Actual Chrome and packaged native editor operated through CUA on the unlocked Mac",
+  "openedDecorations": true,
+  "oneMouseClickPlacedOneSticker": true,
+  "nativeDoneExitedEditor": true,
+  "webUndoRestoredInitialComposition": true,
+  "finalEditor": "none",
+  "finalDecorationCount": 0,
+  "note": "A free desktop sticker dropped over the body of a work window correctly stayed behind that window; the control panel reported it as hidden/inactive."
+}

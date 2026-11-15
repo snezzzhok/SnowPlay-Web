@@ -12,3 +12,6 @@ func XCTAssertGreaterThan<T: Comparable>(_ a: T, _ b: T, file: StaticString = #f
 func XCTAssertLessThan<T: Comparable>(_ a: T, _ b: T, file: StaticString = #filePath, line: UInt = #line) { if !(a<b) { fail("\(a) >= \(b)",file:file,line:line) } }
 func XCTAssertNil<T>(_ a: T?, file: StaticString = #filePath, line: UInt = #line) { if a != nil { fail("expected nil",file:file,line:line) } }
 func XCTAssertNotNil<T>(_ a: T?, file: StaticString = #filePath, line: UInt = #line) { if a == nil { fail("unexpected nil",file:file,line:line) } }
+func XCTAssertGreaterThanOrEqual<T:Comparable>(_ a:T,_ b:T,file:StaticString = #filePath,line:UInt = #line){if a<b {fail("\(a) < \(b)",file:file,line:line)}}
+func XCTAssertLessThanOrEqual<T:Comparable>(_ a:T,_ b:T,file:StaticString = #filePath,line:UInt = #line){if a>b {fail("\(a) > \(b)",file:file,line:line)}}
+func XCTAssertNotEqual<T:Equatable>(_ a:T,_ b:T,file:StaticString = #filePath,line:UInt = #line){if a==b {fail("unexpected equality",file:file,line:line)}}

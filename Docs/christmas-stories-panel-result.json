@@ -1,0 +1,11 @@
+{
+  "allImagesLoad" : true,
+  "elevenCards" : true,
+  "fits390And530" : true,
+  "passed" : true,
+  "reservedDesktopIconEdge" : true,
+  "scope" : "Real WebKit panel with isolated native app and preferences",
+  "settingsPersist" : true,
+  "sevenTabs" : true,
+  "unavailableReasons" : true
+}

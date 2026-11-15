@@ -6,6 +6,9 @@ import SnowCore
 final class WinterCoordinator {
     let surfaces=SurfaceManager(), observer=WindowObserver(), dockObserver=DockObserver(), director=AnimationDirector()
     let decorations=DecorationManager(), input=InteractionController(), server=LocalServer(), performance=PerformanceMonitor()
+    var manualStoryPlayback:ManualStoryPlayback?
+    lazy var garlandRemoval=GarlandRemovalController(self)
+    lazy var stickerStudio=StickerStudio(self)
     var displays: [DisplayOverlay] = []
     var config: Configuration
     var manualChecks=ManualCheckProgress()
@@ -27,6 +30,8 @@ final class WinterCoordinator {
     private var timer: Timer?
     private var tokens: [NSObjectProtocol]=[]
     private var lastTick=0.0, lastPoll=0.0, lastInput=0.0, lastCleaning=0.0, lastPower=0.0, lastSession=0.0, lastDock=0.0
+    var storyLastPolicyPoll=0.0,storyFocusBlocked=false,storyUserBusy=false
+    var isOnBattery:Bool {battery}
     private var battery=false
     private var fps=60
     var plowLoad=SnowPile()
@@ -62,6 +67,7 @@ final class WinterCoordinator {
         decorations.onSnowFall={ [weak self] event,id in self?.queueSnow(event,displayID:id) }
         decorations.onSnowmanRemoved={ [weak self] id in self?.saveSnowman(id) }
         decorations.onHelpBuild={ [weak self] id in self?.helpSnowman(id) }
+        decorations.stories.onFinished={ [weak self] run in self?.christmasStoryFinished(run) }
         decorations.onSnowmanBuilt={ [weak self] id in self?.saveSnowman(id) }
         decorations.onDust={ [weak self] p,id in self?.displays.first(where:{$0.id==id})?.engine.dust(at:p) }
         decorations.onDuelEnded={ [weak self] in self?.duelPanel?.close();self?.duelPanel=nil;self?.duelPanelArea=nil }
@@ -88,9 +94,12 @@ final class WinterCoordinator {
             try? Data(server.url.absoluteString.utf8).write(to:URL(fileURLWithPath:CommandLine.arguments[i+1]),options:.atomic)
         }
     }
-    private func sessionPause() { finishSculpting();cancelCleaning();decorations.cancelTransient();cancelWindowEffects(); sleeping=true; input.stop(); for d in displays { d.hide(true); (d.foreground.contentView as? SKView)?.isPaused=true; (d.background.contentView as? SKView)?.isPaused=true } }
+    private func sessionPause() {manualStoryPlayback?.stop();garlandRemoval.cancel(); stickerStudio.finish(cancelDrag:true); finishSculpting();cancelCleaning();decorations.cancelTransient();cancelWindowEffects(); sleeping=true; input.stop(); for d in displays { d.hide(true); (d.foreground.contentView as? SKView)?.isPaused=true; (d.background.contentView as? SKView)?.isPaused=true } }
     private func sessionResume() { sleeping=false; lastTick=ProcessInfo.processInfo.systemUptime; applySettings() }
     func rebuildDisplays() {
+        manualStoryPlayback?.stop()
+        garlandRemoval.cancel()
+        stickerStudio.finish(cancelDrag:true)
         if !displays.isEmpty {finishSculpting();cancelCleaning();decorations.cancelTransient();input.stop()}
         let existing=Dictionary(uniqueKeysWithValues:displays.map { ($0.id,$0) })
         var next: [DisplayOverlay]=[]
@@ -114,10 +123,12 @@ final class WinterCoordinator {
     func applyPreset(_ mode: WinterMode) {
         let previous=config,date=config.lastDelivery, placements=config.placements, hats=config.dockHats
         config=Configuration.preset(mode); config.lastDelivery=date; config.placements=placements; config.dockHats=hats
-        config.tree=previous.tree;config.garland=previous.garland;config.treeSize=previous.treeSize;config.treeStar=previous.treeStar;config.treeBalls=previous.treeBalls;config.treeGarland=previous.treeGarland;config.treeToy1=previous.treeToy1;config.treeToy2=previous.treeToy2;config.treeToy3=previous.treeToy3;config.yetiEnabled=previous.yetiEnabled
+        config.stickers=previous.stickers;config.stories=previous.stories;config.tree=previous.tree;config.garland=previous.garland;config.treeSize=previous.treeSize;config.treeStar=previous.treeStar;config.treeBalls=previous.treeBalls;config.treeGarland=previous.treeGarland;config.treeToy1=previous.treeToy1;config.treeToy2=previous.treeToy2;config.treeToy3=previous.treeToy3;config.yetiEnabled=previous.yetiEnabled
         persist(); applySettings()
     }
-    func persist() { do { try config.save(to:configURL) } catch { diagnostic="Cannot save settings: \(error.localizedDescription)" } }
+    func persist() {
+        if !config.tree {for id in config.placements.keys {config.placements[id]?.treeIdentity=nil};for id in config.placements.keys where decorations.states[id]?.tree == nil && decorations.states[id]?.treeRemoving != true {if config.placements[id]?.storyPresents != nil {config.placements[id]?.storyPresents=[]}}}
+        do { try config.save(to:configURL) } catch { diagnostic="Cannot save settings: \(error.localizedDescription)" } }
     func applySettings() {
         config.validate()
         director.focus=config.mode == .focus; director.reducedMotion=config.reducedMotion || NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
@@ -131,7 +142,7 @@ final class WinterCoordinator {
         if !config.interaction && input.mode == .snow { input.stop() }
         statusChanged?()
     }
-    func togglePause() { paused.toggle(); if paused { finishSculpting();cancelCleaning();input.stop(); director.cancelAll(); decorations.cancelTransient(); surfaces.surfaces["dock"]?.sweepFraction=nil }; applySettings() }
+    func togglePause() { paused.toggle();if paused {manualStoryPlayback?.stop()};if paused {garlandRemoval.cancel();stickerStudio.finish(cancelDrag:true)}; if paused { finishSculpting();cancelCleaning();input.stop(); director.cancelAll(); decorations.cancelTransient(); surfaces.surfaces["dock"]?.sweepFraction=nil }; applySettings() }
     private func tick() {
         let now=ProcessInfo.processInfo.systemUptime, dt=min(0.05,max(0,now-lastTick)); let actualDT=now-lastTick; lastTick=now
         var simulated=false
@@ -147,8 +158,8 @@ final class WinterCoordinator {
             let front=NSWorkspace.shared.frontmostApplication?.bundleIdentifier
             sessionInactive=front == "com.apple.loginwindow"
         } // Public frontmost-app fallback; see feasibility report.
-        if sessionInactive { for d in displays { d.hide(true); d.setRenderActivity(snow:false,decoration:false) }; return }
-        let trackWindowGeometry=config.windowSnow || config.frost || (config.garland && config.placements.values.contains{$0.garlandTarget=="window" || ($0.extraGarlands ?? []).contains{$0.target=="window"}})
+        if sessionInactive {manualStoryPlayback?.stop();garlandRemoval.cancel();stickerStudio.finish(cancelDrag:true); for d in displays { d.hide(true); d.setRenderActivity(snow:false,decoration:false) }; return }
+        let trackWindowGeometry=stickerStudio.editing || config.stickers.items.contains{$0.anchor.kind == .window} || config.windowSnow || config.frost || (config.garland && config.placements.values.contains{$0.garlandTarget=="window" || ($0.extraGarlands ?? []).contains{$0.target=="window"}})
         let trackingMotion=trackWindowGeometry && (NSEvent.pressedMouseButtons != 0 || observer.sorted.contains{$0.state.phase == .moving || $0.state.phase == .resizing})
         let storyActive=decorations.visibleStoryActive || input.mode != .none || decorations.states.values.contains{!$0.snowballPlay.balls.isEmpty || !$0.fragments.isEmpty} || cleaningElapsed != nil || decorations.states.values.contains{$0.deliveryElapsed != nil}
         let covered = !displays.isEmpty && displays.allSatisfy(\.desktopOccluded)
@@ -217,10 +228,14 @@ final class WinterCoordinator {
             d.render(config:config,windows:windows,surfaces:surfaces,active:active)
         }
         updateSculpting()
+        garlandRemoval.update()
+        updateChristmasScheduler(dt:actualDT,now:now,battery:battery)
         var renderConfig=config; renderConfig.reducedMotion=director.reducedMotion
         decorations.foregroundSnowmen=[EditorMode.snow,.snowballPlay,.snowmen].contains(input.mode)
         for panel in input.panels {if let v=panel.contentView as? InputView,v.glove || v.playSnow {v.needsDisplay=true}}
+        stickerStudio.prepareAccessories()
         decorations.update(dt:dt,now:now,displays:displays,config:renderConfig,windows:windows,dock:dock,surfaces:surfaces,director:director,mouse:mouse)
+        stickerStudio.update(now:now)
         syncDuelInput()
         // Living Winter World starts story animations only after an explicit command.
         var shape="\(input.mode)-\(dock?.isVisible ?? false)-\(config.treeSize)-\(decorations.states.values.reduce(0){$0+$1.treePresents.filter{$0.openedAt==nil}.count})"
@@ -236,14 +251,16 @@ final class WinterCoordinator {
             let ornament=config.mode != .focus && ((state?.snowballs.snowmen.count ?? 0)>0 || (state?.snowmanFloating == true && now-(state?.snowmanBuiltAt ?? 0)<2.5) || state?.tree?.isHidden == false || !(state?.garland.children.isEmpty ?? true) || state?.gift?.isHidden == false || state?.santa?.isHidden == false || state?.plow?.isHidden == false || (state?.balls.children.contains { !$0.isHidden } ?? false) || (state?.celebration.children.contains { !$0.isHidden } ?? false))
             let surfaceVisible=surfaces.surfaces.values.contains { $0.screenID == d.id && $0.visible && $0.renderVisible && $0.volume>0 }
             let frosted=config.frost && config.mode != .focus && windows.contains { $0.isVisible && $0.state.frost>0 }
-            d.setRenderActivity(snow:!d.engine.particles.isEmpty || surfaceVisible || frosted || !d.canvas.hats.isEmpty || !d.canvas.garlandArt.isEmpty || !d.desktopCanvas.snowballArt.isEmpty || d.canvas.workbench != nil || !d.desktopCanvas.composites.isEmpty || !d.desktopCanvas.reveals.isEmpty,decoration:d.snowCloud.activeCount>0 || ornament || state?.actor != nil || state?.living.busy == true)
-            let moving=d.snowCloud.activeCount>0 || state?.living.busy == true || state?.character != nil || !((state?.fragments.isEmpty) ?? true) || input.mode == .garland || objectDrag != nil || state?.deliveryElapsed != nil || state?.plowProgress != nil || (state?.snowmanNode != nil && state?.snowmanFinalized == false) || (state?.giftOpenedAt.map { now-$0<3 } ?? false)
+            d.setRenderActivity(snow:!d.canvas.storyEffects.isEmpty || !d.canvas.stickers.isEmpty || !d.desktopCanvas.stickers.isEmpty || !d.engine.particles.isEmpty || surfaceVisible || frosted || !d.canvas.hats.isEmpty || !d.canvas.garlandArt.isEmpty || !d.desktopCanvas.snowballArt.isEmpty || d.canvas.workbench != nil || !d.desktopCanvas.composites.isEmpty || !d.desktopCanvas.reveals.isEmpty,decoration:decorations.stories.active != nil || d.snowCloud.activeCount>0 || ornament || state?.actor != nil || state?.living.busy == true)
+            let moving=decorations.stories.active != nil || d.snowCloud.activeCount>0 || state?.living.busy == true || state?.character != nil || !((state?.fragments.isEmpty) ?? true) || input.mode == .garland || objectDrag != nil || state?.deliveryElapsed != nil || state?.plowProgress != nil || (state?.snowmanNode != nil && state?.snowmanFinalized == false) || (state?.giftOpenedAt.map { now-$0<3 } ?? false)
             let appearing=decorations.states[d.id].map { $0.tree != nil && now-$0.treeAppearedAt<0.7 } ?? false
             (d.background.contentView as? SKView)?.preferredFramesPerSecond=(moving || appearing) ? fps:min(8,fps)
         }
     }
     func suppressForFullscreen() {
-        finishSculpting();cancelCleaning();decorations.cancelTransient();cancelWindowEffects();input.stop()
+        garlandRemoval.cancel()
+        stickerStudio.finish(cancelDrag:true)
+        finishSculpting();cancelCleaning();decorations.cancelTransient(preserveStories:!config.stories.pauseInFullscreen);cancelWindowEffects();input.stop()
         for d in displays {d.hide(true);(d.background.contentView as? SKView)?.isPaused=true}
     }
     func syncSurfaces(now: Double) {
@@ -379,12 +396,15 @@ final class WinterCoordinator {
     func reset() {
         finishSculpting();cancelCleaning();pendingSnow=[:];director.cancelAll(); lastVisibleSnow.removeAll(); surfaces.clear(); displays.forEach { $0.engine.reset() }; decorations.reset(preserveSnowman:false); input.stop(); config.interaction=false; config.tree=false; config.garland=false; config.mascot="none"; config.placements=[:]; cleaningElapsed=nil; lastCleaning=ProcessInfo.processInfo.systemUptime; persist(); applySettings()
     }
-    func beginEditor(_ mode: EditorMode) {
+    func beginEditor(_ mode: EditorMode,addingAnchor:Bool=false) {
         guard config.mode != .focus && !paused && !sleeping else { return }
         guard !decorations.livingBusy else{diagnostic="Finish the current activity first.";return}
         if mode == .snow,decorations.snowmanCount>=5 {diagnostic="Five snowmen already. Hit one to make room.";return}
+        decorations.stories.stop(immediately:true,reason:"User started editing")
         onWorldInteraction?()
-        finishSculpting();input.stop(); objectDrag=nil; draggedBall=nil; input.mode=mode
+        if mode != .garlandDelete {garlandRemoval.endPicker()}
+        if mode != .decorations {stickerStudio.finish(cancelDrag:true)}
+        finishSculpting();input.stop(); objectDrag=nil; draggedBall=nil; input.mode=mode;input.addingGarlandAnchor=addingAnchor
         if (mode == .hat || mode == .garlandWindow) && !observer.hasAccessibility { observer.permissionPrompt() }
         if mode == .snow { config.automaticSnowman=false;config.interaction=true;startSculpting() }
         if mode == .garland || mode == .garlandWindow {config.garland=true}
@@ -444,12 +464,12 @@ final class WinterCoordinator {
                 if drag.kind == "move-snowman",state.snowballs.snowmen.contains(where:{$0.id != state.snowballs.primaryID && abs($0.position.x-q.x)<($0.height+snowmanHeight)*0.4+8}) {return}
                 guard (drag.kind == "move-snowman" && (state.snowmanFloating || input.mode == .snowmen)) || !interactionWindows.contains(where: { $0.isVisible && $0.frame.intersects(Rect(q.x-radius,q.y-radius,radius*2,radius*2)) }) else { return }
                 if drag.kind == "move-tree" {
-                    var placement=config.placements[id] ?? Placement();placement.tree=Vec((q.x-d.rect.x)/d.rect.width,(q.y-d.rect.y)/d.rect.height);config.placements[id]=placement;state.tree?.position=d.local(q)
+                    var placement=config.placements[id] ?? Placement();placement.treeIdentity=UUID().uuidString;placement.tree=Vec((q.x-d.rect.x)/d.rect.width,(q.y-d.rect.y)/d.rect.height);config.placements[id]=placement;state.tree?.position=d.local(q)
                 } else if drag.kind == "move-snowman" { state.snowballs.snowman=q;state.snowmanNode?.position=d.local(q);state.snowmanLocation=q }
                 else { state.giftPosition=q;state.target=q;state.gift?.position=d.local(q) }
             } else if event.hasSuffix(":up") {
                 objectDrag=nil
-                if drag.kind == "gift" && !drag.moved { decorations.openGift(displayID:id,now:now,fireworks:config.mode == .play,director:director) }
+                if drag.kind == "gift" && !drag.moved { decorations.openGift(displayID:id,now:now,fireworks:config.mode != .focus && !director.reducedMotion,director:director) }
                 if drag.kind == "move-tree" {persist()}
                 if drag.kind == "move-snowman" {saveSnowman(id)}
                 if drag.kind == "move-snowman",state.sculptArea == nil,let q=state.snowballs.snowman {state.snowmanFloating=interactionWindows.contains { $0.isVisible && $0.frame.intersects(Rect(q.x-30,q.y-30,60,60)) }}
@@ -461,6 +481,7 @@ final class WinterCoordinator {
         }
         if kind.hasPrefix("tree-gift@"),event.hasSuffix(":down"),let index=state.treePresents.firstIndex(where:{$0.id==String(kind.dropFirst(10))}),state.treePresents[index].openedAt==nil {
             state.treePresents[index].openedAt=now
+            if config.placements[id]?.storyPresents != nil {saveStoryDecorations(id)}
             if director.start(.fireworks,duration:2.6,particles:36) != nil {decorations.tripleFireworks(parent:state.treePresents[index].node,reduced:director.reducedMotion,now:now)}
             lastInput=0;return
         }
@@ -516,7 +537,7 @@ final class WinterCoordinator {
     }
     func stateJSON() -> [String:Any] {
         let data=(try? JSONEncoder().encode(config)) ?? Data("{}".utf8)
-        return ["tracking":["dockInventoryScans":dockObserver.inventoryScans,"dockFrameQueries":dockObserver.frameQueries],"rendering":displays.map { ["display":$0.id,"desktop":$0.desktopCanvas.probe.snapshot,"windowCaps":$0.canvas.probe.snapshot,"interactive":$0.actionCanvas.probe.snapshot,"spriteKit":($0.decorationScene as? WinterScene)?.probe.snapshot ?? [:]] as [String:Any] },"living":livingSnapshot(),"config":(try? JSONSerialization.jsonObject(with:data)) ?? [:],"paused":paused,"systemPaused":sleeping || sessionInactive,"fullscreenSuppressed":observer.fullscreen,"reducedMotionActive":director.reducedMotion,"deliveryState":["pending":decorations.pendingDelivery,"flying":decorations.states.values.contains { $0.deliveryElapsed != nil },"giftWaiting":decorations.states.values.contains { $0.giftPosition != nil && $0.giftOpenedAt == nil && $0.giftLanded }],"accessibility":observer.hasAccessibility,"windows":observer.windows.count,"windowSnowStates":observer.sorted.map { window -> [String:Any] in
+        return ["stickerStudio":stickerStudio.snapshot(),"christmasStories":storySnapshot(),"tracking":["dockInventoryScans":dockObserver.inventoryScans,"dockFrameQueries":dockObserver.frameQueries],"rendering":displays.map { ["display":$0.id,"desktop":$0.desktopCanvas.probe.snapshot,"windowCaps":$0.canvas.probe.snapshot,"interactive":$0.actionCanvas.probe.snapshot,"spriteKit":($0.decorationScene as? WinterScene)?.probe.snapshot ?? [:]] as [String:Any] },"living":livingSnapshot(),"config":(try? JSONSerialization.jsonObject(with:data)) ?? [:],"paused":paused,"systemPaused":sleeping || sessionInactive,"fullscreenSuppressed":observer.fullscreen,"reducedMotionActive":director.reducedMotion,"deliveryState":["giftActive":decorations.states.values.contains{$0.deliveryElapsed != nil || $0.gift != nil || $0.giftOpenedAt != nil},"pending":decorations.pendingDelivery,"flying":decorations.states.values.contains { $0.deliveryElapsed != nil },"giftWaiting":decorations.states.values.contains { $0.giftPosition != nil && $0.giftOpenedAt == nil && $0.giftLanded }],"accessibility":observer.hasAccessibility,"windows":observer.windows.count,"windowSnowStates":observer.sorted.map { window -> [String:Any] in
             ["id":window.id,"phase":window.state.phase.rawValue,"visible":window.isVisible,"accessibilityLinked":window.ax != nil,
              "frame":["x":window.frame.x,"y":window.frame.y,"width":window.frame.width,"height":window.frame.height],
              "snowOrigin":surfaces.surfaces[window.id].map{[$0.frame.x,$0.frame.y]} ?? [],"snowVolume":surfaces.surfaces[window.id]?.volume ?? 0,"restoreProgress":window.state.restoreProgress]
@@ -529,6 +550,7 @@ final class WinterCoordinator {
     private func handle(_ request: HTTPRequest) -> HTTPResponse {
         if request.method == "GET" {
             if request.path == "/api/checks" { return HTTPResponse(body:(try? JSONEncoder().encode(manualChecks)) ?? Data("{}".utf8)) }
+            if request.path == "/api/stickers/preset" {return HTTPResponse(body:(try? JSONEncoder().encode(StickerPreset(settings:config.stickers))) ?? Data())}
             if request.path == "/api/state" { return .json(stateJSON()) }
             if request.path.hasPrefix("/assets/") {
                 let id=String(request.path.dropFirst(8))
@@ -536,13 +558,14 @@ final class WinterCoordinator {
                 return .json(["error":"unknown asset"],status:404)
             }
             if request.path == "/api/assets" { return .json(["ids":AssetManager.shared.registry.keys.sorted(),"textureLoads":AssetManager.shared.loadCount]) }
-            let files=["/":"index.html","/app.js":"app.js","/testing.js":"testing.js","/style.css":"style.css","/models":"models.html"]
+            let files=["/":"index.html","/app.js":"app.js","/stickers.js":"stickers.js","/testing.js":"testing.js","/style.css":"style.css","/models":"models.html"]
             if let file=files[request.path], let data=try? Data(contentsOf:Resources.root.appendingPathComponent("Web/\(file)")) {
                 let type=file.hasSuffix("js") ? "text/javascript; charset=utf-8" : file.hasSuffix("css") ? "text/css; charset=utf-8" : "text/html; charset=utf-8"
                 return HTTPResponse(type:type,body:data)
             }
             return .json(["error":"not found"],status:404)
         }
+        if request.path == "/api/stickers" {return stickerRequest(request)}
         if request.path == "/api/checks" {
             guard var next=try? JSONDecoder().decode(ManualCheckProgress.self,from:request.body) else { return .json(["error":"invalid checklist"],status:400) }
             next.validate()
@@ -559,6 +582,7 @@ final class WinterCoordinator {
                     for i in 0..<3 where before[i] != after[i] {if let index=toys.firstIndex(where:{$0.id=="tree_slot_\(i)"}) {toys[index].hidden=false}}
                     next.placements[id]?.ornaments=toys
                 }
+                if next.stories.frequency != config.stories.frequency {decorations.stories.scheduler.schedule(next.stories.frequency)}
                 config=next;applySettings();persist();return .json(stateJSON())
             }
             catch { return .json(["error":"invalid configuration"],status:400) }
@@ -566,6 +590,14 @@ final class WinterCoordinator {
         guard request.path == "/api/action", let body=try? JSONSerialization.jsonObject(with:request.body) as? [String:Any], let action=body["action"] as? String else { return .json(["error":"invalid command"],status:400) }
         diagnostic=""
         switch action {
+        case "story-play":
+            guard let raw=body["id"] as? String,let id=ChristmasStoryID(rawValue:raw) else{return .json(["error":"unknown story"],status:400)}
+            let variant=decorations.stories.developerMode ? body["variant"] as? Int:nil
+            if let variant,!(0...1).contains(variant){return .json(["error":"invalid variant"],status:400)}
+            _=playChristmasStory(id,variant:variant)
+        case "story-random":_=playChristmasStory()
+        case "story-stop":manualStoryPlayback?.stop();decorations.stories.stop();diagnostic="Finishing the story…"
+        case "stories-toggle":config.stories.enabled.toggle();persist()
         case "pause": if !paused { togglePause() }
         case "resume": if paused { togglePause() }
         case "reset": reset()
@@ -573,8 +605,7 @@ final class WinterCoordinator {
         case "clean": if !decorations.livingBusy {clean()}
         case "clean-ground":clean(surfaceID:displays.first.map{"ground-"+$0.id})
         case "shake-windows":for w in interactionWindows where w.isVisible {detachWindowSnow(w,fraction:1)}
-        case "garland-add-anchor":
-            for id in config.placements.keys {if var p=config.placements[id],p.garland.count>=2,p.garland.count<12 {let last=p.garland.removeLast(),before=p.garland.last!;p.garland.append((before+last)*0.5);p.garland.append(last);config.placements[id]=p}};persist();beginEditor(.garland)
+        case "garland-add-anchor":beginEditor(.garland,addingAnchor:true)
         case "delivery": if !paused,!sleeping,config.mode != .focus,!director.reducedMotion,!decorations.livingBusy {decorations.pendingDelivery=true}
         case "tree": if !config.tree {beginEditor(.tree)}else{diagnostic="Tree already placed. Drag it to move."}
         case "hat-red","hat-green","hat-blue": input.hatColor=String(action.dropFirst(4)); beginEditor(.hat)
@@ -590,14 +621,15 @@ final class WinterCoordinator {
         case "duel-aim":guard let power=body["power"] as? Double,power.isFinite else{return .json(["error":"invalid power"],status:400)};decorations.aimDuel(power)
         case "duel-fire":_ = decorations.fireDuel()
         case "drop-gift":if !paused,!sleeping,config.mode != .focus,!director.reducedMotion,!decorations.livingBusy {for d in displays {if decorations.startParachuteGift(display:d,surfaces:surfaces){break}}}
-        case "cancel-story":decorations.cancelTransient();endLivingDuel();input.stop()
-        case "tree-gifts":if !decorations.livingBusy {for d in displays {decorations.addTreePresents(display:d,surfaces:surfaces)};lastInput=0}
+        case "cancel-story":manualStoryPlayback?.stop();decorations.cancelTransient();endLivingDuel();input.stop()
+        case "tree-gifts":if !decorations.livingBusy {for d in displays {decorations.addTreePresents(display:d,surfaces:surfaces);if config.placements[d.id]?.storyPresents != nil {saveStoryDecorations(d.id)}};lastInput=0}
         case "ornaments":beginEditor(.ornaments)
         case "reset-ornaments":for id in config.placements.keys {config.placements[id]?.ornaments=TreeOrnament.defaults};persist()
         case "garland-tree":
             for id in config.placements.keys where config.placements[id]?.tree != nil {config.placements[id]?.garlandTarget="tree";config.placements[id]?.garlandWindow=nil;config.placements[id]?.garland=[Vec(0.25,0.5),Vec(0.7,0.6),Vec(0.25,0.76)]};config.garland=true;beginEditor(.garland)
         case "garland-window":beginEditor(.garlandWindow)
-        case "remove-garland":config.garland=false;for id in config.placements.keys{config.placements[id]?.garland=[]};persist()
+        case "remove-garland":garlandRemoval.deleteAll()
+        case "garland-delete-select":garlandRemoval.pickMode()
         case "new-garland":
             for id in config.placements.keys {
                 if let p=config.placements[id],p.garland.count>=2 {
@@ -605,9 +637,7 @@ final class WinterCoordinator {
                     strands.append(GarlandStrand(anchors:p.garland,target:p.garlandTarget ?? "desktop",window:p.garlandWindow,palette:config.bulbColor,sag:config.garlandSag));config.placements[id]?.extraGarlands=strands;config.placements[id]?.garland=[]
                 }
             };persist();beginEditor(.garland)
-        case "remove-garland-strand":
-            let selected=body["id"] as? String ?? "active"
-            for id in config.placements.keys {if selected=="active" {config.placements[id]?.garland=[]}else{config.placements[id]?.extraGarlands?.removeAll{$0.id==selected}}};persist()
+        case "remove-garland-strand":garlandRemoval.pickMode()
         case "garland":
             for id in config.placements.keys where config.placements[id]?.garlandTarget == "tree" || config.placements[id]?.garlandWindow != nil {
                 config.placements[id]?.garland=[];config.placements[id]?.garlandWindow=nil;config.placements[id]?.garlandTarget="desktop"
@@ -615,7 +645,7 @@ final class WinterCoordinator {
         case "move-snowmen":beginEditor(.snowmen)
         case "snowball-play":beginSnowballPlay()
         case "snowballs": beginEditor(.snow)
-        case "done": finishSculpting();input.stop(); config.interaction=false; persist(); statusChanged?()
+        case "done": stickerStudio.finish();finishSculpting();input.stop(); config.interaction=false; persist(); statusChanged?()
         case "permission": observer.permissionPrompt()
         case "focus","balanced","play": applyPreset(WinterMode(rawValue:action)!)
         default: return .json(["error":"unknown action"],status:400)
@@ -631,6 +661,9 @@ final class WinterCoordinator {
         else {diagnostic="Yeti needs some snow and a clear moment."}
     }
     func stop() {
+        garlandRemoval.cancel()
+        stickerStudio.finish(cancelDrag:true)
+        manualStoryPlayback?.stop();decorations.stories.stop(immediately:true,reason:"App closed");persist()
         duelPanel?.close();duelPanel=nil
         timer?.invalidate(); timer=nil; server.stop(); input.stop(); displays.forEach { $0.close() }; displays=[]
         for token in tokens { NSWorkspace.shared.notificationCenter.removeObserver(token); NotificationCenter.default.removeObserver(token) }; tokens=[]

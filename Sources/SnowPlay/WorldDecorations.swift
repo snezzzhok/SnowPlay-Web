@@ -28,6 +28,7 @@ extension DecorationManager {
         }
         let valid=Set(strands.map{$0.0});s.extraGarlandPhysics=s.extraGarlandPhysics.filter{valid.contains($0.key)}
         for (key,placement,paletteName,sag) in strands {
+            if let run=stories.active,run.id == .garlandRemoval,run.garlandTarget?.display==d.id,run.garlandTarget?.id==key,run.custom["released"]==1 {continue}
             let owner=windows.first{$0.id==placement.garlandWindow && $0.isVisible}
         let tree=placement.tree.map{Vec(d.rect.x+$0.x*d.rect.width,d.rect.y+$0.y*d.rect.height)}
         var anchors=GarlandAttachment.resolve(placement,bounds:d.rect,window:owner?.frame,tree:config.tree ? tree:nil,treeSize:s.treeHeight)
@@ -41,20 +42,29 @@ extension DecorationManager {
         let blocked=owner.map { w in windows.filter{$0.isVisible && $0.z<w.z}.map(\.frame) } ?? windows.filter(\.isVisible).map(\.frame)
         let path=CGMutablePath();var previous:Vec?,distance=0.0,index=0
         let palette=paletteName=="ice" ? ["fairy_bulb_blue","fairy_bulb_purple"]:paletteName=="warm" ? ["fairy_bulb_gold"]:["fairy_bulb_red","fairy_bulb_green","fairy_bulb_gold","fairy_bulb_blue"]
+        let spacing=max(config.bulbSpacing,config.bulbSize*1.8)
+        let blockers=blocked.map{$0.expanded(1)}
+        func safe(_ point:Vec)->Bool {point.y>d.rect.y+26 && !blockers.contains{$0.contains(point)}}
+        func bulb(_ point:Vec) {
+            defer{index+=1}
+            guard safe(point),config.garlandLights,d.canvas.garlandArt.count<120,let image=AssetManager.shared.image(palette[index%palette.count]) else{return}
+            let p=d.local(point),h=config.bulbSize*2.2,w=h*48/52,alpha=config.bulbBrightness*(config.reducedMotion || !config.garlandTwinkle ? 1:0.88+sin(now*0.7+Double(index))*0.12)
+            let name=palette[index%palette.count]
+            let color:NSColor=name.hasSuffix("red") ? .systemPink:name.hasSuffix("green") ? .systemGreen:name.hasSuffix("gold") ? .systemYellow:name.hasSuffix("purple") ? .systemPurple:.systemCyan
+            d.canvas.garlandGlows.append(GarlandGlow(point:CGPoint(x:p.x,y:p.y-h*0.48),radius:config.bulbSize*3,color:color,alpha:alpha*0.65))
+            d.canvas.garlandArt.append((image,CGRect(x:p.x-w/2,y:p.y-h*0.9,width:w,height:h),alpha,false))
+        }
         for point in physics.points {
-            let safe=point.y>d.rect.y+26 && !blocked.contains{$0.expanded(1).contains(point)}
-            if safe {
-                if let old=previous,!blocked.contains(where:{$0.contains(old)}) {path.addLine(to:d.local(point));distance+=(point-old).length}else {path.move(to:d.local(point))}
-                if distance>=config.bulbSpacing {distance=0
-                    if config.garlandLights,d.canvas.garlandArt.count<120,let image=AssetManager.shared.image(palette[index%palette.count]) {
-                        let p=d.local(point),h=config.bulbSize*2.2,w=h*48/52,alpha=config.bulbBrightness*(config.reducedMotion || !config.garlandTwinkle ? 1:0.88+sin(now*0.7+Double(index))*0.12)
-                        let name=palette[index%palette.count]
-                        let color:NSColor=name.hasSuffix("red") ? .systemPink:name.hasSuffix("green") ? .systemGreen:name.hasSuffix("gold") ? .systemYellow:name.hasSuffix("purple") ? .systemPurple:.systemCyan
-                        d.canvas.garlandGlows.append(GarlandGlow(point:CGPoint(x:p.x,y:p.y-h*0.48),radius:config.bulbSize*2,color:color,alpha:alpha*0.25))
-                        d.canvas.garlandArt.append((image,CGRect(x:p.x-w/2,y:p.y-h*0.9,width:w,height:h),alpha,false))
-                    };index+=1
-                }
-            } else {path.move(to:d.local(point))};previous=point
+            defer{previous=point}
+            guard let old=previous else{path.move(to:d.local(point));continue}
+            // Even arc-length spacing: long spans no longer have just ten lamps.
+            let delta=point-old,length=delta.length
+            if safe(point),safe(old) {path.addLine(to:d.local(point))}else{path.move(to:d.local(point))}
+            if length>0.001 {
+                var offset=spacing-distance
+                while offset<=length {bulb(old+delta*(offset/length));offset+=spacing}
+                distance=(distance+length).truncatingRemainder(dividingBy:spacing)
+            }
         }
         d.canvas.garlandPaths.append(path)
         }

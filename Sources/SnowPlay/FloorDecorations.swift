@@ -7,6 +7,8 @@ struct TreePresent {
     var position:Vec
     var openedAt:Double?
     var placedAt:Double
+    var variant:String="red"
+    var artHeight=26.0
 }
 extension DecorationManager {
     func treeHeight(_ config:Configuration)->Double {config.treeSize == "small" ? 88:config.treeSize == "large" ? 188:132}
@@ -38,6 +40,7 @@ extension DecorationManager {
         node.isHidden=windows.contains{$0.isVisible && $0.frame.intersects(Rect(p.x-s.treeHeight*0.33,p.y-s.treeHeight*0.4,s.treeHeight*0.66,s.treeHeight*0.8))}
         node.zRotation=config.reducedMotion ? 0:sin(now*0.65)*config.windStrength*0.012
         node.childNode(withName:"tree-topper")?.alpha=config.reducedMotion ? 1:0.91+sin(now*0.8)*0.09
+        node.childNode(withName:"tree-lights")?.isHidden = !config.garlandLights
         node.childNode(withName:"tree-lights")?.alpha=config.reducedMotion ? 1:0.92+sin(now*0.9)*0.08
     }
     func addTreePresents(display d:DisplayOverlay,surfaces:SurfaceManager,now:Double=ProcessInfo.processInfo.systemUptime) {
@@ -72,8 +75,10 @@ extension DecorationManager {
             node.setScale(reduced ? 0.45:0.12+ease*0.88);node.alpha=min(1,t/0.12)*(1-clamp((t-0.55)/1.05,0,1))*(reduced ? 0.45:0.9)
             node.position.y=(node.userData?["y"] as? Double ?? 28)+(reduced ? 0:ease*24)
         }
+        restoreStoryDecorations(state:s,display:d,config:config,now:now,surfaces:surfaces)
         for i in s.treePresents.indices {
             let gift=s.treePresents[i]
+            if stories.reservations.isReserved("gift:"+gift.id){continue}
             if gift.openedAt==nil && !s.treeFalling {
                 let f=clamp((now-gift.placedAt)/0.45,0,1),ease=1-pow(1-f,3)
                 gift.node.alpha=f;gift.node.setScale(0.8+0.2*ease)
@@ -83,6 +88,7 @@ extension DecorationManager {
                 let t=now-opened
                 gift.node.childNode(withName:"package/gift_lid")?.position.y=min(22,t*40)
                 gift.node.childNode(withName:"package")?.alpha=1-clamp((t-1.8)/0.7,0,1)
+                if gift.node.childNode(withName:"package")==nil {gift.node.alpha=1-clamp((t-1.8)/0.7,0,1);gift.node.zRotation=sin(min(1,t)*Double.pi)*0.1}
                 if t>3 {gift.node.removeFromParent()}
             }
         }
@@ -100,6 +106,12 @@ extension DecorationManager {
                 d.canvas.reveals.append(CanvasReveal(image:image,rect:CGRect(x:p.x-size/2,y:p.y-size/2,width:size,height:size),progress:1))
             }
         }
-        for gift in s.treePresents {gift.node.isHidden=false;appendSprites(from:gift.node,reference:s.root,to:d.canvas);gift.node.isHidden=true}
+        for gift in s.treePresents {
+            gift.node.isHidden=false
+            // A leased gift belongs to the story graph, including its parent's visibility.
+            // Drawing it again on the floor would leave a floating box after Yeti exits.
+            if stories.reservations.isReserved("gift:"+gift.id) {continue}
+            appendSprites(from:gift.node,reference:s.root,to:d.canvas);gift.node.isHidden=true
+        }
     }
 }

@@ -5,7 +5,7 @@ from PIL import Image
 import json,math
 root=Path(__file__).resolve().parents[1]/'Sources/SnowPlay/Resources/SnowPlayAssets/Prepared'
 rows=json.loads((root/'index.json').read_text())['assets']
-selected=[r for r in rows if r['id'].startswith(('gnome_','truck_','yeti_','snow_clump_'))]
+selected=[r for r in rows if r['id'].startswith(('gnome_','truck_','yeti_','snow_clump_','sticker_','story_rig_','story_friend_'))]
 folder=root/'Atlas';folder.mkdir(exist_ok=True)
 pages=[];items=[];x=y=shelf=0;page=Image.new('RGBA',(1024,1024));pageNo=0
 for r in selected:

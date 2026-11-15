@@ -19,6 +19,7 @@ final class DecorationState {
     var garlandPaths: [CGPath]=[]
     var garlandBulbs: [GarlandBulb]=[]
     var recentGiftPositions: [Vec]=[]
+    var storyGiftsRestored=false
     var giftLandedAt: Double?
     var sculptArea: Rect?
     var sculptSeeded=false
@@ -52,6 +53,7 @@ final class DecorationState {
 final class DecorationManager {
     var consumedSnowMass=0.0
     var foregroundSnowmen=false
+    let stories=ChristmasStoryEngine()
     var states: [String: DecorationState] = [:]
     struct CharacterRequest {var action:CharacterAction;var display:String;var target:Vec}
     var characterQueue:[CharacterRequest]=[]
@@ -102,11 +104,11 @@ final class DecorationManager {
 
     func update(dt: Double, now: Double, displays: [DisplayOverlay], config: Configuration, windows: [TrackedWindow], dock: DockGeometry?, surfaces: SurfaceManager, director: AnimationDirector, mouse: Vec) {
         install(displays);placementsForInput=config.placements
-        if !states.values.contains(where:{$0.character != nil}),!characterQueue.isEmpty {
+        if stories.active==nil,!states.values.contains(where:{$0.character != nil}),!characterQueue.isEmpty {
             let request=characterQueue.removeFirst()
             if let d=displays.first(where:{$0.id==request.display}) {_ = requestCharacter(request.action,display:d,target:request.target,windows:windows,surfaces:surfaces,config:config)}
         }
-        if pendingDelivery && config.mode != .focus && !config.reducedMotion && !states.values.contains(where: { ($0.giftPosition != nil && $0.giftOpenedAt == nil) || $0.deliveryElapsed != nil }) {
+        if stories.active==nil && pendingDelivery && config.mode != .focus && !config.reducedMotion && !states.values.contains(where: { ($0.giftPosition != nil && $0.giftOpenedAt == nil) || $0.deliveryElapsed != nil }) {
             for d in displays {
                 guard let state=states[d.id],let p=deliveryPoint(display:d,windows:windows,dock:dock,state:state), director.start(.santa,duration:7,priority:0) != nil else { continue }
                 state.gift?.removeFromParent(); state.gift=nil; state.giftPosition=nil; state.giftOpenedAt=nil; state.countdown=false; state.giftLanded=false;state.countdownSecond = -1; state.celebration.removeAllChildren()
@@ -135,12 +137,12 @@ final class DecorationManager {
                 }
             }
             state.time+=dt
-            d.actionCanvas.composites=[];d.canvas.reveals=[];d.canvas.garlandGlows=[];d.canvas.dynamicCaps=[];d.canvas.garlandPaths=[];d.canvas.garlandArt=[];d.canvas.snowballArt=[];d.canvas.composites=[];d.canvas.workbench=nil
+            d.canvas.storyEffects=[];d.actionCanvas.composites=[];d.canvas.reveals=[];d.canvas.garlandGlows=[];d.canvas.dynamicCaps=[];d.canvas.garlandPaths=[];d.canvas.garlandArt=[];d.canvas.snowballArt=[];d.canvas.composites=[];d.canvas.workbench=nil
             let occupied=windows.filter(\.isVisible).map(\.frame)+(state.living.duel.map{[$0.area]} ?? [])
             let focus=config.mode == .focus
             state.root.isHidden=focus; state.root.isPaused=focus
             if focus { continue }
-            if d.desktopOccluded && !state.living.busy && state.character == nil && state.sculptArea == nil && state.snowballPlay.balls.isEmpty {
+            if d.desktopOccluded && stories.active == nil && !state.living.busy && state.character == nil && state.sculptArea == nil && state.snowballPlay.balls.isEmpty {
                 state.root.isPaused=true
                 updateWorldGarland(state:state,display:d,config:config,windows:windows,dt:0,now:now)
                 continue
@@ -150,6 +152,7 @@ final class DecorationManager {
             if inEdge && mouseDelta>550 && mouseDelta<5000 && !config.reducedMotion { state.sway=1 }
             state.sway=max(0,state.sway-dt/0.8)
             updateFloorTree(state:state,display:d,config:config,now:now,surfaces:surfaces,windows:windows)
+            updateBranchSurfaces(display:d,state:state,config:config,surfaces:surfaces)
             updateTreeToys(state:state,display:d,config:config,now:now)
             updateWorldGarland(state:state,display:d,config:config,windows:windows,dt:dt,now:now)
             updateDelivery(state:state,display:d,dt:dt,now:now,occupied:occupied,reduced:config.reducedMotion)
@@ -187,6 +190,7 @@ final class DecorationManager {
             updateLivingStories(state:state,display:d,dt:dt,now:now,config:config,surfaces:surfaces,mouse:mouse,windows:windows)
 
         }
+        stories.update(dt:dt,now:now,config:config,windows:windows,dock:dock,surfaces:surfaces)
     }
     private func updateDelivery(state: DecorationState, display d: DisplayOverlay, dt: Double, now: Double, occupied: [Rect], reduced: Bool) {
         if var t=state.deliveryElapsed {
@@ -214,7 +218,7 @@ final class DecorationManager {
                 state.giftPosition=p; state.gift?.position=d.local(p)
                 state.gift?.childNode(withName:"parachute")?.alpha=min(1,(t-state.dropTime)*3)*(1-max(0,(f-0.85)/0.15))
                 state.gift?.childNode(withName:"parachute")?.zRotation=reduced ? 0:sin((t-state.dropTime)*2)*0.065*(1-f)
-                if f>=1 { state.giftLanded=true;state.giftLandedAt=now;if state.passiveGift {state.giftOpenedAt=now;state.countdown=true} }
+                if f>=1 { state.giftLanded=true;state.giftLandedAt=now }
             }
             if t>=7 { state.santa?.removeFromParent(); state.santa=nil }
             if t>=max(7,state.dropTime+4) { state.deliveryElapsed=nil;if state.gift != nil {state.giftPosition=state.target} }
@@ -233,12 +237,12 @@ final class DecorationManager {
         if let opened=state.giftOpenedAt {
             let t=max(0,now-opened)
             if let gift=state.gift {
-                if !state.passiveGift {for id in ["gift_lid","gift_bow"] { if let lid=gift.childNode(withName:"package/"+id) {lid.position.y=min(22,t*30);lid.alpha=max(0,1-t/2)} }}
-                gift.alpha=state.passiveGift ? 1-clamp((t-4)/0.7,0,1):GiftLifecycle.boxOpacity(elapsed:t);gift.zRotation=reduced ? 0:sin(min(1,t) * .pi)*0.06
-                if t>=(state.passiveGift ? 4.7:GiftLifecycle.boxLifetime) {gift.removeAllActions();gift.removeFromParent();state.gift=nil}
+                for id in ["gift_lid","gift_bow"] { if let lid=gift.childNode(withName:"package/"+id) {lid.position.y=min(22,t*30);lid.alpha=max(0,1-t/2)} }
+                gift.alpha=GiftLifecycle.boxOpacity(elapsed:t);gift.zRotation=reduced ? 0:sin(min(1,t) * .pi)*0.06
+                if t>=GiftLifecycle.boxLifetime {gift.removeAllActions();gift.removeFromParent();state.gift=nil}
             }
-            if t>=(state.passiveGift ? 4.8:GiftLifecycle.celebrationLifetime) {removeGift(state);return}
-            state.celebration.alpha=state.passiveGift ? 1-clamp((t-3.5)/0.5,0,1):GiftLifecycle.celebrationOpacity(elapsed:t)
+            if t>=GiftLifecycle.celebrationLifetime {removeGift(state);return}
+            state.celebration.alpha=GiftLifecycle.celebrationOpacity(elapsed:t)
             if state.countdown {
                 let label: SKLabelNode
                 if let old=state.celebration.childNode(withName:"countdown") as? SKLabelNode {label=old}
@@ -250,8 +254,9 @@ final class DecorationManager {
                 let seconds=max(0,Int(next.timeIntervalSinceNow))
                 if seconds != state.countdownSecond {state.countdownSecond=seconds;label.text="\(year) · \(seconds/86400)d  \(seconds/3600%24)h  \(seconds/60%60)m  \(seconds%60)s"}
                 if let p=state.giftPosition {
-                    label.position=d.local(p+Vec(0,-44));label.isHidden=occupied.contains { $0.intersects(Rect(p.x-85,p.y-85,170,55)) }
-                    if let panel=state.celebration.childNode(withName:"countdown-background") {panel.position=d.local(p+Vec(0,-48));panel.isHidden=label.isHidden}
+                    let centre=Vec(clamp(p.x,d.rect.x+90,d.rect.maxX-90),p.y)
+                    label.position=d.local(centre+Vec(0,-44));label.isHidden=occupied.contains { $0.intersects(Rect(p.x-85,p.y-85,170,55)) }
+                    if let panel=state.celebration.childNode(withName:"countdown-background") {panel.position=d.local(centre+Vec(0,-48));panel.isHidden=label.isHidden}
                 }
             }
         }
@@ -336,11 +341,14 @@ final class DecorationManager {
         guard let state=states[displayID], state.giftLanded, state.gift != nil, state.giftPosition != nil, state.giftOpenedAt == nil else { return }
         state.giftOpenedAt=now; state.countdown=true
         if fireworks, !director.active.contains(where: { $0.kind == .fireworks }), director.start(.fireworks,duration:2,particles:24) != nil, let gift=state.gift {
-            tripleFireworks(parent:gift,reduced:false,now:now)
+            // Keep the burst silhouettes above the countdown rather than across its digits.
+            let launch=SKNode();launch.position.y=90;gift.addChild(launch)
+            tripleFireworks(parent:launch,reduced:false,now:now)
 
         }
     }
-    func cancelTransient() {
+    func cancelTransient(preserveStories:Bool=false) {
+        if !preserveStories {stories.stop(immediately:true,reason:"Effects interrupted")}
         characterQueue=[]
         pendingDelivery=false
         for node in fireworks {node.removeAllActions();node.removeFromParent()};fireworks=[]
@@ -361,6 +369,7 @@ final class DecorationManager {
         }
     }
     func reset(preserveSnowman: Bool) {
+        stories.stop(immediately:true,reason:"Scene reset")
         if duelActive {onDuelEnded?()}
         characterQueue=[]
         pendingDelivery=false

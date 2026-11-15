@@ -1,13 +1,16 @@
 import AppKit
 import SnowCore
 
-enum EditorMode: String { case none, tree, ornaments, garland, garlandWindow, snow, snowballPlay, snowmen, hat }
+enum EditorMode: String { case garlandDelete, decorations, none, tree, ornaments, garland, garlandWindow, snow, snowballPlay, snowmen, hat }
 final class InputPanel: NSPanel {
     var placement=false
     override var canBecomeKey: Bool { placement }
     override var canBecomeMain: Bool { false }
 }
 final class InputView: NSView {
+    var anchorEditor=false,addingAnchor=false
+    var anchorPoints:(()->[NSPoint])?
+    private var anchorDrag:Int?
     var showsAnchor=false
     var singleAnchor=false
     var glove=false,branchAnchors=false,playSnow=false,editSnowmen=false
@@ -18,14 +21,15 @@ final class InputView: NSView {
     }()
     override func updateTrackingAreas() {
         if let area=gloveTracking {removeTrackingArea(area)}
-        if glove || placing || playSnow {let area=NSTrackingArea(rect:bounds,options:[.activeAlways,.mouseEnteredAndExited,.mouseMoved,.inVisibleRect],owner:self,userInfo:nil);addTrackingArea(area);gloveTracking=area}
+        if glove || placing || playSnow || anchorEditor {let area=NSTrackingArea(rect:bounds,options:[.activeAlways,.mouseEnteredAndExited,.mouseMoved,.inVisibleRect],owner:self,userInfo:nil);addTrackingArea(area);gloveTracking=area}
         super.updateTrackingAreas()
     }
-    override func mouseEntered(with event:NSEvent) {if placing {movePreview(convert(event.locationInWindow,from:nil))}else if glove {mitten?.set()}}
-    override func mouseExited(with event:NSEvent) {if glove || placing || playSnow {NSCursor.arrow.set()}}
-    override func mouseMoved(with event:NSEvent) {if playSnow {eventHandler?("hover",event)};if placing {movePreview(convert(event.locationInWindow,from:nil))}else if glove {mitten?.set()}}
+    override func mouseEntered(with event:NSEvent) {if anchorEditor {previewPoint=convert(event.locationInWindow,from:nil);NSCursor.crosshair.set();needsDisplay=true}else if placing {movePreview(convert(event.locationInWindow,from:nil))}else if glove {mitten?.set()}}
+    override func mouseExited(with event:NSEvent) {if glove || placing || playSnow || anchorEditor {NSCursor.arrow.set()}}
+    override func mouseMoved(with event:NSEvent) {if anchorEditor {previewPoint=convert(event.locationInWindow,from:nil);NSCursor.crosshair.set();needsDisplay=true};if playSnow {eventHandler?("hover",event)};if placing {movePreview(convert(event.locationInWindow,from:nil))}else if glove {mitten?.set()}}
     override func resetCursorRects() {
-        if placing {addCursorRect(bounds,cursor:placementCursor)}
+        if anchorEditor {addCursorRect(bounds,cursor:.crosshair)}
+        else if placing {addCursorRect(bounds,cursor:placementCursor)}
         else if glove,let cg=AssetManager.shared.image("shovel_cursor") {let image=NSImage(cgImage:cg,size:NSSize(width:36,height:36));addCursorRect(bounds,cursor:NSCursor(image:image,hotSpot:NSPoint(x:13,y:29)))}
         else if playSnow {addCursorRect(bounds,cursor:.crosshair)}else{super.resetCursorRects()}
     }
@@ -43,17 +47,39 @@ final class InputView: NSView {
     }()
     func showPlacementCursor(){if placing {movePreview(convert(window?.mouseLocationOutsideOfEventStream ?? .zero,from:nil))}}
     private func movePreview(_ point:NSPoint){previewPoint=point;placementCursor.set();needsDisplay=true}
-    override var acceptsFirstResponder:Bool {placing || glove || playSnow || editSnowmen}
-    override func keyDown(with event:NSEvent){if placing || glove || playSnow || editSnowmen,event.keyCode==53 {cancel?()}else{super.keyDown(with:event)}}
+    override var acceptsFirstResponder:Bool {placing || glove || playSnow || editSnowmen || anchorEditor}
+    override func keyDown(with event:NSEvent){if placing || glove || playSnow || editSnowmen || anchorEditor,event.keyCode==53 {cancel?()}else{super.keyDown(with:event)}}
     var eventHandler: ((String, NSEvent)->Void)?
     override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
-    override func mouseDown(with event: NSEvent) { if glove {mitten?.set()};eventHandler?("down",event) }
-    override func mouseDragged(with event: NSEvent) { if glove {mitten?.set()};eventHandler?("drag",event) }
-    override func mouseUp(with event: NSEvent) { eventHandler?("up",event) }
+    override func mouseDown(with event: NSEvent) {
+        if anchorEditor {
+            let point=convert(event.locationInWindow,from:nil),anchors=anchorPoints?() ?? []
+            anchorDrag=anchors.indices.first{hypot(anchors[$0].x-point.x,anchors[$0].y-point.y)<16}
+        }
+        if glove {mitten?.set()};eventHandler?("down",event) }
+    override func mouseDragged(with event: NSEvent) { if anchorEditor {previewPoint=convert(event.locationInWindow,from:nil);needsDisplay=true};if glove {mitten?.set()};eventHandler?("drag",event) }
+    override func mouseUp(with event: NSEvent) { eventHandler?("up",event);anchorDrag=nil }
+    func anchorEventKind()->String? {if let index=anchorDrag{return "garland-anchor@\(index)"};return addingAnchor ? "garland-place":nil}
     override func draw(_ dirtyRect: NSRect) {
         // WindowServer may pass clicks through completely transparent pixels.
         // These windows already have tightly bounded, intentional hit regions.
         NSColor(calibratedWhite:1,alpha:0.01).setFill();bounds.fill()
+        if anchorEditor {
+            let points=anchorPoints?() ?? [],mint=NSColor(calibratedRed:0.4,green:0.95,blue:0.83,alpha:1)
+            for (i,p) in points.enumerated() {
+                let ring=NSBezierPath(ovalIn:NSRect(x:p.x-12,y:p.y-12,width:24,height:24));NSColor(calibratedRed:0.08,green:0.2,blue:0.25,alpha:0.96).setFill();ring.fill();mint.setStroke();ring.lineWidth=2;ring.stroke()
+                let text="\(i+1)" as NSString,attributes:[NSAttributedString.Key:Any]=[.font:NSFont.systemFont(ofSize:12,weight:.bold),.foregroundColor:NSColor.white],size=text.size(withAttributes:attributes)
+                text.draw(at:NSPoint(x:p.x-size.width/2,y:p.y-size.height/2),withAttributes:attributes)
+            }
+            if addingAnchor,let point=previewPoint {
+                mint.setStroke();let ring=NSBezierPath(ovalIn:NSRect(x:point.x-7,y:point.y-7,width:14,height:14));ring.lineWidth=2;ring.stroke()
+                if let last=points.last {let line=NSBezierPath();line.move(to:last);line.line(to:point);line.setLineDash([4,5],count:2,phase:0);line.stroke()}
+                let text="Anchor \(points.count+1) · Click to attach" as NSString
+                let attrs:[NSAttributedString.Key:Any]=[.font:NSFont.systemFont(ofSize:12,weight:.semibold),.foregroundColor:NSColor.white],size=text.size(withAttributes:attrs)
+                let label=NSRect(x:clamp(point.x+18,8,max(8,bounds.width-size.width-24)),y:clamp(point.y+20,8,max(8,bounds.height-34)),width:size.width+16,height:27)
+                NSColor(calibratedRed:0.08,green:0.2,blue:0.25,alpha:0.96).setFill();NSBezierPath(roundedRect:label,xRadius:7,yRadius:7).fill();text.draw(at:NSPoint(x:label.minX+8,y:label.minY+6),withAttributes:attrs)
+            };return
+        }
         if placing {
             NSColor(calibratedRed:0.18,green:0.55,blue:0.57,alpha:0.09).setFill();NSRect(x:0,y:0,width:bounds.width,height:110).fill()
             let point=previewPoint ?? convert(window?.mouseLocationOutsideOfEventStream ?? .zero,from:nil),base=landing?(point) ?? NSPoint(x:point.x,y:16),h=CGFloat(placementHeight)
@@ -87,6 +113,7 @@ final class InputView: NSView {
 }
 final class InteractionController {
     var hatColor="red", mode=EditorMode.none
+    var addingGarlandAnchor=false
     var panels: [InputPanel]=[]
     var onEvent: ((String,Vec,String)->Void)?
     var primaryHeight=0.0
@@ -97,16 +124,17 @@ final class InteractionController {
     var sculptSurface:((String)->SnowSurface?)?
     var groundForPlacement:((Double,DisplayOverlay)->Double)?
     var onCancel:(()->Void)?
-    func stop() { NSCursor.arrow.set();panels.forEach { $0.close() }; panels=[]; mode = .none; dragging=false;placementSignature="" }
+    func stop() { NSCursor.arrow.set();panels.forEach { $0.close() }; panels=[]; mode = .none; addingGarlandAnchor=false;dragging=false;placementSignature="" }
     func rebuild(displays: [DisplayOverlay], windows: [TrackedWindow], dock: DockGeometry?, decorations: DecorationManager, focus: Bool, icons: [DockIcon]) {
         guard !dragging else { return }
         let placementMode=mode == .tree || (mode == .snow && automaticSnowman)
         let floorMode=mode == .snow || mode == .snowballPlay
-        let signature=(placementMode || floorMode) && !focus && !decorations.duelActive ? "\(mode.rawValue)|\(displays.map{String(describing:$0.rect)}.joined())|\(placementModelHeight)":""
+        let garlandMode=mode == .garland
+        let signature=(placementMode || floorMode || garlandMode) && !focus && !decorations.duelActive ? "\(mode.rawValue)|\(displays.map{String(describing:$0.rect)}.joined())|\(placementModelHeight)|\(addingGarlandAnchor)|\(garlandMode ? String(describing:decorations.placementsForInput):"")|\(garlandMode ? windows.map{"\($0.id):\($0.frame):\($0.isVisible)"}.joined():"")":""
         if !signature.isEmpty,signature==placementSignature,!panels.isEmpty{return}
         placementSignature=signature
         panels.forEach { $0.close() };panels=[]
-        guard !focus,!decorations.duelActive else { return }
+        guard !focus,!decorations.duelActive,decorations.stories.active == nil else { return }
         for d in displays {
             let occupied=windows.filter(\.isVisible).map { $0.frame.expanded(3) }
             var zones: [(Rect,String)]=[]
@@ -123,12 +151,7 @@ final class InteractionController {
             } else if mode == .garlandWindow {
                 for w in windows where w.isVisible && w.frame.intersects(d.rect){zones.append((Rect(w.frame.x+76,w.frame.y+3,max(1,w.frame.width-88),18),"garland@"+w.id))}
             } else if mode == .garland {
-                let p=decorations.placementsForInput[d.id] ?? Placement()
-                let w=windows.first{$0.id==p.garlandWindow && $0.isVisible}
-                let tree=p.tree.map{Vec(d.rect.x+$0.x*d.rect.width,d.rect.y+$0.y*d.rect.height)}
-                let anchors=GarlandAttachment.resolve(p,bounds:d.rect,window:w?.frame,tree:tree,treeSize:decorations.states[d.id]?.treeHeight ?? 132)
-                if anchors.count>=2 {zones=anchors.enumerated().map{(Rect($0.element.x-9,$0.element.y-9,18,18),"garland-anchor@\($0.offset)")}}
-                else {zones=[(Rect(d.rect.x+8,d.rect.y+34,d.rect.width-16,d.rect.height-50),"garland-place")]}
+                zones=[(Rect(d.rect.x,d.rect.y+28,d.rect.width,d.rect.height-28),"garland-editor")]
             } else if mode == .snowmen,let s=decorations.states[d.id] {
                 zones=s.snowballs.snowmen.map{($0.hitbox.expanded(12),"move-snowman@"+$0.id.uuidString)}
             } else if mode == .snowballPlay {
@@ -153,11 +176,11 @@ final class InteractionController {
                     let h=state.treeHeight;zones.append((Rect(p.x-h*0.35,p.y-h*0.45,h*0.7,h*0.85),"move-tree"))
                 }
                 zones += state.treePresents.filter{$0.openedAt==nil}.map{(Rect($0.position.x-15,$0.position.y-16,30,32),"tree-gift@"+$0.id)}
-                if let p=state.giftPosition,state.giftLanded,state.gift != nil,!state.passiveGift,state.giftOpenedAt==nil { zones.append((Rect(p.x-22,p.y-5,44,44),"gift")) }
+                if let p=state.giftPosition,state.giftLanded,state.gift != nil,state.giftOpenedAt==nil { zones.append((Rect(p.x-22,p.y-5,44,44),"gift")) }
             }
             for (zone,kind) in zones {
                 let blockers: [Rect]
-                if placementMode || floorMode || mode == .snowmen || kind == "hat" {blockers=[]}
+                if placementMode || floorMode || mode == .snowmen || garlandMode || kind == "hat" {blockers=[]}
                 else if kind.hasPrefix("garland-anchor@"),let p=decorations.placementsForInput[d.id],let target=windows.first(where:{$0.id==p.garlandWindow && $0.isVisible}) {blockers=windows.filter{$0.isVisible && $0.z<target.z}.map(\.frame)}
                 else if kind.hasPrefix("garland@"),let target=windows.first(where: { $0.id == String(kind.dropFirst(8)) }) {
                     blockers=windows.filter { $0.isVisible && $0.z<target.z }.map { $0.frame.expanded(2) }
@@ -166,7 +189,7 @@ final class InteractionController {
                     let frame=NSRect(x:safe.x,y:primaryHeight-safe.maxY,width:safe.width,height:safe.height)
                     let panel=InputPanel(contentRect:frame,styleMask:[.borderless,.nonactivatingPanel],backing:.buffered,defer:false)
                     panel.acceptsMouseMovedEvents=true;panel.isOpaque=false;panel.backgroundColor = .clear;panel.hasShadow=false;panel.isReleasedWhenClosed=false;panel.hidesOnDeactivate=false
-                    if placementMode {panel.placement=true;panel.level = .floating}
+                    if placementMode || garlandMode {panel.placement=true;panel.level = .floating}
                     else if kind == "hat" || floorMode || mode == .snowmen {
                         panel.level=NSWindow.Level(rawValue:Int(CGWindowLevelForKey(.dockWindow))+2)
                     } else if kind.hasPrefix("garland@") || (kind.hasPrefix("garland-anchor@") && decorations.placementsForInput[d.id]?.garlandTarget=="window") {
@@ -176,6 +199,15 @@ final class InteractionController {
                     }
                     panel.collectionBehavior=[.canJoinAllSpaces,.stationary,.ignoresCycle]
                     let view=InputView(frame:NSRect(origin:.zero,size:frame.size));view.glove=mode == .snow;view.playSnow=mode == .snowballPlay;view.editSnowmen=mode == .snowmen;view.branchAnchors=kind == "ornaments";view.showsAnchor=kind.hasPrefix("garland@");view.singleAnchor=kind.hasPrefix("garland-anchor@");view.identifier=NSUserInterfaceItemIdentifier(kind)
+                    if garlandMode {
+                        view.anchorEditor=true;view.addingAnchor=addingGarlandAnchor || (decorations.placementsForInput[d.id]?.garland.count ?? 0)<2
+                        view.cancel={ [weak self] in self?.onCancel?() }
+                        view.anchorPoints={ [weak decorations,weak panel,weak self] in
+                            guard let self,let panel,let p=decorations?.placementsForInput[d.id] else{return []}
+                            let window=windows.first{$0.id==p.garlandWindow && $0.isVisible},tree=p.tree.map{Vec(d.rect.x+$0.x*d.rect.width,d.rect.y+$0.y*d.rect.height)}
+                            return GarlandAttachment.resolve(p,bounds:d.rect,window:window?.frame,tree:tree,treeSize:decorations?.states[d.id]?.treeHeight ?? 132).map{panel.convertPoint(fromScreen:NSPoint(x:$0.x,y:self.primaryHeight-$0.y))}
+                        }
+                    }
                     if floorMode || mode == .snowmen {
                         view.cancel={ [weak self] in self?.onCancel?() };view.sculptCount=decorations.states[d.id]?.snowballs.balls.count ?? 0;panel.placement=true
                         let playing=mode == .snowballPlay
@@ -197,12 +229,13 @@ final class InteractionController {
                         guard let self,let panel else { return }
                         let ns=panel.convertPoint(toScreen:e.locationInWindow),p=Vec(ns.x,self.primaryHeight-ns.y)
                         if event == "down" { self.dragging=true }
-                        self.onEvent?(kind+":"+event,p,d.id)
+                        let eventKind=kind == "garland-editor" ? (panel.contentView as? InputView)?.anchorEventKind():kind
+                        if let eventKind {self.onEvent?(eventKind+":"+event,p,d.id)}
                         if self.mode == .snow || self.mode == .snowballPlay {let v=panel.contentView as? InputView;v?.sculptCount=decorations?.states[d.id]?.snowballs.balls.count ?? 0;v?.needsDisplay=true}
                         if event == "up" { self.dragging=false }
                     }
                     panel.contentView=view;panel.orderFrontRegardless();panels.append(panel)
-                    if placementMode || floorMode || mode == .snowmen {panel.makeFirstResponder(view);panel.makeKey();panel.invalidateCursorRects(for:view);if placementMode,panel.frame.contains(NSEvent.mouseLocation){view.showPlacementCursor()}}
+                    if placementMode || floorMode || mode == .snowmen || garlandMode {panel.makeFirstResponder(view);panel.makeKey();panel.invalidateCursorRects(for:view);if placementMode,panel.frame.contains(NSEvent.mouseLocation){view.showPlacementCursor()}}
                 }
             }
         }

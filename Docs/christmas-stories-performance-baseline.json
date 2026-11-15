@@ -1,0 +1,38 @@
+{
+  "battery" : false,
+  "build" : "release (-O)",
+  "canvas" : {
+    "callbackFPS" : 59.827908286787242,
+    "frames" : 1300,
+    "gpuMeasured" : false,
+    "measurement" : "native draw\/update callbacks; not presented GPU frames",
+    "p95IntervalMS" : 17.16133333320613,
+    "p95WorkMS" : 0.066208333009853959
+  },
+  "cpuAverageSinceLaunch" : 22.906745235594208,
+  "cpuPercentOneCore" : 20.663044334240162,
+  "gpuMeasured" : false,
+  "gpuPresentationMeasured" : false,
+  "p95FrameMS" : 17.884291664813645,
+  "p95SimulationWorkMS" : 2.1791666658828035,
+  "p95TimerIntervalMS" : 17.882375002955087,
+  "particles" : 1400,
+  "passed" : true,
+  "physicalFootprintMB" : 79.111572265625,
+  "residentMB" : 49.765625,
+  "scope" : "Real visible owned native AppKit\/SpriteKit window, 1400 falling particles and an optional production three-actor story; callbacks are not a GPU presentation benchmark",
+  "simulating" : true,
+  "simulationHz" : 59.105297308763369,
+  "spriteKit" : {
+    "callbackFPS" : 59.873633807212506,
+    "frames" : 1303,
+    "gpuMeasured" : false,
+    "measurement" : "native draw\/update callbacks; not presented GPU frames",
+    "p95IntervalMS" : 18.048375000944361,
+    "p95WorkMS" : 0
+  },
+  "storyTicks" : 1301,
+  "targetFPS" : 60,
+  "uptimeSeconds" : 21.713263708330487,
+  "withStory" : false
+}

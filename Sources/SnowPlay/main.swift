@@ -37,6 +37,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(.separator())
         item("Place Garland…",#selector(garland)); item("Place Tree…",#selector(tree)); item("Gather Snowballs…",#selector(snowballs))
         if winter.input.mode != .none { item("Done Editing",#selector(done),".") }
+        let stickerMenu=NSMenu(title:"Decorations")
+        for (title,action) in [("Add…",#selector(addSticker)),("Edit…",#selector(editStickers)),("Hide All",#selector(hideStickers))] {let entry=stickerMenu.addItem(withTitle:title,action:action,keyEquivalent:"");entry.target=self}
+        let stickerItem=menu.addItem(withTitle:"Decorations",action:nil,keyEquivalent:"");stickerItem.submenu=stickerMenu
+        let stories=NSMenu(title:"Christmas Stories")
+        for (title,action) in [("Play Random Story",#selector(randomStory)),("Automatic Stories: "+(winter.config.stories.enabled ? "On":"Off"),#selector(toggleStories)),("Open Stories Settings…",#selector(storySettings)),("Stop Current Story",#selector(stopStory))] {let entry=stories.addItem(withTitle:title,action:action,keyEquivalent:"");entry.target=self}
+        let storyItem=menu.addItem(withTitle:"Christmas Stories",action:nil,keyEquivalent:"");storyItem.submenu=stories
         item("Santa Delivery",#selector(delivery)); item("Clear Snow",#selector(clean)); item("Reset Winter",#selector(reset))
         menu.addItem(.separator())
         item("Enable Window Accessibility…",#selector(permission))
@@ -46,6 +52,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
     @objc func panel() {if let button=status.button {control?.show(relativeTo:button)}}
     @objc func statusPressed(){if let event=NSApp.currentEvent,event.type == .rightMouseUp,let menu=contextMenu,let button=status.button {NSMenu.popUpContextMenu(menu,with:event,for:button)}else{panel()}}
+    @objc func addSticker(){panel();control?.webView.evaluateJavaScript("tab('decorations')",completionHandler:nil)}
+    @objc func editStickers(){_=winter.stickerStudio.begin()}
+    @objc func hideStickers(){_=winter.stickerStudio.apply("hide")}
+    @objc func randomStory(){_=winter.playChristmasStory()}
+    @objc func toggleStories(){winter.config.stories.enabled.toggle();winter.persist();updateMenu()}
+    @objc func stopStory(){winter.manualStoryPlayback?.stop();winter.decorations.stories.stop()}
+    @objc func storySettings(){panel();control?.webView.evaluateJavaScript("tab('stories')",completionHandler:nil)}
     @objc func pause() { winter.togglePause() }
     @objc func snow() { winter.config.snow.toggle(); winter.persist(); winter.applySettings() }
     func preset(_ mode: WinterMode) { winter.applyPreset(mode) }

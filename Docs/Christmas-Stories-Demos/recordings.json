@@ -1,0 +1,69 @@
+{
+  "items" : [
+    {
+      "file" : "presentTheft-0.mp4",
+      "id" : "presentTheft",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 29.366666666666667,
+      "title" : "Yeti Steals a Present",
+      "variant" : 0
+    },
+    {
+      "file" : "presentTheft-1.mp4",
+      "id" : "presentTheft",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 28.966666666666665,
+      "title" : "Yeti Steals a Present",
+      "variant" : 1
+    },
+    {
+      "file" : "lightRepair-0.mp4",
+      "id" : "lightRepair",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 23.5,
+      "title" : "Elves Fix the Lights",
+      "variant" : 0
+    },
+    {
+      "file" : "snowballExchange-0.mp4",
+      "id" : "snowballExchange",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 21.600000000000001,
+      "title" : "Yeti vs Snowman",
+      "variant" : 0
+    },
+    {
+      "file" : "snowmanBuild-0.mp4",
+      "id" : "snowmanBuild",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 27.800000000000001,
+      "title" : "Elves Build a Snowman",
+      "variant" : 0
+    },
+    {
+      "file" : "treeShake-0.mp4",
+      "id" : "treeShake",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 19.633333333333333,
+      "title" : "Yeti Shakes the Tree",
+      "variant" : 0
+    },
+    {
+      "file" : "santaDrop-0.mp4",
+      "id" : "santaDrop",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 21.866666666666667,
+      "title" : "Santa Drops a Present",
+      "variant" : 0
+    },
+    {
+      "file" : "snowmanParty-0.mp4",
+      "id" : "snowmanParty",
+      "scope" : "Zoomed native production SpriteKit\/AppKit scene in an isolated owned fixture; not a recording of the user's desktop",
+      "seconds" : 24,
+      "title" : "Snowman Party",
+      "variant" : 0
+    }
+  ],
+  "passed" : true
+}

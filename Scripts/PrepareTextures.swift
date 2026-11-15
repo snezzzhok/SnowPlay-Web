@@ -16,3 +16,12 @@ for e in index.assets {
         try data.write(to:root.appendingPathComponent("Prepared/\(e.id)\(scale == 2 ? "@2x" : "").png"),options:.atomic)
     }
 }
+
+let masters=root.appendingPathComponent("Stickers")
+try FileManager.default.createDirectory(at:masters,withIntermediateDirectories:true)
+for e in index.assets where e.id.hasPrefix("sticker_") {
+ let image=NSImage(contentsOf:root.appendingPathComponent(e.source))!,factor=512/max(e.width,e.height),w=Int(ceil(e.width*factor)),h=Int(ceil(e.height*factor))
+ let b=NSBitmapImageRep(bitmapDataPlanes:nil,pixelsWide:w,pixelsHigh:h,bitsPerSample:8,samplesPerPixel:4,hasAlpha:true,isPlanar:false,colorSpaceName:.deviceRGB,bytesPerRow:0,bitsPerPixel:0)!
+ NSGraphicsContext.saveGraphicsState();NSGraphicsContext.current=NSGraphicsContext(bitmapImageRep:b);image.draw(in:NSRect(x:0,y:0,width:w,height:h),from:.zero,operation:.copy,fraction:1);NSGraphicsContext.restoreGraphicsState()
+ try b.representation(using:.png,properties:[:])!.write(to:masters.appendingPathComponent(e.id+".png"))
+}

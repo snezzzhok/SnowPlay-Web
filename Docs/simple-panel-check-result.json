@@ -1,13 +1,16 @@
 {
+  "callSantaRemoved": true,
   "controlsAndPause": true,
   "english": true,
   "fits390And530pt": true,
-  "fiveTabs": true,
+  "garlandSizeAndGlowPersist": true,
   "manualShovelActionAndExit": true,
   "manualShovelUIUnavailableLockedSession": false,
   "passed": true,
   "removedResetMoreAndManualChecks": true,
   "scope": "own WebKit UI, isolated app/preferences; no user manual-check marks changed",
   "settingsReload": true,
+  "sevenTabs": true,
+  "visualCards": 30,
   "survivesNativeAppRestart": true
 }

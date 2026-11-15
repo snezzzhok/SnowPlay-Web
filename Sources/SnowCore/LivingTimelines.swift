@@ -1,5 +1,5 @@
 import Foundation
-public enum LivingPose:String {case idle,run,stop,pickSnow,makeSnowball,throwBall,dodge,hit,fall,celebrate,chop,carry,lift,aim,drive,load,unload}
+public enum LivingPose:String {case idle,run,stop,pickSnow,makeSnowball,throwBall,dodge,hit,fall,celebrate,chop,carry,lift,aim,drive,load,unload,walk,sneak,pickUp,putDown,repair,climb,point,surprised,angry,recover,dance,brush,bow,shake}
 public enum VehiclePhase:String {case idle,drive,brake,load,unload,exit}
 public struct VehiclePose {
     public var position:Vec;public var wheelAngle:Double;public var tilt:Double;public var phase:VehiclePhase

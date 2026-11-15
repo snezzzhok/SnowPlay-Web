@@ -1,0 +1,30 @@
+'use strict';
+let stickerCategory='all',stickerLibraryReady=false,stickerSelected=null;
+async function studioCommand(op,extra={}){try{await flush();const fresh=await request('/api/stickers',{op,...extra});state=fresh;config=fresh.config;render();}catch(e){showMessage(e.message);}}
+function renderStickers(){
+ const studio=state.stickerStudio;if(!studio)return;
+ const prefs=config.stickers,selected=studio.selected?.id?studio.selected:null;stickerSelected=selected;
+ byId('sticker-placed-row').hidden=!studio.instances?.length;
+ const placed=byId('sticker-placed'),signature=(studio.instances||[]).map(i=>i.id+':'+i.inactive).join(',');if(placed.dataset.signature!==signature){placed.replaceChildren(new Option('Choose a decoration',''),...(studio.instances||[]).map((i,n)=>new Option((n+1)+'. '+i.title+(i.inactive?' · inactive':''),i.id)));placed.dataset.signature=signature;}placed.value=selected?.id||'';
+ if(!stickerLibraryReady){for(const item of studio.catalogue){const b=document.createElement('button');b.className='sticker-card';b.dataset.categories=item.categories.join(' ');b.dataset.asset=item.id;const image=new Image();image.src='/assets/'+item.id;image.alt='';const label=document.createElement('span');label.textContent=item.title;b.append(image,label);b.addEventListener('click',()=>studioCommand('add',{assetID:item.id}));byId('sticker-library').append(b);}stickerLibraryReady=true;}
+ for(const b of document.querySelectorAll('[data-sticker-category]'))b.setAttribute('aria-pressed',String(b.dataset.stickerCategory===stickerCategory));
+ for(const b of document.querySelectorAll('.sticker-card'))b.hidden=stickerCategory!=='all'&&!b.dataset.categories.split(' ').includes(stickerCategory);
+ byId('sticker-hide').textContent=prefs.hidden?'Show All':'Hide All';byId('sticker-done').hidden=!studio.editing;
+ byId('sticker-status').textContent=(studio.editing?'Editing · Esc to finish':prefs.items.length+' decorations · saved')+(studio.inactive?' · '+studio.inactive+' hidden or inactive':'');
+ byId('sticker-selection').hidden=!selected;byId('sticker-undo').disabled=!studio.undo;byId('sticker-redo').disabled=!studio.redo;
+ if(selected){byId('sticker-selection-title').textContent=studio.catalogue.find(a=>a.id===selected.assetID)?.title||'Decoration';for(const [id,key] of [['sticker-scale','scale'],['sticker-rotation','rotation'],['sticker-segments','segments'],['sticker-animation','animation'],['sticker-text','text']]){const el=byId(id);if(document.activeElement!==el)el.value=selected[key];el.disabled=selected.locked;}byId('sticker-segments').parentElement.hidden=!studio.catalogue.find(a=>a.id===selected.assetID)?.repeatable;byId('sticker-text-row').hidden=selected.assetID!=='sticker_sign';byId('sticker-lock').textContent=selected.locked?'Unlock':'Lock';}
+ for(const [id,key] of [['sticker-snap','autoSnap'],['sticker-animate','animations'],['sticker-reduce','reduceMotion']])byId(id).checked=prefs[key];
+ for(const [id,key] of [['sticker-default-size','defaultSize'],['sticker-quality','quality']])if(document.activeElement!==byId(id))byId(id).value=prefs[key];
+}
+for(const b of document.querySelectorAll('[data-sticker-category]'))b.addEventListener('click',()=>{stickerCategory=b.dataset.stickerCategory;renderStickers();});
+byId('sticker-add').addEventListener('click',()=>{stickerCategory='all';renderStickers();byId('sticker-library').scrollIntoView({block:'nearest'});});
+for(const [id,op] of [['sticker-edit','edit'],['sticker-hide','hide'],['sticker-clear','clear'],['sticker-undo','undo'],['sticker-redo','redo'],['sticker-done','done'],['sticker-copy','duplicate'],['sticker-reattach','reattach'],['sticker-delete','delete']])byId(id).addEventListener('click',()=>studioCommand(op));
+for(const [id,key] of [['sticker-scale','scale'],['sticker-rotation','rotation'],['sticker-segments','segments'],['sticker-animation','animation'],['sticker-text','text']])byId(id).addEventListener('change',e=>studioCommand('transform',{[key]:['animation','text'].includes(key)?e.target.value:Number(e.target.value)}));
+for(const [id,key] of [['sticker-flip-x','flipX'],['sticker-flip-y','flipY'],['sticker-lock','locked']])byId(id).addEventListener('click',()=>stickerSelected&&studioCommand('transform',{[key]:!stickerSelected[key]}));
+byId('sticker-front').addEventListener('click',()=>stickerSelected&&studioCommand('transform',{z:stickerSelected.z+1}));
+for(const [id,key] of [['sticker-snap','autoSnap'],['sticker-animate','animations'],['sticker-reduce','reduceMotion']])byId(id).addEventListener('change',e=>studioCommand('settings',{[key]:e.target.checked}));
+byId('sticker-default-size').addEventListener('change',e=>studioCommand('settings',{defaultSize:Number(e.target.value)}));byId('sticker-quality').addEventListener('change',e=>studioCommand('settings',{quality:e.target.value}));
+byId('sticker-export').addEventListener('click',async()=>{try{const preset=await request('/api/stickers/preset'),url=URL.createObjectURL(new Blob([JSON.stringify(preset,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='SnowPlay-Christmas-Composition.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(e){showMessage(e.message);}});
+byId('sticker-import').addEventListener('click',()=>byId('sticker-file').click());byId('sticker-file').addEventListener('change',async e=>{try{const file=e.target.files[0];if(!file)return;if(file.size>800000)throw Error('Composition is too large (800 KB maximum).');const preset=JSON.parse(await file.text());if(preset.version!==1||!Array.isArray(preset.settings?.items))throw Error('Invalid composition.');const items=preset.settings.items;await request('/api/stickers',{op:'import-begin',preset:{version:1,settings:{...preset.settings,items:[]}}});for(let i=0;i<items.length;i+=24)await request('/api/stickers',{op:'import-part',items:items.slice(i,i+24)});const fresh=await request('/api/stickers',{op:'import-end'});state=fresh;config=fresh.config;render();}catch(error){showMessage(error.message);}finally{e.target.value='';}});
+
+byId('sticker-placed').addEventListener('change',e=>studioCommand('select',{id:e.target.value}));
