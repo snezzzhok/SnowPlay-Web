@@ -1,6 +1,34 @@
 # ❄︎ SnowPlay — Web и macOS
 
-**Браузерная версия:** [открыть SnowPlay](https://snezzzhok.github.io/SnowPlay-Web/) · [исходники](https://github.com/snezzzhok/SnowPlay-Web) · [запуск и проверки](Docs/Browser-Public-Version.md).
+## Скачать и запустить
+
+**[Скачать SnowPlay для macOS](https://github.com/snezzzhok/SnowPlay-Web/raw/refs/heads/main/dist/SnowPlay-macOS.zip)** · [SHA-256](dist/SHA256SUMS.txt)
+
+Требуется **macOS 13 или новее**. Один архив подходит для **Apple Silicon (M1 и новее) и Intel**. Для готового приложения достаточно скачать ZIP, Xcode и другие инструменты разработки не требуются. Скачивание доступно без аккаунта GitHub.
+
+1. Скачайте архив по ссылке выше и откройте его двойным щелчком.
+2. Перетащите `SnowPlay.app` в папку **Программы / Applications**.
+3. Откройте `SnowPlay` из этой папки. Если macOS блокирует первый запуск, выполните шаги ниже.
+4. Нажмите **снежинку в строке меню** в верхней части экрана, чтобы открыть управление снегом, ёлкой, снеговиками и сценками. Значок может оказаться в скрытой части строки меню, если вы используете менеджер значков.
+5. Для выхода нажмите правой кнопкой на снежинку и выберите **Quit SnowPlay**.
+
+### Если macOS блокирует первый запуск
+
+Текущая сборка имеет подпись ad-hoc. После попытки открыть приложение перейдите в **Системные настройки → Конфиденциальность и безопасность → Безопасность**, найдите сообщение о SnowPlay, нажмите **Всё равно открыть / Open Anyway** и подтвердите запуск. На компьютере с корпоративными ограничениями может понадобиться помощь администратора. [Инструкция Apple](https://support.apple.com/en-us/102445).
+
+Для снега на окнах и эффектов, учитывающих их расположение, откройте правой кнопкой меню снежинки → **Enable Window Accessibility…** и разрешите SnowPlay в **Конфиденциальность и безопасность → Универсальный доступ / Accessibility**. Затем перезапустите приложение. Обычный снег работает сразу после запуска.
+
+### Windows, Linux и браузер
+
+[Открыть браузерную версию SnowPlay](https://snezzzhok.github.io/SnowPlay-Web/). Она работает внутри вкладки. Настольные эффекты реализованы в приложении macOS. [Исходники браузерной версии](https://github.com/snezzzhok/SnowPlay-Web) · [инструкции](Docs/Browser-Public-Version.md).
+
+### English quick start
+
+[Download SnowPlay for macOS 13+](https://github.com/snezzzhok/SnowPlay-Web/raw/refs/heads/main/dist/SnowPlay-macOS.zip), unzip it, move **SnowPlay.app** to **Applications**, and open it. The download supports Apple Silicon and Intel. If macOS blocks the first launch, go to **System Settings → Privacy & Security → Open Anyway** after trying to open the app. Click the **snowflake in the menu bar** to open the controls. Right-click it and choose **Quit SnowPlay** to exit. [Apple's first-launch instructions](https://support.apple.com/en-us/102445).
+
+[Use SnowPlay in your browser](https://snezzzhok.github.io/SnowPlay-Web/) on Windows, Linux, or macOS.
+
+## О приложении
 
 Нативная редакция **Living Winter World**: снег с массой, гномы с машиной, доставка ёлки, ручные активности Йети и Snow Duel. По умолчанию снег умеренный, размер хлопьев 2,5×, окна чистые; снегопад идёт за рабочими окнами. Сюжетные сценки запускаются кнопками, автоматического Санты нет.
 
@@ -20,15 +48,15 @@
 
 ## Запуск macOS-приложения
 
-Готовый архив приложения сохранён прямо в репозитории: [SnowPlay-macOS.zip](dist/SnowPlay-macOS.zip), [SHA-256](dist/SHA256SUMS.txt). На странице ZIP нажмите **Download raw file**, распакуйте архив и перенесите `SnowPlay.app` в Applications. Репозиторий публичный: скачивание доступно без входа в GitHub.
+Прямая ссылка и установка приведены в начале README. **Code → Download ZIP** скачивает весь проект. Готовое приложение лежит внутри него в `dist/SnowPlay-macOS.zip`; распакуйте также этот внутренний архив и перенесите приложение в Applications.
 
-После локальной сборки приложение находится в `dist/SnowPlay.app`. Распакованный app и промежуточные файлы сборки в Git не включаются. Обычный **Code → Download ZIP** скачивает весь проект, а отдельный ZIP выше содержит готовое приложение.
+После локальной сборки приложение находится в `dist/SnowPlay.app`.
 
 ```sh
 open dist/SnowPlay.app
 ```
 
-Нажмите снежинку в строке меню: откроется компактный пульт. Правый клик открывает дополнительное меню; **Open Control Panel…** также открывает пульт. Сервер работает на `127.0.0.1` со случайным портом; браузер можно закрыть, эффекты продолжают работать. Автозапуск не добавляется. Сборка arm64, macOS 13+, подпись ad-hoc; Developer ID/нотариализация не выполнялись.
+Снежинка в строке меню открывает пульт. Сервер работает на `127.0.0.1` со случайным портом. Эффекты работают, пока запущено приложение. Автозапуск добавляется вручную через настройки macOS. Текущий архив универсальный, macOS 13+, подпись ad-hoc. Developer ID и нотариализация требуют сертификата разработчика Apple.
 
 Для точной геометрии чужих окон и шапочек Dock нужен **Accessibility**: меню **Enable Window Accessibility…**, затем разрешение в System Settings → Privacy & Security → Accessibility. Для самого рисования снега дополнительное разрешение не нужно. Приватные API не используются.
 
@@ -46,15 +74,22 @@ open dist/SnowPlay.app
 
 ## Сборка и ресурсы
 
-В исправной среде Xcode/Swift 6:
+Для сборки исходников нужны macOS 13+, Swift 6+ из Xcode или совместимых Command Line Tools. Ресурсы уже включены в репозиторий.
 
 ```sh
 swift build
 swift test
 Scripts/package.sh
+python3 Scripts/check-package.py
+# В активном сеансе рабочего стола macOS, с запуском приложения:
+python3 Scripts/check-package.py --smoke
+# Intel-сборка на Mac с Intel или с установленной Rosetta:
+python3 Scripts/check-package.py --smoke --arch x86_64
 ```
 
-На этой машине неполный/несогласованный CLT, поэтому используется локальный VFS-обход внутри `.build`:
+`package.sh` собирает обе архитектуры, создаёт универсальное приложение с ресурсами, проверяет подпись и обновляет `dist/SnowPlay-macOS.zip` вместе с `dist/SHA256SUMS.txt`. Для упаковки используются Swift, Python 3 со стандартной библиотекой и системные инструменты macOS. Проверка готового ZIP использует Python 3 со стандартной библиотекой и распаковывает приложение в отдельную временную папку. Режим `--smoke` проверяет запуск, загрузку пульта, изображений и работу кнопки паузы с временными настройками.
+
+В среде с конфликтующими модулями Command Line Tools можно использовать имеющийся локальный обход.
 
 ```sh
 Scripts/local-build.sh build
@@ -62,7 +97,9 @@ Scripts/test-core.sh
 SNOWPLAY_LOCAL_TOOLCHAIN_WORKAROUND=1 Scripts/package.sh
 ```
 
-`test-core.sh` выполняет те же **81 метод** через assertion-адаптер; это не запуск XCTest. Полный `xcodebuild test` здесь не выполнялся. Проект Xcode сохранён; неактивные шаблоны CI находятся в [Docs/CI-Templates](Docs/CI-Templates).
+`test-core.sh` использует XCTest при доступном Xcode. Для локального CLT предусмотрен assertion-адаптер. Шаблоны автоматизации находятся в [Docs/CI-Templates](Docs/CI-Templates).
+
+Для подписанного и нотариализованного выпуска задайте `SNOWPLAY_SIGN_IDENTITY` с установленным сертификатом Developer ID Application и `SNOWPLAY_NOTARY_PROFILE` с профилем `notarytool`, затем запустите `Scripts/package.sh`. Скрипт включает hardened runtime и timestamp, отправляет архив Apple и прикрепляет подтверждение к приложению перед созданием итогового ZIP.
 
 Сохранены 63 оригинальных SVG и исходный манифест библиотеки. World-реестр содержит 63 собственных/производных дополнения; старый замок остаётся неиспользуемым архивным ресурсом. Всего 126 зарегистрированных ресурсов, 131 подготовленных источников текстур 1×/2×, 30 компонентов персонажей и машины в двух общих атласах 1024×1024. Каталог ресурсов не используется для вырезания спрайтов; конвертации SVG на кадре нет.
 
